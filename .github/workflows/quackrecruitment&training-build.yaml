@@ -19,7 +19,7 @@ env:
 jobs:
 # Please do not rename this job
   build-project:
-    name: build quackrecruitment
+    name: build quackrecruitment&training
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -51,5 +51,5 @@ jobs:
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
-          config-file: .deploy-now/quackrecruitment/config.yaml
+          config-file: .deploy-now/quackrecruitment&training/config.yaml
           action: upload
