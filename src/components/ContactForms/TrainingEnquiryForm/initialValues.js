@@ -1,5 +1,6 @@
 export const initialValues = {
   traineeType: "",
+  location: "",
   company: "",
   contactName: "",
   contactNumber: "",

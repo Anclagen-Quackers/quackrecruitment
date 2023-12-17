@@ -92,6 +92,18 @@ const TrainingEnquiryForm = () => {
                     ]}
                   />
                   <FormikField
+                    label="Location*"
+                    type="select"
+                    id="location"
+                    options={[
+                      { value: "", label: "Please select a location", disabled: true },
+                      { value: "Walsall", label: "Walsall" },
+                      { value: "Birmingham", label: "Birmingham" },
+                      { value: "Northampton", label: "Northampton" },
+                      { value: "Luton", label: "Luton" },
+                    ]}
+                  />
+                  <FormikField
                     label="Looking to Train as"
                     type="select"
                     id="traineeType"

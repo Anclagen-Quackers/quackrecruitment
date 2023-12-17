@@ -1,5 +1,5 @@
 import Section from "@/components/Sections/Section";
-import ExpandableSection from "@/components/ExpandableSection/ExpandableSection";
+import ExpandableSectionFAQ from "@/components/ExpandableSection/ExpandableSectionFAQ";
 import BannerHalf from "@/components/Banner/BannerHalf";
 
 export const metadata = {
@@ -15,8 +15,8 @@ const PrivacyPolicy = () => {
       <div className="hidden bg-teal-900 bg-gray-900 bg-sky-900 bg-indigo-900 bg-red-900 bg-blue-900 bg-green-900 bg-sky-400 text-teal-900 text-gray-900 text-sky-900 text-indigo-900 text-red-900 text-blue-900 text-green-900 text-sky-400"></div>
       <main>
         <BannerHalf title="Privacy Policy" slogan="Need to get in touch with us?" imgSrc="/images/banners/privacy-banner.jpg" imgAlt="Privacy Policy" position="top" />
-        <Section bgColor="bg-zinc-200">
-          <div className="mx-auto max-w-screen-md bg-zinc-50 p-3 px-3 sm:px-10 mb-5">
+        <Section bgColor="bg-gray-50">
+          <div className="mx-auto max-w-screen-md bg-zinc-200 p-3 px-3 sm:px-10 mb-5">
             <p className="my-2 italic">{"Quack Group Ltd – GDPR & Privacy Policy 2023"}</p>
 
             <p className="my-2">
@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
             </p>
           </div>
           <div className="mx-auto max-w-screen-md">
-            <ExpandableSection title="1. What information might we collect about you?">
+            <ExpandableSectionFAQ title="1. What information might we collect about you?">
               <p className="my-2">{"When you interact with us in the different ways described below, we may ask you for the following information:"}</p>
               <h3 className="text-xl font-semibold my-3">Candidates</h3>
               <p className="my-2">{"Personal and contact details (for example your name, email address, date of birth, gender);"}</p>
@@ -103,9 +103,9 @@ const PrivacyPolicy = () => {
                   "We may also collect Sensitive Personal Information about you (including details of your physical or mental health, racial or ethnic origin, criminal allegations or offences, trade union membership and/or other Sensitive Personal Information that you may choose to provide to us voluntarily from time to time. "
                 }
               </p>
-            </ExpandableSection>
+            </ExpandableSectionFAQ>
 
-            <ExpandableSection title="2. How, when, and why do we collect your Personal Information?">
+            <ExpandableSectionFAQ title="2. How, when, and why do we collect your Personal Information?">
               <h3 className="text-xl font-semibold my-3">Candidates</h3>
               <p className="my-2 italic">{"How and when do we collect your Personal Information?"}</p>
               <p className="my-2">
@@ -146,9 +146,9 @@ const PrivacyPolicy = () => {
                   "Administrative purposes; in hosting and maintaining our websites; in ensuring network and information security; and/or in carrying out direct marketing. However, we will only collect, use, and handle your Personal Information when: it is necessary for our legitimate interests in connection with carrying out our business, as long as, in each case, these interests are in line with applicable law and your legal rights; and/or where you have consented; in the performance of our contract with you; and/or it is necessary for legal obligations which apply to us."
                 }
               </p>
-            </ExpandableSection>
+            </ExpandableSectionFAQ>
 
-            <ExpandableSection title="3. How we use the Personal Information that you provide to us.">
+            <ExpandableSectionFAQ title="3. How we use the Personal Information that you provide to us.">
               <p className="my-2">
                 {
                   "Where necessary and appropriate for our business purposes and in accordance with regulatory requirements, and where if required we have an appropriate processing agreement in place, we may use your personal data for: The performance of our contracts with clients and suppliers; Third party professional advisers such as lawyers, auditors and accountants and third-party service providers and consultants performing technical services for us (such as IT support functions, testing and development work and external consultants);Where necessary in using technology systems and document storage; and. In using marketing services platforms. Website Cookies - We use cookies on our website. You can find out which cookies we use and why by viewing our Cookie Policy."
@@ -172,8 +172,8 @@ const PrivacyPolicy = () => {
                   "Marketing – where legally permitted to do so where you have provided us with your contact details and have agreed to be contacted for marketing purposes, we may contact you by telephone or by post for marketing purposes relating to our services, our website, and/or to research opinion on proposed business developments. Your agreement to the use of your Personal Information for these purposes is optional and if you fail to provide your agreement, your use of our work-finding services will not be affected."
                 }
               </p>
-            </ExpandableSection>
-            <ExpandableSection title="4. How and when do we share information with third parties?">
+            </ExpandableSectionFAQ>
+            <ExpandableSectionFAQ title="4. How and when do we share information with third parties?">
               <p className="my-2">
                 {
                   "Some services that we provide require the involvement of third parties. We have carefully selected these third parties and taken steps to ensure that your Personal Information is adequately protected.  The third parties may include our clients, suppliers of IT services, pay-rolling services, or vetting services."
@@ -210,8 +210,8 @@ const PrivacyPolicy = () => {
                   "We may also provide your information to other third parties such as regulators and law enforcement agencies, where we are required by law to do so, where necessary for the purposes of preventing and detecting fraud, other criminal offences and/or to ensure network and information security."
                 }
               </p>
-            </ExpandableSection>
-            <ExpandableSection title="5. How long do we store Personal Information for?">
+            </ExpandableSectionFAQ>
+            <ExpandableSectionFAQ title="5. How long do we store Personal Information for?">
               <p className="my-2">
                 {
                   "It is our policy to retain your Personal Information only for the length of time required for the specific purpose or purposes for which it was collected, and this is set out in Annex B. However, on occasion we may be obliged to store some data for a longer time, for example, where a longer time is required by applicable laws. In this case, we will ensure that your Personal Data will continue to be treated in accordance with this Privacy Policy."
@@ -222,8 +222,8 @@ const PrivacyPolicy = () => {
                   "We support Candidates over many years and potentially throughout their careers and the reason for which we retain the Personal Data can be an ongoing purpose.  We also work with Suppliers and Clients over long periods of time and retain Personal Data as part of these relationships.   If we have not had meaningful contact with you for an extended period, we will delete Personal Data."
                 }
               </p>
-            </ExpandableSection>
-            <ExpandableSection title="6. Security and Confidentiality">
+            </ExpandableSectionFAQ>
+            <ExpandableSectionFAQ title="6. Security and Confidentiality">
               <p className="my-2">
                 {
                   "We employ appropriate security measures to help protect your Personal Information and guard against access by unauthorised persons. Information storage is on secure computers in a secure environment, or in secure, locked storage in the case of hard copy information.  The information is encrypted wherever possible and we undergo periodic reviews of our security policies and procedures to ensure that our systems is secure and protected. However, the transmission of information via the Internet is not completely secure so we cannot guarantee the security of your information when it is transmitted to our website or from third party websites such as job boards. "
@@ -234,8 +234,8 @@ const PrivacyPolicy = () => {
                   "We acknowledge that the information you provide may be confidential. We do not sell, rent, distribute, or otherwise make Personal Information commercially available to any third party, but we may share information with our service providers for the purposes set out in this Privacy Policy. We will keep your information confidential and protect it in accordance with our Privacy Policy and all applicable laws."
                 }
               </p>
-            </ExpandableSection>
-            <ExpandableSection title="7. Your rights">
+            </ExpandableSectionFAQ>
+            <ExpandableSectionFAQ title="7. Your rights">
               <p className="my-2">{"It is important to us that you are in control of your own information. As a result, you have the following controls:"}</p>
               <p className="my-2">
                 {
@@ -280,23 +280,23 @@ const PrivacyPolicy = () => {
                 </a>
                 {` for assistance.`}
               </p>
-            </ExpandableSection>
-            <ExpandableSection title="8. Updates to this Privacy Notice">
+            </ExpandableSectionFAQ>
+            <ExpandableSectionFAQ title="8. Updates to this Privacy Notice">
               <p className="my-2">
                 {
                   "This Privacy Notice may be updated periodically to reflect changes in our privacy practices and legal updates.  We will indicate at the top of the notice, which is posted on our websites, when it was most recently updated."
                 }
               </p>
-            </ExpandableSection>
-            <ExpandableSection title="9. Contact Us.">
+            </ExpandableSectionFAQ>
+            <ExpandableSectionFAQ title="9. Contact Us.">
               <p className="my-2">
                 {"If you have any questions in relation to this Privacy Policy, or if you would like to contact us to exercise your rights as stated in this Privacy Policy, you may contact us at: "}
                 <a className="text-quackred-950 hover:text-quackred-700 font-semibold" href="mailto:hello@quackrecruitment.co.uk">
                   hello@quackrecruitment.co.uk
                 </a>
               </p>
-            </ExpandableSection>
-            <ExpandableSection title="10. Definitions">
+            </ExpandableSectionFAQ>
+            <ExpandableSectionFAQ title="10. Definitions">
               <p className="my-2">
                 {
                   "Candidates – refers to applicants (and those subsequently engaged on temporary assignments, directly or indirectly, by the Company) for any roles advertised by or through the Company, whether permanent or temporary positions, whether as freelancers, contractors, flexible employees or through third parties including Suppliers; as well as people who have submitted a speculative CV to the Company. "
@@ -313,7 +313,7 @@ const PrivacyPolicy = () => {
                   "Suppliers – covers supplier companies (including sole traders), vendors, umbrella companies, partnerships and limited company contractors who provide services to the Company including as sub-contractors.  Suppliers should ensure their employees and workers are made aware of the provisions of this Privacy Policy as applicable."
                 }
               </p>
-            </ExpandableSection>
+            </ExpandableSectionFAQ>
           </div>
         </Section>
       </main>
