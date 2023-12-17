@@ -1,4 +1,5 @@
 const BannerHalf = ({ title, slogan, imgSrc, imgAlt, position = "bottom" }) => {
+  const lines = slogan.split(",");
   return (
     <div className="bg-white shadow-lg shadow-quackred-200 z-10">
       <div className="relative banner max-w-screen-2xl mx-auto overflow-x-hidden" style={{ height: "40vh", minHeight: "400px" }}>
@@ -11,7 +12,11 @@ const BannerHalf = ({ title, slogan, imgSrc, imgAlt, position = "bottom" }) => {
           <div className="relative max-w-screen-2xl mx-auto top-0 left-0 h-full flex items-center ">
             <div className="text-center pt-20 mx-auto md:mx-0">
               <h1 className="text-black text-5xl md:text-6xl mb-4 max-w-sm mx-auto">{title}</h1>
-              <p className="text-quackred text-2xl md:text-3xl mb-8 max-w-md mx-auto">{slogan}</p>
+              {lines.map((line, index) => (
+                <p key={index} className="text-quackred text-2xl md:text-3xl mb-2 max-w-md mx-auto">
+                  {line}
+                </p>
+              ))}
             </div>
           </div>
         </div>

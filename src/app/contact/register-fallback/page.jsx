@@ -73,7 +73,7 @@ const CandidateRegistrationFallback = () => {
 
   return (
     <>
-      <main>
+      <main className="flex flex-col">
         <Section bgColor="bg-zinc-200">
           <div className="max-w-screen-md mx-auto">
             <div className="flex flex-col items-center">

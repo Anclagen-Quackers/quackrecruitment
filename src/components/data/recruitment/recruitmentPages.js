@@ -59,7 +59,7 @@ const recruitmentPages = [
     ],
   },
   {
-    title: "On-Site Managed Services Recruitment",
+    title: "On-Site Managed Services",
     introduction: "Experience a revolutionized approach to workforce management with our On-Site Managed Services Recruitment.",
     sections: [
       {

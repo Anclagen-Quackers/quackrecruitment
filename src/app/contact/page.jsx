@@ -15,7 +15,7 @@ const Contact = () => {
   return (
     <>
       <div className="hidden bg-teal-900 bg-gray-900 bg-sky-900 bg-indigo-900 bg-red-900 bg-blue-900 bg-green-900 bg-sky-400 text-teal-900 text-gray-900 text-sky-900 text-indigo-900 text-red-900 text-blue-900 text-green-900 text-sky-400"></div>
-      <main>
+      <main className="flex flex-col">
         <BannerHalf title="Contact Us" slogan="Employer Or Job Seeker Were Here To Help" imgSrc="/images/banners/pexels-yan-krukau-8867434.jpg" imgAlt="Descriptive Image Alt Text" position="top" />
         <Section bgColor="bg-zinc-200">
           <div className="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0">

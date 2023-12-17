@@ -15,10 +15,12 @@ const FLTPage = () => {
 
   return (
     <>
-      <BannerHalf title={course.banner} slogan={course.description} imgSrc={course.bannerImage} imgAlt={course.bannerImageAlt} position={course.bannerPosition} />
-      <Section bgColor="bg-gray-50">
-        <TrainingCourse course={course} />
-      </Section>
+      <main className="flex flex-col">
+        <BannerHalf title={course.banner} slogan={course.description} imgSrc={course.bannerImage} imgAlt={course.bannerImageAlt} position={course.bannerPosition} />
+        <Section bgColor="bg-gray-50">
+          <TrainingCourse course={course} />
+        </Section>
+      </main>
     </>
   );
 };

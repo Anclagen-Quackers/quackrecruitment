@@ -76,12 +76,18 @@ body {
 /* Banner Background */
 .home-banner,
 .banner-gradient {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.65);
 }
 
 @media only screen and (min-width: 768px) {
   .banner-gradient {
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 55%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 1) 100%);
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .banner-gradient {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 30%, rgba(255, 255, 255, 0) 45%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 1) 100%);
   }
 }
 

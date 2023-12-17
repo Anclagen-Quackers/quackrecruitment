@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
   return (
     <>
       <div className="hidden bg-teal-900 bg-gray-900 bg-sky-900 bg-indigo-900 bg-red-900 bg-blue-900 bg-green-900 bg-sky-400 text-teal-900 text-gray-900 text-sky-900 text-indigo-900 text-red-900 text-blue-900 text-green-900 text-sky-400"></div>
-      <main>
+      <main className="flex flex-col">
         <BannerHalf title="Privacy Policy" slogan="Need to get in touch with us?" imgSrc="/images/banners/privacy-banner.jpg" imgAlt="Privacy Policy" position="top" />
         <Section bgColor="bg-gray-50">
           <div className="mx-auto max-w-screen-md bg-zinc-200 p-3 px-3 sm:px-10 mb-5">

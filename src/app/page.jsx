@@ -27,7 +27,7 @@ const Home = () => {
         <meta name="description" content="Welcome to Quack Specialists, your local recruitment specialist" key="description" />
         <meta name="keywords" content={keywords} key="keywords" />
       </Head>
-      <main>
+      <main className="flex flex-col">
         <BannerHome
           title={`Quack \nRecruitment & Training`}
           slogan="Whether your looking to recruit, or train the best talent... we've got you covered!"

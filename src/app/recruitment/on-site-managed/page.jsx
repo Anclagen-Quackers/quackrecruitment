@@ -17,7 +17,7 @@ const OnSiteManagedService = () => {
   return (
     <>
       <div className="hidden bg-teal-900 bg-gray-900 bg-sky-900 bg-indigo-900 bg-red-900 bg-blue-900 bg-green-900 bg-sky-400 text-teal-900 text-gray-900 text-sky-900 text-indigo-900 text-red-900 text-blue-900 text-green-900 text-sky-400"></div>
-      <main>
+      <main className="flex flex-col">
         <BannerHalf
           title={recruitmentPages[2].title}
           slogan="Flexible Talent Solutions, Tailored for Success"
