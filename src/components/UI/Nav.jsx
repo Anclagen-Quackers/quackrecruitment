@@ -14,6 +14,14 @@ const Nav = () => {
   const navItems = [
     { path: "/", label: "Home" },
     {
+      label: "About",
+      dropdown: [
+        { path: "/about", label: "About Us" },
+        { path: "/legal", label: "Legal" },
+        { path: "/legal/privacy-policy", label: "Privacy Policy" },
+      ],
+    },
+    {
       label: "Training",
       dropdown: [
         { path: "/training", label: "Training" },
@@ -35,14 +43,7 @@ const Nav = () => {
         { path: "/recruitment/on-site-managed", label: "On Site Managed Services" },
       ],
     },
-    {
-      label: "About",
-      dropdown: [
-        { path: "/about", label: "About Us" },
-        { path: "/legal", label: "Legal" },
-        { path: "/legal/privacy-policy", label: "Privacy Policy" },
-      ],
-    },
+
     { path: "/contact/register", label: "Register" },
     { path: "/contact", label: "Contact" },
   ];
