@@ -8,8 +8,30 @@ import { permanentFAQ } from "@/components/data/recruitment/recruitmentFAQ";
 
 export const metadata = {
   title: `${recruitmentPages[1].title} | Quack Recruitment & Training`,
-  description: "TBD",
-  keywords: ["TBD"],
+  description:
+    "Secure top talent with Quack Recruitment & Training's Permanent Recruitment services. Benefit from comprehensive candidate vetting, tailored strategies, and industry-specific expertise for strategic long-term hires.",
+  keywords: [
+    "Permanent Recruitment Services",
+    "Quack Recruitment & Training",
+    "Strategic Talent Acquisition",
+    "Comprehensive Candidate Vetting",
+    "Tailored Recruitment Strategies",
+    "Industry-Centric Recruitment",
+    "Permanent Placement Guarantees",
+    "Professional Hiring Process",
+    "IT Sector Recruitment",
+    "Healthcare Recruitment",
+    "Finance Sector Hiring",
+    "Engineering Talent Acquisition",
+    "Retail Industry Recruitment",
+    "Quality Candidate Shortlisting",
+    "Skill Assessments and Interviews",
+    "Cultural Fit Evaluation",
+    "Recruitment Expertise",
+    "Long-Term Employment Solutions",
+    "Recruitment FAQs",
+    "Customized Hiring Solutions",
+  ],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 

@@ -5,8 +5,30 @@ import FadeInFreeTextSection from "@/components/Sections/FadeInFreeFormatSection
 
 export const metadata = {
   title: "Legal | Quack Recruitment & Training",
-  description: "Learn about Quack Recruitment, who we are and what we can do for you.",
-  keywords: ["Quack Group", "Quack Recruitment", "Jobs", "Training", "Recruiters", "Recruitment"],
+  description:
+    "Learn about the legal aspects of Quack Recruitment Ltd, a GLAA license holder with comprehensive insurance coverages. Find our registered office details, contact information, and more.",
+  keywords: [
+    "Quack Recruitment Legal Information",
+    "GLAA License Holder",
+    "Registered Office Details",
+    "Professional Indemnity",
+    "Public Liability Insurance",
+    "Employers' Liability Insurance",
+    "Legal Notice Quack Recruitment",
+    "Company Contact Information",
+    "Recruitment Insurance Coverage",
+    "Legal Compliance in Recruitment",
+    "Quack Recruitment Contact Details",
+    "Recruitment Agency Legal Aspects",
+    "Comprehensive Insurance Policies",
+    "Business Legal Information",
+    "Recruitment Legal Standards",
+    "Regulatory Compliance",
+    "Recruitment Industry Insurance",
+    "Professional Recruitment Services",
+    "Recruitment Agency Registration",
+    "Legal Transparency",
+  ],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 

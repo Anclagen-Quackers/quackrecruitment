@@ -8,8 +8,30 @@ import { OnSiteFAQ } from "@/components/data/recruitment/recruitmentFAQ";
 
 export const metadata = {
   title: `${recruitmentPages[2].title} | Quack Recruitment & Training`,
-  description: "TBD",
-  keywords: ["TBD"],
+  description:
+    "Revolutionize your workforce management with Quack Recruitment & Training's On-Site Managed Services. Experience dedicated, scalable, and cost-efficient recruitment solutions tailored to your business needs.",
+  keywords: [
+    "On-Site Managed Services",
+    "Workforce Management Solutions",
+    "Quack Recruitment & Training",
+    "Dedicated Recruitment Teams",
+    "Scalable Recruitment Solutions",
+    "Cost-Controlled Staffing",
+    "Continuous Recruitment Improvement",
+    "Performance-Driven Management",
+    "GLAA Compliant Recruitment",
+    "TUPE Compliance",
+    "High-Volume Staffing",
+    "Industry-Specific Recruitment Strategies",
+    "HR Process Integration",
+    "Efficient Hiring Processes",
+    "Customized Staffing Services",
+    "Key Performance Indicators in Recruitment",
+    "Ethical Recruitment Practices",
+    "Legal Recruitment Expertise",
+    "Streamlined Workforce Solutions",
+    "Business-Specific Recruitment Services",
+  ],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 

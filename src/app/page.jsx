@@ -12,8 +12,31 @@ import PageLink from "@/components/PageLink";
 
 export const metadata = {
   title: "Quack Recruitment",
-  description: "Quack Recruitment, your local recruitment specialist.",
-  keywords: ["Quack Group", "Quack Recruitment", "Jobs", "Training", "Recruiters", "Recruitment"],
+  description:
+    "Welcome to Quack Recruitment & Training, we are one of the leading agencies in the home counties and we provide support to our contractors and clients on a national basis. Whatever you are looking for, get in touch with one of the team at Quack Recruitment & Training today.",
+  keywords: [
+    "Quack Recruitment & Training",
+    "Recruitment Solutions",
+    "Training Programs",
+    "On-Site Managed Services",
+    "Temporary Staffing",
+    "Permanent Recruitment",
+    "Career Opportunities",
+    "Job Listings",
+    "GLAA Licensed",
+    "Specialist Consultants",
+    "Quality Recruitment Services",
+    "Customized Recruitment Models",
+    "Diverse Hiring Capabilities",
+    "Industry Affiliations",
+    "Warehouse & Logistics Training",
+    "Customer Service Training",
+    "CSCS Courses",
+    "SIA Security Courses",
+    "Certified Training",
+    "Training Locations in UK",
+  ],
+  image: "https://quackrecruitmentandtraining.co.uk/logos/QRT-logo/QRT-black-transparent-centred.png",
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 

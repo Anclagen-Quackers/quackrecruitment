@@ -8,8 +8,30 @@ import { tempFAQ } from "@/components/data/recruitment/recruitmentFAQ";
 
 export const metadata = {
   title: `${recruitmentPages[0].title} | Quack Recruitment & Training`,
-  description: "TBD",
-  keywords: ["TBD"],
+  description:
+    "Discover flexible talent solutions with Quack Recruitment & Training's Temporary Recruitment Services. Benefit from customized staffing, swift placements, and industry-specific expertise for adaptable workforce management.",
+  keywords: [
+    "Temporary Recruitment Services",
+    "Flexible Staffing Solutions",
+    "Quack Recruitment & Training",
+    "Customized Temporary Staffing",
+    "Swift Turnaround Placement",
+    "Adaptable Workforce Solutions",
+    "Industry-Specific Temporary Staff",
+    "Cost-Effective Staffing",
+    "Temporary Workforce Management",
+    "Rapid Response Recruitment",
+    "Diverse Talent Pool",
+    "Administrative Staffing",
+    "Customer Service Staffing",
+    "IT Temporary Roles",
+    "Finance Sector Temp Staff",
+    "Temporary to Permanent Transition",
+    "Skill Assessments for Temp Staff",
+    "Workforce Scalability",
+    "Temporary Employment FAQs",
+    "High-Quality Temporary Workers",
+  ],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 

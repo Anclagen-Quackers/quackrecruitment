@@ -7,8 +7,32 @@ import Flipper from "@/components/Sections/Flipper";
 
 export const metadata = {
   title: "Recruitment | Quack Recruitment & Training",
-  description: "Check out our latest opportunities and find that dream job for you today!",
-  keywords: ["Quack Group", "Quack Recruitment", "Jobs", "Training", "Recruiters", "Recruitment"],
+  description:
+    "Explore Quack Recruitment & Training's diverse recruitment solutions. Specializing in Temporary, Permanent, and On-Site Managed Services, we offer tailored staffing strategies across various sectors to ensure optimal workforce alignment with your business goals. Discover our commitment to excellence in recruitment today.",
+  keywords: [
+    "Quack Group",
+    "Quack Recruitment",
+    "Quack Recruitment & Training",
+    "Modern Recruitment Solutions",
+    "Temporary Recruitment Services",
+    "Permanent Recruitment",
+    "On-Site Managed Services",
+    "Industry-Specific Recruitment",
+    "Cost-Effective Staffing",
+    "Operational Effectiveness",
+    "Workforce Management",
+    "Strategic Talent Acquisition",
+    "Customized Staffing Solutions",
+    "High-Quality Hires",
+    "Sector-Specific Expertise",
+    "Administration Recruitment",
+    "Customer Service Recruitment",
+    "Engineering Recruitment",
+    "Food Processing & Packaging Jobs",
+    "IT Recruitment",
+    "Logistics Jobs",
+    "Sales Sector Recruitment",
+  ],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 

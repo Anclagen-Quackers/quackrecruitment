@@ -6,8 +6,32 @@ import ExpandableSectionFAQ from "@/components/ExpandableSection/ExpandableSecti
 
 export const metadata = {
   title: "Contact | Quack Recruitment & Training",
-  description: "Need to get in touch with us?",
-  keywords: ["Quack Group", "Quack Recruitment", "Jobs", "Training", "Recruiters", "Recruitment"],
+  description:
+    "Get in touch with Quack Recruitment & Training for all your recruitment and training needs. Contact us via email or phone, or arrange a visit to our offices for personalized assistance. We're here to help employers and job seekers alike.",
+  keywords: [
+    "Quack Group",
+    "Quack Recruitment",
+    "Contact Quack Recruitment & Training",
+    "Recruitment Inquiries",
+    "Training Assistance",
+    "Customer Support",
+    "Office Contact Details",
+    "Email Quack Recruitment",
+    "Phone Support",
+    "Quack Recruitment Office Hours",
+    "Employer Support",
+    "Job Seeker Help",
+    "Quack Recruitment Locations",
+    "Stevenage Office",
+    "Hitchin Office",
+    "Birmingham Office",
+    "Coventry Office",
+    "Luton Office",
+    "Milton Keynes Office",
+    "Northampton Office",
+    "Professional Recruitment Services",
+    "Training and Development Queries",
+  ],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 

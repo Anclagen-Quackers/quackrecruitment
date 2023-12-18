@@ -3,8 +3,27 @@ import RegistrationForm from "@/components/ContactForms/RegistrationForm";
 
 export const metadata = {
   title: "Register | Quack Recruitment & Training",
-  description: "Register with Quack Recruitment & Training to find your next job.",
-  keywords: ["Quack Group", "Quack Recruitment", "Jobs", "Training", "Recruiters", "Recruitment"],
+  description:
+    "Register with Quack Recruitment & Training to discover exciting job opportunities. Fill out our simple form to connect with top employers and find roles that match your skills and career aspirations.",
+  keywords: [
+    "Quack Group",
+    "Quack Recruitment",
+    "Job Applicant Registration",
+    "Quack Recruitment & Training",
+    "Career Opportunities",
+    "Submit Resume",
+    "Employment Application",
+    "Job Search",
+    "Find Jobs",
+    "Career Registration Form",
+    "Connect with Employers",
+    "Job Matching",
+    "Work in Desired Industry",
+    "Employment Opportunities",
+    "Apply for Jobs Online",
+    "Professional Career Development",
+  ],
+  image: "https://quackrecruitmentandtraining.co.uk/logos/QRT-logo/QRT-black-transparent-centred.png",
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 

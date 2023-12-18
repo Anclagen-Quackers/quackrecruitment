@@ -4,8 +4,30 @@ import BannerHalf from "@/components/Banner/BannerHalf";
 
 export const metadata = {
   title: "Privacy Policy | Quack Recruitment & Training",
-  description: "Need to get in touch with us?",
-  keywords: ["Quack Group", "Quack Recruitment", "Jobs", "Training", "Recruiters", "Recruitment"],
+  description: "Explore Quack Group Ltd's GDPR & Privacy Policy 2023. Understand how we handle your personal information as a data controller, ensuring the protection and proper use of your data.",
+  keywords: [
+    "Quack Group",
+    "Quack Group Privacy Policy",
+    "GDPR Compliance",
+    "Data Protection",
+    "Personal Information Security",
+    "Data Controller Quack Group",
+    "Candidate Privacy",
+    "Supplier Data Privacy",
+    "Client Information Security",
+    "Employee Data Protection",
+    "Website User Privacy",
+    "Personal Data Usage",
+    "Privacy Notice",
+    "Data Collection Policies",
+    "Information Handling",
+    "Privacy Standards",
+    "Confidentiality and Privacy",
+    "Bank Details Security",
+    "Tax Information Privacy",
+    "Personal Data Rights",
+    "Information Privacy Compliance",
+  ],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 

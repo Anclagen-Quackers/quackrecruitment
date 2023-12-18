@@ -6,8 +6,31 @@ import { courses } from "@/components/data/training/courses";
 
 export const metadata = {
   title: "Training | Quack Recruitment & Training",
-  description: "Get the skills you need to succeed with Quack!",
-  keywords: ["Quack Group", "Quack Recruitment", "Jobs", "Training", "Recruiters", "Recruitment"],
+  description: "Enhance your career with Quack Recruitment & Training's expert-led courses in administration, CSCS, SIA, food hygiene, and more. Gain practical skills and recognized certifications.",
+  keywords: [
+    "Quack Group",
+    "Quack Recruitment",
+    "Professional Training Courses",
+    "Expert-Led Programs",
+    "Administration Training",
+    "Customer Service Skills",
+    "CSCS Training",
+    "SIA Security Training",
+    "Food and Hygiene Certification",
+    "Industry-Recognized Certifications",
+    "Flexible Learning Options",
+    "Career Enhancement",
+    "Level 3 Courses",
+    "Practical Skills Development",
+    "Welding Training",
+    "Forklift Operation Course",
+    "Construction Industry Training",
+    "Personal Development",
+    "Professional Networking",
+    "Safety and Regulations",
+    "Quality Assurance in Food",
+    "Leadership Skills Training",
+  ],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 
