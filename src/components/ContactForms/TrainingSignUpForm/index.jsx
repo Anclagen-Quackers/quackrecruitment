@@ -17,7 +17,7 @@ const TrainingSignUpForm = ({ params }) => {
   const [formErrors, setFormErrors] = useState(null);
   const [agree, setAgree] = useState(false);
   const [success, setSuccess] = useState(false);
-  const Schema = [courseAndDisability, personalSchema, empty];
+  const Schema = [personalSchema, courseAndDisability, empty];
 
   useEffect(() => {
     const section = document.querySelector(`.section-${activeSection}`);
@@ -51,13 +51,8 @@ const TrainingSignUpForm = ({ params }) => {
         }
       }
 
-      // cf7 9
-      // const response = await fetch("https://content.quackrecruitmentandtraining.co.uk/wp-json/contact-form-7/v1/contact-forms/9/feedback", {
-      //   method: "POST",
-      //   body: formData,
-      // });
-
-      const response = await fetch("#", {
+      // cf7 12
+      const response = await fetch("https://content.quackrecruitmentandtraining.co.uk/wp-json/contact-form-7/v1/contact-forms/12/feedback", {
         method: "POST",
         body: formData,
       });
@@ -80,7 +75,7 @@ const TrainingSignUpForm = ({ params }) => {
 
   const sectionFields = {
     0: ["first-name", "last-name", "date-of-birth", "mobile-number", "email", "ethnicity", "english", "employment-status", "job-seeker", "criminal-record", "ni-number"],
-    1: ["first-name", "last-name", "date-of-birth", "mobile-number", "email", "ethnicity", "disabilities", "disabilities-info"],
+    1: ["course-interest", "location", "disabilities", "disabilities-info", "further-info"],
     2: [],
   };
 
@@ -170,10 +165,10 @@ const TrainingSignUpForm = ({ params }) => {
                         {formErrors && (
                           <>
                             <div className="error error-message">
-                              {formErrors} If problem persist please submit your details to using the provided{" "}
-                              <Link prefetch={false} target="_blank" href={"/contact/register-fallback"} className="text-quackred-950 font-semibold">
-                                email template here.
-                              </Link>
+                              {formErrors} If problem persist please contact us at{" "}
+                              <a href="mailto:sales@quackrecruitmentandtraining.co.uk" className="text-quackred-900 hover:underline">
+                                sales@quackrecruitmentandtraining.co.uk.
+                              </a>
                             </div>
                           </>
                         )}

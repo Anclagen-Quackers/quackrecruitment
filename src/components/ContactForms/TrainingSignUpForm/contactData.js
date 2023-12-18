@@ -1,6 +1,5 @@
 export const initialState = {
   // Personal Details
-  title: "",
   "first-name": "",
   "last-name": "",
   "date-of-birth": "",
