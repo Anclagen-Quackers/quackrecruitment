@@ -22,6 +22,16 @@ const Nav = () => {
       ],
     },
     {
+      label: "Recruitment",
+      dropdown: [
+        { path: "/recruitment", label: "Recruitment" },
+        { path: "/recruitment/listings", label: "Jobs" },
+        { path: "/recruitment/permanent", label: "Permanent Recruitment" },
+        { path: "/recruitment/temporary", label: "Temporary Recruitment" },
+        { path: "/recruitment/on-site-managed", label: "On Site Managed Services" },
+      ],
+    },
+    {
       label: "Training",
       dropdown: [
         { path: "/training", label: "Training" },
@@ -31,16 +41,6 @@ const Nav = () => {
         { path: "/training/sia", label: "SIA" },
         { path: "/training/welding", label: "Welding" },
         { path: "/training/fork-lift", label: "Forklift Truck (FLT)" },
-      ],
-    },
-    {
-      label: "Recruitment",
-      dropdown: [
-        { path: "/recruitment", label: "Recruitment" },
-        { path: "/recruitment/listings", label: "Jobs" },
-        { path: "/recruitment/permanent", label: "Permanent Recruitment" },
-        { path: "/recruitment/temporary", label: "Temporary Recruitment" },
-        { path: "/recruitment/on-site-managed", label: "On Site Managed Services" },
       ],
     },
 
