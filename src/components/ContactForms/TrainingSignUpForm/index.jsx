@@ -59,7 +59,6 @@ const TrainingSignUpForm = ({ params }) => {
 
       const data = await response.json();
       if (data.status === "mail_sent") {
-        console.log(values);
         setSubmitting(false);
         setSuccess(true);
         resetForm();
@@ -73,10 +72,29 @@ const TrainingSignUpForm = ({ params }) => {
     }
   };
 
+  // Form sections ids for validation
   const sectionFields = {
     0: ["first-name", "last-name", "date-of-birth", "mobile-number", "email", "ethnicity", "english", "employment-status", "job-seeker", "criminal-record", "ni-number"],
     1: ["course-interest", "location", "disabilities", "disabilities-info", "further-info"],
     2: [],
+  };
+
+  // Next button handler
+  const handleNext = async (setTouched, validateForm) => {
+    const currentSectionFields = sectionFields[activeSection];
+    const touchedFields = {};
+    currentSectionFields.forEach((key) => {
+      touchedFields[key] = true;
+    });
+    setTouched(touchedFields);
+
+    await validateForm().then((formErrors) => {
+      // Check if there are no errors in the current section
+      const hasErrors = Object.keys(formErrors).some((key) => currentSectionFields.includes(key));
+      if (!hasErrors) {
+        setActiveSection((prev) => Math.min(3, prev + 1));
+      }
+    });
   };
 
   if (success) {
@@ -105,6 +123,8 @@ const TrainingSignUpForm = ({ params }) => {
               <div>
                 <div className="">
                   <div className="">
+                    {/*------------------- Form Sections ------------------------*/}
+
                     <div className="section-1" style={{ display: activeSection === 0 ? "block" : "none" }}>
                       <h2 className="text-xl text-center">Personal Details</h2>
                       <Stepper activeSection={activeSection} steps={3} />
@@ -120,6 +140,9 @@ const TrainingSignUpForm = ({ params }) => {
                       <Stepper activeSection={activeSection} steps={3} />
                       <DocumentUpload fileUploads={fileUploads} setFileUploads={setFileUploads} setUploadError={setUploadError} />
                     </div>
+
+                    {/*------------------- Next and Back buttons ------------------------*/}
+
                     <div className="flex mt-8">
                       <button
                         type="button"
@@ -130,28 +153,15 @@ const TrainingSignUpForm = ({ params }) => {
                       </button>
                       <button
                         type="button"
-                        onClick={async () => {
-                          console.log(activeSection);
-                          if (activeSection >= 0) {
-                            const currentSectionFields = sectionFields[activeSection];
-                            const touchedFields = {};
-                            currentSectionFields.forEach((key) => {
-                              touchedFields[key] = true;
-                            });
-                            setTouched(touchedFields);
-                            await validateForm();
-                            if (isValid || activeSection === 3) {
-                              setActiveSection((prev) => Math.min(3, prev + 1));
-                            }
-                          } else {
-                            setActiveSection((prev) => Math.min(3, prev + 1));
-                          }
-                        }}
+                        onClick={() => handleNext(setTouched, validateForm)}
                         className={`${(activeSection === 2 && "hidden") || ""} ms-auto bg-quackred-900 hover:bg-quackred-600 hover:text-white text-white py-2 px-4 rounded `}
                       >
                         Next
                       </button>
                     </div>
+
+                    {/*------------------- Final Page TOS agreement ------------------------*/}
+
                     {activeSection === 2 && (
                       <div className="text-center mt-10 flex flex-col gap-6">
                         <label>
@@ -173,6 +183,9 @@ const TrainingSignUpForm = ({ params }) => {
                           </>
                         )}
                         <Field type="text" name="botInput" style={{ display: "none" }} autoComplete="off" />
+
+                        {/*------------------- Submit Button ------------------------*/}
+
                         <button
                           className={`${uploadError || !agree ? "opacity-50" : ""} bg-quackred-900 hover:bg-quackred-600 hover:text-white text-white py-2 px-4 rounded`}
                           disabled={uploadError || !agree}
