@@ -46,7 +46,7 @@ const PermanentRecruitment = () => {
           </div>
         </Section>
         <Section bgColor="bg-gray-50">
-          <FAQSection title={"On-Site Managed Services FAQ"} faqs={permanentFAQ} />
+          <FAQSection title={"Permanent Recruitment FAQ"} faqs={permanentFAQ} />
         </Section>
         <Section bgColor="bg-zinc-200">
           <RecruitmentQuery />
