@@ -3,9 +3,11 @@ import Section from "@/components/Sections/Section";
 
 const TrainingEnquiryPage = () => {
   return (
-    <Section bgColor={"bg-gray-50"}>
-      <TrainingEnquiryForm />
-    </Section>
+    <main>
+      <Section bgColor={"bg-gray-50"}>
+        <TrainingEnquiryForm />
+      </Section>
+    </main>
   );
 };
 

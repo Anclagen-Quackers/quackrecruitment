@@ -1,10 +1,11 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Form, Formik, Field, ErrorMessage } from "formik";
 import ErrorBoundary from "../ErrorBoundary";
 import { validationSchema } from "./schema";
 import { initialValues } from "./initialValues";
 import Link from "next/link";
+import FormikField from "@/components/Formik/FormikFeild";
 
 const RecruitmentQuery = () => {
   const [formSubmittedSuccessfully, setFormSubmittedSuccessfully] = useState(false);
@@ -25,12 +26,7 @@ const RecruitmentQuery = () => {
         formData.append(key, values[key]);
       }
       // CF7 10
-      // const response = await fetch("https://content.quackrecruitmentandtraining.co.uk/wp-json/contact-form-7/v1/contact-forms/10/feedback", {
-      //   method: "POST",
-      //   body: formData,
-      // });
-
-      const response = await fetch("#", {
+      const response = await fetch("https://content.quackrecruitmentandtraining.co.uk/wp-json/contact-form-7/v1/contact-forms/10/feedback", {
         method: "POST",
         body: formData,
       });
@@ -142,13 +138,17 @@ const RecruitmentQuery = () => {
                           <ErrorMessage name="vacancies" component="span" className="error-message w-full text-center text-sm" />
                         </div>
                         <div className="h-20">
-                          <div className="w-full justify-start">
-                            <label htmlFor="type" className=" block py-1">
-                              Enquiry Type
-                            </label>
-                            <Field type="text" id="type" name="type" className="w-full p-1 rounded bg-white text-black" />
-                          </div>
-                          <ErrorMessage name="type" component="span" className="error-message w-full text-center text-sm" />
+                          <FormikField
+                            label="Service Type*"
+                            type="select"
+                            id="type"
+                            options={[
+                              { value: "", label: "Please select a course", disabled: true },
+                              { value: "Temporary Recruitment", label: "Temporary Recruitment Services" },
+                              { value: "Permanent Recruitment", label: "Permanent Recruitment Services" },
+                              { value: "On Site Managed Services", label: "On Site Managed Services" },
+                            ]}
+                          />
                         </div>
                         <div className="h-40">
                           <div className="w-full justify-start">
@@ -173,8 +173,8 @@ const RecruitmentQuery = () => {
                         {formErrors && (
                           <div className="error error-message">
                             {formErrors}
-                            <a href="mailto:hello@quackrecruitment.co.uk" className="text-quackred-800 hover:underline">
-                              hello@quackrecruitment.co.uk
+                            <a href="mailto:sales@quackrecruitment.co.uk" className="text-quackred-800 hover:underline">
+                              sales@quackrecruitment.co.uk
                             </a>
                           </div>
                         )}

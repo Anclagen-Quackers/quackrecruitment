@@ -27,12 +27,7 @@ const TrainingEnquiryForm = () => {
         formData.append(key, values[key]);
       }
       // CF7 11
-      // const response = await fetch("https://content.quackrecruitmentandtraining.co.uk/wp-json/contact-form-7/v1/contact-forms/11/feedback", {
-      //   method: "POST",
-      //   body: formData,
-      // });
-
-      const response = await fetch("#", {
+      const response = await fetch("https://content.quackrecruitmentandtraining.co.uk/wp-json/contact-form-7/v1/contact-forms/11/feedback", {
         method: "POST",
         body: formData,
       });
@@ -121,7 +116,7 @@ const TrainingEnquiryForm = () => {
 
                   <FormikYesNoDetails name="multipleStudents" question="Do you want to place multiple students?" detailsLabel="How many would you like to place?*" />
                   <div className="my-3">
-                    <FormikYesNoDetails name="disabilities" question="Any relevant learning disabilities or disabilities?" detailsLabel="Please further details.*" />
+                    <FormikYesNoDetails name="disabilities" question="Any relevant learning disabilities or disabilities?" detailsLabel="Please provide further details.*" />
                   </div>
 
                   <FormikField
@@ -142,7 +137,14 @@ const TrainingEnquiryForm = () => {
                     *
                     <input className="w-5 h-5 ms-3 mt-1" type="checkbox" checked={agree} onChange={() => setAgree(!agree)} />
                   </label>
-                  {formErrors && <div className="error error-message">{formErrors}</div>}
+                  {formErrors && (
+                    <div className="error error-message">
+                      {formErrors} If the problem persists you can contact us at{" "}
+                      <a href="mailto:sales@quackrecruitmentandtraining.co.uk" className="text-quackred-800 hover:underline">
+                        sales@quackrecruitmentandtraining.co.uk
+                      </a>{" "}
+                    </div>
+                  )}
                   <button className={`${!agree ? "opacity-50" : "hover:bg-quackred-600"} bg-quackred-900 mb-2 hover:text-white text-white py-2 px-4 rounded`} disabled={!agree} type="submit">
                     Submit
                   </button>
