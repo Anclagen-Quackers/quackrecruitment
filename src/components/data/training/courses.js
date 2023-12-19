@@ -64,7 +64,8 @@ export const courses = [
       "Invest in your future with Quack Recruitment & Training - where your success begins!",
     ],
     price: "£399 + VAT",
-    priceInfo: "Either Government Funded T&Cs apply, or £399 + VAT pp, cheaper quotes available for multiple purchases.",
+    priceInfo: "Available through Government Funding (terms and conditions apply). Discounted rates offered for bulk purchases. Enquire for more details.",
+
     timeToComplete: "c37/40 hours",
     locations: ["Walsall", "Birmingham", "Northampton", "Luton"],
     link: "/training/customer-service-administration ",
@@ -137,7 +138,8 @@ export const courses = [
       "Quack Recruitment & Training is committed to helping you achieve your goals in the construction industry. By enrolling in our Level 3 Course in CSCS, you are taking the first step towards a rewarding and fulfilling career. Don't miss out on this opportunity to enhance your skills, boost your confidence, and open doors to new career possibilities. Contact us today to learn more about our course offerings, schedule, and enrolment process. Invest in your future with Quack Recruitment & Training - where success begins!",
     ],
     price: "£399 + VAT",
-    priceInfo: "Either Government Funded T&Cs apply, or £399 + VAT pp, cheaper quotes available for multiple purchases.",
+    priceInfo: "Available through Government Funding (terms and conditions apply). Discounted rates offered for bulk purchases. Enquire for more details.",
+
     timeToComplete: "c37/40 hours",
     locations: ["Walsall", "Birmingham", "Northampton", "Luton"],
     link: "/training/cscs",
@@ -208,7 +210,8 @@ export const courses = [
       "Invest in your future with Quack Recruitment & Training - where security meets success!",
     ],
     price: "£399 + VAT",
-    priceInfo: "Either Government Funded T&Cs apply, or £399 + VAT pp, cheaper quotes available for multiple purchases.",
+    priceInfo: "Available through Government Funding (terms and conditions apply). Discounted rates offered for bulk purchases. Enquire for more details.",
+
     timeToComplete: "c37/40 hours",
     locations: ["Walsall", "Birmingham", "Northampton", "Luton"],
     link: "/training/sia",
@@ -277,7 +280,8 @@ export const courses = [
       "Invest in your future with Quack Recruitment & Training - where your journey to success begins!",
     ],
     price: "£399 + VAT",
-    priceInfo: "Either Government Funded T&Cs apply, or £399 + VAT pp, cheaper quotes available for multiple purchases.",
+    priceInfo: "Available through Government Funding (terms and conditions apply). Discounted rates offered for bulk purchases. Enquire for more details.",
+
     timeToComplete: "c37/40 hours",
     locations: ["Walsall", "Birmingham", "Northampton", "Luton"],
     link: "/training/food-and-hygiene",
@@ -345,7 +349,8 @@ export const courses = [
       "Invest in your future with Quack Recruitment & Training - where forklift expertise meets success!",
     ],
     price: "£399 + VAT",
-    priceInfo: "Either Government Funded T&Cs apply, or £399 + VAT pp, cheaper quotes available for multiple purchases.",
+    priceInfo: "Available through Government Funding (terms and conditions apply). Discounted rates offered for bulk purchases. Enquire for more details.",
+
     timeToComplete: "c37/40 hours",
     locations: ["Walsall", "Birmingham", "Northampton", "Luton"],
     link: "/training/fork-lift",
@@ -412,7 +417,8 @@ export const courses = [
       "Invest in your future with Quack Recruitment & Training - where welding excellence meets success!",
     ],
     price: "£399 + VAT",
-    priceInfo: "Either Government Funded T&Cs apply, or £399 + VAT pp, cheaper quotes available for multiple purchases.",
+    priceInfo: "Available through Government Funding (terms and conditions apply). Discounted rates offered for bulk purchases. Enquire for more details.",
+
     timeToComplete: "c37/40 hours",
     locations: ["Walsall", "Birmingham", "Northampton", "Luton"],
     link: "/training/welding",
