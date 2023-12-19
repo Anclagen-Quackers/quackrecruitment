@@ -43,7 +43,6 @@ const Nav = () => {
         { path: "/training/fork-lift", label: "Forklift Truck (FLT)" },
       ],
     },
-
     { path: "/contact/register", label: "Register" },
     { path: "/contact", label: "Contact" },
   ];

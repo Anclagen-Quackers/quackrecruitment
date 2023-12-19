@@ -12,7 +12,11 @@ const TrainingCourse = ({ course }) => {
                 {message}
               </p>
             ))}
-          <PageLink label={"Enquire Now"} href={"/training/enquiry"} />
+          <div className="flex flex-col sm:flex-row gap-3">
+            <PageLink label={"Sign Up Today"} href={"/training/signup"} />
+
+            <PageLink label={"Enquire Now"} href={"/training/enquiry"} />
+          </div>
         </div>
         <h3 className="text-4xl font-bold mb-6 mt-10">What You Learn</h3>
         <div>
@@ -54,8 +58,8 @@ const TrainingCourse = ({ course }) => {
           <b>Course Cost:</b> {course.price}
         </p>
         <p className="text-lg lg:mb-10"> {course.priceInfo}</p>
-        <div className="hidden lg:block">
-          <PageLink label={"Enquire Now"} href={"/training/enquiry"} />
+        <div className="mt-5">
+          <PageLink label={"Sign Up Today"} href={"/training/signup"} />
         </div>
       </div>
     </div>
