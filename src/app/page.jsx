@@ -96,6 +96,7 @@ const Home = () => {
             linkText="Jobs"
             linkHref="/recruitment/listings"
             image="/images/hardhat.png"
+            alt="Hardhat"
           />
         </Section>
         <Section bgColor="bg-gray-50">
@@ -127,6 +128,7 @@ const Home = () => {
             linkHref="/contact/register"
             image="/images/tools.png"
             reverse={true}
+            alt="Tools"
           />
         </Section>
         <Section bgColor="bg-gray-50">

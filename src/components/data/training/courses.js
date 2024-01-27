@@ -68,7 +68,7 @@ export const courses = [
 
     timeToComplete: "c37/40 hours",
     locations: ["Walsall", "Birmingham", "Northampton", "Luton"],
-    link: "/training/customer-service-administration ",
+    link: "/training/customer-service-administration",
   },
   {
     title: "CSCS (Construction Skills Certification Scheme)",

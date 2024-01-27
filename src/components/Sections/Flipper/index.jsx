@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useSpring, a } from "react-spring";
 
-const Flipper = ({ imageSRC, imageAlt, text, bgColor, textColor }) => {
+const Flipper = ({ imageSRC, imageAlt = "Flipper Image", text, bgColor, textColor }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const { transform, opacity } = useSpring({

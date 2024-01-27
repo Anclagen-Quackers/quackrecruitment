@@ -2,8 +2,8 @@ import PageLink from "@/components/PageLink";
 
 const TrainingCourse = ({ course }) => {
   return (
-    <div className="lg:flex col p-10 xl:px-10 mx-auto ">
-      <div className="lg:w-2/3 ps-5 lg:pe-20 xl:pe-32">
+    <div className="lg:flex col sm:p-10 xl:px-10 mx-auto ">
+      <div className="lg:w-2/3 sm:ps-5 lg:pe-20 xl:pe-32">
         <h2 className="text-4xl font-bold text-center mb-10">{course.title}</h2>
         <div>
           {course &&

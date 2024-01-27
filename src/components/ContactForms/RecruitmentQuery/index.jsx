@@ -94,7 +94,7 @@ const RecruitmentQuery = () => {
                         </div>
                         <div className="h-20">
                           <div className="w-full justify-start">
-                            <label htmlFor="contact-name" className=" block py-1">
+                            <label htmlFor="company" className=" block py-1">
                               Company Name
                             </label>
                             <Field type="text" id="company" name="company" className="w-full p-1 rounded bg-white text-black" />
@@ -161,7 +161,10 @@ const RecruitmentQuery = () => {
                         </div>
                       </div>
                       <div className="text-center mt-10 flex flex-col gap-6">
-                        <Field type="text" name="botInput" style={{ display: "none" }} autoComplete="off" />
+                        <label htmlFor="botInput" className="hidden" aria-hidden>
+                          botInput
+                          <Field type="text" name="botInput" style={{ display: "none" }} autoComplete="off" />
+                        </label>
                         <label>
                           I agree to the{" "}
                           <Link className="text-quackred-800" prefetch={false} target="_blank" href={"/legal/privacy-policy"}>

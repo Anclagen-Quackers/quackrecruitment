@@ -2,7 +2,7 @@
 import PageLink from "@/components/PageLink";
 import { useInView } from "react-intersection-observer";
 
-const CTASection = ({ titleBlack, titlePurple, text, linkText, linkHref, image, reverse = false }) => {
+const CTASection = ({ titleBlack, titlePurple, text, linkText, linkHref, image, alt = "CTA image", reverse = false }) => {
   const [ref, inView] = useInView({
     triggerOnce: true, // Trigger the fade in animation once
     rootMargin: "-50px 0px", // Start the animation slightly before the element is in view
@@ -23,7 +23,7 @@ const CTASection = ({ titleBlack, titlePurple, text, linkText, linkHref, image, 
         </div>
       </div>
       <div className={`lg:w-1/2 ${reverse ? "md:order-1" : "md:order-2"}`}>
-        <img src={image} className="top-0 right-0 hidden h-full max-w-1/2 lg:block p-5 mx-auto" />
+        <img src={image} className="top-0 right-0 hidden h-full max-w-1/2 lg:block p-5 mx-auto" alt={alt} />
       </div>
     </div>
   );
