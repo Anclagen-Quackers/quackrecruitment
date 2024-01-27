@@ -3,10 +3,17 @@ import Section from "@/components/Sections/Section";
 import { courses } from "@/components/data/training/courses";
 import TrainingCourse from "@/components/templates/TrainingCourse";
 
+// export const metadata = {
+//   title: `${courses[5].title} | Quack Recruitment & Training`,
+//   description: `${courses[5].description}`,
+//   keywords: ["Quack Recruitment & Training", "Training", "CSCS", "Construction Skills Certification Scheme"],
+//   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
+// };
+
 export const metadata = {
-  title: `${courses[5].title} | Quack Recruitment & Training`,
-  description: `${courses[5].description}`,
-  keywords: ["Quack Recruitment & Training", "Training", "CSCS", "Construction Skills Certification Scheme"],
+  title: `Welding | Quack Recruitment & Training`,
+  description: `${"Master the art of welding with our Level 3 Welding Course."}`,
+  keywords: ["Quack Recruitment & Training", "Training", "Welding", "Welding Course", "Welding Training"],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 

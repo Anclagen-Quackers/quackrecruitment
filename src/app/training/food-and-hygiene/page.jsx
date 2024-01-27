@@ -4,9 +4,9 @@ import { courses } from "@/components/data/training/courses";
 import TrainingCourse from "@/components/templates/TrainingCourse";
 
 export const metadata = {
-  title: `${courses[3].title} | Quack Recruitment & Training`,
-  description: `${courses[3].description}`,
-  keywords: ["Quack Recruitment & Training", "Training", "CSCS", "Construction Skills Certification Scheme"],
+  title: `Food and Hygiene | Quack Recruitment & Training`,
+  description: `Ensure food safety and hygiene with our specialized courses.`,
+  keywords: ["Quack Recruitment & Training", "Training", "Food and Hygiene", "Food and Hygiene Course", "Food and Hygiene Training"],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 
