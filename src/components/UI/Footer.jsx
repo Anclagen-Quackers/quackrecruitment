@@ -100,8 +100,8 @@ const Footer = () => {
           {/* Copyright */}
           <div className="flex flex-col mb-8">
             <img src="/logos/quack-group-horizonal-full-logo-white.png" alt="Quack Group Full Logo" className="my-3 w-full sm:w-80 md:w-96 mx-auto" />
-            <div className="flex flex-row justify-center max-w-screen-lg mx-auto gap-12 mt-8">
-              <Link prefetch={false} href="/" className="flex flex-row">
+            <div className="md:flex flex-row justify-center max-w-screen-lg mx-auto gap-12 mt-8">
+              <Link prefetch={false} href="/" className="my-3 flex flex-row">
                 <img src="/logos/temp-logo-rt.png" alt="Logo" className="h-16" />
                 <div className="flex flex-col ml-3 text-white text-xl font-medium">
                   <span>Quack</span>
@@ -109,7 +109,7 @@ const Footer = () => {
                 </div>
               </Link>
               <a target="_blank" href="https://www.quackspecialists.co.uk" className="flex flex-row">
-                <img src="/logos/qs-logo-transparent.png" alt="QS Logo" className="h-16 sm:ps-10" />
+                <img src="/logos/qs-logo-transparent.png" alt="QS Logo" className="h-16 md:ps-10" />
               </a>
             </div>
           </div>

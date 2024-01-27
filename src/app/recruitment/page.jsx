@@ -101,12 +101,12 @@ const Recruitment = () => {
           <h2 className="text-4xl text-center mb-8">Our Sectors</h2>
           <div className="flex flex-wrap justify-center">
             <Flipper text="Administration" bgColor={"quackred"} textColor="white" imageSRC="/images/pexels-christina-morillo-1181524.jpg" imageAlt="Woman working at desk" />
-            <Flipper text={"Customer Services"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-yan-krukau-8867482.jpg"} />
-            <Flipper text={"Engineering"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-pixabay-159358.jpg"} />
-            <Flipper text={"Food Processing & Packaging"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-mark-stebnicki-7163991.jpg"} />
-            <Flipper text={"IT"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-andrea-piacquadio-840996.jpg"} />
-            <Flipper text={"Logistics"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-tiger-lily-4487365.jpg"} />
-            <Flipper text={"Sales"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-edmond-dantès-4343030.jpg"} />
+            <Flipper text={"Customer Services"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-yan-krukau-8867482.jpg"} imageAlt="Customer Service Rep Smiling" />
+            <Flipper text={"Engineering"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-pixabay-159358.jpg"} imageAlt="Construction site with workers in safety gear" />
+            <Flipper text={"Food Processing & Packaging"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-mark-stebnicki-7163991.jpg"} imageAlt="Meat in a food processing plant" />
+            <Flipper text={"IT"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-andrea-piacquadio-840996.jpg"} imageAlt="Man working at a computer" />
+            <Flipper text={"Logistics"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-tiger-lily-4487365.jpg"} imageAlt="Men in a warehouse" />
+            <Flipper text={"Sales"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-edmond-dantès-4343030.jpg"} imageAlt="People in a meeting" />
           </div>
         </Section>
         <Section bgColor="bg-zinc-200">
