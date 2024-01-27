@@ -1,7 +1,7 @@
 import BannerHome from "../components/Banner/BannerHome";
 import Section from "../components/Sections/Section";
 import FadeInFreeTextSection from "@/components/Sections/FadeInFreeFormatSection";
-import { CardMinimalIconTop, TestimonialCard } from "../components/Card";
+import { CardMinimalIconTop } from "../components/Card";
 import CardSection from "../components/Sections/CardSection";
 import Link from "next/link";
 import { keywords } from "../components/data/keywords";
@@ -11,11 +11,13 @@ import Head from "next/head";
 import PageLink from "@/components/PageLink";
 
 export const metadata = {
-  title: "Quack Recruitment",
+  title: "Quack Recruitment & Training",
   description:
     "Welcome to Quack Recruitment & Training, we are one of the leading agencies in the home counties and we provide support to our contractors and clients on a national basis. Whatever you are looking for, get in touch with one of the team at Quack Recruitment & Training today.",
   keywords: [
     "Quack Recruitment & Training",
+    "Quack Recruitment",
+    "Quack Training",
     "Recruitment Solutions",
     "Training Programs",
     "On-Site Managed Services",

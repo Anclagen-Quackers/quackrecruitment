@@ -5,9 +5,18 @@ import PageLink from "@/components/PageLink";
 import TrainingCourse from "@/components/templates/TrainingCourse";
 
 export const metadata = {
-  title: `${courses[0].title} | Quack Recruitment & Training`,
-  description: `${courses[0].description}`,
-  keywords: ["Quack Recruitment & Training", "Training", "CSCS", "Construction Skills Certification Scheme"],
+  title: `Customer Service & Administration | Quack Recruitment & Training`,
+  description: `Unlock the skills needed to excel in administrative roles.`,
+  keywords: [
+    "Quack Recruitment & Training",
+    "Training",
+    "Customer Service",
+    "Administration",
+    "Customer Service Course",
+    "Administration Course",
+    "Customer Service Training",
+    "Administration Training",
+  ],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 

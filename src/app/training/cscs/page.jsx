@@ -5,8 +5,8 @@ import PageLink from "@/components/PageLink";
 import TrainingCourse from "@/components/templates/TrainingCourse";
 
 export const metadata = {
-  title: `${courses[1].title} | Quack Recruitment & Training`,
-  description: `${courses[1].description}`,
+  title: `Construction Skills Certification Scheme | Quack Recruitment & Training`,
+  description: `Prepare for success in the construction industry through our CSCS training.`,
   keywords: ["Quack Recruitment & Training", "Training", "CSCS", "Construction Skills Certification Scheme"],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };

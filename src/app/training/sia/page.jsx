@@ -4,11 +4,18 @@ import { courses } from "@/components/data/training/courses";
 import TrainingCourse from "@/components/templates/TrainingCourse";
 
 export const metadata = {
-  title: `${courses[2].title} | Quack Recruitment & Training`,
-  description: `${courses[2].description}`,
-  keywords: ["Quack Recruitment & Training", "Training", "CSCS", "Construction Skills Certification Scheme"],
+  title: `Security Industry Authority (SIA) | Quack Recruitment & Training`,
+  description: "Become a proficient security professional with our SIA training.",
+  keywords: ["Quack Recruitment & Training", "Training", "SIA", "Security Industry Authority", "SIA Training"],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
+
+// export const metadata = {
+//   title: `${courses[2].title} | Quack Recruitment & Training`,
+//   description: `${courses[2].description}`,
+//   keywords: ["Quack Recruitment & Training", "Training", "CSCS", "Construction Skills Certification Scheme"],
+//   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
+// };
 
 const SIAPage = () => {
   const course = courses[2];
