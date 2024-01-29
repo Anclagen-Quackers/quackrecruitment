@@ -118,7 +118,7 @@ const Footer = () => {
         <div className="border-t border-quackred-300 pt-6">
           {/* Copyright */}
           <div className="text-lg font-semibold text-center">
-            <p>Quack Recruitment Ltd. © 2023</p>
+            <p>Quack Recruitment & Training Ltd. © 2023</p>
             <p>Quack Recruitment, Business & Technology Centre, Bessemer Drive, Stevenage, SG1 2DX </p>
             <p>
               Company number:{" "}
