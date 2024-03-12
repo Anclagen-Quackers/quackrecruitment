@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Not Found",
-  description: "Quack Recruitment, your local recruitment specialist.",
+  description: "Quack Recruitment & Training, your local recruitment specialist.",
 };
 
 const NoPage = () => {

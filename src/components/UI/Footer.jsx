@@ -38,6 +38,19 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
+            <h3 className="mt-4 mb-2 text-xl font-bold">Policies & Plans</h3>
+            <ul>
+              <li>
+                <a prefetch={false} href="/docs/Carbon_Reduction_Plan_QR0T.pdf" className="hover:underline hover:text-white text-white text-lg">
+                  Carbon Reduction Plan <span className={`material-symbols-outlined `}>download</span>
+                </a>
+              </li>
+              <li>
+                <a prefetch={false} href="/docs/Quack_Group_Ltd_GDPR_Privacy_Policy_2023.pdf" className="hover:underline hover:text-white text-white text-lg">
+                  Privacy Policy <span className={`material-symbols-outlined`}>download</span>
+                </a>
+              </li>
+            </ul>
           </div>
           <div className="px-2">
             <h3 className="mb-3 text-xl font-bold max-w-fit">Recruitment</h3>
@@ -118,8 +131,8 @@ const Footer = () => {
         <div className="border-t border-quackred-300 pt-6">
           {/* Copyright */}
           <div className="text-lg font-semibold text-center">
-            <p>Quack Recruitment Ltd. © 2023</p>
-            <p>Quack Recruitment, Business & Technology Centre, Bessemer Drive, Stevenage, SG1 2DX </p>
+            <p>Quack Recruitment & Training Ltd. © 2023</p>
+            <p>Quack Recruitment & Training, Business & Technology Centre, Bessemer Drive, Stevenage, SG1 2DX </p>
             <p>
               Company number:{" "}
               <a target="_blank" href="https://find-and-update.company-information.service.gov.uk/company/11066952" className="text-quackred-300">
