@@ -132,7 +132,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-lg font-semibold text-center">
             <p>Quack Recruitment & Training Ltd. © 2023</p>
-            <p>Quack Recruitment, Business & Technology Centre, Bessemer Drive, Stevenage, SG1 2DX </p>
+            <p>Quack Recruitment & Training, Business & Technology Centre, Bessemer Drive, Stevenage, SG1 2DX </p>
             <p>
               Company number:{" "}
               <a target="_blank" href="https://find-and-update.company-information.service.gov.uk/company/11066952" className="text-quackred-300">
