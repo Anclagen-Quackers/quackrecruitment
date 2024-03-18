@@ -97,13 +97,25 @@ const Contact = () => {
               <h3 className="text-2xl font-semibold mb-3">Find A Branch Near You</h3>
               {quackRecruitmentLocations.map((location, index) => (
                 <ExpandableSectionFAQ title={location.area} key={index}>
-                  <address className="mt-2 text-lg leading-relaxed text-left">
-                    <p>Quack Recruitment</p>
+                  {/* {location.address.map(address, addrIndex) => (
+                    <address className="mt-2 text-lg leading-relaxed text-left">
+                    <p>Quack Recruitment & Training</p>
                     {location.address.map((line, addrIndex) => (
                       <p key={addrIndex}>{line}</p>
                     ))}
                     <p>{location.postalCode}</p>
                   </address>
+                  )
+                  } */}
+                  {location.addresses.map((address, addrIndex) => (
+                    <address className={`mt-3 ${location.addresses.length - 1 === addrIndex ? "" : "border-b-2 pb-3 border-quackred"} text-lg leading-relaxed text-left`} key={addrIndex}>
+                      <p>Quack Recruitment & Training</p>
+                      {address.address.map((line, addrIndex) => (
+                        <p key={addrIndex}>{line}</p>
+                      ))}
+                      <p>{address.postalCode}</p>
+                    </address>
+                  ))}
                 </ExpandableSectionFAQ>
               ))}
             </div>

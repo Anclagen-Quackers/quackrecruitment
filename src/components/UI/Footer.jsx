@@ -14,6 +14,13 @@ const Footer = () => {
             <img src="/footer/ALP.jpg" alt="ALP member logo || https://www.labourproviders.org.uk/" className="h-24" />
             <img src="/footer/Sedex-Logo.png" alt="Sedex logo || https://www.sedex.com/" className="h-24" />
             <img src="/footer/ETF_Cyan_Digital_Logo.jpg" alt="Education & Training Foundation logo || https://www.et-foundation.co.uk/" className="h-24" />
+            <img
+              src="/footer/Department_for_Work_and_Pensions_logo.svg.png"
+              alt="Department for Work & Pensions || https://www.gov.uk/government/organisations/department-for-work-pensions"
+              className="h-24 bg-white border-4 border-white"
+            />
+            <img src="/footer/shaw_trust.png" alt="Shaw Trust logo || https://www.shawtrust.org.uk/" className="h-24 bg-white border-4 border-white" />
+            <img src="/footer/West_Midlands_Combined_Authority_logo.svg.png" alt="West Midlands Combine Authority logo || https://www.wmca.org.uk/" className="h-24 bg-white border-4 border-white" />
           </div>
           {/* <p className="text-center mb-6">(Logos: Stronger Together / Crown Commercial Supplier)</p> */}
         </div>
