@@ -2,14 +2,14 @@ export const quackRecruitmentLocations = [
   { area: "Head Office", name: "Quack Recruitment & Training", addresses: [{ address: ["Business & Technology Centre", "Bessemer Drive", "Stevenage"], postalCode: "SG1 2DX" }] },
   { area: "Hertfordshire", name: "Quack Recruitment & Training", addresses: [{ address: ["Eastway Enterprise Centre", "7 Paynes Park", "Hitchin"], postalCode: "SG5 1EH" }] },
   {
-    area: "WestMidlands",
+    area: "West Midlands",
     name: "Quack Recruitment & Training",
     addresses: [
       { address: ["20 Colmore Circus Queensway", "Birmingham"], postalCode: "B4 6AT" },
       { address: ["Alexander House", "Bethesda Street", "Stoke-on-Trent"], postalCode: "ST1 3DE" },
     ],
   },
-  { area: "EastMidlands", name: "Quack Recruitment & Training", addresses: [{ address: ["Manor House Drive", "Coventry"], postalCode: "CV1 2TE" }] },
+  { area: "East Midlands", name: "Quack Recruitment & Training", addresses: [{ address: ["Manor House Drive", "Coventry"], postalCode: "CV1 2TE" }] },
   { area: "Bedfordshire", name: "Quack Recruitment & Training", addresses: [{ address: ["960 Capability Green", "Luton"], postalCode: "LU1 3PE" }] },
   { area: "Buckinghamshire", name: "Quack Recruitment & Training", addresses: [{ address: ["Midsummer Court", "314 Midsummer Blvd", "Milton Keynes"], postalCode: "MK9 2UB" }] },
   { area: "Northamptonshire", name: "Quack Recruitment & Training", addresses: [{ address: ["Victory House", "Business Park", "400 Pavilion Dr", "Northampton"], postalCode: "NN4 7PA" }] },
