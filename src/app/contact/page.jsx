@@ -70,7 +70,7 @@ const Contact = () => {
               <div>
                 <h3 className="text-2xl font-semibold">Legal / Head office</h3>
                 <address className="mt-2 text-lg leading-relaxed">
-                  Quack Recruitment,
+                  Quack Recruitment & Training,
                   <br />
                   Business & Technology Centre,
                   <br />

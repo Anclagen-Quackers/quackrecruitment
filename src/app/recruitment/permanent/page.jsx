@@ -42,7 +42,7 @@ const PermanentRecruitment = () => {
       <main className="flex flex-col">
         <BannerHalf
           title="Permanent Recruitment"
-          slogan="Secure Top Talent with Quack Recruitment."
+          slogan="Secure Top Talent with Quack Recruitment & Training."
           imgSrc="/images/banners/pexels-pixabay-162553.jpg"
           imgAlt="Descriptive Image Alt Text"
           links={[]}

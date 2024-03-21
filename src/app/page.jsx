@@ -75,7 +75,7 @@ const Home = () => {
           >
             <p className="mt-4 text-lg leading-6">
               {
-                "Quack Recruitment: A force in the recruitment landscape. We've soared, partnering with both household giants and cherished local businesses. In our recent highlight, we managed over 400 temps for one major client, showcasing our range and capability. Whether you're a small business with 5 staff or a large-scale operation needing 400+ temps, we tailor to your needs. Our affiliations span top industry bodies, from warehouse & logistics to food and production. Our promise? Delivering with integrity, every step of the way."
+                "Quack Recruitment & Training: A force in the recruitment landscape. We've soared, partnering with both household giants and cherished local businesses. In our recent highlight, we managed over 400 temps for one major client, showcasing our range and capability. Whether you're a small business with 5 staff or a large-scale operation needing 400+ temps, we tailor to your needs. Our affiliations span top industry bodies, from warehouse & logistics to food and production. Our promise? Delivering with integrity, every step of the way."
               }
             </p>
             <p className="mt-4 text-lg leading-6 italic">Discover the Quack difference.</p>
@@ -134,7 +134,7 @@ const Home = () => {
           />
         </Section>
         <Section bgColor="bg-gray-50">
-          <h2 className="text-3xl text-center mb-10 font-semibold">Why Choose Quack Recruitment?</h2>
+          <h2 className="text-3xl text-center mb-10 font-semibold">Why Choose Quack Recruitment & Training?</h2>
           <CardSection>
             <CardMinimalIconTop
               title="Compliant Provider"
