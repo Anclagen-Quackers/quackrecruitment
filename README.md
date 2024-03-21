@@ -45,4 +45,4 @@ The source code of this project is licensed under the MIT License - see the [LIC
 
 ### Content and Logos
 
-The content, images, and Quack Recruitment logos included in this project are proprietary assets and are not licensed for reuse or redistribution. These assets are the property of Quack Group and/or its affiliates and are provided in this repository for reference purposes only.
+The content, images, and Quack Recruitment & Training logos included in this project are proprietary assets and are not licensed for reuse or redistribution. These assets are the property of Quack Group and/or its affiliates and are provided in this repository for reference purposes only.
