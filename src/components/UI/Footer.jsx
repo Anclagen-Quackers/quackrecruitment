@@ -22,6 +22,9 @@ const Footer = () => {
             <img src="/footer/shaw_trust.png" alt="Shaw Trust logo || https://www.shawtrust.org.uk/" className="h-24 bg-white border-4 border-white" />
             <img src="/footer/West_Midlands_Combined_Authority_logo.svg.png" alt="West Midlands Combine Authority logo || https://www.wmca.org.uk/" className="h-24 bg-white border-4 border-white" />
             <img src="/footer/Approved-Training-Organisation-Status.jpg" alt="CITB Approved Training Organisation Status || https://www.citb.co.uk/" className="h-24 bg-white border-4 border-white" />
+            <img src="/footer/EU_Social_Fund.png" alt="EU Social Fund" className="h-24 bg-white border-4 border-white" />
+            <img src="/footer/Highfields_Approved_Centre.jpg" alt="Highfields Approved Centre" className="h-24 bg-white border-4 border-white" />
+            <img src="/footer/SYMCA.png" alt="South Yorkshire Mayoral Combined Authority" className="h-24 bg-white border-4 border-white" />
           </div>
           {/* <p className="text-center mb-6">(Logos: Stronger Together / Crown Commercial Supplier)</p> */}
         </div>
