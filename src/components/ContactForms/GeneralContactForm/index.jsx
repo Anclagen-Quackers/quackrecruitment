@@ -17,6 +17,8 @@ const GeneralContactForm = () => {
         formData.append(key, values[key]);
       }
 
+      formData.append("_wpcf7_unit_tag", "wpcf7-f6-p13-o1");
+
       // CF7 6
       const response = await fetch("https://content.quackrecruitmentandtraining.co.uk/wp-json/contact-form-7/v1/contact-forms/6/feedback", {
         method: "POST",
