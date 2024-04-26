@@ -51,6 +51,8 @@ const TrainingSignUpForm = ({ params }) => {
         }
       }
 
+      formData.append("_wpcf7_unit_tag", "wpcf7-f12-p13-o1");
+
       // cf7 12
       const response = await fetch("https://content.quackrecruitmentandtraining.co.uk/wp-json/contact-form-7/v1/contact-forms/12/feedback", {
         method: "POST",

@@ -25,6 +25,9 @@ const RecruitmentQuery = () => {
       for (const key in values) {
         formData.append(key, values[key]);
       }
+
+      formData.append("_wpcf7_unit_tag", "wpcf7-f10-p13-o1");
+
       // CF7 10
       const response = await fetch("https://content.quackrecruitmentandtraining.co.uk/wp-json/contact-form-7/v1/contact-forms/10/feedback", {
         method: "POST",
