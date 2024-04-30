@@ -7,6 +7,7 @@ export const quackRecruitmentLocations = [
     addresses: [
       { address: ["20 Colmore Circus Queensway", "Birmingham"], postalCode: "B4 6AT" },
       { address: ["Alexander House", "Bethesda Street", "Stoke-on-Trent"], postalCode: "ST1 3DE" },
+      { address: ["17 Lichfield St", "Walsall"], postalCode: "WS1 1TJ" },
     ],
   },
   { area: "East Midlands", name: "Quack Recruitment & Training", addresses: [{ address: ["Manor House Drive", "Coventry"], postalCode: "CV1 2TE" }] },
