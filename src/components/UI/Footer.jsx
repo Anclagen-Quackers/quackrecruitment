@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import LogoGallery from "../LogoLoop/LogoGallery";
 
 const Footer = () => {
   const location = usePathname();
@@ -9,7 +10,7 @@ const Footer = () => {
     <footer className="bg-black text-white p-10 mt-auto">
       <div className="container mx-auto max-w-screen-2xl">
         <div>
-          <div className="flex flex-wrap justify-center gap-10 mb-10">
+          {/* <div className="flex flex-wrap justify-center gap-10 mb-10">
             <img src="/footer/disability-confident-committed.jpg" alt="Disability Committed Logo" className="h-24" />
             <img src="/footer/ALP.jpg" alt="ALP member logo || https://www.labourproviders.org.uk/" className="h-24" />
             <img src="/footer/Sedex-Logo.png" alt="Sedex logo || https://www.sedex.com/" className="h-24" />
@@ -25,7 +26,8 @@ const Footer = () => {
             <img src="/footer/EU_Social_Fund.png" alt="EU Social Fund" className="h-24 bg-white border-4 border-white" />
             <img src="/footer/Highfields_Approved_Centre.jpg" alt="Highfields Approved Centre" className="h-24 bg-white border-4 border-white" />
             <img src="/footer/SYMCA.JPG" alt="South Yorkshire Mayoral Combined Authority" className="h-24 bg-white border-4 border-white" />
-          </div>
+          </div> */}
+          <LogoGallery />
           {/* <p className="text-center mb-6">(Logos: Stronger Together / Crown Commercial Supplier)</p> */}
         </div>
         {/* Top Section */}
