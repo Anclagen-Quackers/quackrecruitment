@@ -4,9 +4,9 @@ import { multiplyCourses } from "@/components/data/training/multiplyCourses";
 import MultiplyCourse from "@/components/templates/MultiplyCourse";
 
 export const metadata = {
-  title: `Construction Skills Certification Scheme | Quack Recruitment & Training`,
-  description: `Prepare for success in the construction industry through our CSCS training.`,
-  keywords: ["Quack Recruitment & Training", "Training", "CSCS", "Construction Skills Certification Scheme"],
+  title: `Qualify with Numbers | Quack Recruitment & Training`,
+  description: `aimed at learners who wish to develop their skills in mathematics to help them gain their first formal accredited Maths qualification - Functional Skills Level 1 - 603/4996/7`,
+  keywords: ["Quack Recruitment & Training", "Training", "Multiply", "Qualify with Numbers"],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 
