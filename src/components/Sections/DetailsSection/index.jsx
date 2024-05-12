@@ -3,7 +3,7 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 
-const DetailsSection = ({ title, content = [], linkText = "", linkURL = "", detailsTitle = "", details = [], dark = false }) => {
+const DetailsSection = ({ title, content = [], linkText = "", linkURL = "", detailsTitle = "", details = [], logo = "", logoAlt = "", dark = false }) => {
   const [ref, inView] = useInView({
     triggerOnce: true, // Trigger the fade in animation once
     rootMargin: "-50px 0px", // Start the animation slightly before the element is in view
@@ -21,6 +21,11 @@ const DetailsSection = ({ title, content = [], linkText = "", linkURL = "", deta
                   {paragraph}
                 </p>
               ))}
+              {logo && logoAlt && (
+                <div className="text-center">
+                  <img src={logo} alt={logoAlt} className="w-2/3 sm:w-1/2 h-auto mx-auto" />
+                </div>
+              )}
               {linkText && linkURL && (
                 <div className="w-full md:w-1/3">
                   <Link

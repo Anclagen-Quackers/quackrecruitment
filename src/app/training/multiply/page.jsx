@@ -16,22 +16,30 @@ function Training() {
     <>
       <div className="hidden bg-teal-900 bg-gray-900 bg-sky-900 bg-indigo-900 bg-red-900 bg-blue-900 bg-green-900 bg-sky-400 text-teal-900 text-gray-900 text-sky-900 text-indigo-900 text-red-900 text-blue-900 text-green-900 text-sky-400"></div>
       <main className="flex flex-col">
-        <BannerHalf title="Multiply" slogan="Empower Your Life with Numbers!" imgSrc="/images/banners/math-class-banner.jpg" imgAlt="People engaging in numeracy activities" position="center" />
+        <BannerHalf title="Multiply" slogan="Empower Your Prospects With Numbers!" imgSrc="/images/banners/math-class-banner.jpg" imgAlt="People engaging in numeracy activities" position="center" />
         <Section bgColor="bg-white">
           <DetailsSection
             title={"Multiply Your Potential with Quack Recruitment & Training"}
+            logo={"/footer/skills_for_life_multiple_logo.png"}
+            logoAlt={"Multiply Logo"}
+            logoBgColor={"bg-black"}
             content={[
               "As a proud partner of the Multiply initiative, Quack Recruitment & Training is excited to offer free numeracy courses designed to enhance your ability to work with numbers in everyday life and professional settings. From helping you manage your finances to improving your job performance, our courses provide valuable skills.",
               "If you're 19 or older, don't have a math GCSE at grade C or equivalent, and live in [specify area], you're eligible to participate in these courses. Whether you're starting from scratch or looking to build on existing knowledge, we have a range of options to suit your needs.",
-              "Contact our team at [phone number/email] or visit [website/link] for more details and to explore the full list of courses available.",
+              "Check out and explore the full list of courses available below and enroll today to start your journey to a brighter future!",
             ]}
-            detailsTitle={"Why Choose Quack Recruitment & Training's Multiply Courses?"}
+            detailsTitle={"What Do Multiply Courses Offer?"}
             details={[
-              { title: "Expert Instructors", detail: "Our instructors bring real-world experience to the classroom, ensuring you learn practical, applicable skills." },
-              { title: "Tailored Learning Experiences", detail: "Courses are designed to fit different learning styles and schedules, making education accessible to everyone." },
-              { title: "Certifications and Progression", detail: "Gain recognized qualifications that can boost your employability and career advancement." },
-              { title: "Comprehensive Support", detail: "Benefit from full support throughout your learning journey, from enrollment to course completion." },
-              { title: "Impact on Career and Wellbeing", detail: "Improving your numeracy skills can lead to better job prospects, higher earnings, and enhanced personal wellbeing." },
+              { title: "Boost Your Numeracy Confidence", detail: "Unlock your potential, and elevate your comfort with numbers and turn anxiety into achievement.." },
+              { title: "Practical Numeracy Skills", detail: "Master daily math and effortlessly handle everyday calculations from budgeting your expenses to optimizing your garden." },
+              {
+                title: "Pathway to Certifications",
+                detail: "Advance academically, embarking on a journey that could lead to obtaining key qualifications like GCSEs or Functional Skills Qualifications.",
+              },
+              {
+                title: "Career Enhancement",
+                detail: "Elevate your professional life, propelling your career forward with improved math skills, unlocking better job opportunities, higher earnings, and enhanced well-being.",
+              },
             ]}
           />
         </Section>
@@ -40,16 +48,7 @@ function Training() {
           <div className="flex flex-wrap justify-center">
             {multiplyCourses &&
               multiplyCourses.map((course, index) => (
-                <CourseCard
-                  key={index}
-                  title={course.title}
-                  description={course.description}
-                  points={course.whatYouLearn}
-                  enrollmentMessage={course.enrolmentMessage}
-                  price={course.price}
-                  locations={course.locations}
-                  link={course.link}
-                />
+                <CourseCard key={index} title={course.title} description={course.description} enrollmentMessage={"Multiply Your Potential Today!"} locations={course.locations} link={course.link} />
               ))}
           </div>
         </Section>
