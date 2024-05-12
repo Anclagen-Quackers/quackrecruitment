@@ -2,7 +2,7 @@ export const multiplyCourses = [
   {
     title: "Working with Numbers",
     slogan: "Enhance your numeracy skills for the workplace!",
-    description: "basic maths skills (KS2 Sats), to increase basic maths abilities in relation to work, topics to include; problem-solving, reasoning, and decision-making.",
+    description: "Basic maths skills (KS2 Sats), to increase basic maths abilities in relation to work, topics to include; problem-solving, reasoning, and decision-making.",
     bannerImage: "/images/banners/maths-banner.jpg",
     bannerImageAlt: "People engaging in numeracy activities",
     learningHours: "40",
@@ -31,7 +31,7 @@ export const multiplyCourses = [
     title: "Living with Numbers",
     slogan: "Enhance your numeracy skills for everyday life!",
     description:
-      "basic maths skills (KS2), including but not limited to, understanding numbers to support health and well-being such as adding calories or saturated fats in foods, or support with cooking when measuring ingredients, and using numbers to help with working out bills, and debts.",
+      "Basic maths skills (KS2), including but not limited to, understanding numbers to support health and well-being such as adding calories or saturated fats in foods, or support with cooking when measuring ingredients, and using numbers to help with working out bills, and debts.",
     bannerImage: "/images/banners/maths-banner.jpg",
     bannerImageAlt: "People engaging in numeracy activities",
     learningHours: "40",
@@ -59,7 +59,7 @@ export const multiplyCourses = [
   {
     title: "Qualify with Numbers",
     slogan: "Gain your first formal accredited Maths qualification!",
-    description: "aimed at learners who wish to develop their skills in mathematics to help them gain their first formal accredited Maths qualification - Functional Skills Level 1 - 603/4996/7",
+    description: "Aimed at learners who wish to develop their skills in mathematics to help them gain their first formal accredited Maths qualification - Functional Skills Level 1 - 603/4996/7",
     bannerImage: "/images/banners/maths-banner.jpg",
     bannerImageAlt: "People engaging in numeracy activities",
     learningHours: "60",

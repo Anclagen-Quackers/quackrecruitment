@@ -120,7 +120,7 @@ const MultiplySignUpForm = ({ params }) => {
       <Formik initialValues={initialState} validationSchema={Schema[activeSection]} onSubmit={handleSubmit}>
         {({ isValid, validateForm, setTouched, isSubmitting, setFieldValue, values }) => (
           <>
-            <h1 className="text-3xl text-center mb-6">Multiply Course Sign Up</h1>
+            {/* <h1 className="text-3xl text-center mb-6">Multiply Course Sign Up</h1> */}
             <Form className="p-5 bg-zinc-300 text-black w-full max-w-lg mx-auto rounded-xl shadow-xl transition-all duration-300 shadow-quackred-300">
               <div>
                 <div className="">
