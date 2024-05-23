@@ -36,11 +36,17 @@ const Footer = () => {
           <div className="px-2 md:ps-6">
             <h3 className="mb-3 text-xl font-bold">General</h3>
             <ul>
+              {[{ path: "/", label: "Home" }, { path: "/recruitment/listings", label: "Jobs" }, { path: "/about", label: "About" }, { path: "/contact", label: "Contact" }, ,].map((route) => (
+                <li key={route.path}>
+                  <Link prefetch={false} href={`${route.path}`} className={`${location === route.path ? "underline" : ""} hover:underline hover:text-white text-white text-lg`}>
+                    {route.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h3 className="mt-4 mb-2 text-xl font-bold">Policies & Plans</h3>
+            <ul>
               {[
-                { path: "/", label: "Home" },
-                { path: "/recruitment/listings", label: "Jobs" },
-                { path: "/about", label: "About" },
-                { path: "/contact", label: "Contact" },
                 { path: "/legal", label: "Legal" },
                 { path: "/legal/privacy-policy", label: "Privacy Policy" },
                 { path: "/legal/policies", label: "All Policies" },
@@ -51,19 +57,6 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-            </ul>
-            <h3 className="mt-4 mb-2 text-xl font-bold">Policies & Plans</h3>
-            <ul>
-              <li>
-                <a prefetch={false} href="/docs/Carbon_Reduction_Plan_QR0T.pdf" className="hover:underline hover:text-white text-white text-lg">
-                  Carbon Reduction Plan <span className={`material-symbols-outlined `}>download</span>
-                </a>
-              </li>
-              <li>
-                <a prefetch={false} href="/docs/Quack_Group_Ltd_GDPR_Privacy_Policy_2023.pdf" className="hover:underline hover:text-white text-white text-lg">
-                  Privacy Policy <span className={`material-symbols-outlined`}>download</span>
-                </a>
-              </li>
             </ul>
           </div>
           <div className="px-2">
