@@ -47,14 +47,14 @@ const AllPolicies = () => {
 export default AllPolicies;
 
 const docs = [
-  { name: "GDPR Privacy Policy", description: "Our GDPR & Privacy Policy 2023", link: "./docs/Quack_Group_Ltd_GDPR_Privacy_Policy_2023.pdf", type: "business" },
+  { name: "GDPR Privacy Policy", description: "Our GDPR & Privacy Policy 2023", link: "/docs/Quack_Group_Ltd_GDPR_Privacy_Policy_2023.pdf", type: "business" },
   {
     name: "Equality, Diversity, and Inclusion Policy",
     description: "Our commitment to equality, diversity, and inclusion",
     link: "/docs/Quack_Group_Ltd-Equality_Diversity_and_Inclusion_Policy_2021.pdf",
     type: "business",
   },
-  { name: "Carbon Reduction Plan", description: "Our carbon reduction plan", link: "./docs/Carbon_Reduction_Plan_QR0T.pdf", type: "environment" },
+  { name: "Carbon Reduction Plan", description: "Our carbon reduction plan", link: "/docs/Carbon_Reduction_Plan_QR0T.pdf", type: "environment" },
   { name: "Privacy Notice", description: "LRS Privacy Notice", link: "/docs/LRS_Privacy_Notice.pdf", type: "legal" },
   // {
   //   name: "Malpractice and Maladministration Policy",
@@ -74,8 +74,8 @@ const docs = [
     link: "/docs/Quack_Recruitment_and_Training-Safeguarding_Prevention_and_Anti-Bullying_Policy.pdf",
     type: "safety",
   },
-  { name: "Appeals Procedure", description: "Quack Recruitment and Training Appeals Procedure", link: "./docs/Quack_Recruitment_and_Training_Appeals_Procedure.pdf", type: "training" },
-  { name: "Complaints Policy", description: "Quack Recruitment and Training Complaints Policy", link: "./docs/Quack_Recruitment_and_Training_Complaints_Policy.pdf", type: "training" },
+  { name: "Appeals Procedure", description: "Quack Recruitment and Training Appeals Procedure", link: "/docs/Quack_Recruitment_and_Training_Appeals_Procedure.pdf", type: "training" },
+  { name: "Complaints Policy", description: "Quack Recruitment and Training Complaints Policy", link: "/docs/Quack_Recruitment_and_Training_Complaints_Policy.pdf", type: "training" },
   {
     name: "Conflict of Interest Policy",
     description: "Quack Recruitment and Training Conflict of Interest Policy",
