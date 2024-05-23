@@ -5,37 +5,38 @@ import { useState } from "react";
 const AllPolicies = () => {
   const [activeTab, setActiveTab] = useState("all");
   const active =
-    "py-2 px-4 block bg-quackred-800 hover:bg-quackred-600 focus:ring-quackred-400 focus:ring-offset-quackred-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg";
+    "py-2 px-4 block bg-quackred-800 hover:bg-quackred-600 focus:ring-quackred-400 focus:ring-offset-quackred-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg mb-2";
   const inactive =
-    "py-2 px-4 block bg-gray-300 hover:bg-gray-200 focus:ring-gray-400 focus:ring-offset-gray-200 text-gray-800 w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg";
+    "py-2 px-4 block bg-gray-300 hover:bg-gray-200 focus:ring-gray-400 focus:ring-offset-gray-200 text-gray-800 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg mb-2";
   return (
     <>
-      <h2>Our Policies</h2>
-      <p>
-        At Quack Group Ltd, we take privacy and data protection seriously. We are committed to ensuring the protection and proper use of your data. Below are our policies. Click on each to learn more.
+      <h2 className="text-3xl text-center mb-10 font-semibold">Our Policies</h2>
+      <p className="mb-10 max-w-3xl mx-auto">
+        At Quack Group Ltd, we take privacy and data protection seriously. We are committed to ensuring the protection and proper use of your data. Below are our policies. Click on each to download a
+        copy and learn more.
       </p>
-      <div className="flex justify-center">
-        <ul className="flex space-x-4 mt-4">
-          <button className={activeTab === "all" ? active : inactive} onClick={() => setActiveTab("all")}>
-            All
-          </button>
-          <button className={activeTab === "business" ? active : inactive} onClick={() => setActiveTab("business")}>
-            Business
-          </button>
-          <button className={activeTab === "environment" ? active : inactive} onClick={() => setActiveTab("environment")}>
-            Environment
-          </button>
-          <button className={activeTab === "legal" ? active : inactive} onClick={() => setActiveTab("legal")}>
-            Legal
-          </button>
-          <button className={activeTab === "safety" ? active : inactive} onClick={() => setActiveTab("safety")}>
-            Safety
-          </button>
-          <button className={activeTab === "training" ? active : inactive} onClick={() => setActiveTab("training")}>
-            Training
-          </button>
-        </ul>
+
+      <div className="flex space-x-4 mt-4 flex-wrap justify-center">
+        <button className={activeTab === "all" ? active : inactive} onClick={() => setActiveTab("all")}>
+          All
+        </button>
+        <button className={activeTab === "business" ? active : inactive} onClick={() => setActiveTab("business")}>
+          Business
+        </button>
+        <button className={activeTab === "environment" ? active : inactive} onClick={() => setActiveTab("environment")}>
+          Environment
+        </button>
+        <button className={activeTab === "legal" ? active : inactive} onClick={() => setActiveTab("legal")}>
+          Legal
+        </button>
+        <button className={activeTab === "safety" ? active : inactive} onClick={() => setActiveTab("safety")}>
+          Safety
+        </button>
+        <button className={activeTab === "training" ? active : inactive} onClick={() => setActiveTab("training")}>
+          Training
+        </button>
       </div>
+
       <div className="flex flex-wrap justify-center">
         {docs.map((doc, index) => (activeTab === "all" || activeTab === doc.type ? <PolicyCard key={index} name={doc.name} description={doc.description} link={doc.link} /> : null))}
       </div>
