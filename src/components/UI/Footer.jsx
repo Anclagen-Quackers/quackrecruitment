@@ -43,6 +43,7 @@ const Footer = () => {
                 { path: "/contact", label: "Contact" },
                 { path: "/legal", label: "Legal" },
                 { path: "/legal/privacy-policy", label: "Privacy Policy" },
+                { path: "/legal/policies", label: "All Policies" },
               ].map((route) => (
                 <li key={route.path}>
                   <Link prefetch={false} href={`${route.path}`} className={`${location === route.path ? "underline" : ""} hover:underline hover:text-white text-white text-lg`}>

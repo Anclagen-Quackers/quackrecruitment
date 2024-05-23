@@ -19,6 +19,7 @@ const Nav = () => {
         { path: "/about", label: "About Us" },
         { path: "/legal", label: "Legal" },
         { path: "/legal/privacy-policy", label: "Privacy Policy" },
+        { path: "/legal/policies", label: "All Policies" },
       ],
     },
     {
