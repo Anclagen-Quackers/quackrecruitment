@@ -36,7 +36,6 @@ const Nav = () => {
       label: "Training",
       dropdown: [
         { path: "/training", label: "Training" },
-        { path: "https://qrt.magn8.co.uk/portal/login.php", label: "Tutuor Login", external: true },
         { path: "/training/multiply", label: "Multiply" },
         { path: "/training/cscs", label: "CSCS" },
         { path: "/training/customer-service-administration", label: "Customer Service & Administration" },
@@ -44,6 +43,7 @@ const Nav = () => {
         { path: "/training/sia", label: "SIA" },
         { path: "/training/welding", label: "Welding" },
         { path: "/training/fork-lift", label: "Forklift Truck (FLT)" },
+        { path: "https://qrt.magn8.co.uk/portal/login.php", label: "Tutor Login", external: true },
       ],
     },
     { path: "/contact/register", label: "Register" },
