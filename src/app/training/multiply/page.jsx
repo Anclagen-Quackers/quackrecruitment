@@ -56,7 +56,10 @@ function Training() {
           <div className="flex flex-col md:flex-row items-center justify-center space-x-0 md:space-x-4 space-y-4 md:space-y-0">
             <img src="/footer/Kent-Council.jpg" alt="Kent Council Logo" className="w-1/3 md:w-1/4 lg:w-1/5 transform hover:scale-105 transition-transform duration-200" />
             <div className="text-center md:text-left max-w-xl">
-              <p className="text-lg">Kent Council is a provider of funding and supports recruitment and training courses at Maidstone, Whitstable, and Ashford.</p>
+              <p className="text-lg mb-4">Kent Council is a provider of funding and supports recruitment and training courses at Maidstone, Whitstable, and Ashford.</p>
+              <a href="https://www.kentadulteducation.co.uk/privacy-policy/" target="_blank" rel="" className="text-quackred-900 font-semibold hover:text-quackred-800">
+                Kent Adult Education Privacy Policy.
+              </a>
             </div>
           </div>
         </Section>
