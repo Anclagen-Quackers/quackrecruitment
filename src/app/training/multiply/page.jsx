@@ -20,10 +20,7 @@ function Training() {
         <Section bgColor="bg-white">
           <DetailsSection
             title={"Multiply Your Potential with Quack Recruitment & Training"}
-            logos={[
-              { src: "/footer/skills_for_life_multiple_logo.png", alt: "Multiply Logo" },
-              { src: "/footer/Kent-Council.jpg", alt: "Kent Council Logo" },
-            ]}
+            logos={[{ src: "/footer/skills_for_life_multiple_logo.png", alt: "Multiply Logo" }]}
             logoBgColor={"bg-black"}
             content={[
               "As a proud partner of the Multiply initiative, Quack Recruitment & Training is excited to offer free numeracy courses designed to enhance your ability to work with numbers in everyday life and professional settings. From helping you manage your finances to improving your job performance, our courses provide valuable skills.",
@@ -45,6 +42,12 @@ function Training() {
             ]}
           />
         </Section>
+        {/* <Section bgColor="bg-gray-50">
+          <h2>partners and providers</h2>
+          <div className="flex flex-wrap justify-center">
+            <img src="/footer/Kent-Council.jpg" alt="Kent Council Logo" className="w-1/3 md:w-1/4 lg:w-1/5 mx-4 my-4" />
+          </div>
+        </Section> */}
         <Section bgColor="bg-gray-50">
           <h2 className="text-3xl text-center mb-10 font-semibold">Featured Courses</h2>
           <div className="flex flex-wrap justify-center">
