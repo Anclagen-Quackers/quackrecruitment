@@ -24,7 +24,7 @@ const DetailsSection = ({ title, content = [], linkText = "", linkURL = "", deta
               {logos.length > 0 && (
                 <div className="flex flex-wrap gap-4 justify-center">
                   {logos.map((logo, index) => (
-                    <img src={logo.src} alt={logo.alt} className="h-24 mx-4" key={index} />
+                    <img src={logo.src} alt={logo.alt} className="h-24 mx-4 transform hover:scale-105 transition-transform duration-200" key={index} />
                   ))}
                 </div>
               )}

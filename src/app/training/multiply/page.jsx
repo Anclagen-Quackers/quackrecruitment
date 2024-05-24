@@ -42,12 +42,6 @@ function Training() {
             ]}
           />
         </Section>
-        {/* <Section bgColor="bg-gray-50">
-          <h2>partners and providers</h2>
-          <div className="flex flex-wrap justify-center">
-            <img src="/footer/Kent-Council.jpg" alt="Kent Council Logo" className="w-1/3 md:w-1/4 lg:w-1/5 mx-4 my-4" />
-          </div>
-        </Section> */}
         <Section bgColor="bg-gray-50">
           <h2 className="text-3xl text-center mb-10 font-semibold">Featured Courses</h2>
           <div className="flex flex-wrap justify-center">
@@ -55,6 +49,15 @@ function Training() {
               multiplyCourses.map((course, index) => (
                 <CourseCard key={index} title={course.title} description={course.description} enrollmentMessage={"Multiply Your Potential Today!"} locations={course.locations} link={course.link} />
               ))}
+          </div>
+        </Section>
+        <Section bgColor="bg-white">
+          <h2 className="text-2xl font-semibold text-center my-8">Partners and Providers</h2>
+          <div className="flex flex-col md:flex-row items-center justify-center space-x-0 md:space-x-4 space-y-4 md:space-y-0">
+            <img src="/footer/Kent-Council.jpg" alt="Kent Council Logo" className="w-1/3 md:w-1/4 lg:w-1/5 transform hover:scale-105 transition-transform duration-200" />
+            <div className="text-center md:text-left max-w-xl">
+              <p className="text-lg">Kent Council is a provider of funding and supports recruitment and training courses at Maidstone, Whitstable, and Ashford.</p>
+            </div>
           </div>
         </Section>
       </main>
