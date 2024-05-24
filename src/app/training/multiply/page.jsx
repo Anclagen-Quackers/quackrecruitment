@@ -20,8 +20,10 @@ function Training() {
         <Section bgColor="bg-white">
           <DetailsSection
             title={"Multiply Your Potential with Quack Recruitment & Training"}
-            logo={"/footer/skills_for_life_multiple_logo.png"}
-            logoAlt={"Multiply Logo"}
+            logos={[
+              { src: "/footer/skills_for_life_multiple_logo.png", alt: "Multiply Logo" },
+              { src: "/footer/Kent-Council.jpg", alt: "Kent Council Logo" },
+            ]}
             logoBgColor={"bg-black"}
             content={[
               "As a proud partner of the Multiply initiative, Quack Recruitment & Training is excited to offer free numeracy courses designed to enhance your ability to work with numbers in everyday life and professional settings. From helping you manage your finances to improving your job performance, our courses provide valuable skills.",

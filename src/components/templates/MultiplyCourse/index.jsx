@@ -11,7 +11,13 @@ const MultiplyCourse = ({ course }) => {
           {course.description && <p className="text-lg font-semibold leading-6 text-gray-900 mb-6">{course.description}</p>}
           <div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <PageLink label={"Sign Up Today"} href="#signup" />
+              <a
+                className="py-4 px-6 focus:ring-quackred-500 focus:ring-offset-quackred-200 text-white transition ease-in duration-200 text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg mx-auto bg-quackred-800 hover:bg-quackred-600 hover:bg-quackred-600 text-white font-semibold rounded w-fit flex"
+                href="https://qrt.magn8.co.uk/online/index.php"
+                target="_blank"
+              >
+                Sign Up Today{" "}
+              </a>
             </div>
           </div>
           <h3 className="text-4xl font-bold mb-6 mt-10">What You Learn</h3>
@@ -41,7 +47,10 @@ const MultiplyCourse = ({ course }) => {
       </div>
       <section className="lg:w-1/3 bg-quackred-50 mt-10 lg:mt-16 p-5 xl:p-10 rounded-xl h-fit shadow-xl mb-9">
         <h3 className="text-4xl font-bold text-center mb-6">Course Information</h3>
-        <img src={"/footer/skills_for_life_multiple_logo.png"} alt={"multiply logo"} className="w-full h-auto bg-white p-1 w-2/3 md:w-1/3 lg:w-2/3 mx-auto my-4" />
+        <div className="flex gap-1">
+          <img src={"/footer/skills_for_life_multiple_logo.png"} alt={"multiply logo"} className="bg-white p-1 w-1/2 mx-auto my-4" />
+          <img src={"/footer/Kent-Council.jpg"} alt={"multiply logo"} className=" bg-white p-1 w-1/2 mx-auto my-4" />
+        </div>
 
         <p className="mb-3 text-lg">
           <b>Course Duration:</b> {course.learningHours} hours
@@ -55,16 +64,16 @@ const MultiplyCourse = ({ course }) => {
         <p className="text-lg lg:mb-10">
           <b>Incentives:</b> {course.incentives}
         </p>
-        {/* <div className="mt-5">
-          <PageLink label={"Sign Up Today"} href="/training/multiply/signup" />
-        </div> */}
+        <div className="mt-5">
+          <a
+            className="py-4 px-6 focus:ring-quackred-500 focus:ring-offset-quackred-200 text-white transition ease-in duration-200 text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg mx-auto bg-quackred-800 hover:bg-quackred-600 hover:bg-quackred-600 text-white font-semibold rounded w-fit flex"
+            href="https://qrt.magn8.co.uk/online/index.php"
+            target="_blank"
+          >
+            Sign Up Today
+          </a>
+        </div>
       </section>
-      <div className="lg:w-2/3" id="signup">
-        <Section bgColor={"bg-gray-50"}>
-          <h2 className="text-4xl font-bold text-center mb-10">Sign Up Today</h2>
-          <MultiplySignUpForm />
-        </Section>
-      </div>
     </div>
   );
 };
