@@ -102,5 +102,11 @@ const docs = [
     type: "business",
   },
   { name: "Whistleblowing Policy", description: "Quack Group Ltd Whistleblowing Policy", link: "/docs/WHISTLEBLOWING_POLICY.pdf", type: "legal" },
-  { name: "Kent Adult Education Privacy Notice", description: "Kent Adult Education Privacy Notice", link: "https://www.kentadulteducation.co.uk/privacy-policy/", type: "legal", dl: false },
+  {
+    name: "Kent Education Privacy Notice",
+    description: "Kent County Council Education Privacy Notices",
+    link: "https://www.kent.gov.uk/about-the-council/information-and-data/access-to-information/gdpr-privacy-notices/education",
+    type: "legal",
+    dl: false,
+  },
 ];

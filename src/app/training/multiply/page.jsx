@@ -57,8 +57,13 @@ function Training() {
             <img src="/footer/Kent-Council.jpg" alt="Kent Council Logo" className="w-1/3 md:w-1/4 lg:w-1/5 transform hover:scale-105 transition-transform duration-200" />
             <div className="text-center md:text-left max-w-xl">
               <p className="text-lg mb-4">Kent Council is a provider of funding and supports recruitment and training courses at Maidstone, Whitstable, and Ashford.</p>
-              <a href="https://www.kentadulteducation.co.uk/privacy-policy/" target="_blank" rel="" className="text-quackred-900 font-semibold hover:text-quackred-800">
-                Kent Adult Education Privacy Policy.
+              <a
+                href="https://www.kent.gov.uk/about-the-council/information-and-data/access-to-information/gdpr-privacy-notices/education"
+                target="_blank"
+                rel=""
+                className="text-quackred-900 font-semibold hover:text-quackred-800"
+              >
+                Kent County Council Education Privacy Notices.
               </a>
             </div>
           </div>
