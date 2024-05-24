@@ -17,13 +17,14 @@ const PolicyCard = ({ name, description, link, dl = true }) => {
               Download
             </a>
           ) : (
-            <Link
-              prefetch={false}
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
               href={link}
               className="py-2 px-4 block bg-quackred-800 hover:bg-quackred-600 focus:ring-quackred-400 focus:ring-offset-quackred-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg"
             >
               Learn More
-            </Link>
+            </a>
           )}
         </div>
       </div>

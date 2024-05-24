@@ -38,7 +38,7 @@ const AllPolicies = () => {
       </div>
 
       <div className="flex flex-wrap justify-center">
-        {docs.map((doc, index) => (activeTab === "all" || activeTab === doc.type ? <PolicyCard key={index} name={doc.name} description={doc.description} link={doc.link} /> : null))}
+        {docs.map((doc, index) => (activeTab === "all" || activeTab === doc.type ? <PolicyCard key={index} name={doc.name} description={doc.description} link={doc.link} dl={doc.dl} /> : null))}
       </div>
     </>
   );
@@ -102,4 +102,5 @@ const docs = [
     type: "business",
   },
   { name: "Whistleblowing Policy", description: "Quack Group Ltd Whistleblowing Policy", link: "/docs/WHISTLEBLOWING_POLICY.pdf", type: "legal" },
+  { name: "Kent Adult Education Privacy Notice", description: "Kent Adult Education Privacy Notice", link: "https://www.kentadulteducation.co.uk/privacy-policy/", type: "legal", dl: false },
 ];
