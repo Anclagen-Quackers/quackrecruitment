@@ -47,10 +47,8 @@ const MultiplyCourse = ({ course }) => {
       </div>
       <section className="lg:w-1/3 bg-quackred-50 mt-10 lg:mt-16 p-5 xl:p-10 rounded-xl h-fit shadow-xl mb-9">
         <h3 className="text-4xl font-bold text-center mb-6">Course Information</h3>
-        <div className="flex gap-1">
-          <img src={"/footer/skills_for_life_multiple_logo.png"} alt={"multiply logo"} className="bg-white p-1 w-1/2 mx-auto my-4" />
-          <img src={"/footer/Kent-Council.jpg"} alt={"multiply logo"} className=" bg-white p-1 w-1/2 mx-auto my-4" />
-        </div>
+
+        <img src={"/footer/skills_for_life_multiple_logo.png"} alt={"multiply logo"} className="w-full h-auto bg-white p-1 w-2/3 md:w-1/3 lg:w-2/3 mx-auto my-4" />
 
         <p className="mb-3 text-lg">
           <b>Course Duration:</b> {course.learningHours} hours
@@ -70,7 +68,7 @@ const MultiplyCourse = ({ course }) => {
             href="https://qrt.magn8.co.uk/online/index.php"
             target="_blank"
           >
-            Sign Up Today
+            Sign Up Today{" "}
           </a>
         </div>
       </section>

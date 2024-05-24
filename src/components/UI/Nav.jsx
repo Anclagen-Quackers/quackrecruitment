@@ -36,6 +36,7 @@ const Nav = () => {
       label: "Training",
       dropdown: [
         { path: "/training", label: "Training" },
+        { path: "https://qrt.magn8.co.uk/portal/login.php", label: "Tutuor Login", external: true },
         { path: "/training/multiply", label: "Multiply" },
         { path: "/training/cscs", label: "CSCS" },
         { path: "/training/customer-service-administration", label: "Customer Service & Administration" },
@@ -105,16 +106,22 @@ const Nav = () => {
                     <ul className="absolute bg-gray-50 shadow-lg bg-opacity-90 shadow-quackred-100 mt-2 rounded-lg w-content pd-1 right-0 w-fit">
                       {item.dropdown.map((dropdownItem) => (
                         <li key={dropdownItem.path} className="p-2">
-                          <Link
-                            prefetch={false}
-                            href={dropdownItem.path}
-                            className={`${
-                              location === dropdownItem.path ? "bg-quackred text-white hover:bg-quackred-700" : ""
-                            } hover:bg-quackred hover:text-white  duration-500  font-medium text-black text-lg p-2 rounded-full whitespace-nowrap`}
-                            onClick={handleMenuClose}
-                          >
-                            {dropdownItem.label}
-                          </Link>
+                          {dropdownItem.external ? (
+                            <a href={dropdownItem.path} target="_blank" className="hover:bg-quackred hover:text-white  duration-500  font-medium text-black text-lg p-2 rounded-full whitespace-nowrap">
+                              {dropdownItem.label}
+                            </a>
+                          ) : (
+                            <Link
+                              prefetch={false}
+                              href={dropdownItem.path}
+                              className={`${
+                                location === dropdownItem.path ? "bg-quackred text-white hover:bg-quackred-700" : ""
+                              } hover:bg-quackred hover:text-white  duration-500  font-medium text-black text-lg p-2 rounded-full whitespace-nowrap`}
+                              onClick={handleMenuClose}
+                            >
+                              {dropdownItem.label}
+                            </Link>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -173,16 +180,22 @@ const Nav = () => {
                     <ul className="mx-3 border-b-2 border-t-2 mt-1 border-quackred">
                       {item.dropdown.map((dropdownItem) => (
                         <li key={dropdownItem.path} className="my-2">
-                          <Link
-                            prefetch={false}
-                            href={dropdownItem.path}
-                            className={`${
-                              location === dropdownItem.path ? "bg-quackred  hover:bg-quackred-700" : ""
-                            } hover:bg-quackred hover:text-white  duration-500  font-medium text-lg p-2 rounded-full whitespace-nowrap`}
-                            onClick={handleMenuClose}
-                          >
-                            {dropdownItem.label}
-                          </Link>
+                          {dropdownItem.external ? (
+                            <a href={dropdownItem.path} target="_blank" className="hover:bg-quackred hover:text-white  duration-500  font-medium text-black text-lg p-2 rounded-full whitespace-nowrap">
+                              {dropdownItem.label}
+                            </a>
+                          ) : (
+                            <Link
+                              prefetch={false}
+                              href={dropdownItem.path}
+                              className={`${
+                                location === dropdownItem.path ? "bg-quackred  hover:bg-quackred-700" : ""
+                              } hover:bg-quackred hover:text-white  duration-500  font-medium text-lg p-2 rounded-full whitespace-nowrap`}
+                              onClick={handleMenuClose}
+                            >
+                              {dropdownItem.label}
+                            </Link>
+                          )}
                         </li>
                       ))}
                     </ul>
