@@ -82,6 +82,7 @@ const Footer = () => {
             <ul>
               {[
                 { path: "/training", label: "Training" },
+                { path: "/training/multiply", label: "Multiply Courses" },
                 { path: "/training/food-and-hygiene", label: "Food & Hygiene" },
                 { path: "/training/sia", label: "Security Industry Authority (SIA)" },
                 { path: "/training/customer-service-administration", label: "Admin & Customer Service" },
@@ -95,6 +96,11 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a target="_blank" href="https://qrt.magn8.co.uk/portal/login.php" className={`hover:underline hover:text-white text-white text-lg`}>
+                  Tutor Login
+                </a>
+              </li>
             </ul>
           </div>
           {/* Business Hours */}
