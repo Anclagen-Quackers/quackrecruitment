@@ -3,7 +3,7 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 
-const DetailsSection = ({ title, content = [], linkText = "", linkURL = "", detailsTitle = "", details = [], dark = false }) => {
+const DetailsSection = ({ title, content = [], linkText = "", linkURL = "", detailsTitle = "", details = [], logos = [], dark = false }) => {
   const [ref, inView] = useInView({
     triggerOnce: true, // Trigger the fade in animation once
     rootMargin: "-50px 0px", // Start the animation slightly before the element is in view
@@ -21,6 +21,13 @@ const DetailsSection = ({ title, content = [], linkText = "", linkURL = "", deta
                   {paragraph}
                 </p>
               ))}
+              {logos.length > 0 && (
+                <div className="flex flex-wrap gap-4 justify-center">
+                  {logos.map((logo, index) => (
+                    <img src={logo.src} alt={logo.alt} className="h-24 mx-4 transform hover:scale-105 transition-transform duration-200" key={index} />
+                  ))}
+                </div>
+              )}
               {linkText && linkURL && (
                 <div className="w-full md:w-1/3">
                   <Link
