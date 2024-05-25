@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
@@ -43,11 +44,17 @@ const Nav = () => {
         { path: "/training/sia", label: "SIA" },
         { path: "/training/welding", label: "Welding" },
         { path: "/training/fork-lift", label: "Forklift Truck (FLT)" },
-        { path: "https://qrt.magn8.co.uk/portal/login.php", label: "Tutor Login", external: true },
       ],
     },
     { path: "/contact/register", label: "Register" },
     { path: "/contact", label: "Contact" },
+    {
+      label: "Login",
+      dropdown: [
+        { path: "https://qrt.magn8.co.uk/login.php", label: "Administrator", external: true },
+        { path: "https://qrt.magn8.co.uk/portal/login.php", label: "Tutor", external: true },
+      ],
+    },
   ];
 
   // Update toggleDropdown function
@@ -78,19 +85,19 @@ const Nav = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white bg-opacity-80 p-1 z-50 shadow">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="max-w-screen-2xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div>
           <Link prefetch={false} className="flex flex-row" href="/" title="home">
             <img src="/logos/temp-logo-rt.png" alt="Logo" className="h-12" />
-            <div className="flex flex-col ml-3 text-black text-xl font-medium">
+            <div className="flex flex-col ml-3 text-black text-lg font-semibold">
               <span>Quack</span>
               <span>Recruitment & Training</span>
             </div>
           </Link>
         </div>
         {/* Logo and Desktop Links here */}
-        <ul className="hidden lg:flex content-center space-x-5 pr-2">
+        <ul className="hidden lg:flex content-center space-x-3 pr-1">
           {navItems.map((item) => (
             <li key={item.label}>
               {item.dropdown ? (
@@ -154,7 +161,7 @@ const Nav = () => {
       {/* Mobile Menu */}
       <div
         ref={menuRef}
-        className={`fixed top-0 right-0 h-screen overflow-y-auto bg-white bg-opacity-90 w-full transform transition-transform ${isMenuOpen ? "translate-x-0" : "translate-x-full"} lg:hidden`}
+        className={`fixed top-0 right-0 h-screen overflow-y-auto bg-white w-full md:w-1/2 transform transition-transform ${isMenuOpen ? "translate-x-0" : "translate-x-full"} lg:hidden`}
       >
         {/* Close button */}
         <div className="flex justify-end p-2  me-5 mt-3">
