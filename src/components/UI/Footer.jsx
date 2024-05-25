@@ -9,26 +9,9 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white p-10 mt-auto">
       <div className="container mx-auto max-w-screen-2xl">
+        <h3 className="mb-3 text-xl font-bold text-center">Partners & Affiliates</h3>
         <div>
-          {/* <div className="flex flex-wrap justify-center gap-10 mb-10">
-            <img src="/footer/disability-confident-committed.jpg" alt="Disability Committed Logo" className="h-24" />
-            <img src="/footer/ALP.jpg" alt="ALP member logo || https://www.labourproviders.org.uk/" className="h-24" />
-            <img src="/footer/Sedex-Logo.png" alt="Sedex logo || https://www.sedex.com/" className="h-24" />
-            <img src="/footer/ETF_Cyan_Digital_Logo.jpg" alt="Education & Training Foundation logo || https://www.et-foundation.co.uk/" className="h-24" />
-            <img
-              src="/footer/Department_for_Work_and_Pensions_logo.svg.png"
-              alt="Department for Work & Pensions || https://www.gov.uk/government/organisations/department-for-work-pensions"
-              className="h-24 bg-white border-4 border-white"
-            />
-            <img src="/footer/shaw_trust.png" alt="Shaw Trust logo || https://www.shawtrust.org.uk/" className="h-24 bg-white border-4 border-white" />
-            <img src="/footer/West_Midlands_Combined_Authority_logo.svg.png" alt="West Midlands Combine Authority logo || https://www.wmca.org.uk/" className="h-24 bg-white border-4 border-white" />
-            <img src="/footer/Approved-Training-Organisation-Status.jpg" alt="CITB Approved Training Organisation Status || https://www.citb.co.uk/" className="h-24 bg-white border-4 border-white" />
-            <img src="/footer/EU_Social_Fund.png" alt="EU Social Fund" className="h-24 bg-white border-4 border-white" />
-            <img src="/footer/Highfields_Approved_Centre.jpg" alt="Highfields Approved Centre" className="h-24 bg-white border-4 border-white" />
-            <img src="/footer/SYMCA.JPG" alt="South Yorkshire Mayoral Combined Authority" className="h-24 bg-white border-4 border-white" />
-          </div> */}
           <LogoGallery />
-          {/* <p className="text-center mb-6">(Logos: Stronger Together / Crown Commercial Supplier)</p> */}
         </div>
         {/* Top Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-10 border-t border-quackred-300 pt-6">
@@ -44,23 +27,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            <h3 className="mt-4 mb-2 text-xl font-bold">Policies & Plans</h3>
-            <ul>
-              {[
-                { path: "/legal", label: "Legal" },
-                { path: "/legal/privacy-policy", label: "Privacy Policy" },
-                { path: "/legal/policies", label: "All Policies" },
-              ].map((route) => (
-                <li key={route.path}>
-                  <Link prefetch={false} href={`${route.path}`} className={`${location === route.path ? "underline" : ""} hover:underline hover:text-white text-white text-lg`}>
-                    {route.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="px-2">
-            <h3 className="mb-3 text-xl font-bold max-w-fit">Recruitment</h3>
+            <h3 className="mb-2 text-xl font-bold max-w-fit mt-4">Recruitment</h3>
             <ul>
               {[
                 { path: "/recruitment/listings", label: "Listings" },
@@ -78,7 +45,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="px-2">
-            <h3 className="mb-3 text-xl font-bold max-w-fit">Training & Courses</h3>
+            <h3 className="mb-2 text-xl font-bold max-w-fit">Training & Courses</h3>
             <ul>
               {[
                 { path: "/training", label: "Training" },
@@ -96,11 +63,35 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-              <li>
-                <a target="_blank" href="https://qrt.magn8.co.uk/portal/login.php" className={`hover:underline hover:text-white text-white text-lg`}>
-                  Tutor Login
-                </a>
-              </li>
+            </ul>
+          </div>
+          <div className="px-2">
+            <h3 className="mb-2 text-xl font-bold">Policies & Plans</h3>
+            <ul>
+              {[
+                { path: "/legal", label: "Legal" },
+                { path: "/legal/privacy-policy", label: "Privacy Policy" },
+                { path: "/legal/policies", label: "All Policies" },
+              ].map((route) => (
+                <li key={route.path}>
+                  <Link prefetch={false} href={`${route.path}`} className={`${location === route.path ? "underline" : ""} hover:underline hover:text-white text-white text-lg`}>
+                    {route.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h3 className="mt-4 mb-2 text-xl font-bold">Login</h3>
+            <ul>
+              {[
+                { path: "https://qrt.magn8.co.uk/login.php", label: "Administrator", external: true },
+                { path: "https://qrt.magn8.co.uk/portal/login.php", label: "Tutor", external: true },
+              ].map((route) => (
+                <li key={route.path}>
+                  <a target="_blank" href={`${route.path}`} className={`${location === route.path ? "underline" : ""} hover:underline hover:text-white text-white text-lg`}>
+                    {route.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           {/* Business Hours */}
