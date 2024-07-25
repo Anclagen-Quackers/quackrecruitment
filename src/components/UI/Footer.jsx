@@ -115,19 +115,16 @@ const Footer = () => {
         {/* Quack group and affiliated */}
         <div className="border-t border-quackred-300 pt-6">
           {/* Copyright */}
-          <div className="flex flex-col mb-8">
-            <img src="/logos/quack-group-horizonal-full-logo-white.png" alt="Quack Group Full Logo" className="my-3 w-full sm:w-80 md:w-96 mx-auto" />
-            <div className="md:flex flex-row justify-center max-w-screen-lg mx-auto gap-12 mt-8">
-              <Link prefetch={false} href="/" className="my-3 flex flex-row">
+          <div className="flex flex-col lg:flex-row mb-8">
+            <img src="/logos/quack-group-horizonal-full-logo-white.png" alt="Quack Group Full Logo" className="mx-auto my-3 w-full h-full sm:w-80 lg:w-96 mx-auto" />
+            <div className="md:flex flex-row justify-center max-w-screen-lg mx-auto gap-12 mt-5 lg:mt-0">
+              <Link prefetch={false} href="/" className="my-auto flex flex-row">
                 <img src="/logos/temp-logo-rt.png" alt="Logo" className="h-16" />
-                <div className="flex flex-col ml-3 text-white text-xl font-medium">
+                <div className="flex flex-col ml-3 my-auto text-white text-2xl font-medium">
                   <span>Quack</span>
                   <span>Recruitment & Training</span>
                 </div>
               </Link>
-              <a target="_blank" href="https://www.quackspecialists.co.uk" className="flex flex-row">
-                <img src="/logos/qs-logo-transparent.png" alt="QS Logo" className="h-16 md:ps-10" />
-              </a>
             </div>
           </div>
         </div>
