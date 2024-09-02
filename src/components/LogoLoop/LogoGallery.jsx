@@ -15,6 +15,7 @@ const logos = [
   { src: "/footer/SYMCA.JPG", alt: "South Yorkshire Mayoral Combined Authority" },
   { src: "/footer/skills_for_life_multiple_logo.png", alt: "Skills For Life Multiply, Logo" },
   { src: "/footer/Kent-Council.jpg", alt: "Kent Council Logo" },
+  { src: "/footer/Cyber-Essentials-Badge.png", alt: "Cyber Essentials Certification Badge" },
 ];
 
 const LogoGallery = () => {
