@@ -95,7 +95,7 @@ const Contact = () => {
           <div className="lg:flex">
             <div className="lg:w-1/3 mb-10">
               <h3 className="text-2xl font-semibold mb-3">Find A Branch Near You</h3>
-              {quackRecruitmentLocations.map((location, index) => (
+              {quackRecruitmentLocations.locations.map((location, index) => (
                 <ExpandableSectionFAQ title={location.area} key={index}>
                   {/* {location.address.map(address, addrIndex) => (
                     <address className="mt-2 text-lg leading-relaxed text-left">
