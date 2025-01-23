@@ -3,7 +3,8 @@ import Section from "@/components/Sections/Section";
 
 export const metadata = {
   title: "Retrofit | Quack Recruitment & Training",
-  description: "Enhance your numeracy skills with Quack Recruitment & Training's free courses, designed to improve your daily life and career prospects.",
+  description:
+    "Transform your future with free retrofit training! Learn about the Pathways to Retrofit Excellence programme and how it can help you build a rewarding career in the growing retrofit industry.",
   keywords: ["Quack Group", "Quack Recruitment", "Multiply Training Courses"],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
