@@ -204,7 +204,7 @@ For more information, get in touch with us at 0333 577 0036 or follow us on soci
             <p className=" text-lg max-w-3xl mx-auto mb-8">For more information, get in touch with us at 0333 577 0036 or follow us on social media for updates.</p>
           </div>
         </Section>
-        <Section bgColor="bg-white">
+        {/* <Section bgColor="bg-white">
           <h2 className="text-2xl font-semibold text-center my-8">Partners and Providers</h2>
           <div className="flex flex-col md:flex-row items-center justify-center space-x-0 md:space-x-4 space-y-4 md:space-y-0">
             <img src="/footer/West_Midlands_Combined_Authority_logo.svg.png" alt="... Logo" className="w-1/3 md:w-1/4 lg:w-1/5 transform hover:scale-105 transition-transform duration-200" />
@@ -215,7 +215,7 @@ For more information, get in touch with us at 0333 577 0036 or follow us on soci
               </a>
             </div>
           </div>
-        </Section>
+        </Section> */}
       </main>
     </>
   );
