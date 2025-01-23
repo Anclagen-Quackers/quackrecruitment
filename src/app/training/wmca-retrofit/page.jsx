@@ -139,9 +139,9 @@ function Retrofit() {
                 <div className="pb-12 mb-12 border-b lg:mb-0 lg:pb-0 lg:border-b-0">
                   <h3 className="mb-8 text-2xl font-bold lg:text-3xl font-heading">Sarah Thompson – Retrofit Assessor</h3>
                   <p className="mb-6 leading-loose text-gray-500 quote">
-                    Before joining the Pathways to Retrofit Excellence programme, I was working part-time in retail with little room for growth. Since completing the course, I've secured a full-time
-                    role as a <b className="text-gray-800"> Retrofit Assessor</b> and my salary has increased from £20,000 to £35,000 per year. The practical skills I gained were invaluable, and best
-                    of all, the course was completely free!
+                    Before joining the Pathways to Retrofit Excellence programme, I was working part-time in retail with little room for growth. Since completing the course, I&apos;ve secured a
+                    full-time role as a <b className="text-gray-800"> Retrofit Assessor</b> and my salary has increased from £20,000 to £35,000 per year. The practical skills I gained were invaluable,
+                    and best of all, the course was completely free!
                   </p>
                 </div>
               </div>
@@ -150,7 +150,7 @@ function Retrofit() {
                   <h3 className="mb-8 text-2xl font-bold lg:text-3xl font-heading">Mohammed Fayaz – Retrofit Coordinator</h3>
                   <p className="mb-6 leading-loose text-gray-500 quote">
                     I was in construction but wanted more career progression. After completing this programme, I became a <b className="text-gray-800">Retrofit Coordinator</b>, and my salary jumped
-                    from £25,000 to £42,000 annually. The course gave me the knowledge and confidence to move into a leadership role in retrofit, and it didn't cost me a penny!
+                    from £25,000 to £42,000 annually. The course gave me the knowledge and confidence to move into a leadership role in retrofit, and it didn&apos;t cost me a penny!
                   </p>
                 </div>
               </div>
@@ -158,9 +158,9 @@ function Retrofit() {
                 <div className="pb-12 mb-12 border-b lg:mb-0 lg:pb-0 lg:border-b-0">
                   <h3 className="mb-8 text-2xl font-bold lg:text-3xl font-heading">Emily Jones – Retrofit Advisor</h3>
                   <p className="mb-6 leading-loose text-gray-500 quote">
-                    The Pathways to Retrofit Excellence programme was perfect for me as I returned to work after a career break. I'm now a <b className="text-gray-800">Retrofit Advisor</b>, earning
-                    £33,000 per year, and I'm proud to be making a real difference in reducing energy consumption and improving building performance. The fact that the course was free made it even
-                    more accessible!
+                    The Pathways to Retrofit Excellence programme was perfect for me as I returned to work after a career break. I&apos;m now a <b className="text-gray-800">Retrofit Advisor</b>,
+                    earning £33,000 per year, and I&apos;m proud to be making a real difference in reducing energy consumption and improving building performance. The fact that the course was free
+                    made it even more accessible!
                   </p>
                 </div>
               </div>
@@ -192,7 +192,7 @@ For more information, get in touch with us at 0333 577 0036 or follow us on soci
           </div>
 
           <div className="container p-4 mx-auto bg-gray-50 max-w-7xl sm:p-6 lg:p-8">
-            <h2 className="text-3xl text-center mb-10 font-semibold">Start Your Retrofit Career Today – 100% Free!</h2>
+            <h2 className="text-3xl text-center mb-10 font-semibold">Start Your Retrofit Career Today - 100% Free!</h2>
             <p className=" text-lg max-w-3xl mx-auto mb-8">
               Take the first step towards a rewarding career in the growing retrofit industry. Learn new skills, secure exciting job opportunities, and help make a positive impact on the
               environment—all for free. Plus, earn £35,000 - £50,000+ annually in your new role in retrofit. Apply now!
