@@ -44,14 +44,23 @@ const DetailsSection = ({ title, content = [], linkText = "", linkURL = "", deta
           <div className="w-full px-8 lg:w-1/2">
             <h3 className="mb-4 text-xl font-bold lg:text-2xl font-heading">{detailsTitle}</h3>
             <ul className="space-y-6">
-              {details.map(({ title, detail }, index) => (
+              {details.map(({ title, detail, detailsList }, index) => (
                 <li className="flex mx-1" key={index}>
                   <div className="px-4 my-auto">
                     <span className="flex items-center justify-center w-12 h-12 mx-auto text-xl font-bold text-quackred-600 rounded-full font-heading bg-quackred-50">{index + 1}</span>
                   </div>
                   <div className="px-4">
                     <h3 className="mt-4 text-xl font-semibold">{title}</h3>
-                    <p className="leading-loose">{detail}</p>
+                    {detail && <p className="leading-loose">{detail}</p>}
+                    {detailsList && (
+                      <ul>
+                        {detailsList.map((item, index) => (
+                          <li className="pt-1 leading-loose" key={index}>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </li>
               ))}

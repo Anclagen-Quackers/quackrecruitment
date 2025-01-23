@@ -38,6 +38,7 @@ const Nav = () => {
       dropdown: [
         { path: "/training", label: "Training" },
         { path: "/training/multiply", label: "Multiply" },
+        { path: "/training/wmca-retrofit", label: "Retrofit" },
         { path: "/training/cscs", label: "CSCS" },
         { path: "/training/customer-service-administration", label: "Customer Service & Administration" },
         { path: "/training/food-and-hygiene", label: "Food & Hygiene" },
