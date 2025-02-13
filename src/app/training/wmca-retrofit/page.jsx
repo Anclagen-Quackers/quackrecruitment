@@ -16,117 +16,165 @@ function Retrofit() {
       <main className="flex flex-col">
         <BannerHalf title="Retrofit" slogan="Transform Your Future with Free Retrofit Training!" imgSrc="/images/banners/retrofit-banner.jpg" imgAlt="Colourful houses on a street" position="center" />
         <Section bgColor="bg-gray-50">
-          <h2 className="text-3xl text-center mb-10 font-semibold">What is Retrofit?</h2>
-          <p className=" text-lg max-w-3xl mx-auto mb-8">Retrofit refers to upgrading existing buildings to improve their energy efficiency, reduce carbon footprints, and ensure sustainability. </p>
-          <p className=" text-lg max-w-3xl mx-auto mb-8">
-            This is essential for reducing energy consumption, lowering costs, and meeting climate goals like net-zero emissions. Our Pathways to Retrofit Excellence programme is 100% free for
-            eligible learners and helps equip you with the skills to meet the growing demand for skilled professionals in retrofit roles.
+          <h2 className="text-3xl  lg:text-4xl text-center mb-10 font-semibold">What is Retrofit?</h2>
+          <p className="text-gray-800  text-lg max-w-3xl mx-auto mb-8">
+            Retrofit refers to upgrading existing buildings to improve their energy efficiency, reduce carbon footprints, and ensure sustainability. This is essential for reducing energy consumption,
+            lowering costs, and meeting climate goals like net-zero emissions.{" "}
           </p>
+          <h3 className="text-xl text-center mb-10 font-semibold">Start Your Career in Construction or Retrofit </h3>
+          <p className="text-gray-800  text-lg max-w-3xl mx-auto mb-8">
+            Our <b className="text-gray-900">fully funded Skills Bootcamp</b>, in partnership with <b className="text-gray-900 ">West Midlands Combined Authority (WMCA)</b>, provides you with the
+            qualifications, skills, and job opportunities to secure a high-paying role in the retrofit and construction industry.
+          </p>
+          <p className="text-gray-800  text-lg max-w-3xl mx-auto mb-8">
+            We were recently featured in the <b className="text-gray-900">Express & Star</b> for securing a £1.5 million contract to upskill local workers and support the growing demand for skilled
+            professionals in construction and retrofit. Read more here:{" "}
+            <a
+              href="https://www.expressandstar.com/your-world/2025/02/05/quack-recruitment-and-training-secures-15m-contract-to-upskill-west-midlands-workforce/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-quackred-900 font-semibold hover:text-quackred-800"
+            >
+              👉 Express & Star
+            </a>
+          </p>
+
           <div className="flex flex-wrap justify-center">
             <img src="/footer/West_Midlands_Combined_Authority_logo.svg.png" alt="WMCA logo" className="w-1/3 md:w-1/4 lg:w-1/5 transform hover:scale-105 transition-transform duration-200" />
           </div>
         </Section>
         <Section bgColor="bg-white">
           <div className="container p-4 mx-auto bg-white max-w-7xl sm:p-6 lg:p-8">
-            <div className="flex flex-wrap -mx-8">
-              <div className="w-full px-8 lg:w-1/2">
+            <div className="flex flex-wrap">
+              <div className="w-full lg:px-8 lg:w-1/2">
                 <div className="pb-12 mb-12 border-b lg:mb-0 lg:pb-0 lg:border-b-0">
-                  <h2 className="mb-8 text-3xl font-bold lg:text-4xl font-heading">Programme Overview</h2>
-                  <p className="mb-2 leading-loose text-gray-500">
-                    <b className="text-gray-800">Pathways to Retrofit Excellence</b> provides two <b className="text-gray-800">nationally recognised qualifications</b> at no cost to you:
+                  <h2 className="mb-8 text-3xl font-semibold lg:text-4xl font-heading">Why Join Our Skills Bootcamp?</h2>
+                  <p className="mb-2 leading-loose text-gray-800 ">
+                    ✅ <b className="text-gray-900 ">Completely FREE training</b> - no cost to you!
                   </p>
-                  <ul className="list-disc pl-8 mb-3 font-semibold text-gray-600">
+                  <p className="mb-2 leading-loose text-gray-800 ">
+                    ✅ Gain two <b className="text-gray-900 ">industry-recognised qualifications:</b>
+                  </p>
+                  <ul className="list-disc pl-8 mb-3 font-semibold text-gray-800 ">
                     <li className="pt-1 leading-loose">Level 2 Award in Retrofit Principles</li>
                     <li className="pt-1 leading-loose">Level 3 Award in Assessing Competence in the Work Environment</li>
                   </ul>
-                  <p className="mb-6 leading-loose text-gray-500">
-                    The course covers both theoretical knowledge and <b className="text-gray-800">hands-on practical experience</b>, including retrofit techniques like insulation fitting,
-                    air-tightness testing, and renewable energy integration (e.g., solar panels and heat pumps). You will also gain essential knowledge of the{" "}
-                    <b className="text-gray-800">PAS 2035 compliance framework</b>, which is vital for any retrofit project.
+
+                  <p className="mb-2 leading-loose text-gray-800 ">
+                    ✅ Develop hands-on <b className="text-gray-900 ">practical skills</b> in <b className="text-gray-900 ">insulation, PAS 2035, energy efficiency & more</b>
+                  </p>
+                  <p className="mb-2 leading-loose text-gray-800 ">
+                    ✅ Access <b className="text-gray-900 ">exclusive job opportunities</b> with top employers
+                  </p>
+                  <p className="mb-2 leading-loose text-gray-800 ">
+                    ✅ Fast-track your career in a <b className="text-gray-900 ">high-demand industry</b>
                   </p>
                 </div>
               </div>
               {/* */}
-              <div className="w-full px-8 lg:w-1/2">
-                <h3 className="mb-4 text-xl font-bold lg:text-2xl font-heading">Key Benefits of Retrofit Training</h3>
-                <ul className="list-disc pl-8 mb-3 text-gray-600">
+              <div className="w-full lg:px-8 lg:w-1/2">
+                <h2 className="mb-8 text-3xl font-semibold lg:text-4xl font-heading">What You Will Learn</h2>
+                <p className="mb-2 leading-loose text-gray-800 ">Our 3-week intensive programme includes:</p>
+                <ul className=" mb-3 text-gray-800 ">
                   <li className="pt-1 leading-loose">
-                    <b className="text-gray-800">Free Training:</b> This course is fully funded for eligible learners—no fees required.
+                    🏗 <b className="text-gray-900 ">Introduction to Retrofit & Construction:</b> Energy efficiency, sustainability & net-zero goals
                   </li>
                   <li className="pt-1 leading-loose">
-                    <b className="text-gray-800">High Demand for Retrofit Professionals:</b> As the UK strives to meet its <b className="text-gray-800">net-zero targets</b>, there is a growing need
-                    for skilled Retrofit Assessors, Coordinators, and Advisors.
+                    🔍 <b className="text-gray-900 ">Building Assessments & Materials:</b> Understanding defects, insulation, and U-values
                   </li>
                   <li className="pt-1 leading-loose">
-                    <b className="text-gray-800">Career Progression and Earning Potential:</b>
+                    ⚡ <b className="text-gray-900 ">Health & Safety in Construction:</b> Risk assessments, PPE, and manual handling
                   </li>
-                  <ul className="list-disc pl-8 mb-3 text-gray-600">
-                    <li className="pt-1 leading-loose">
-                      Entry-level <b className="text-gray-800">Retrofit Technicians</b> can earn around <b className="text-gray-800">£30,000</b> per year.
-                    </li>
-                    <li className="pt-1 leading-loose">
-                      <b className="text-gray-800">Retrofit Assessors</b> and <b className="text-gray-800">Coordinators</b> can earn between <b className="text-gray-800">£35,000</b> to{" "}
-                      <b className="text-gray-800">£45,000 </b>annually, with opportunities for higher earnings as you gain experience.
-                    </li>
-                    <li className="pt-1 leading-loose">
-                      <b className="text-gray-800">Retrofit Project Managers</b> can earn <b className="text-gray-800">£50,000</b> or more per year, managing large-scale retrofit projects.
-                    </li>
-                  </ul>
                   <li className="pt-1 leading-loose">
-                    <b className="text-gray-800">Sustainable Future:</b> Contribute to a greener future by helping reduce carbon emissions and energy consumption in buildings.
+                    📜 <b className="text-gray-900 ">PAS 2035 & Industry Standards:</b> Compliance & best practices
+                  </li>
+                  <li className="pt-1 leading-loose">
+                    🔨 <b className="text-gray-900 ">Practical Retrofit & Installation:</b> Hands-on experience with real materials
                   </li>
                 </ul>
+                <p className="mb-6 leading-loose text-gray-800 ">
+                  📌<b className="text-gray-900 ">PLUS:</b> Training to become a <b className="text-gray-900 ">Retrofit Assessor, Coordinator, or Installer</b> - with{" "}
+                  <b className="text-gray-900 ">job interviews available upon completion!</b>
+                </p>
               </div>
+            </div>
+            <div className="flex flex-wrap justify-center mt-6">
+              <a
+                href="https://qrt.magn8.co.uk/online/online-contact-details.php?ls=3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="py-4 px-6 bg-quackred-900 hover:bg-quackred-600 focus:ring-quackred-500 focus:ring-offset-quackred-200 text-white transition ease-in duration-200 text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg "
+              >
+                Apply Now
+              </a>
             </div>
           </div>
         </Section>
         <Section bgColor="bg-gray-50">
-          <div className="container p-4 mx-auto bg-gray-50 max-w-7xl sm:p-6 lg:p-8">
-            <div className="flex flex-wrap -mx-8">
-              <div className="w-full px-8 lg:w-1/2">
-                <h2 className="mb-8 text-3xl font-bold lg:text-4xl font-heading">What You Will Learn</h2>
-                <ul className="list-disc pl-8 mb-3 text-gray-600">
+          <div className="container p-4 mx-auto max-w-7xl sm:p-6 lg:p-8">
+            <h2 className="text-3xl text-center mb-10 font-semibold">Career Opportunities After the Course</h2>
+            <div className="flex flex-wrap">
+              <div className="w-full lg:px-8 lg:w-1/2">
+                <p className="mb-2 leading-loose text-gray-800 ">
+                  🛠 <b className="text-gray-900 ">Blue-Collar Roles:</b>
+                </p>
+                <ul className="list-disc pl-8 mb-3 font-semibold text-gray-800 ">
                   <li className="pt-1 leading-loose">
-                    <b className="text-gray-800">Energy Efficiency & Environmental Sustainability:</b> Understand the principles of energy efficiency, the importance of retrofitting, and the role of
-                    the retrofit sector in achieving net-zero targets.
+                    <b className="text-gray-900 ">Retrofit Installer</b> (Insulation, ventilation, glazing, and heating upgrades){" "}
                   </li>
                   <li className="pt-1 leading-loose">
-                    <b className="text-gray-800">Practical Retrofit Techniques:</b> Learn how to install insulation, test airtightness, and integrate renewable energy systems like solar panels and
-                    heat pumps.
+                    <b className="text-gray-900 ">Construction Labourer</b> (Assisting with site work and installations){" "}
                   </li>
                   <li className="pt-1 leading-loose">
-                    <b className="text-gray-800">PAS 2035 Framework:</b> Gain knowledge of the compliance standards required for domestic retrofitting, including the roles of Retrofit Coordinators,
-                    Assessors, and Advisors.
+                    <b className="text-gray-900 ">Bricklayer</b> (Building and repairing structures in retrofit projects){" "}
                   </li>
                   <li className="pt-1 leading-loose">
-                    <b className="text-gray-800">Assessment & Coordination of Retrofit Projects:</b> Learn how to assess retrofit projects in real-world environments, ensuring compliance with
-                    regulations and best practices.
+                    <b className="text-gray-900 ">Electrician (Retrofit Focused)</b> (Upgrading energy-efficient systems){" "}
+                  </li>
+                  <li className="pt-1 leading-loose">
+                    <b className="text-gray-900 ">Plumber</b> (Installing and maintaining water-efficient systems){" "}
+                  </li>
+                  <li className="pt-1 leading-loose">
+                    <b className="text-gray-900 ">Roofing Specialist</b> (Working on energy-efficient roofing solutions){" "}
+                  </li>
+                  <li className="pt-1 leading-loose">
+                    <b className="text-gray-900 ">Window & Door Fitter</b> (Installing energy-efficient glazing){" "}
+                  </li>
+                  <li className="pt-1 leading-loose">
+                    <b className="text-gray-900 ">Cavity Wall & Loft Insulation Installer</b>{" "}
                   </li>
                 </ul>
               </div>
-              <div className="w-full px-8 lg:w-1/2">
-                <h3 className="mb-4 text-xl font-bold lg:text-2xl font-heading">Eligibility Criteria</h3>
-                <ul className="list-disc pl-8 mb-3 text-gray-600">
+              <div className="w-full lg:px-8 lg:w-1/2">
+                <p className="mb-2 leading-loose text-gray-800 ">
+                  🏗 <b className="text-gray-900 ">Technical & Specialist Roles:</b>
+                </p>
+                <ul className="list-disc pl-6 mb-3 font-semibold text-gray-800 ">
                   <li className="pt-1 leading-loose">
-                    <b className="text-gray-800">Age:</b> 19 years or older
+                    <b className="text-gray-900 ">Retrofit Assessor</b> (Surveying buildings and recommending energy-efficient improvements){" "}
                   </li>
                   <li className="pt-1 leading-loose">
-                    <b className="text-gray-800">Location:</b> Must reside within the West Midlands Combined Authority (WMCA) region.
+                    <b className="text-gray-900 ">Retrofit Coordinator</b> (Managing retrofit projects and ensuring compliance){" "}
                   </li>
                   <li className="pt-1 leading-loose">
-                    <b className="text-gray-800">Employment Status:</b> Open to both employed and unemployed individuals.
+                    <b className="text-gray-900 ">Building Fabric Specialist</b> (Focusing on structural energy efficiency){" "}
                   </li>
-                  <ul className="list-disc pl-8 mb-3 text-gray-600">
-                    <li className="pt-1 leading-loose">
-                      <b className="text-gray-800">Unemployed learners:</b> Guaranteed job interview for a genuine retrofit vacancy.
-                    </li>
-                    <li className="pt-1 leading-loose">
-                      <b className="text-gray-800">Employed learners:</b> Opportunities for career changes or upskilling in retrofit roles.
-                    </li>
-                  </ul>
                   <li className="pt-1 leading-loose">
-                    <b className="text-gray-800">Target Groups:</b> Women and ethnic minorities who are underrepresented in the retrofit sector and those currently unemployed or underemployed.
+                    <b className="text-gray-900 ">Site Supervisor</b> (Overseeing construction and retrofit projects){" "}
                   </li>
+                  <li className="pt-1 leading-loose">
+                    <b className="text-gray-900 ">Energy Efficiency Advisor</b> (Providing consultation on sustainability improvements){" "}
+                  </li>
+                </ul>
+
+                <p className="mb-2 leading-loose text-gray-800 ">
+                  🚀 <b className="text-gray-900 ">Progression Opportunities:</b>
+                </p>
+                <ul className="list-disc pl-6 mb-3 font-semibold text-gray-800 ">
+                  <li className="pt-1 leading-loose">
+                    Further qualifications to become a <b className="text-gray-900 ">Retrofit Designer, Energy Consultant, or PAS 2035 Specialist</b>{" "}
+                  </li>
+                  <li className="pt-1 leading-loose">Advanced roles in sustainable construction and net-zero development </li>
                 </ul>
               </div>
             </div>
@@ -134,89 +182,64 @@ function Retrofit() {
         </Section>
         <Section bgColor="bg-white">
           <div className="container p-4 mx-auto bg-white max-w-7xl sm:p-6 lg:p-8">
-            <h2 className="text-3xl text-center mb-10 font-semibold">Hear from Our Learners</h2>
-            <div className="flex flex-wrap -mx-8">
-              <div className="w-full px-8 lg:w-1/3">
+            <div className="flex flex-wrap">
+              <div className="w-full lg:px-8 lg:w-1/2">
                 <div className="pb-12 mb-12 border-b lg:mb-0 lg:pb-0 lg:border-b-0">
-                  <h3 className="mb-8 text-2xl font-bold lg:text-3xl font-heading">Sarah Thompson – Retrofit Assessor</h3>
-                  <p className="mb-6 leading-loose text-gray-500 quote">
-                    Before joining the Pathways to Retrofit Excellence programme, I was working part-time in retail with little room for growth. Since completing the course, I&apos;ve secured a
-                    full-time role as a <b className="text-gray-800"> Retrofit Assessor</b> and my salary has increased from £20,000 to £35,000 per year. The practical skills I gained were invaluable,
-                    and best of all, the course was completely free!
+                  <h2 className="text-3xl text-center mb-10 font-semibold">Who Can Apply?</h2>
+
+                  <p className="mb-2 leading-loose text-gray-800 ">
+                    ✔ <b className="text-gray-900 ">Aged 19+</b>
+                  </p>
+                  <p className="mb-2 leading-loose text-gray-800 ">
+                    ✔ <b className="text-gray-900 ">Live in the West Midlands area</b>
+                  </p>
+                  <p className="mb-2 leading-loose text-gray-800 ">
+                    ✔ <b className="text-gray-900 ">Looking to enter or progress in construction, retrofit, or sustainability</b>
+                  </p>
+
+                  <p className="mb-2 leading-loose text-gray-800 ">
+                    ✔ <b className="text-gray-900 ">Ready to start a new career in a high-growth sector</b>
+                  </p>
+                  <p className="mb-2 leading-loose text-gray-800 ">
+                    ✔ <b className="text-gray-900 ">HAVE NOT completed a Skills Bootcamp in the last academic year</b>
                   </p>
                 </div>
               </div>
-              <div className="w-full px-8 lg:w-1/3">
-                <div className="pb-12 mb-12 border-b lg:mb-0 lg:pb-0 lg:border-b-0">
-                  <h3 className="mb-8 text-2xl font-bold lg:text-3xl font-heading">Mohammed Fayaz – Retrofit Coordinator</h3>
-                  <p className="mb-6 leading-loose text-gray-500 quote">
-                    I was in construction but wanted more career progression. After completing this programme, I became a <b className="text-gray-800">Retrofit Coordinator</b>, and my salary jumped
-                    from £25,000 to £42,000 annually. The course gave me the knowledge and confidence to move into a leadership role in retrofit, and it didn&apos;t cost me a penny!
-                  </p>
-                </div>
-              </div>
-              <div className="w-full px-8 lg:w-1/3">
-                <div className="pb-12 mb-12 border-b lg:mb-0 lg:pb-0 lg:border-b-0">
-                  <h3 className="mb-8 text-2xl font-bold lg:text-3xl font-heading">Emily Jones – Retrofit Advisor</h3>
-                  <p className="mb-6 leading-loose text-gray-500 quote">
-                    The Pathways to Retrofit Excellence programme was perfect for me as I returned to work after a career break. I&apos;m now a <b className="text-gray-800">Retrofit Advisor</b>,
-                    earning £33,000 per year, and I&apos;m proud to be making a real difference in reducing energy consumption and improving building performance. The fact that the course was free
-                    made it even more accessible!
-                  </p>
-                </div>
+              <div className="w-full lg:px-8 lg:w-1/2">
+                <h2 className="text-3xl text-center mb-10 font-semibold">What Happens After the Course?</h2>
+
+                <p className="mb-2 leading-loose text-gray-800 ">
+                  🎯 <b className="text-gray-900 ">Guaranteed interviews with top employers</b>
+                </p>
+                <p className="mb-2 leading-loose text-gray-800 ">
+                  📢 <b className="text-gray-900 ">Access to job vacancies in construction & retrofit</b>
+                </p>
+
+                <p className="mb-2 leading-loose text-gray-800 ">
+                  📈 <b className="text-gray-900 ">Progression routes to higher qualifications & career advancement</b>
+                </p>
               </div>
             </div>
           </div>
         </Section>
         <Section bgColor="bg-gray-50">
-          {/* How to Apply
-To apply for the Pathways to Retrofit Excellence programme, [Click Here to Apply – This to take through to a new enrolment page] or get in touch with our team for more details.
-
-Our staff will guide you through the application process and answer any questions you have.
-________________________________________
-Start Your Retrofit Career Today – 100% Free!
-Take the first step towards a rewarding career in the growing retrofit industry. Learn new skills, secure exciting job opportunities, and help make a positive impact on the environment—all for free. Plus, earn £35,000 - £50,000+ annually in your new role in retrofit. Apply now!
-________________________________________
-Contact Us
-For more information, get in touch with us at 0333 577 0036 or follow us on social media for updates. */}
-
           <div className="container p-4 mx-auto bg-gray-50 max-w-7xl sm:p-6 lg:p-8">
-            <h2 className="text-3xl text-center mb-10 font-semibold">How to Apply</h2>
-            <p className=" text-lg max-w-3xl mx-auto mb-8">
-              To apply for the Pathways to Retrofit Excellence programme,{" "}
-              <a href="#" className="text-quackred-900 font-semibold hover:text-quackred-800">
-                Click Here to Apply
-              </a>{" "}
-              or get in touch with our team for more details.
+            <h2 className="text-3xl text-center mb-10 font-semibold">Apply Now – Limited Spaces Available!</h2>
+            <p className="text-gray-800 text-center text-lg max-w-3xl mx-auto mb-8">
+              📩 <b className="text-gray-900 ">Secure your place today </b> and take the first step towards a high-paying career in retrofit & construction!
             </p>
-            <p className=" text-lg max-w-3xl mx-auto mb-8">Our staff will guide you through the application process and answer any questions you have.</p>
-          </div>
-
-          <div className="container p-4 mx-auto bg-gray-50 max-w-7xl sm:p-6 lg:p-8">
-            <h2 className="text-3xl text-center mb-10 font-semibold">Start Your Retrofit Career Today - 100% Free!</h2>
-            <p className=" text-lg max-w-3xl mx-auto mb-8">
-              Take the first step towards a rewarding career in the growing retrofit industry. Learn new skills, secure exciting job opportunities, and help make a positive impact on the
-              environment—all for free. Plus, earn £35,000 - £50,000+ annually in your new role in retrofit. Apply now!
-            </p>
-          </div>
-
-          <div className="container p-4 mx-auto bg-gray-50 max-w-7xl sm:p-6 lg:p-8">
-            <h2 className="text-3xl text-center mb-10 font-semibold">Contact Us</h2>
-            <p className=" text-lg max-w-3xl mx-auto mb-8">For more information, get in touch with us at 0333 577 0036 or follow us on social media for updates.</p>
-          </div>
-        </Section>
-        {/* <Section bgColor="bg-white">
-          <h2 className="text-2xl font-semibold text-center my-8">Partners and Providers</h2>
-          <div className="flex flex-col md:flex-row items-center justify-center space-x-0 md:space-x-4 space-y-4 md:space-y-0">
-            <img src="/footer/West_Midlands_Combined_Authority_logo.svg.png" alt="... Logo" className="w-1/3 md:w-1/4 lg:w-1/5 transform hover:scale-105 transition-transform duration-200" />
-            <div className="text-center md:text-left max-w-xl">
-              <p className="text-lg mb-4">....</p>
-              <a href="#" target="_blank" rel="" className="text-quackred-900 font-semibold hover:text-quackred-800">
-                TBD
+            <div className="flex flex-wrap justify-center">
+              <a
+                href="https://qrt.magn8.co.uk/online/online-contact-details.php?ls=3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="py-4 px-6 bg-quackred-900 hover:bg-quackred-600 focus:ring-quackred-500 focus:ring-offset-quackred-200 text-white transition ease-in duration-200 text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg "
+              >
+                Apply Now
               </a>
             </div>
           </div>
-        </Section> */}
+        </Section>
       </main>
     </>
   );
