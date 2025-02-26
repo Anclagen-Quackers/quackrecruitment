@@ -37,10 +37,12 @@ const Nav = () => {
       label: "Training",
       dropdown: [
         { path: "/training", label: "Training" },
-        { path: "/training/multiply", label: "Multiply" },
         { path: "/training/wmca-retrofit", label: "Retrofit" },
         { path: "/training/cscs", label: "CSCS" },
-        { path: "/training/customer-service-administration", label: "Customer Service & Administration" },
+        {
+          path: "/training/customer-service-administration",
+          label: "Customer Service & Administration",
+        },
         { path: "/training/food-and-hygiene", label: "Food & Hygiene" },
         { path: "/training/sia", label: "SIA" },
         { path: "/training/welding", label: "Welding" },
@@ -70,7 +72,11 @@ const Nav = () => {
 
   useEffect(() => {
     const handleOutsideClick = (e) => {
-      if (menuRef.current && !menuRef.current.contains(e.target) && e.target !== menuButtonRef.current) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(e.target) &&
+        e.target !== menuButtonRef.current
+      ) {
         setMenuOpen(false);
       }
     };
@@ -105,17 +111,25 @@ const Nav = () => {
                 <div className="relative">
                   <button
                     onClick={() => toggleDropdown(item.label)}
-                    className={`${openDropdown === item.label ? "bg-quackred-200" : ""} font-medium text-black text-lg p-2 py-1 rounded-full flex hover:bg-quackred hover:text-white`}
+                    className={`${
+                      openDropdown === item.label ? "bg-quackred-200" : ""
+                    } font-medium text-black text-lg p-2 py-1 rounded-full flex hover:bg-quackred hover:text-white`}
                   >
                     {item.label}
-                    <span className="m-0 rounded-full ps-1 material-symbols-outlined">{openDropdown === item.label ? "expand_more" : "expand_less"}</span>
+                    <span className="m-0 rounded-full ps-1 material-symbols-outlined">
+                      {openDropdown === item.label ? "expand_more" : "expand_less"}
+                    </span>
                   </button>
                   {openDropdown === item.label && (
                     <ul className="absolute bg-gray-50 shadow-lg bg-opacity-90 shadow-quackred-100 mt-2 rounded-lg w-content pd-1 right-0 w-fit">
                       {item.dropdown.map((dropdownItem) => (
                         <li key={dropdownItem.path} className="p-2">
                           {dropdownItem.external ? (
-                            <a href={dropdownItem.path} target="_blank" className="hover:bg-quackred hover:text-white  duration-500  font-medium text-black text-lg p-2 rounded-full whitespace-nowrap">
+                            <a
+                              href={dropdownItem.path}
+                              target="_blank"
+                              className="hover:bg-quackred hover:text-white  duration-500  font-medium text-black text-lg p-2 rounded-full whitespace-nowrap"
+                            >
                               {dropdownItem.label}
                             </a>
                           ) : (
@@ -123,7 +137,9 @@ const Nav = () => {
                               prefetch={false}
                               href={dropdownItem.path}
                               className={`${
-                                location === dropdownItem.path ? "bg-quackred text-white hover:bg-quackred-700" : ""
+                                location === dropdownItem.path
+                                  ? "bg-quackred text-white hover:bg-quackred-700"
+                                  : ""
                               } hover:bg-quackred hover:text-white  duration-500  font-medium text-black text-lg p-2 rounded-full whitespace-nowrap`}
                               onClick={handleMenuClose}
                             >
@@ -153,7 +169,11 @@ const Nav = () => {
           ))}
         </ul>
         {/* Mobile Menu Icon */}
-        <button ref={menuButtonRef} className="lg:hidden text-black mr-1" onClick={() => setMenuOpen(!isMenuOpen)}>
+        <button
+          ref={menuButtonRef}
+          className="lg:hidden text-black mr-1"
+          onClick={() => setMenuOpen(!isMenuOpen)}
+        >
           <i className="material-icons  pointer-events-none pt-1">menu</i>
           <span className="sr-only">Open menu</span>
         </button>
@@ -162,7 +182,9 @@ const Nav = () => {
       {/* Mobile Menu */}
       <div
         ref={menuRef}
-        className={`fixed top-0 right-0 h-screen overflow-y-auto bg-white w-full md:w-1/2 transform transition-transform ${isMenuOpen ? "translate-x-0" : "translate-x-full"} lg:hidden`}
+        className={`fixed top-0 right-0 h-screen overflow-y-auto bg-white w-full md:w-1/2 transform transition-transform ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        } lg:hidden`}
       >
         {/* Close button */}
         <div className="flex justify-end p-2  me-5 mt-3">
@@ -179,17 +201,25 @@ const Nav = () => {
                 <div className="relative">
                   <button
                     onClick={() => toggleDropdown(item.label)}
-                    className={`${openDropdown === item.label ? "bg-quackred-200" : ""} hover:bg-quackred hover:text-white font-medium text-black text-lg p-2 rounded-full flex`}
+                    className={`${
+                      openDropdown === item.label ? "bg-quackred-200" : ""
+                    } hover:bg-quackred hover:text-white font-medium text-black text-lg p-2 rounded-full flex`}
                   >
                     {item.label}
-                    <span className="material-symbols-outlined">{openDropdown === item.label ? "expand_more" : "expand_less"}</span>
+                    <span className="material-symbols-outlined">
+                      {openDropdown === item.label ? "expand_more" : "expand_less"}
+                    </span>
                   </button>
                   {openDropdown === item.label && (
                     <ul className="mx-3 border-b-2 border-t-2 mt-1 border-quackred">
                       {item.dropdown.map((dropdownItem) => (
                         <li key={dropdownItem.path} className="my-2">
                           {dropdownItem.external ? (
-                            <a href={dropdownItem.path} target="_blank" className="hover:bg-quackred hover:text-white  duration-500  font-medium text-black text-lg p-2 rounded-full whitespace-nowrap">
+                            <a
+                              href={dropdownItem.path}
+                              target="_blank"
+                              className="hover:bg-quackred hover:text-white  duration-500  font-medium text-black text-lg p-2 rounded-full whitespace-nowrap"
+                            >
                               {dropdownItem.label}
                             </a>
                           ) : (
@@ -197,7 +227,9 @@ const Nav = () => {
                               prefetch={false}
                               href={dropdownItem.path}
                               className={`${
-                                location === dropdownItem.path ? "bg-quackred  hover:bg-quackred-700" : ""
+                                location === dropdownItem.path
+                                  ? "bg-quackred  hover:bg-quackred-700"
+                                  : ""
                               } hover:bg-quackred hover:text-white  duration-500  font-medium text-lg p-2 rounded-full whitespace-nowrap`}
                               onClick={handleMenuClose}
                             >
