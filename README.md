@@ -2,6 +2,8 @@
 
 Updated website for Quack Recruitment & Training.
 
+[![Deploy Now: Deploy to IONOS](https://github.com/Anclagen-Quackers/quackrecruitment/actions/workflows/deploy-to-ionos.yaml/badge.svg)](https://github.com/Anclagen-Quackers/quackrecruitment/actions/workflows/deploy-to-ionos.yaml)
+
 ## Getting Started
 
 First, run the development server:
