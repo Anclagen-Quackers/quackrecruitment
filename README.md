@@ -1,6 +1,6 @@
 # Quack Recruitment & Training
 
-Updated website for Quack Recruitment & Training.
+Updated website for Quack Recruitment & Training..
 
 ## Getting Started
 
