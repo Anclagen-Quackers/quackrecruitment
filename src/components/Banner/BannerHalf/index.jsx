@@ -2,10 +2,17 @@ const BannerHalf = ({ title, slogan, imgSrc, imgAlt, position = "bottom" }) => {
   const lines = slogan.split(",");
   return (
     <div className="bg-white shadow-lg shadow-quackred-200 z-10">
-      <div className="relative banner max-w-screen-2xl mx-auto overflow-x-hidden" style={{ height: "40vh", minHeight: "400px" }}>
+      <div
+        className="relative banner max-w-screen-2xl mx-auto overflow-x-hidden"
+        style={{ height: "40vh", minHeight: "400px", maxHeight: "525px" }}
+      >
         <div className="object-bottom object-top object-right object-left object-center m-w-2xl"></div>
         {/* Image */}
-        <img src={imgSrc} alt={imgAlt} className={`absolute top-0 left-0 w-full h-full object-cover object-${position}`} />
+        <img
+          src={imgSrc}
+          alt={imgAlt}
+          className={`absolute top-0 left-0 w-full h-full object-cover object-${position}`}
+        />
 
         {/* Overlay */}
         <div className="absolute top-0 left-0 w-full h-full px-5 md:px-12 banner-gradient">

@@ -51,7 +51,7 @@ function RetrofitPage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-xl lg:mt-10">
+            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-xl lg:mt-10 max-w-xl mx-auto">
               <h3 className="mb-4 text-2xl font-bold">At a glance</h3>
               <ul className="space-y-3">
                 {retrofitHighlights.map((item) => (
