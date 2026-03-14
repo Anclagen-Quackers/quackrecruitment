@@ -317,9 +317,9 @@ export const bootcampCourses = {
     banner: {
       title: "Pathway to Recruitment Leadership (SYMCA)",
       slogan: "Build practical recruitment and office skills with career-focused support.",
-      imgSrc: "/images/banners/recruitment-banner.jpg",
+      imgSrc: "/images/interview-1.jpg",
       imgAlt: "Professional office environment",
-      position: "center",
+      position: "top",
     },
     authority: {
       name: "South Yorkshire Mayoral Combined Authority (SYMCA)",
