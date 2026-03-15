@@ -21,7 +21,7 @@ const BootcampCoursePage = ({ course }) => {
         />
       )}
 
-      <div className="container px-4 py-24 mx-auto">
+      <div className="max-w-screen-2xl px-4 py-24 mx-auto">
         <div className="lg:flex gap-10">
           <div className="lg:w-2/3 max-w-screen-2xl mx-auto">
             <BootcampSection title="Course Overview" bannerTitle={course.banner.title}>
@@ -90,7 +90,7 @@ const BootcampCoursePage = ({ course }) => {
                 )}
               </BootcampSection>
             )}
-            <div className="hidden lg:block">
+            <div className="hidden lg:block px-10">
               <BootcampApplyCard apply={course.apply} />
             </div>
           </div>

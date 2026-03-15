@@ -7,6 +7,7 @@ import Link from "next/link";
 import { keywords } from "../components/data/keywords";
 import FourImageStretch from "@/components/Sections/FourImageFeature/FourImageStretch";
 import CTASection from "../components/Sections/CTASection";
+import MultiLinkCTASection from "@/components/Sections/MultiLinkCTASection";
 import Head from "next/head";
 import PageLink from "@/components/PageLink";
 
@@ -211,16 +212,22 @@ const Home = () => {
           </CardSection>
         </Section>
         <Section bgColor="bg-zinc-200">
-          <CTASection
-            eyebrow="Skills Bootcamps"
-            titleBlack="Looking to build new skills?"
-            titlePurple="Explore our funded Bootcamps."
-            text="Our Skills Bootcamps are designed to help learners develop practical, career-focused skills with clear progression routes into employment."
-            linkText="View Bootcamps"
-            linkHref="/training/retrofit"
-            image="/images/interview-1.jpg"
-            alt="Learner in professional setting"
-            reverse={false}
+          <MultiLinkCTASection
+            titleBlack="Looking to build practical skills?"
+            titlePurple="Explore our latest funded Bootcamps."
+            text="Our Skills Bootcamps are designed to help learners build job-ready skills, gain industry insight, and move into real career opportunities."
+            highlights={[
+              "Funded training opportunities",
+              "Face-to-face or live remote delivery",
+              "Career-focused learning with employer progression support",
+            ]}
+            links={[
+              { label: "Retrofit Training", href: "/training/retrofit" },
+              { label: "Recruitment Leadership", href: "/training/recruitment-leadership" },
+            ]}
+            image="/footer/skillsbootcamp.jpg"
+            alt="Professional training and career development"
+            reverse={true}
           />
         </Section>
         <Section bgColor="bg-gray-50">
