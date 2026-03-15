@@ -2,10 +2,17 @@ import BootcampCoursePage from "@/components/training/bootcamp/BootcampCoursePag
 import { bootcampCourses } from "@/components/data/training/bootcampCourses";
 
 export const metadata = {
-  title: "Retrofit (WMCA) | Quack Recruitment & Training",
+  title: "Pathway to Retrofit Excellence (WMCA) | Quack Recruitment & Training",
   description:
-    "Transform your future with free retrofit training! Learn about the Pathways to Retrofit Excellence programme and how it can help you build a rewarding career in the growing retrofit industry.",
-  keywords: ["Quack Group", "Quack Recruitment", "Multiply Training Courses"],
+    "Train for a career in retrofit and sustainable construction with the Pathway to Retrofit Excellence Skills Bootcamp delivered in partnership with the West Midlands Combined Authority (WMCA).",
+  keywords: [
+    "Retrofit training",
+    "WMCA Skills Bootcamp",
+    "Retrofit installer training",
+    "Energy efficiency retrofit course",
+    "Green construction training",
+    "Retrofit careers UK",
+  ],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 

@@ -22,6 +22,13 @@ export const metadata = {
   title: "Retrofit Training | Quack Recruitment & Training",
   description:
     "Explore Quack Recruitment & Training retrofit Skills Bootcamps and start your journey into retrofit, insulation, and green construction.",
+  keywords: [
+    "Retrofit training",
+    "Retrofit installer training",
+    "Energy efficiency retrofit course",
+    "Green construction training",
+    "Retrofit careers UK",
+  ],
 };
 
 function RetrofitPage() {

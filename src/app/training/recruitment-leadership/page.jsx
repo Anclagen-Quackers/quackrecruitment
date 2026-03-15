@@ -2,10 +2,17 @@ import BootcampCoursePage from "@/components/training/bootcamp/BootcampCoursePag
 import { bootcampCourses } from "@/components/data/training/bootcampCourses";
 
 export const metadata = {
-  title: "Retrofit (ECW) | Quack Recruitment & Training",
+  title: "Pathway to Recruitment Leadership (SYMCA) | Quack Recruitment & Training",
   description:
-    "Transform your future with free retrofit training! Learn about the Pathways to Retrofit Excellence programme and how it can help you build a rewarding career in the growing retrofit industry.",
-  keywords: ["Quack Group", "Quack Recruitment", "Multiply Training Courses"],
+    "Start a career in recruitment with the Pathway to Recruitment Leadership Skills Bootcamp delivered in partnership with the South Yorkshire Mayoral Combined Authority (SYMCA). Gain practical recruitment, sales, and client management skills.",
+  keywords: [
+    "Recruitment training",
+    "Recruitment bootcamp",
+    "SYMCA Skills Bootcamp",
+    "Recruitment consultant training",
+    "Recruitment resourcer training",
+    "Recruitment careers UK",
+  ],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 

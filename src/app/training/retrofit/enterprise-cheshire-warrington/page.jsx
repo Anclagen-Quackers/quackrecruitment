@@ -2,10 +2,18 @@ import BootcampCoursePage from "@/components/training/bootcamp/BootcampCoursePag
 import { bootcampCourses } from "@/components/data/training/bootcampCourses";
 
 export const metadata = {
-  title: "Retrofit (ECW) | Quack Recruitment & Training",
+  title:
+    "Pathway to Retrofit Excellence (Enterprise Cheshire & Warrington) | Quack Recruitment & Training",
   description:
-    "Transform your future with free retrofit training! Learn about the Pathways to Retrofit Excellence programme and how it can help you build a rewarding career in the growing retrofit industry.",
-  keywords: ["Quack Group", "Quack Recruitment", "Multiply Training Courses"],
+    "Join the Pathway to Retrofit Excellence Skills Bootcamp delivered with Enterprise Cheshire & Warrington. Learn retrofit principles, energy efficiency, and sustainable construction skills for careers in the growing retrofit sector.",
+  keywords: [
+    "Retrofit training",
+    "Retrofit Skills Bootcamp",
+    "Enterprise Cheshire Warrington bootcamp",
+    "Energy efficiency training",
+    "Green construction training",
+    "Retrofit installer training UK",
+  ],
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 
