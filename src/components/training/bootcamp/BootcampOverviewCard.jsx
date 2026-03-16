@@ -55,6 +55,17 @@ const BootcampOverviewCard = ({ overview, authority }) => {
       )}
 
       {overview.deliveryNote && <p className="text-lg mt-4">{overview.deliveryNote}</p>}
+
+      {overview.eligibility?.length > 0 && (
+        <div className="mt-6 text-lg">
+          <b>Who Can Apply</b>
+          <ul className="mt-2 ms-6 list-disc">
+            {overview.eligibility.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </aside>
   );
 };

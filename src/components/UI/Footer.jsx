@@ -85,20 +85,21 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            <h3 className="mb-2 mt-4 text-xl font-bold max-w-fit">Bootcamps</h3>
+            <h3 className="mb-2 mt-4 text-xl font-bold max-w-fit">Skills Bootcamps</h3>
             <ul>
               {[
                 {
                   path: "/training/retrofit/wmca",
-                  label: "Retrofit Excellence (WMCA)",
+                  label: "Pathway to Retrofit Excellence (West Midlands Combined Authority)",
                 },
                 {
                   path: "/training/retrofit/enterprise-cheshire-warrington/",
-                  label: "Retrofit Excellence (ECW)",
+                  label: "Pathway to Retrofit Excellence (Enterprise Cheshire & Warrington)",
                 },
                 {
                   path: "/training/recruitment-leadership",
-                  label: "Recruitment Leadership (SYMCA)",
+                  label:
+                    "Pathway to Recruitment Leadership (South Yorkshire Mayoral Combined Authority)",
                 },
               ].map((route) => (
                 <li key={route.path}>

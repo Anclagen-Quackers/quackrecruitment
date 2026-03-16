@@ -43,6 +43,12 @@ export const bootcampCourses = {
       deliveryModes: ["Face-to-face", "Remotely through live tutor-led sessions"],
       deliveryNote:
         "This flexible delivery model ensures learners can participate regardless of location or personal circumstances.",
+      eligibility: [
+        "Aged 19+",
+        "Resident in the relevant Combined Authority area",
+        "Have the right to work in the UK",
+        "Interested in starting or progressing in the sector",
+      ],
     },
     learningIntro:
       "The programme provides a strong foundation in retrofit and sustainable construction.",
@@ -68,19 +74,19 @@ export const bootcampCourses = {
       "Demand for retrofit professionals continues to grow as the UK upgrades its housing stock.",
     testimonials: [
       {
-        name: "Daniel",
+        name: "Cameron K",
         role: "Retrofit Installer",
         quote:
           "Before joining the Bootcamp I had never worked in construction. The tutors explained the retrofit industry clearly and helped me prepare my CV and interviews. Through the employer connections arranged during the course I secured an interview with a local insulation company and started work as a Retrofit Installer shortly after completing the Bootcamp.",
       },
       {
-        name: "Aisha",
+        name: "Lee M",
         role: "Internal Wall Installer",
         quote:
           "I wanted to move into the green sector but didn’t know where to start. The Bootcamp gave me a great understanding of energy efficiency and retrofit projects. The team helped me prepare for interviews and introduced me to employers working in the sector. After finishing the programme I secured a role supporting energy efficiency assessments.",
       },
       {
-        name: "Liam",
+        name: "Shiloh C",
         role: "Construction Operative",
         quote:
           "The course was really informative and gave me a strong understanding of retrofit installations and construction processes. The careers support helped me apply for roles in the sector and within a few weeks of finishing the Bootcamp I secured work with a company delivering insulation and retrofit projects.",
@@ -104,11 +110,6 @@ export const bootcampCourses = {
           "Learners receive interview coaching including mock interviews and guidance on employer expectations.",
       },
       {
-        title: "Employer Engagement",
-        description:
-          "We work with an established portfolio of employer partners who engage with learners through insight sessions and recruitment opportunities.",
-      },
-      {
         title: "Job Application Support",
         description:
           "Our team helps learners identify suitable vacancies and complete job applications.",
@@ -119,15 +120,25 @@ export const bootcampCourses = {
           "Support continues after training as we assist learners in securing employment opportunities.",
       },
     ],
+    employerSection: {
+      title: "Employer Engagement",
+      description:
+        "We work with a network of employers who support our programmes through insight sessions, industry engagement, and recruitment opportunities for learners.",
+      details: [
+        "Industry insight sessions and guest talks",
+        "Discussions about current vacancies and career pathways",
+        "Recruitment opportunities for learners completing the programme",
+      ],
+    },
     whyChoose: [
       {
         title: "Industry-Relevant Training",
         description: "Our programmes are designed around real employer needs.",
       },
       {
-        title: "Employer Partnerships",
+        title: "Industry Connections",
         description:
-          "We have an established portfolio of employer partners across construction and retrofit sectors.",
+          "Our programmes are informed by industry needs and designed to prepare learners for real workplace environments.",
       },
       {
         title: "Flexible Learning",
@@ -136,7 +147,7 @@ export const bootcampCourses = {
       {
         title: "Intensive Career-Focused Training",
         description:
-          "Our Bootcamps are short, focused programmes designed to help learners quickly develop employable skills.",
+          "Our Skills Bootcamps are short, focused programmes designed to help learners quickly develop employable skills.",
       },
       {
         title: "Proven Outcomes",
@@ -157,7 +168,7 @@ export const bootcampCourses = {
     progressionOutro:
       "These partnerships help us connect learners with real employment opportunities.",
     apply: {
-      heading: "Apply for the Bootcamp",
+      heading: "Apply for the Skills Bootcamp",
       text: "Start your journey into retrofit and green construction.",
       href: "https://quackrecruitment.picsweb.co.uk/Guest/SignUp/Applicant/522f666796b8479c8d1ac1aac8d7f2b9",
     },
@@ -202,6 +213,12 @@ export const bootcampCourses = {
       guidedLearningHours: "82 GLH",
       schedule: "Monday – Friday | 9:00am – 3:30pm",
       deliveryModes: ["Face-to-face", "Remotely through live tutor-led sessions"],
+      eligibility: [
+        "Aged 19+",
+        "Resident in the relevant Combined Authority area",
+        "Have the right to work in the UK",
+        "Interested in starting or progressing in the sector",
+      ],
     },
     learningPoints: [
       "Retrofit principles and energy efficiency",
@@ -215,19 +232,19 @@ export const bootcampCourses = {
     learningOutro: "These modules provide learners with a strong introduction to retrofit careers.",
     testimonials: [
       {
-        name: "Jack",
+        name: "Stephen S",
         role: "Retrofit Technician",
         quote:
           "After being made redundant I wanted a career that had long-term prospects. The Bootcamp helped me understand retrofit and energy efficiency improvements. With the support from the training team I applied for roles and secured a job as a Retrofit Technician working on insulation projects.",
       },
       {
-        name: "Sarah",
+        name: "Gohere M",
         role: "Construction Operative",
         quote:
           "The course explained retrofit in a way that was easy to understand and really engaging. The tutors helped me prepare my CV and introduced me to employers in the sector. After completing the Bootcamp I secured work supporting retrofit installation projects.",
       },
       {
-        name: "Ryan",
+        name: "Mukesh S",
         role: "Loft Insulation Installer",
         quote:
           "The Bootcamp helped me gain the knowledge employers are looking for. Through the employer connections provided during the programme I attended interviews with local contractors and secured a role installing loft insulation shortly after finishing the course.",
@@ -251,11 +268,6 @@ export const bootcampCourses = {
           "Learners receive interview coaching including mock interviews and guidance on employer expectations.",
       },
       {
-        title: "Employer Engagement",
-        description:
-          "We work with an established portfolio of employer partners who engage with learners through insight sessions and recruitment opportunities.",
-      },
-      {
         title: "Job Application Support",
         description:
           "Our team helps learners identify suitable vacancies and complete job applications.",
@@ -266,15 +278,25 @@ export const bootcampCourses = {
           "Support continues after training as we assist learners in securing employment opportunities.",
       },
     ],
+    employerSection: {
+      title: "Employer Engagement",
+      description:
+        "We work with a network of employers who support our programmes through insight sessions, industry engagement, and recruitment opportunities for learners.",
+      details: [
+        "Industry insight sessions and guest talks",
+        "Discussions about current vacancies and career pathways",
+        "Recruitment opportunities for learners completing the programme",
+      ],
+    },
     whyChoose: [
       {
         title: "Industry-Relevant Training",
         description: "Our programmes are designed around real employer needs.",
       },
       {
-        title: "Employer Partnerships",
+        title: "Industry Connections",
         description:
-          "We have an established portfolio of employer partners across construction and retrofit sectors.",
+          "Our programmes are informed by industry needs and designed to prepare learners for real workplace environments.",
       },
       {
         title: "Flexible Learning",
@@ -283,7 +305,7 @@ export const bootcampCourses = {
       {
         title: "Intensive Career-Focused Training",
         description:
-          "Our Bootcamps are short, focused programmes designed to help learners quickly develop employable skills.",
+          "Our Skills Bootcamps are short, focused programmes designed to help learners quickly develop employable skills.",
       },
       {
         title: "Proven Outcomes",
@@ -297,14 +319,13 @@ export const bootcampCourses = {
       "insulation and retrofit contractors",
       "construction companies",
       "energy efficiency specialists",
-      "recruitment agencies",
       "professional services organisations",
       "local SMEs and national employers",
     ],
     progressionOutro:
       "These partnerships help us connect learners with real employment opportunities.",
     apply: {
-      heading: "Apply for the Bootcamp",
+      heading: "Apply for the Skills Bootcamp",
       text: "Start your journey into retrofit and green construction.",
       href: "https://quackrecruitment.picsweb.co.uk/Guest/SignUp/Applicant/522f666796b8479c8d1ac1aac8d7f2b9",
     },
@@ -328,6 +349,13 @@ export const bootcampCourses = {
       logo: "/footer/SYMCA.jpg",
       logoAlt: "South Yorkshire Mayoral Combined Authority logo",
     },
+    cardDescription:
+      "A funded Skills Bootcamp designed to help learners build practical recruitment and office-based skills with clear progression into employment.",
+    cardHighlights: [
+      "4-week intensive course",
+      "Remote or face-to-face delivery",
+      "Employer insight and progression support",
+    ],
     hero: {
       eyebrow: "Skills Bootcamp",
       heading: "Start a Career in Recruitment",
@@ -342,8 +370,14 @@ export const bootcampCourses = {
       guidedLearningHours: "100 GLH",
       schedule: "Monday – Friday | 9:00am – 3:30pm",
       deliveryModes: ["Face-to-face", "Remotely through live tutor-led sessions"],
+      eligibility: [
+        "Aged 19+",
+        "Resident in the relevant Combined Authority area",
+        "Have the right to work in the UK",
+        "Interested in starting or progressing in the sector",
+      ],
     },
-    learningIntro: "The Bootcamp covers the full recruitment process including:",
+    learningIntro: "The Skills Bootcamp covers the full recruitment process including:",
     learningPoints: [
       "the recruitment lifecycle",
       "candidate sourcing and job advertising",
@@ -357,32 +391,107 @@ export const bootcampCourses = {
       "Learners complete practical recruitment simulations designed to reflect real industry scenarios.",
     testimonials: [
       {
-        name: "Chloe",
+        name: "Kieron H",
         role: "Recruitment Consultant",
         quote:
           "I joined the Bootcamp because I wanted to move into a professional office role. The course covered the full recruitment process and included practical exercises like cold calling and interviewing. With the help of the tutors I secured an interview with a recruitment agency and started work as a Recruitment Consultant shortly after finishing the programme.",
       },
       {
-        name: "Marcus",
+        name: "David L",
         role: "Recruitment Resourcer",
         quote:
           "The training felt very practical and realistic. We practised sourcing candidates and screening CVs which helped me understand the industry. The careers support team helped me apply for roles and I secured a position as a Recruitment Resourcer within weeks of completing the Bootcamp.",
       },
       {
-        name: "Lauren",
+        name: "Rosemary A",
         role: "Talent Acquisition Assistant",
         quote:
           "I was working in retail and wanted to move into an office role. The Bootcamp gave me the skills and confidence needed to work in recruitment. With support from the tutors I secured an interview with a recruitment agency and was offered a role as a Talent Acquisition Assistant.",
       },
     ],
+    jobSupportIntro:
+      "Our Skills Bootcamps are designed with a clear objective — helping learners move into employment or progress in their careers.",
+    jobSupport: [
+      {
+        title: "Career Guidance",
+        description:
+          "Learners receive guidance to identify suitable career pathways within recruitment.",
+      },
+      {
+        title: "CV Development",
+        description: "We support learners in developing professional CVs tailored to the industry.",
+      },
+      {
+        title: "Interview Preparation",
+        description:
+          "Learners receive interview coaching including mock interviews and guidance on employer expectations.",
+      },
+      {
+        title: "Job Application Support",
+        description:
+          "Our team helps learners identify suitable vacancies and complete job applications.",
+      },
+      {
+        title: "Post-Course Progression Support",
+        description:
+          "Support continues after training as we assist learners in securing employment opportunities.",
+      },
+    ],
+    employerSection: {
+      title: "Employer Engagement",
+      description:
+        "We work with a network of employers who support our programmes through insight sessions, industry engagement, and recruitment opportunities for learners.",
+      details: [
+        "Industry insight sessions and guest talks",
+        "Discussions about current vacancies and career pathways",
+        "Recruitment opportunities for learners completing the programme",
+      ],
+    },
+    whyChoose: [
+      {
+        title: "Industry-Relevant Training",
+        description: "Our programmes are designed around real employer needs.",
+      },
+      {
+        title: "Industry Connections",
+        description:
+          "Our programmes are informed by industry needs and designed to prepare learners for real workplace environments.",
+      },
+      {
+        title: "Flexible Learning",
+        description: "Training is available face-to-face or remotely.",
+      },
+      {
+        title: "Intensive Career-Focused Training",
+        description:
+          "Our Skills Bootcamps are short, focused programmes designed to help learners quickly develop employable skills.",
+      },
+      {
+        title: "Proven Outcomes",
+        description:
+          "Across our Skills Bootcamp programmes around 80% of learners progress into employment or career advancement.",
+      },
+    ],
+    progressionTitle: "Where Our Learners Now Work",
+    progressionIntro:
+      "Learners who have completed our programmes have progressed into roles such as:",
+    progressionItems: [
+      "Recruitment Consultant",
+      "Recruitment Resourcer",
+      "Talent Acquisition Assistant",
+    ],
+    progressionOutro:
+      "These outcomes demonstrate the progression routes available to learners who complete the programme.",
     apply: {
-      heading: "Apply for the Bootcamp",
+      heading: "Apply for the Skills Bootcamp",
       text: "Start your journey into recruitment.",
       href: "https://quackrecruitment.picsweb.co.uk/Guest/SignUp/Applicant/522f666796b8479c8d1ac1aac8d7f2b9",
     },
     link: "/training/recruitment-leadership/symca",
   },
 };
+
+export const bootcampCourseList = Object.values(bootcampCourses);
 
 export const bootcampCourseGroups = {
   retrofit: [bootcampCourses.retrofitWmca, bootcampCourses.retrofitEcw],
