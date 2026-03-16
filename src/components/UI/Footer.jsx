@@ -19,9 +19,19 @@ const Footer = () => {
           <div className="px-2 md:ps-6">
             <h3 className="mb-3 text-xl font-bold">General</h3>
             <ul>
-              {[{ path: "/", label: "Home" }, { path: "/recruitment/listings", label: "Jobs" }, { path: "/about", label: "About" }, { path: "/contact", label: "Contact" }, ,].map((route) => (
+              {[
+                { path: "/", label: "Home" },
+                { path: "/recruitment/listings", label: "Jobs" },
+                { path: "/about", label: "About" },
+                { path: "/contact", label: "Contact" },
+                ,
+              ].map((route) => (
                 <li key={route.path}>
-                  <Link prefetch={false} href={`${route.path}`} className={`${location === route.path ? "underline" : ""} hover:underline hover:text-white text-white text-lg`}>
+                  <Link
+                    prefetch={false}
+                    href={`${route.path}`}
+                    className={`${location === route.path ? "underline" : ""} hover:underline hover:text-white text-white text-lg`}
+                  >
                     {route.label}
                   </Link>
                 </li>
@@ -37,7 +47,11 @@ const Footer = () => {
                 { path: "/recruitment/on-site-managed", label: "On-Site Managed Services" },
               ].map((route) => (
                 <li key={route.path}>
-                  <Link prefetch={false} href={route.path} className={`${location === route.path ? "underline" : ""} hover:underline hover:text-white text-white text-lg`}>
+                  <Link
+                    prefetch={false}
+                    href={route.path}
+                    className={`${location === route.path ? "underline" : ""} hover:underline hover:text-white text-white text-lg`}
+                  >
                     {route.label}
                   </Link>
                 </li>
@@ -49,16 +63,51 @@ const Footer = () => {
             <ul>
               {[
                 { path: "/training", label: "Training" },
-                { path: "/training/multiply", label: "Multiply Courses" },
                 { path: "/training/food-and-hygiene", label: "Food & Hygiene" },
                 { path: "/training/sia", label: "Security Industry Authority (SIA)" },
-                { path: "/training/customer-service-administration", label: "Admin & Customer Service" },
+                {
+                  path: "/training/customer-service-administration",
+                  label: "Admin & Customer Service",
+                },
                 { path: "/training/cscs", label: "Construction Skills (CSCS)" },
                 { path: "/training/fork-lift", label: "Forklift" },
                 { path: "/training/welding", label: "Welding" },
+                { path: "/training/retrofit", label: "Retrofit" },
               ].map((route) => (
                 <li key={route.path}>
-                  <Link prefetch={false} href={`${route.path}`} className={`${location === route.path ? "underline" : ""} hover:underline hover:text-white text-white text-lg`}>
+                  <Link
+                    prefetch={false}
+                    href={`${route.path}`}
+                    className={`${location === route.path ? "underline" : ""} hover:underline hover:text-white text-white text-lg`}
+                  >
+                    {route.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h3 className="mb-2 mt-4 text-xl font-bold max-w-fit">Skills Bootcamps</h3>
+            <ul>
+              {[
+                {
+                  path: "/training/retrofit/wmca",
+                  label: "Pathway to Retrofit Excellence (West Midlands Combined Authority)",
+                },
+                {
+                  path: "/training/retrofit/enterprise-cheshire-warrington/",
+                  label: "Pathway to Retrofit Excellence (Enterprise Cheshire & Warrington)",
+                },
+                {
+                  path: "/training/recruitment-leadership/symca/",
+                  label:
+                    "Pathway to Recruitment Leadership (South Yorkshire Mayoral Combined Authority)",
+                },
+              ].map((route) => (
+                <li key={route.path}>
+                  <Link
+                    prefetch={false}
+                    href={`${route.path}`}
+                    className={`${location === route.path ? "underline" : ""} hover:underline hover:text-white text-white text-lg`}
+                  >
                     {route.label}
                   </Link>
                 </li>
@@ -74,7 +123,11 @@ const Footer = () => {
                 { path: "/legal/policies", label: "All Policies" },
               ].map((route) => (
                 <li key={route.path}>
-                  <Link prefetch={false} href={`${route.path}`} className={`${location === route.path ? "underline" : ""} hover:underline hover:text-white text-white text-lg`}>
+                  <Link
+                    prefetch={false}
+                    href={`${route.path}`}
+                    className={`${location === route.path ? "underline" : ""} hover:underline hover:text-white text-white text-lg`}
+                  >
                     {route.label}
                   </Link>
                 </li>
@@ -83,11 +136,23 @@ const Footer = () => {
             <h3 className="mt-4 mb-2 text-xl font-bold">Login</h3>
             <ul>
               {[
-                { path: "https://qrt.magn8.co.uk/login.php", label: "Administrator", external: true },
-                { path: "https://qrt.magn8.co.uk/portal/login.php", label: "Tutor", external: true },
+                {
+                  path: "https://quackrecruitment.picsweb.co.uk/Authenticate/Account/Login?ReturnUrl=%2FWorkspace%2FHome",
+                  label: "Staff Login",
+                  external: true,
+                },
+                {
+                  path: "https://quackrecruitment.picsweb.co.uk/Authenticate/Account/Login",
+                  label: "Learner Login",
+                  external: true,
+                },
               ].map((route) => (
                 <li key={route.path}>
-                  <a target="_blank" href={`${route.path}`} className={`${location === route.path ? "underline" : ""} hover:underline hover:text-white text-white text-lg`}>
+                  <a
+                    target="_blank"
+                    href={`${route.path}`}
+                    className={`${location === route.path ? "underline" : ""} hover:underline hover:text-white text-white text-lg`}
+                  >
                     {route.label}
                   </a>
                 </li>
@@ -116,7 +181,11 @@ const Footer = () => {
         <div className="border-t border-quackred-300 pt-6">
           {/* Copyright */}
           <div className="flex flex-col lg:flex-row mb-8">
-            <img src="/logos/quack-group-horizonal-full-logo-white.png" alt="Quack Group Full Logo" className="mx-auto my-3 w-full h-full sm:w-80 lg:w-96 mx-auto" />
+            <img
+              src="/logos/quack-group-horizonal-full-logo-white.png"
+              alt="Quack Group Full Logo"
+              className="mx-auto my-3 w-full h-full sm:w-80 lg:w-96 mx-auto"
+            />
             <div className="md:flex flex-row justify-center max-w-screen-lg mx-auto gap-12 mt-5 lg:mt-0">
               <Link prefetch={false} href="/" className="my-auto flex flex-row">
                 <img src="/logos/temp-logo-rt.png" alt="Logo" className="h-16" />
@@ -133,10 +202,17 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-lg font-semibold text-center">
             <p>Quack Recruitment & Training Ltd. © 2023</p>
-            <p>Quack Recruitment & Training, Business & Technology Centre, Bessemer Drive, Stevenage, SG1 2DX </p>
+            <p>
+              Quack Recruitment & Training, Business & Technology Centre, Bessemer Drive, Stevenage,
+              SG1 2DX{" "}
+            </p>
             <p>
               Company number:{" "}
-              <a target="_blank" href="https://find-and-update.company-information.service.gov.uk/company/11066952" className="text-quackred-300">
+              <a
+                target="_blank"
+                href="https://find-and-update.company-information.service.gov.uk/company/11066952"
+                className="text-quackred-300"
+              >
                 11066952
               </a>
             </p>

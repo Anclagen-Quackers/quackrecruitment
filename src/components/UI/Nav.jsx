@@ -37,7 +37,8 @@ const Nav = () => {
       label: "Training",
       dropdown: [
         { path: "/training", label: "Training" },
-        { path: "/training/wmca-retrofit", label: "Retrofit" },
+        { path: "/training/retrofit", label: "Retrofit" },
+        { path: "/training/recruitment-leadership/symca", label: "Recruitment Leadership" },
         { path: "/training/cscs", label: "CSCS" },
         {
           path: "/training/customer-service-administration",
@@ -54,8 +55,16 @@ const Nav = () => {
     {
       label: "Login",
       dropdown: [
-        { path: "https://qrt.magn8.co.uk/login.php", label: "Administrator", external: true },
-        { path: "https://qrt.magn8.co.uk/portal/login.php", label: "Tutor", external: true },
+        {
+          path: "https://quackrecruitment.picsweb.co.uk/Authenticate/Account/Login?ReturnUrl=%2FWorkspace%2FHome",
+          label: "Staff Login",
+          external: true,
+        },
+        {
+          path: "https://quackrecruitment.picsweb.co.uk/Authenticate/Account/Login",
+          label: "Learner Login",
+          external: true,
+        },
       ],
     },
   ];

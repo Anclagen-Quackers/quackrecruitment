@@ -7,6 +7,7 @@ import Link from "next/link";
 import { keywords } from "../components/data/keywords";
 import FourImageStretch from "@/components/Sections/FourImageFeature/FourImageStretch";
 import CTASection from "../components/Sections/CTASection";
+import MultiLinkCTASection from "@/components/Sections/MultiLinkCTASection";
 import Head from "next/head";
 import PageLink from "@/components/PageLink";
 
@@ -38,7 +39,8 @@ export const metadata = {
     "Certified Training",
     "Training Locations in UK",
   ],
-  image: "https://quackrecruitmentandtraining.co.uk/logos/QRT-logo/QRT-black-transparent-centred.png",
+  image:
+    "https://quackrecruitmentandtraining.co.uk/logos/QRT-logo/QRT-black-transparent-centred.png",
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 
@@ -49,7 +51,11 @@ const Home = () => {
       {/* <Head title="Home" description="Welcome to Quack Specialists, your local recruitment specialist." keywords={keywords} /> */}
       <Head>
         <title>Home</title>
-        <meta name="description" content="Welcome to Quack Specialists, your local recruitment specialist" key="description" />
+        <meta
+          name="description"
+          content="Welcome to Quack Specialists, your local recruitment specialist"
+          key="description"
+        />
         <meta name="keywords" content={keywords} key="keywords" />
       </Head>
       <main className="flex flex-col">
@@ -67,10 +73,22 @@ const Home = () => {
           <FourImageStretch
             title="Who Are We?"
             images={[
-              { src: "/images/pexels-edmond-dantès-4343030.jpg", alt: "Office workers relaxing in lobby" },
-              { src: "/images/pexels-kampus-production-8171221.jpg", alt: "Office workers in meeting room" },
-              { src: "/images/pexels-yan-krukau-8867482.jpg", alt: "Call center workers posing for photo" },
-              { src: "/images/pexels-mart-production-7709219.jpg", alt: "Office with works at desks." },
+              {
+                src: "/images/pexels-edmond-dantès-4343030.jpg",
+                alt: "Office workers relaxing in lobby",
+              },
+              {
+                src: "/images/pexels-kampus-production-8171221.jpg",
+                alt: "Office workers in meeting room",
+              },
+              {
+                src: "/images/pexels-yan-krukau-8867482.jpg",
+                alt: "Call center workers posing for photo",
+              },
+              {
+                src: "/images/pexels-mart-production-7709219.jpg",
+                alt: "Office with works at desks.",
+              },
             ]}
           >
             <p className="mt-4 text-lg leading-6">
@@ -102,20 +120,31 @@ const Home = () => {
           />
         </Section>
         <Section bgColor="bg-gray-50">
-          <FadeInFreeTextSection title="Our Comprehensive Recruitment Solutions" imageSrc="/images/interview-1.jpg" imageAlt="Description">
+          <FadeInFreeTextSection
+            title="Our Comprehensive Recruitment Solutions"
+            imageSrc="/images/interview-1.jpg"
+            imageAlt="Description"
+          >
             <p className="mt-4 text-lg leading-6">
-              <b>On-Site Managed Services:</b> Benefit from dedicated teams that integrate seamlessly with your HR department, offering scalable and cost-efficient staffing solutions.
+              <b>On-Site Managed Services:</b> Benefit from dedicated teams that integrate
+              seamlessly with your HR department, offering scalable and cost-efficient staffing
+              solutions.
             </p>
             <p className="mt-4 text-lg leading-6">
               <b>Temporary Recruitment:</b>
-              {" Got staffing emergencies? Quack's got you. Quick solutions for sudden needs, always the right talent."}
+              {
+                " Got staffing emergencies? Quack's got you. Quick solutions for sudden needs, always the right talent."
+              }
             </p>
 
             <p className="mt-4 text-lg leading-6">
-              <b>Permanent Recruitment:</b> Simplify your long-term hires. Whether new roles or replacements, share your needs and let Quack do the rest.
+              <b>Permanent Recruitment:</b> Simplify your long-term hires. Whether new roles or
+              replacements, share your needs and let Quack do the rest.
             </p>
 
-            <p className="mt-8 text-lg leading-6 italic">Discover more about how Quack can empower your hiring process.</p>
+            <p className="mt-8 text-lg leading-6 italic">
+              Discover more about how Quack can empower your hiring process.
+            </p>
             <div className="text-center my-10">
               <PageLink href={"/recruitment"} label={"Recruitment"} />
             </div>
@@ -134,7 +163,9 @@ const Home = () => {
           />
         </Section>
         <Section bgColor="bg-gray-50">
-          <h2 className="text-3xl text-center mb-10 font-semibold">Why Choose Quack Recruitment & Training?</h2>
+          <h2 className="text-3xl text-center mb-10 font-semibold">
+            Why Choose Quack Recruitment & Training?
+          </h2>
           <CardSection>
             <CardMinimalIconTop
               title="Compliant Provider"
@@ -181,13 +212,41 @@ const Home = () => {
           </CardSection>
         </Section>
         <Section bgColor="bg-zinc-200">
+          <MultiLinkCTASection
+            titleBlack="Looking to build practical skills?"
+            titlePurple="Explore our latest funded Bootcamps."
+            text="Our Skills Bootcamps are designed to help learners build job-ready skills, gain industry insight, and move into real career opportunities."
+            highlights={[
+              "Funded training opportunities",
+              "Face-to-face or live remote delivery",
+              "Career-focused learning with employer progression support",
+            ]}
+            links={[
+              { label: "Pathway to Retrofit Excellence", href: "/training/retrofit" },
+              {
+                label: "Pathway to Recruitment Leadership",
+                href: "/training/recruitment-leadership/symca/",
+              },
+            ]}
+            image="/footer/skillsbootcamp.jpg"
+            alt="Professional training and career development"
+            reverse={true}
+          />
+        </Section>
+        <Section bgColor="bg-gray-50">
           <FourImageStretch
             title="Unleash Your Potential with Our Training Programs"
             images={[
               { src: "/images/pexels-christina-morillo-1181524.jpg", alt: "Woman sitting at desk" },
               { src: "/images/pexels-movidagrafica-barcelona-1474993.jpg", alt: "Welder at work" },
-              { src: "/images/pexels-cottonbro-studio-3205737.jpg", alt: "Security camera on wall" },
-              { src: "/images/pexels-elevate-1267338.jpg", alt: "Forklift moving pallet in warehouse" },
+              {
+                src: "/images/pexels-cottonbro-studio-3205737.jpg",
+                alt: "Security camera on wall",
+              },
+              {
+                src: "/images/pexels-elevate-1267338.jpg",
+                alt: "Forklift moving pallet in warehouse",
+              },
             ]}
           >
             <p className="mt-4 text-lg leading-6">
@@ -197,15 +256,21 @@ const Home = () => {
             </p>
             <p className="mt-4 text-lg leading-6">
               <b>Multiple Training Locations:</b>{" "}
-              {"Our training centers are strategically located to cater to a diverse group of trainees. Whether you're from Walsall, Northampton, or Stevenage, there's a venue near you."}
+              {
+                "Our training centers are strategically located to cater to a diverse group of trainees. Whether you're from Walsall, Northampton, or Stevenage, there's a venue near you."
+              }
             </p>
             <p className="mt-4 text-lg leading-6">
               <b>Certifications & Accreditations:</b>
-              {" Our courses aren't just about learning; they're about achieving recognized certifications that boost your employability. Stay tuned for detailed insights on our accreditations!"}
+              {
+                " Our courses aren't just about learning; they're about achieving recognized certifications that boost your employability. Stay tuned for detailed insights on our accreditations!"
+              }
             </p>
             <p className="mt-4 text-lg leading-6">
               <b>More Details Coming Soon:</b>
-              {" We're in the process of fine-tuning our offerings. Check back soon for comprehensive course details, schedules, and more."}
+              {
+                " We're in the process of fine-tuning our offerings. Check back soon for comprehensive course details, schedules, and more."
+              }
             </p>
             <div className="text-center my-10">
               <PageLink href={"/training"} label={"Learn More"} />
