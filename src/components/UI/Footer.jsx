@@ -137,13 +137,13 @@ const Footer = () => {
             <ul>
               {[
                 {
-                  path: "https://qrt.magn8.co.uk/login.php",
-                  label: "Administrator",
+                  path: "https://quackrecruitment.picsweb.co.uk/Authenticate/Account/Login?ReturnUrl=%2FWorkspace%2FHome",
+                  label: "Staff Login",
                   external: true,
                 },
                 {
-                  path: "https://qrt.magn8.co.uk/portal/login.php",
-                  label: "Tutor",
+                  path: "https://quackrecruitment.picsweb.co.uk/Authenticate/Account/Login",
+                  label: "Learner Login",
                   external: true,
                 },
               ].map((route) => (

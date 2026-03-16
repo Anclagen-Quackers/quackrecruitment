@@ -35,7 +35,7 @@ const BootcampCoursePage = ({ course, allCourses = [] }) => {
           </a>
         </p>
       </div>
-      <div className="max-w-screen-2xl px-4 py-24 mx-auto">
+      <div className="max-w-screen-2xl px-4 lg:py-12 mx-auto">
         <div className="lg:flex gap-10">
           <div className="lg:w-2/3 max-w-screen-2xl mx-auto">
             <BootcampSection title="Course Overview" bannerTitle={course.banner.title}>
@@ -164,7 +164,7 @@ const BootcampCoursePage = ({ course, allCourses = [] }) => {
             )}
           </div>
 
-          <aside className="lg:w-1/3 mt-10 lg:mt-0 space-y-6">
+          <aside className="lg:w-1/3 mt-10 space-y-6 mb-10">
             <BootcampOverviewCard overview={course.overview} authority={course.authority} />
             <BootcampApplyCard apply={course.apply} />
           </aside>

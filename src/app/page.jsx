@@ -222,8 +222,11 @@ const Home = () => {
               "Career-focused learning with employer progression support",
             ]}
             links={[
-              { label: "Retrofit Training", href: "/training/retrofit" },
-              { label: "Recruitment Leadership", href: "/training/recruitment-leadership" },
+              { label: "Pathway to Retrofit Excellence", href: "/training/retrofit" },
+              {
+                label: "Pathway to Recruitment Leadership",
+                href: "/training/recruitment-leadership/symca/",
+              },
             ]}
             image="/footer/skillsbootcamp.jpg"
             alt="Professional training and career development"
