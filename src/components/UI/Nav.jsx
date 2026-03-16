@@ -38,7 +38,7 @@ const Nav = () => {
       dropdown: [
         { path: "/training", label: "Training" },
         { path: "/training/retrofit", label: "Retrofit" },
-        { path: "/training/recruitment-leadership", label: "Recruitment Leadership" },
+        { path: "/training/recruitment-leadership/symca", label: "Recruitment Leadership" },
         { path: "/training/cscs", label: "CSCS" },
         {
           path: "/training/customer-service-administration",

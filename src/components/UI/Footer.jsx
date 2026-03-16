@@ -97,7 +97,7 @@ const Footer = () => {
                   label: "Pathway to Retrofit Excellence (Enterprise Cheshire & Warrington)",
                 },
                 {
-                  path: "/training/recruitment-leadership",
+                  path: "/training/recruitment-leadership/symca/",
                   label:
                     "Pathway to Recruitment Leadership (South Yorkshire Mayoral Combined Authority)",
                 },
