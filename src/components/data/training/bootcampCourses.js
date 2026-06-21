@@ -537,11 +537,11 @@ export const bootcampCourses = {
       href: "https://quackrecruitment.picsweb.co.uk/Guest/SignUp/Applicant/522f666796b8479c8d1ac1aac8d7f2b9",
     },
     policies: [
-      {
-        name: "Learner Handbook WMCA",
-        description: "Pathway to Retrofit Excellence WMCA Learner Handbook v2.0",
-        link: "/docs/Quack_Recruitment_Learner_Handbook_WMCA_v.2.pdf",
-      },
+      // {
+      //   name: "Learner Handbook WMCA",
+      //   description: "Pathway to Retrofit Excellence WMCA Learner Handbook v2.0",
+      //   link: "/docs/Quack_Recruitment_Learner_Handbook_WMCA_v.2.pdf",
+      // },
       ...sharedPolicies,
     ],
     link: "/training/recruitment-leadership/symca",
