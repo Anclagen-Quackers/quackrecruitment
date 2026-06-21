@@ -82,10 +82,17 @@ const docs = [
     link: "/docs/Quack_Group_Ltd_GDPR_Privacy_Policy_2023.pdf",
     type: "business",
   },
+  // Retired 2026
+  // {
+  //   name: "Equality, Diversity, and Inclusion Policy",
+  //   description: "Our commitment to equality, diversity, and inclusion",
+  //   link: "/docs/Quack_Group_Ltd-Equality_Diversity_and_Inclusion_Policy_2021.pdf",
+  //   type: "business",
+  // },
   {
-    name: "Equality, Diversity, and Inclusion Policy",
+    name: "Equality, Diversity, and Inclusion Policy 2026 v2.0",
     description: "Our commitment to equality, diversity, and inclusion",
-    link: "/docs/Quack_Group_Ltd-Equality_Diversity_and_Inclusion_Policy_2021.pdf",
+    link: "/docs/Quack_EDI_Policy_June_2026.pdf",
     type: "business",
   },
   {
@@ -119,15 +126,40 @@ const docs = [
     type: "safety",
   },
   {
+    name: "Safeguarding Learner Onboarding",
+    description: "Safeguarding learners at Quack Recruitment & Training",
+    link: "/docs/Quack_safeguarding_learner_onboarding.pdf",
+    type: "safety",
+  },
+  {
+    name: "Prevent Risk Assessment v1.0 2026",
+    description: "Quack Prevent Risk Assessment",
+    link: "/docs/Quack_Prevent_Risk_Assessment_June_2026.pdf",
+    type: "safety",
+  },
+  {
+    name: "Learner Support Policy v2.0 2026",
+    description: "Safeguarding learners at Quack Recruitment & Training",
+    link: "/docs/Quack_Learner_Support_Policy_June_2026.pdf",
+    type: "safety",
+  },
+  {
     name: "Appeals Procedure",
     description: "Quack Recruitment and Training Appeals Procedure",
     link: "/docs/Quack_Recruitment_and_Training_Appeals_Procedure.pdf",
     type: "training",
   },
+  // Retired 2026
+  // {
+  //   name: "Complaints Policy",
+  //   description: "Quack Recruitment and Training Complaints Policy",
+  //   link: "/docs/Quack_Recruitment_and_Training_Complaints_Policy.pdf",
+  //   type: "training",
+  // },
   {
-    name: "Complaints Policy",
+    name: "Complaints Policy v2.0 2026",
     description: "Quack Recruitment and Training Complaints Policy",
-    link: "/docs/Quack_Recruitment_and_Training_Complaints_Policy.pdf",
+    link: "/docs/Quack_Complaints_Policy_and_Procedure_June_2026.pdf",
     type: "training",
   },
   {
@@ -142,10 +174,17 @@ const docs = [
     link: "/docs/Quack_Recruitment_and_Training_Counter_Fraud_Policy.pdf",
     type: "legal",
   },
+  // retired 2026
+  // {
+  //   name: "Health and Safety Policy",
+  //   description: "Quack Recruitment and Training Health and Safety Policy",
+  //   link: "/docs/Quack_Recruitment_and_Training_Health_and_Safety_Policy.pdf",
+  //   type: "safety",
+  // },
   {
-    name: "Health and Safety Policy",
+    name: "Health and Safety Policy v3.0 2026",
     description: "Quack Recruitment and Training Health and Safety Policy",
-    link: "/docs/Quack_Recruitment_and_Training_Health_and_Safety_Policy.pdf",
+    link: "/docs/Quack_Health_and_Safety_Policy_v3_June_2026.pdf",
     type: "safety",
   },
   {

@@ -1,3 +1,36 @@
+const sharedPolicies = [
+  {
+    name: "Safeguarding Learner Onboarding",
+    description: "Safeguarding learners at Quack Recruitment & Training",
+    link: "/docs/Quack_safeguarding_learner_onboarding.pdf",
+    type: "safety",
+  },
+  {
+    name: "Prevent Risk Assessment v1.0 2026",
+    description: "Quack Prevent Risk Assessment",
+    link: "/docs/Quack_Prevent_Risk_Assessment_June_2026.pdf",
+    type: "safety",
+  },
+  {
+    name: "Learner Support Policy v2.0 2026",
+    description: "Safeguarding learners at Quack Recruitment & Training",
+    link: "/docs/Quack_Learner_Support_Policy_June_2026.pdf",
+    type: "safety",
+  },
+  {
+    name: "Complaints Policy v2.0 2026",
+    description: "Quack Recruitment and Training Complaints Policy",
+    link: "/docs/Quack_Complaints_Policy_and_Procedure_June_2026.pdf",
+    type: "training",
+  },
+  {
+    name: "Health and Safety Policy v3.0 2026",
+    description: "Quack Recruitment and Training Health and Safety Policy",
+    link: "/docs/Quack_Health_and_Safety_Policy_v3_June_2026.pdf",
+    type: "safety",
+  },
+];
+
 export const bootcampCourses = {
   retrofitWmca: {
     slug: "wmca",
@@ -172,6 +205,14 @@ export const bootcampCourses = {
       text: "Start your journey into retrofit and green construction.",
       href: "https://quackrecruitment.picsweb.co.uk/Guest/SignUp/Applicant/522f666796b8479c8d1ac1aac8d7f2b9",
     },
+    policies: [
+      {
+        name: "Learner Handbook WMCA",
+        description: "Pathway to Retrofit Excellence WMCA Learner Handbook v2.0",
+        link: "/docs/Quack_Recruitment_Learner_Handbook_WMCA_v.2.pdf",
+      },
+      ...sharedPolicies,
+    ],
     link: "/training/retrofit/wmca",
   },
   retrofitEcw: {
@@ -329,6 +370,14 @@ export const bootcampCourses = {
       text: "Start your journey into retrofit and green construction.",
       href: "https://quackrecruitment.picsweb.co.uk/Guest/SignUp/Applicant/522f666796b8479c8d1ac1aac8d7f2b9",
     },
+    policies: [
+      {
+        name: "Learner Handbook ECW",
+        description: "Pathway to Retrofit Excellence ECW Learner Handbook v2.0",
+        link: "/docs/Quack_Recruitment_Learner_Handbook_ECW_v.2.pdf",
+      },
+      ...sharedPolicies,
+    ],
     link: "/training/retrofit/enterprise-cheshire-warrington",
   },
   recruitmentSymca: {
@@ -487,6 +536,14 @@ export const bootcampCourses = {
       text: "Start your journey into recruitment.",
       href: "https://quackrecruitment.picsweb.co.uk/Guest/SignUp/Applicant/522f666796b8479c8d1ac1aac8d7f2b9",
     },
+    policies: [
+      {
+        name: "Learner Handbook WMCA",
+        description: "Pathway to Retrofit Excellence WMCA Learner Handbook v2.0",
+        link: "/docs/Quack_Recruitment_Learner_Handbook_WMCA_v.2.pdf",
+      },
+      ...sharedPolicies,
+    ],
     link: "/training/recruitment-leadership/symca",
   },
 };
