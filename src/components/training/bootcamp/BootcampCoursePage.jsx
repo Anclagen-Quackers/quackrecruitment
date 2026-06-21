@@ -5,6 +5,7 @@ import BootcampBulletList from "./BootcampBulletList";
 import BootcampTestimonials from "./BootcampTestimonials";
 import BootcampFeatureList from "./BootcampFeatureList";
 import BootcampApplyCard from "./BootcampApplyCard";
+import BootcampPolicies from "./BootcampPolicies";
 import Link from "next/link";
 
 const BootcampCoursePage = ({ course, allCourses = [] }) => {
@@ -119,8 +120,15 @@ const BootcampCoursePage = ({ course, allCourses = [] }) => {
             <div className="hidden lg:block px-10">
               <BootcampApplyCard apply={course.apply} />
             </div>
+
+            {course.policies?.length > 0 && (
+              <BootcampSection title="Policies & Learner Information">
+                <BootcampPolicies items={course.policies} variant="grid" />
+              </BootcampSection>
+            )}
+
             {otherCourses.length > 0 && (
-              <section className="mt-16 border-t border-quackred-100 pt-12">
+              <section className="mt-16 border-t border-quackred-100 pt-12 lg:px-10">
                 <h3 className="text-3xl font-bold mb-4">Other Skills Bootcamps Available</h3>
                 <p className="mb-8 max-w-3xl text-lg leading-8 text-gray-900">
                   Explore our other Skills Bootcamp programmes designed to support different career
