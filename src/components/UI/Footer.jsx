@@ -22,6 +22,7 @@ const Footer = () => {
               {[
                 { path: "/", label: "Home" },
                 { path: "/recruitment/listings", label: "Jobs" },
+                { path: "/report-a-safeguarding-concern", label: "Report a Safeguarding Concern" },
                 { path: "/about", label: "About" },
                 { path: "/contact", label: "Contact" },
                 ,
@@ -121,6 +122,7 @@ const Footer = () => {
                 { path: "/legal", label: "Legal" },
                 { path: "/legal/privacy-policy", label: "Privacy Policy" },
                 { path: "/legal/policies", label: "All Policies" },
+                { path: "/report-a-safeguarding-concern", label: "Report a Safeguarding Concern" },
               ].map((route) => (
                 <li key={route.path}>
                   <Link

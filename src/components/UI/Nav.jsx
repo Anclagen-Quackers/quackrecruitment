@@ -50,6 +50,7 @@ const Nav = () => {
         { path: "/training/fork-lift", label: "Forklift Truck (FLT)" },
       ],
     },
+    { path: "/report-a-safeguarding-concern", label: "Safeguarding" },
     { path: "/contact/register", label: "Register" },
     { path: "/contact", label: "Contact" },
     {
@@ -113,7 +114,7 @@ const Nav = () => {
           </Link>
         </div>
         {/* Logo and Desktop Links here */}
-        <ul className="hidden lg:flex content-center space-x-3 pr-1">
+        <ul className="hidden lg:flex content-center space-x-1 xl:space-x-3 pr-1">
           {navItems.map((item) => (
             <li key={item.label}>
               {item.dropdown ? (
@@ -122,7 +123,7 @@ const Nav = () => {
                     onClick={() => toggleDropdown(item.label)}
                     className={`${
                       openDropdown === item.label ? "bg-quackred-200" : ""
-                    } font-medium text-black text-lg p-2 py-1 rounded-full flex hover:bg-quackred hover:text-white`}
+                    } font-medium text-black text-base xl:text-lg p-2 py-1 rounded-full flex hover:bg-quackred hover:text-white`}
                   >
                     {item.label}
                     <span className="m-0 rounded-full ps-1 material-symbols-outlined">
@@ -167,7 +168,7 @@ const Nav = () => {
                     href={item.path}
                     className={`${
                       location === item.path ? "bg-quackred text-white hover:bg-quackred-700" : ""
-                    } hover:bg-quackred hover:text-white my-auto d-block duration-500 font-medium text-black text-lg p-2 rounded-full`}
+                    } hover:bg-quackred hover:text-white my-auto d-block duration-500 font-medium text-black text-base xl:text-lg p-2 rounded-full`}
                     onClick={handleMenuClose}
                   >
                     {item.label}

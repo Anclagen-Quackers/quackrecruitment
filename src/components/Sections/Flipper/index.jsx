@@ -12,12 +12,23 @@ const Flipper = ({ imageSRC, imageAlt = "Flipper Image", text, bgColor, textColo
   });
 
   return (
-    <div className="flex items-center justify-center relative h-44 w-64  md:h-52 md:w-96 m-6" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-      <a.div className={`bg-${bgColor} c flex items-center justify-center h-44 w-64 md:h-52 md:w-96 absolute`} style={{ opacity: opacity.to((o) => 1 - o), transform }}>
-        <p className={`text-${textColor} text-2xl font-medium text-center px-1`}>{text}</p>
+    <div
+      className="flex items-center justify-center relative h-24 w-32 md:h-48 md:w-72 lg:h-52 lg:w-96 m-6"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <a.div
+        className={`bg-${bgColor} c flex items-center justify-center h-24 w-32  md:h-48 md:w-72 lg:h-52 lg:w-96 absolute`}
+        style={{ opacity: opacity.to((o) => 1 - o), transform }}
+      >
+        <p
+          className={`text-${textColor} text-lg  md:text-xl lg:text-2xl font-medium text-center px-1`}
+        >
+          {text}
+        </p>
       </a.div>
       <a.div
-        className={`c  h-44 w-64 md:h-52 md:w-96 absolute`}
+        className={`c  h-24 w-32 md:h-48 md:w-72 lg:h-52 lg:w-96 absolute`}
         style={{
           opacity,
           transform,
