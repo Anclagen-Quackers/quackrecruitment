@@ -546,6 +546,236 @@ export const bootcampCourses = {
     ],
     link: "/training/recruitment-leadership/symca",
   },
+  constructionUtilitiesHcc: {
+  id: "constructionUtilitiesHcc",
+  slug: "hampshire-construction-utilities",
+  category: "construction",
+  title: "Pathway to Construction Utilities",
+  subtitle: "Hampshire County Council Skills Bootcamp",
+  funding: "Hampshire County Council",
+  location: "Hampshire",
+  banner: {
+    title: "Pathway to Construction Utilities",
+    slogan:
+      "A practical Skills Bootcamp designed to support learners into construction, civils and utilities roles across Hampshire.",
+    imgSrc: "/images/banners/construction-banner.jpg",
+    imgAlt: "Workers on a road construction site",
+    position: "center",
+  },
+  authority: {
+    name: "Hampshire County Council",
+    shortName: "HCC",
+    strapline: "Delivered in Partnership with Hampshire County Council",
+    logo: "/images/hcc-logo-colour.gif",
+    logoAlt: "Hampshire County Council logo",
+  },
+  brandingLogos: [
+    {
+      src: "/logos/QRT-logo/QRT-black-transparent.png",
+      alt: "Quack Recruitment & Training logo",
+      className: "max-h-20",
+    },
+    {
+      src: "/images/hcc-logo-colour.gif",
+      alt: "Hampshire County Council logo",
+      className: "max-h-24",
+    },
+  ],
+  cardDescription:
+    "A funded Skills Bootcamp supporting learners into construction, civils and utilities roles across Hampshire.",
+  cardHighlights: [
+    "15 structured sessions",
+    "97.5 total hours",
+    "CSCS Labourer Card progression support",
+  ],
+  noticeText: "Hampshire Construction Utilities Skills Bootcamp places available",
+  noticeLinkText: "register your interest today",
+  hero: {
+    eyebrow: "Skills Bootcamp",
+    heading: "Pathway to Construction Utilities - Hampshire County Council Skills Bootcamp",
+    intro: [
+      "The Pathway to Construction Utilities Skills Bootcamp is delivered by Quack Recruitment & Training in partnership with Hampshire County Council.",
+      "The programme is designed to help address skills shortages across the construction, civils and utilities sectors in Hampshire, while supporting learners to progress into sustained employment.",
+      "Learners develop core site-readiness knowledge, health and safety awareness, practical construction skills and the employability behaviours required by employers.",
+    ],
+  },
+  overview: {
+    course: "Pathway to Construction Utilities",
+    sector: "Construction / Civils / Utilities",
+    duration: "15 structured sessions",
+    guidedLearningHours: "82 GLH",
+    schedule: "97.5 total hours including 15.5 hours employability activity",
+    deliveryModes: [
+      "Practical skills training",
+      "Accredited qualifications",
+      "Employability support",
+    ],
+    deliveryNote:
+      "A practical Skills Bootcamp designed to support learners into construction, civils and utilities roles across Hampshire.",
+    eligibility: [
+      "Learners interested in construction, civils or utilities roles",
+      "Learners able to commit to all programme sessions",
+      "Learners seeking practical training and progression into employment",
+    ],
+  },
+  handbook: {
+    title: "Learner Handbook",
+    buttonText: "Download the HCC Learner Handbook",
+    href: "/docs/Quack_Recruitment_Learner_Handbook_HCC_v.2.pdf",
+    description: [
+      "Learners are required to read and follow the HCC Skills Bootcamp Learner Handbook throughout the programme.",
+      "The handbook includes key information about programme structure, expectations, qualifications, assessments, learner responsibilities, support, progression and completion requirements.",
+    ],
+  },
+  programmeStructure: [
+    { value: "15", label: "Structured sessions" },
+    { value: "97.5", label: "Total programme hours" },
+    { value: "82", label: "Guided Learning Hours" },
+    { value: "15.5", label: "Employability activity hours" },
+  ],
+  programmeStructureNote:
+    "The programme combines practical skills, accredited qualifications and employability support.",
+  learningTitle: "What Learners Will Develop",
+  learningIntro: "The Bootcamp is designed to help learners develop:",
+  learningFeatures: [
+    {
+      title: "Knowledge",
+      description: "Health and safety, COSHH, manual handling and site procedures.",
+    },
+    {
+      title: "Skills",
+      description: "Tools, materials, practical site tasks and safe working methods.",
+    },
+    {
+      title: "Behaviours",
+      description: "Punctuality, teamwork, communication, reliability and professional conduct.",
+    },
+  ],
+  qualifications: [
+    "Highfield Level 1 Award in Health and Safety within a Construction Environment",
+    "Highfield Level 2 Award in Safe Moving and Handling",
+    "Highfield Level 2 Award in Health and Safety within the Workplace",
+    "Highfield Level 2 Award in the Control of Substances Hazardous to Health",
+    "CITB Health, Safety and Environment Test preparation",
+    "CSCS Labourer Card progression",
+  ],
+  qualificationsNote:
+    "These qualifications support learners to build the knowledge and practical understanding required for safe working in construction, civils and utilities environments.",
+  cscsProgression: [
+    "As part of the programme, learners will prepare for the CITB Health, Safety and Environment Test and, upon successful completion, will be supported to progress towards the CSCS Labourer Card.",
+    "This is an important requirement for many entry-level construction and site-based roles.",
+  ],
+  careerTitle: "Progression Opportunities",
+  careerNote:
+    "The programme is designed to support progression into entry-level construction, civils, utilities and infrastructure support roles.",
+  careerOpportunities: [
+    "Construction Labourer",
+    "Civils Operative",
+    "Utilities Operative",
+    "Groundworker",
+    "Drainage Operative",
+    "Highways Operative",
+    "Site Labourer",
+    "Entry-level Infrastructure Support Roles",
+  ],
+  learnerSupportTitle: "Support During the Programme",
+  learnerSupportIntro: "Learners receive support throughout the programme, including:",
+  learnerSupport: [
+    "Initial assessment",
+    "BKSB English and maths support where required",
+    "Skills scan and starting point review",
+    "IAG and career planning",
+    "Weekly progress reviews",
+    "Employability support",
+    "CV and interview preparation",
+    "Progression and employer engagement support",
+    "SEND and reasonable adjustments where required",
+  ],
+  learnerExpectations: [
+    "attend all sessions",
+    "arrive on time",
+    "participate fully",
+    "complete all required assessments",
+    "engage with English and maths support where required",
+    "complete employability activity",
+    "apply for suitable roles",
+    "attend interviews arranged through the programme",
+    "follow behaviour, conduct, health and safety expectations",
+  ],
+  testimonialsTitle: "Learner and Employer Feedback",
+  testimonials: [
+    {
+      quote:
+        "Julie J completed the course, loved the training and has since progressed into employment.",
+      name: "Julie J",
+      role: "HCC Skills Bootcamp Learner",
+    },
+    {
+      quote:
+        "Luke W really enjoyed the course and found the training useful, engaging and relevant to the construction sector.",
+      name: "Luke W",
+      role: "HCC Skills Bootcamp Learner",
+    },
+    {
+      quote:
+        "Learners demonstrated a good understanding of health and safety, manual handling, COSHH and general site procedures. They understood the importance of PPE, following instructions and working safely around others.",
+      name: "Employer Feedback",
+      role: "PH Brickwork",
+    },
+  ],
+  whyChoose: [
+    {
+      title: "Practical Site Readiness",
+      description:
+        "Training focuses on the knowledge, skills and behaviours needed for construction, civils and utilities environments.",
+    },
+    {
+      title: "Accredited Qualifications",
+      description:
+        "Learners work towards Highfield awards and preparation for CITB Health, Safety and Environment testing.",
+    },
+    {
+      title: "Employment Focus",
+      description:
+        "The programme includes employability activity, CV support, interview preparation and employer engagement.",
+    },
+    {
+      title: "CSCS Progression",
+      description:
+        "Learners are supported to progress towards the CSCS Labourer Card after successful completion.",
+    },
+  ],
+  progressionTitle: "Sectors Learners Can Progress Into",
+  progressionIntro: "The Bootcamp supports progression into practical site-based pathways across:",
+  progressionItems: [
+    "Construction",
+    "Civil engineering",
+    "Utilities",
+    "Infrastructure",
+    "Highways",
+    "Groundworks",
+  ],
+  finalCta: {
+    heading: "Interested in the Hampshire Construction Utilities Skills Bootcamp?",
+    text: "Register your interest today and a member of the team will contact you with further information.",
+    buttonText: "Register Your Interest",
+  },
+  policies: [
+    {
+      name: "Learner Handbook HCC",
+      description: "Pathway to Construction Utilities HCC Learner Handbook v2.0",
+      link: "/docs/Quack_Recruitment_Learner_Handbook_HCC_v.2.pdf",
+    },
+    ...sharedPolicies,
+  ],
+  apply: {
+    heading: "Register Your Interest",
+    text: "Start your journey into construction, civils and utilities.",
+    buttonText: "Register Your Interest",
+    href: "https://quackrecruitment.picsweb.co.uk/Guest/SignUp/Applicant/522f666796b8479c8d1ac1aac8d7f2b9",
+  },
+  link: "/skills-bootcamps/hampshire-construction-utilities",
+  },
 };
 
 export const bootcampCourseList = Object.values(bootcampCourses);
@@ -553,4 +783,5 @@ export const bootcampCourseList = Object.values(bootcampCourses);
 export const bootcampCourseGroups = {
   retrofit: [bootcampCourses.retrofitWmca, bootcampCourses.retrofitEcw],
   recruitment: [bootcampCourses.recruitmentSymca],
+  construction: [bootcampCourses.constructionUtilitiesHcc],
 };

@@ -18,9 +18,14 @@ const BannerHalf = ({ title, slogan, imgSrc, imgAlt, position = "bottom" }) => {
         <div className="absolute top-0 left-0 w-full h-full px-5 md:px-12 banner-gradient">
           <div className="relative max-w-screen-2xl mx-auto top-0 left-0 h-full flex items-center ">
             <div className="text-center pt-20 mx-auto md:mx-0">
-              <h1 className="text-black text-5xl md:text-6xl mb-4 max-w-sm mx-auto">{title}</h1>
+              <h1 className="mx-auto mb-4 max-w-xs break-words text-3xl text-black sm:max-w-sm sm:text-5xl md:text-6xl">
+                {title}
+              </h1>
               {lines.map((line, index) => (
-                <p key={index} className="text-quackred text-2xl md:text-3xl mb-2 max-w-md mx-auto">
+                <p
+                  key={index}
+                  className="mx-auto mb-2 max-w-xs break-words text-lg text-quackred sm:max-w-md md:text-3xl"
+                >
                   {line}
                 </p>
               ))}

@@ -13,7 +13,7 @@ const BootcampApplyCard = ({ apply }) => {
           rel="noopener noreferrer"
           className="inline-flex py-4 px-6 text-base font-semibold rounded-lg bg-white text-quackred-800 hover:opacity-90 transition"
         >
-          Apply for the Bootcamp
+          {apply.buttonText || "Apply for the Bootcamp"}
         </a>
       </div>
     </section>
