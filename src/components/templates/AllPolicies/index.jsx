@@ -3,77 +3,267 @@ import PolicyCard from "@/components/Card/PolicyCard";
 import { useState } from "react";
 
 const AllPolicies = () => {
-  const [activeTab, setActiveTab] = useState("all");
-  const active =
-    "py-2 px-4 block bg-quackred-800 hover:bg-quackred-600 focus:ring-quackred-400 focus:ring-offset-quackred-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg mb-2";
-  const inactive =
-    "py-2 px-4 block bg-gray-300 hover:bg-gray-200 focus:ring-gray-400 focus:ring-offset-gray-200 text-gray-800 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg mb-2";
   return (
-    <>
-      <h2 className="text-3xl text-center mb-10 font-semibold">Our Policies</h2>
-      <p className="mb-10 max-w-3xl mx-auto">
-        At Quack Group Ltd, we take privacy and data protection seriously. We are committed to
-        ensuring the protection and proper use of your data. Below are our policies. Click on each
-        to download a copy and learn more.
-      </p>
-
-      <div className="flex space-x-4 mt-4 flex-wrap justify-center">
-        <button
-          className={activeTab === "all" ? active : inactive}
-          onClick={() => setActiveTab("all")}
-        >
-          All
-        </button>
-        <button
-          className={activeTab === "business" ? active : inactive}
-          onClick={() => setActiveTab("business")}
-        >
-          Business
-        </button>
-        <button
-          className={activeTab === "environment" ? active : inactive}
-          onClick={() => setActiveTab("environment")}
-        >
-          Environment
-        </button>
-        <button
-          className={activeTab === "legal" ? active : inactive}
-          onClick={() => setActiveTab("legal")}
-        >
-          Legal
-        </button>
-        <button
-          className={activeTab === "safety" ? active : inactive}
-          onClick={() => setActiveTab("safety")}
-        >
-          Safety
-        </button>
-        <button
-          className={activeTab === "training" ? active : inactive}
-          onClick={() => setActiveTab("training")}
-        >
-          Training
-        </button>
+    <div className="mx-auto max-w-6xl">
+      <div className="mb-12 max-w-3xl">
+        <p className="text-lg leading-8 text-gray-800">
+          Access current Quack Recruitment & Training policies covering safeguarding, learner
+          support, assessment, data protection, governance, health and safety and responsible
+          business.
+        </p>
       </div>
 
-      <div className="flex flex-wrap justify-center">
-        {docs.map((doc, index) =>
-          activeTab === "all" || activeTab === doc.type ? (
-            <PolicyCard
-              key={index}
-              name={doc.name}
-              description={doc.description}
-              link={doc.link}
-              dl={doc.dl}
-            />
-          ) : null,
-        )}
+      <div className="space-y-14">
+        {policyGroups.map((group) => (
+          <section key={group.id} id={group.id}>
+            <div className="mb-6 border-l-4 border-quackred-700 pl-4">
+              <p className="mb-1 text-sm font-semibold uppercase tracking-wide text-quackred-700">
+                Policy area
+              </p>
+
+              <h2 className="text-2xl font-bold text-gray-950 sm:text-3xl">{group.title}</h2>
+
+              {group.description && (
+                <p className="mt-2 max-w-3xl text-base leading-7 text-gray-700">
+                  {group.description}
+                </p>
+              )}
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2">
+              {group.policies.map((policy) => (
+                <PolicyItem key={policy.href} policy={policy} />
+              ))}
+            </div>
+          </section>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 
 export default AllPolicies;
+
+const PolicyItem = ({ policy }) => {
+  return (
+    <a
+      href={policy.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block rounded-xl border border-quackred-100 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-quackred-300 hover:shadow-md"
+    >
+      <div className="flex items-start justify-between gap-4">
+        <div className="min-w-0">
+          <div className="flex flex-wrap items-center gap-2">
+            <h3 className="font-semibold text-gray-900 transition group-hover:text-quackred-800">
+              {policy.title}
+            </h3>
+
+            {policy.version && (
+              <span className="rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-600">
+                {policy.version}
+              </span>
+            )}
+          </div>
+
+          {policy.description && (
+            <p className="mt-2 text-sm leading-6 text-gray-600">{policy.description}</p>
+          )}
+
+          {policy.reference && (
+            <p className="mt-3 text-xs font-medium uppercase tracking-wide text-gray-500">
+              Policy {policy.reference}
+            </p>
+          )}
+        </div>
+
+        <div className="flex shrink-0 flex-col items-end gap-2">
+          <span className="rounded-md bg-quackred-100 px-3 py-1 text-sm font-medium text-quackred-700">
+            PDF
+          </span>
+
+          <span
+            className="material-icons text-xl text-gray-400 transition group-hover:text-quackred-700"
+            aria-hidden="true"
+          >
+            open_in_new
+          </span>
+        </div>
+      </div>
+    </a>
+  );
+};
+
+export const policyGroups = [
+  {
+    id: "safeguarding",
+    title: "Safeguarding, Prevent and Staff Suitability",
+    description:
+      "Policies covering safeguarding, Prevent responsibilities and safer recruitment practices.",
+    policies: [
+      {
+        title: "Safeguarding, Prevent and Online Safety Policy",
+        version: "v5.0",
+        href: "/docs/policies/1.1-quack-safeguarding-prevent-online-safety-policy-v5.pdf",
+      },
+      {
+        title: "Prevent, Radicalisation and Extremism Policy",
+        version: "v3.0",
+        href: "/docs/policies/1.3-quack-prevent-radicalisation-extremism-policy-v3.pdf",
+      },
+      {
+        title: "Safer Recruitment, Selection and Pre-Employment Checks Policy",
+        version: "v2.0",
+        href: "/docs/policies/1.5-quack-safer-recruitment-selection-pre-employment-checks-v2.pdf",
+      },
+    ],
+  },
+
+  {
+    id: "learner-support",
+    title: "Learner Journey, Support and Progression",
+    description:
+      "Policies covering learner support, inclusion, progression, attendance, conduct and complaints.",
+    policies: [
+      {
+        title: "Learner Support Policy",
+        version: "v2.0",
+        href: "/docs/policies/2.1-quack-learner-support-policy-v2.pdf",
+      },
+      {
+        title: "Equality, Diversity and Inclusion Policy",
+        version: "v2.0",
+        href: "/docs/policies/2.2-quack-equality-diversity-inclusion-policy-v2.pdf",
+      },
+      {
+        title: "Information, Advice, Guidance, Careers and Progression Policy",
+        version: "v1.0",
+        href: "/docs/policies/2.3-quack-iag-careers-progression-policy-v1.pdf",
+      },
+      {
+        title: "Attendance, Engagement, Re-engagement and Withdrawal Policy",
+        version: "v1.0",
+        href: "/docs/policies/2.4-quack-attendance-engagement-withdrawal-policy-v1.pdf",
+      },
+      {
+        title: "Learner Conduct, Behaviour and Anti-Bullying Policy",
+        version: "v1.0",
+        href: "/docs/policies/2.5-quack-learner-conduct-behaviour-anti-bullying-policy-v1.pdf",
+      },
+      {
+        title: "Complaints Policy and Procedure",
+        version: "v2.0",
+        href: "/docs/policies/2.7-quack-complaints-policy-procedure-v2.pdf",
+      },
+    ],
+  },
+
+  {
+    id: "curriculum-quality",
+    title: "Curriculum, Assessment and Quality",
+    description:
+      "Policies governing teaching, assessment, examinations, academic integrity and online learning.",
+    policies: [
+      {
+        title: "Teaching, Learning and Assessment Policy",
+        version: "v1.0",
+        href: "/docs/policies/3.1-quack-teaching-learning-assessment-policy-v1.pdf",
+      },
+      {
+        title: "Assessment Appeals, Enquiries and Reviews Procedure",
+        version: "v2.0",
+        href: "/docs/policies/3.3-quack-assessment-appeals-enquiries-reviews-v2.pdf",
+      },
+      {
+        title: "Examinations, E-Assessment and Invigilation Policy",
+        version: "v2.0",
+        href: "/docs/policies/3.4-quack-examinations-e-assessment-invigilation-policy-v2.pdf",
+      },
+      {
+        title: "Malpractice, Maladministration and Assessment Integrity Policy",
+        version: "v2.0",
+        href: "/docs/policies/3.5-quack-malpractice-maladministration-assessment-integrity-v2.pdf",
+      },
+      {
+        title: "Online and E-Learning Policy",
+        version: "v2.0",
+        href: "/docs/policies/3.7-quack-online-elearning-policy-v2.pdf",
+      },
+    ],
+  },
+
+  {
+    id: "data-privacy",
+    title: "Funding, Data, Privacy and Records",
+    description: "Policies covering learner data, privacy and information governance.",
+    policies: [
+      {
+        title: "GDPR and Learner Privacy Policy",
+        version: "v3.0",
+        href: "/docs/policies/4.2-quack-gdpr-learner-privacy-policy-v3.pdf",
+      },
+    ],
+  },
+
+  {
+    id: "governance",
+    title: "Governance, Risk and Integrity",
+    description:
+      "Policies supporting transparent governance, financial integrity and protected disclosures.",
+    policies: [
+      {
+        title:
+          "Conflict of Interest, Related-Party Relationships and Impartial Decision-Making Policy",
+        version: "v2.0",
+        href: "/docs/policies/5.3-quack-conflict-interest-related-party-impartiality-policy-v2.pdf",
+      },
+      {
+        title: "Counter Fraud, Bribery, Corruption and Financial Irregularity Policy",
+        version: "v2.1",
+        href: "/docs/policies/5.4-quack-counter-fraud-bribery-corruption-policy-v2.1.pdf",
+      },
+      {
+        title: "Whistleblowing and Protected Disclosures Policy",
+        version: "v2.0",
+        href: "/docs/policies/5.5-quack-whistleblowing-protected-disclosures-policy-v2.pdf",
+      },
+    ],
+  },
+
+  {
+    id: "health-safety",
+    title: "Health, Safety and Continuity",
+    policies: [
+      {
+        title: "Health and Safety Policy",
+        version: "v3.0",
+        href: "/docs/policies/7.1-quack-health-safety-policy-v3.pdf",
+      },
+    ],
+  },
+
+  {
+    id: "responsible-business",
+    title: "Procurement, Sustainability and Responsible Business",
+    policies: [
+      {
+        title: "Modern Slavery, Human Trafficking and Labour Exploitation Policy",
+        version: "v2.0",
+        href: "/docs/policies/8.2-quack-modern-slavery-human-trafficking-policy-v2.pdf",
+      },
+      {
+        title: "Environmental Sustainability and Climate Action Policy",
+        version: "v2.0",
+        href: "/docs/policies/8.3-quack-environmental-sustainability-climate-action-policy-v2.pdf",
+      },
+      {
+        title: "Carbon Reduction Plan",
+        version: "v2.0",
+        href: "/docs/policies/8.4-quack-carbon-reduction-plan-v2.pdf",
+      },
+    ],
+  },
+];
 
 const docs = [
   {

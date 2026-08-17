@@ -72,8 +72,10 @@ const createRetrofitCourse = ({
     qualifications: programme.qualifications,
 
     learnerSupportTitle: "Learner Support and SEND",
-    learnerSupportIntro: programme.learnerSupportIntro,
-    learnerSupport: programme.learnerSupport,
+    learnerSupportIntro:
+      programme.learnerSupportIntro || retrofitProgramme.programme.learnerSupportIntro,
+    intro: [regionalIntro, ...programme.overview],
+    learnerSupport: programme.learnerSupport || retrofitProgramme.programme.learnerSupport,
 
     learnerExpectations: programme.learnerExpectations,
 
@@ -126,7 +128,7 @@ const retrofitProgramme = {
     "A funded retrofit Skills Bootcamp focused on energy efficiency, practical construction knowledge and employability support.",
 
   cardHighlights: [
-    "3-week intensive programme",
+    "15 structured sessions",
     "82 guided learning hours",
     "Employer engagement and progression support",
   ],
@@ -489,12 +491,12 @@ export const retrofitSurrey = createRetrofitCourse({
   regionalIntro:
     "The Pathway to Retrofit Excellence Skills Bootcamp is delivered by Quack Recruitment & Training as part of Skills Bootcamp provision for Surrey.",
 
-  /*
-   * Dion has said these are regional/contract-specific.
-   * Do not copy WMCA's eligibility just because it looks plausible.
-   */
-  eligibility: [],
-
+  eligibility: [
+    "Aged 19+",
+    "Resident in the relevant Combined Authority area",
+    "Have the right to work in the UK",
+    "Interested in starting or progressing in the sector",
+  ],
   /*
    * Delivery method/location and timetable still need Surrey-specific
    * confirmation.
