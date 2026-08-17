@@ -111,7 +111,7 @@ const Home = () => {
         <Section bgColor="bg-zinc-200">
           <MultiLinkCTASection
             titleBlack="Looking to build practical skills?"
-            titlePurple="Explore our latest funded Bootcamps."
+            titlePurple="Explore our latest funded Skills Bootcamps."
             text="Our Skills Bootcamps are designed to help learners build job-ready skills, gain industry insight, and move into real career opportunities."
             highlights={[
               "Funded training opportunities",

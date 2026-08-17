@@ -149,7 +149,7 @@ function SkillsBootcampsPage() {
           </p>
           <Link
             prefetch={false}
-            href="/contact/register"
+            href="https://quackrecruitment.picsweb.co.uk/Guest/SignUp/Applicant/522f666796b8479c8d1ac1aac8d7f2b9"
             className="inline-flex rounded-lg bg-white px-6 py-3 text-base font-semibold text-gray-900 transition hover:bg-quackred-50"
           >
             Register Your Interest
