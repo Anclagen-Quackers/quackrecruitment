@@ -72,19 +72,19 @@ export const bootcampCourses = {
         name: "Kieron H",
         role: "Recruitment Consultant",
         quote:
-          "I joined the Bootcamp because I wanted to move into a professional office role. The course covered the full recruitment process and included practical exercises like cold calling and interviewing. With the help of the tutors I secured an interview with a recruitment agency and started work as a Recruitment Consultant shortly after finishing the programme.",
+          "I joined the Skills Bootcamp because I wanted to move into a professional office role. The course covered the full recruitment process and included practical exercises like cold calling and interviewing. With the help of the tutors I secured an interview with a recruitment agency and started work as a Recruitment Consultant shortly after finishing the programme.",
       },
       {
         name: "David L",
         role: "Recruitment Resourcer",
         quote:
-          "The training felt very practical and realistic. We practised sourcing candidates and screening CVs which helped me understand the industry. The careers support team helped me apply for roles and I secured a position as a Recruitment Resourcer within weeks of completing the Bootcamp.",
+          "The training felt very practical and realistic. We practised sourcing candidates and screening CVs which helped me understand the industry. The careers support team helped me apply for roles and I secured a position as a Recruitment Resourcer within weeks of completing the Skills Bootcamp.",
       },
       {
         name: "Rosemary A",
         role: "Talent Acquisition Assistant",
         quote:
-          "I was working in retail and wanted to move into an office role. The Bootcamp gave me the skills and confidence needed to work in recruitment. With support from the tutors I secured an interview with a recruitment agency and was offered a role as a Talent Acquisition Assistant.",
+          "I was working in retail and wanted to move into an office role. The Skills Bootcamp gave me the skills and confidence needed to work in recruitment. With support from the tutors I secured an interview with a recruitment agency and was offered a role as a Talent Acquisition Assistant.",
       },
     ],
     jobSupportIntro:

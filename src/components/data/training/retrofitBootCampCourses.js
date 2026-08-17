@@ -371,7 +371,7 @@ export const retrofitWmca = createRetrofitCourse({
       name: "Shiloh C",
       role: "Construction Operative",
       quote:
-        "The course was really informative and gave me a strong understanding of retrofit installations and construction processes. The careers support helped me apply for roles in the sector and within a few weeks of finishing the Bootcamp I secured work with a company delivering insulation and retrofit projects.",
+        "The course was really informative and gave me a strong understanding of retrofit installations and construction processes. The careers support helped me apply for roles in the sector and within a few weeks of finishing the Skills Bootcamp I secured work with a company delivering insulation and retrofit projects.",
     },
   ],
 
@@ -433,19 +433,19 @@ export const retrofitEcw = createRetrofitCourse({
       name: "Stephen S",
       role: "Retrofit Technician",
       quote:
-        "After being made redundant I wanted a career that had long-term prospects. The Bootcamp helped me understand retrofit and energy efficiency improvements. With the support from the training team I applied for roles and secured a job as a Retrofit Technician working on insulation projects.",
+        "After being made redundant I wanted a career that had long-term prospects. The Skills Bootcamp helped me understand retrofit and energy efficiency improvements. With the support from the training team I applied for roles and secured a job as a Retrofit Technician working on insulation projects.",
     },
     {
       name: "Gohere M",
       role: "Construction Operative",
       quote:
-        "The course explained retrofit in a way that was easy to understand and really engaging. The tutors helped me prepare my CV and introduced me to employers in the sector. After completing the Bootcamp I secured work supporting retrofit installation projects.",
+        "The course explained retrofit in a way that was easy to understand and really engaging. The tutors helped me prepare my CV and introduced me to employers in the sector. After completing the Skills Bootcamp I secured work supporting retrofit installation projects.",
     },
     {
       name: "Mukesh S",
       role: "Loft Insulation Installer",
       quote:
-        "The Bootcamp helped me gain the knowledge employers are looking for. Through the employer connections provided during the programme I attended interviews with local contractors and secured a role installing loft insulation shortly after finishing the course.",
+        "The Skills Bootcamp helped me gain the knowledge employers are looking for. Through the employer connections provided during the programme I attended interviews with local contractors and secured a role installing loft insulation shortly after finishing the course.",
     },
   ],
 
