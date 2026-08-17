@@ -75,20 +75,23 @@ const BootcampCoursePage = ({ course, allCourses = [] }) => {
       <div className="mx-auto max-w-screen-2xl px-4 lg:py-12">
         <div className="gap-10 lg:flex">
           <div className="mx-auto max-w-screen-2xl lg:w-2/3">
-            {course.brandingLogos?.length > 0 && (
-              <section className="mt-10 overflow-hidden rounded-xl border border-gray-200 bg-white p-5 shadow-sm lg:mx-10">
-                <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-                  {course.brandingLogos.map((logo) => (
-                    <img
-                      key={logo.src}
-                      src={logo.src}
-                      alt={logo.alt}
-                      className={`h-auto max-w-full object-contain ${logo.className || "max-h-20 w-auto"}`}
-                    />
-                  ))}
-                </div>
-              </section>
-            )}
+            <section className="mt-10 rounded-xl border border-gray-200 bg-white p-5 shadow-sm lg:mx-10">
+              <div className="flex flex-wrap items-center justify-between gap-6 flex-row">
+                <img
+                  src="/logos/QRT-logo/QRT-black-transparent-centred.png"
+                  alt="Quack Recruitment & Training logo"
+                  className="max-h-20 w-auto mx-auto"
+                />
+
+                {course.authority?.logo && (
+                  <img
+                    src={course.authority.logo}
+                    alt={course.authority.logoAlt}
+                    className="max-h-20 w-auto mx-auto"
+                  />
+                )}
+              </div>
+            </section>
 
             <BootcampSection
               title={course.overviewTitle || "Course Overview"}
@@ -102,6 +105,12 @@ const BootcampCoursePage = ({ course, allCourses = [] }) => {
                 ))}
               </div>
             </BootcampSection>
+
+            {course.overview?.eligibility?.length > 0 && (
+              <BootcampSection title="Who Can Apply">
+                <BootcampBulletList items={course.overview.eligibility} />
+              </BootcampSection>
+            )}
 
             {course.programmeStructure?.length > 0 && (
               <BootcampSection title={course.programmeStructureTitle || "Programme Structure"}>
@@ -151,6 +160,12 @@ const BootcampCoursePage = ({ course, allCourses = [] }) => {
               </BootcampSection>
             )}
 
+            {course.skillsDeveloped?.length > 0 && (
+              <BootcampSection title={course.skillsTitle || "Skills and Knowledge Developed"}>
+                <BootcampBulletList items={course.skillsDeveloped} />
+              </BootcampSection>
+            )}
+
             {cscsProgression.length > 0 && (
               <BootcampSection title="CSCS Labourer Card Progression">
                 <div className="space-y-5">
@@ -164,7 +179,9 @@ const BootcampCoursePage = ({ course, allCourses = [] }) => {
             )}
 
             {course.learnerSupport?.length > 0 && (
-              <BootcampSection title={course.learnerSupportTitle || "Safeguarding and Learner Support"}>
+              <BootcampSection
+                title={course.learnerSupportTitle || "Safeguarding and Learner Support"}
+              >
                 {course.learnerSupportIntro && (
                   <p className="mb-4 text-lg leading-8 text-gray-900">
                     {course.learnerSupportIntro}
@@ -266,9 +283,7 @@ const BootcampCoursePage = ({ course, allCourses = [] }) => {
 
             {course.finalCta && (
               <section className="mt-14 rounded-xl bg-gray-900 px-6 py-10 text-center text-white shadow-xl lg:mx-10">
-                <h3 className="mx-auto max-w-3xl text-3xl font-bold">
-                  {course.finalCta.heading}
-                </h3>
+                <h3 className="mx-auto max-w-3xl text-3xl font-bold">{course.finalCta.heading}</h3>
                 {course.finalCta.text && (
                   <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-gray-100">
                     {course.finalCta.text}

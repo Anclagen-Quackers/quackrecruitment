@@ -36,6 +36,7 @@ const logos = [
   { src: "/footer/hcc-logo.gif", alt: "Hampshire County Council Logo" },
   { src: "/footer/Liverpool-City-Region.png", alt: "Liverpool City Region Logo" },
   { src: "/footer/ec+w_logo.png", alt: "Enterprise Cheshire & Warrington Logo" },
+  { src: "/footer/Surrey_County_Council.svg", alt: "Surrey County Council Logo" },
 ];
 
 const LogoGallery = () => {

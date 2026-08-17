@@ -36,23 +36,28 @@ const Nav = () => {
     {
       label: "Training",
       dropdown: [
-        { path: "/training", label: "Training" },
         { path: "/skills-bootcamps", label: "Skills Bootcamps" },
-        { path: "/training/retrofit", label: "Retrofit" },
+        { path: "/skills-bootcamps/retrofit", label: "Retrofit" },
         {
-          path: "/skills-bootcamps/hampshire-construction-utilities",
+          path: "/skills-bootcamps/retrofit/wmca",
+          label: "Retrofit (West Midlands)",
+        },
+        {
+          path: "/skills-bootcamps/retrofit/surrey/",
+          label: "Retrofit (Surrey)",
+        },
+        {
+          path: "/skills-bootcamps/retrofit/enterprise-cheshire-warrington/",
+          label: "Retrofit (Enterprise Cheshire & Warrington)",
+        },
+        {
+          path: "/skills-bootcamps/construction-utilities/hcc",
           label: "Construction Utilities HCC",
         },
-        { path: "/training/recruitment-leadership/symca", label: "Recruitment Leadership" },
-        { path: "/training/cscs", label: "CSCS" },
         {
-          path: "/training/customer-service-administration",
-          label: "Customer Service & Administration",
+          path: "/skills-bootcamps/recruitment-leadership/symca",
+          label: "Recruitment Leadership SYMCA",
         },
-        { path: "/training/food-and-hygiene", label: "Food & Hygiene" },
-        { path: "/training/sia", label: "SIA" },
-        { path: "/training/welding", label: "Welding" },
-        { path: "/training/fork-lift", label: "Forklift Truck (FLT)" },
       ],
     },
     { path: "/report-a-safeguarding-concern", label: "Safeguarding" },
