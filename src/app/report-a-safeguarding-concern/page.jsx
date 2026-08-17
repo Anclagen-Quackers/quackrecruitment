@@ -116,10 +116,10 @@ const ReportSafeguardingConcern = () => {
                   our safeguarding team.
                 </p>
                 <p>
-                  You can use this form to report a safeguarding, welfare, Prevent, abuse,
-                  exploitation, harassment, discrimination, mental health or wellbeing concern where
-                  there may be a risk of harm or safeguarding concern, online safety, staff conduct
-                  or workplace concern.
+                  Use this form to report any safeguarding, welfare, Prevent, abuse, exploitation,
+                  harassment, discrimination, mental health, wellbeing, online safety, staff
+                  conduct, or workplace concern where there may be a risk of harm or a safeguarding
+                  issue.
                 </p>
                 <p>
                   You can report anonymously, but this may limit our ability to follow up or provide

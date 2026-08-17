@@ -10,7 +10,7 @@ export const metadata = {
   keywords: [
     "Retrofit training",
     "Retrofit Skills Bootcamp",
-    "Enterprise Cheshire Warrington bootcamp",
+    "Enterprise Cheshire Warrington Skills Bootcamp",
     "Energy efficiency training",
     "Green construction training",
     "Retrofit installer training UK",

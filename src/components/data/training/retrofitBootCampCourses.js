@@ -359,13 +359,13 @@ export const retrofitWmca = createRetrofitCourse({
       name: "Cameron K",
       role: "Retrofit Installer",
       quote:
-        "Before joining the Bootcamp I had never worked in construction. The tutors explained the retrofit industry clearly and helped me prepare my CV and interviews. Through the employer connections arranged during the course I secured an interview with a local insulation company and started work as a Retrofit Installer shortly after completing the Bootcamp.",
+        "Before joining the Skills Bootcamp I had never worked in construction. The tutors explained the retrofit industry clearly and helped me prepare my CV and interviews. Through the employer connections arranged during the course I secured an interview with a local insulation company and started work as a Retrofit Installer shortly after completing the Skills Bootcamp.",
     },
     {
       name: "Lee M",
       role: "Internal Wall Installer",
       quote:
-        "I wanted to move into the green sector but didn’t know where to start. The Bootcamp gave me a great understanding of energy efficiency and retrofit projects. The team helped me prepare for interviews and introduced me to employers working in the sector. After finishing the programme I secured a role supporting energy efficiency assessments.",
+        "I wanted to move into the green sector but didn’t know where to start. The Skills Bootcamp gave me a great understanding of energy efficiency and retrofit projects. The team helped me prepare for interviews and introduced me to employers working in the sector. After finishing the programme I secured a role supporting energy efficiency assessments.",
     },
     {
       name: "Shiloh C",

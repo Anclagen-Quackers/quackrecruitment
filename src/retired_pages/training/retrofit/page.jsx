@@ -76,7 +76,7 @@ function RetrofitPage() {
                   href="#retrofit-bootcamps"
                   className="rounded-lg bg-quackred-800 px-6 py-3 text-base font-semibold text-white transition hover:bg-quackred-600"
                 >
-                  Explore Bootcamps
+                  Explore Skills Bootcamps
                 </a>
               </div>
             </div>

@@ -61,7 +61,7 @@ const Home = () => {
       <main className="flex flex-col">
         <BannerHome
           title={`Quack \nRecruitment & Training`}
-          slogan="Whether your looking to recruit, or train the best talent... we've got you covered!"
+          slogan="Whether you're looking to recruit, or train the best talent... we've got you covered!"
           imgSrc="/images/banners/pexels-sevenstorm-juhaszimrus-443383.jpg"
           imgAlt="Descriptive Image Alt Text"
           links={[
