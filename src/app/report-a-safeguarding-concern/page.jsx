@@ -26,10 +26,10 @@ const concernTypes = [
   "exploitation",
   "harassment",
   "discrimination",
-  "mental health",
   "online safety",
   "staff conduct",
   "workplace concern",
+  "mental health or wellbeing concerns involving a risk of harm or safeguarding concern",
 ];
 
 const policyLinks = [
@@ -54,7 +54,7 @@ const policyLinks = [
 export const metadata = {
   title: "Report a Safeguarding Concern | Quack Recruitment & Training",
   description:
-    "Report a safeguarding, welfare, Prevent, abuse, exploitation, harassment, discrimination, mental health, online safety, staff conduct or workplace concern to Quack Recruitment & Training.",
+    "Report a safeguarding, welfare, Prevent, abuse, exploitation, harassment, discrimination, mental health or wellbeing concern involving a risk of harm, online safety, staff conduct or workplace concern to Quack Recruitment & Training.",
 };
 
 const ReportSafeguardingConcern = () => {
@@ -72,10 +72,7 @@ const ReportSafeguardingConcern = () => {
         <div className="mx-auto max-w-screen-2xl px-4 py-5">
           <div className="flex flex-col gap-3 rounded-lg border border-quackred-300 bg-white p-5 shadow-sm md:flex-row md:items-center md:justify-between">
             <div className="flex items-start gap-3">
-              <span
-                className="material-icons mt-1 text-3xl text-quackred-800"
-                aria-hidden="true"
-              >
+              <span className="material-icons mt-1 text-3xl text-quackred-800" aria-hidden="true">
                 warning
               </span>
               <div>
@@ -99,7 +96,7 @@ const ReportSafeguardingConcern = () => {
       </section>
 
       <section className="mx-auto w-full max-w-screen-2xl px-4 py-10 lg:py-14">
-        <div className="grid gap-8 lg:grid-cols-3 lg:items-start">
+        <div className="md:grid gap-8 lg:grid-cols-3 lg:items-start">
           <div className="space-y-8 lg:col-span-2">
             <section className="lg:px-10">
               <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-quackred-700">
@@ -120,8 +117,9 @@ const ReportSafeguardingConcern = () => {
                 </p>
                 <p>
                   You can use this form to report a safeguarding, welfare, Prevent, abuse,
-                  exploitation, harassment, discrimination, mental health, online safety, staff
-                  conduct or workplace concern.
+                  exploitation, harassment, discrimination, mental health or wellbeing concern where
+                  there may be a risk of harm or safeguarding concern, online safety, staff conduct
+                  or workplace concern.
                 </p>
                 <p>
                   You can report anonymously, but this may limit our ability to follow up or provide
@@ -135,8 +133,10 @@ const ReportSafeguardingConcern = () => {
                 Report a Safeguarding Concern
               </h2>
               <p className="mb-6 text-lg leading-8 text-gray-900">
-                Use the online form to send a concern to the safeguarding team. For urgent or
-                immediate danger, call 999 first.
+                Use the online form to send a concern to the safeguarding team.{" "}
+                <b>
+                  This form is not monitored 24/7. For urgent or immediate danger, call 999 first.
+                </b>
               </p>
               <a
                 href={formLink}
@@ -186,7 +186,14 @@ const ReportSafeguardingConcern = () => {
             <section className="rounded-xl bg-quackred-800 p-6 text-white shadow-xl">
               <h2 className="mb-4 text-3xl font-bold">Safeguarding Contacts</h2>
               <p className="mb-6 text-lg">
-                If someone is in immediate danger, call 999 first.
+                <b>
+                  If someone is in immediate danger, call{" "}
+                  <a href="tel:999" className="underline">
+                    999
+                  </a>{" "}
+                  first.
+                </b>{" "}
+                These forms and emails are not monitored 24/7.
               </p>
 
               <div className="space-y-5">
@@ -222,13 +229,12 @@ const ReportSafeguardingConcern = () => {
                 <a className="mt-1 block text-xl font-bold underline" href="tel:03335770036">
                   0333 577 0036
                 </a>
+                {/* <p className="mt-1 text-sm text-quackred-100">Monday–Friday, 9:00am–5:00pm</p> */}
               </div>
             </section>
 
             <section className="rounded-xl border border-quackred-100 bg-white p-6 shadow-lg">
-              <h2 className="mb-4 text-2xl font-bold text-gray-950">
-                Safeguarding Information
-              </h2>
+              <h2 className="mb-4 text-2xl font-bold text-gray-950">Safeguarding Information</h2>
               <a
                 href={formLink}
                 target="_blank"

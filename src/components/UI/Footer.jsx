@@ -64,6 +64,7 @@ const Footer = () => {
             <ul>
               {[
                 { path: "/training", label: "Training" },
+                { path: "/skills-bootcamps", label: "Skills Bootcamps" },
                 { path: "/training/food-and-hygiene", label: "Food & Hygiene" },
                 { path: "/training/sia", label: "Security Industry Authority (SIA)" },
                 {
@@ -89,6 +90,14 @@ const Footer = () => {
             <h3 className="mb-2 mt-4 text-xl font-bold max-w-fit">Skills Bootcamps</h3>
             <ul>
               {[
+                {
+                  path: "/skills-bootcamps",
+                  label: "All Skills Bootcamps",
+                },
+                {
+                  path: "/skills-bootcamps/hampshire-construction-utilities",
+                  label: "Pathway to Construction Utilities (Hampshire County Council)",
+                },
                 {
                   path: "/training/retrofit/wmca",
                   label: "Pathway to Retrofit Excellence (West Midlands Combined Authority)",
@@ -166,7 +175,6 @@ const Footer = () => {
             <h3 className="mb-3 text-xl font-bold">Office Hours</h3>
             <p className="my-2">Monday to Friday: 8:00am - 5.30pm</p>
             <p className="my-2">Saturday to Sunday: 9:00am - 3.00pm</p>
-            <p className="my-2">24/7 Availability</p>
             <h3 className="mb-3 text-xl font-bold">Socials</h3>
             <div className="flex justify-start my-2">
               <a href="#" className=" w-10">

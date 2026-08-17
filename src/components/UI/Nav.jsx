@@ -37,7 +37,12 @@ const Nav = () => {
       label: "Training",
       dropdown: [
         { path: "/training", label: "Training" },
+        { path: "/skills-bootcamps", label: "Skills Bootcamps" },
         { path: "/training/retrofit", label: "Retrofit" },
+        {
+          path: "/skills-bootcamps/hampshire-construction-utilities",
+          label: "Construction Utilities HCC",
+        },
         { path: "/training/recruitment-leadership/symca", label: "Recruitment Leadership" },
         { path: "/training/cscs", label: "CSCS" },
         {

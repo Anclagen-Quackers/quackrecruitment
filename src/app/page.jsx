@@ -222,6 +222,11 @@ const Home = () => {
               "Career-focused learning with employer progression support",
             ]}
             links={[
+              { label: "View All Skills Bootcamps", href: "/skills-bootcamps" },
+              {
+                label: "Construction Utilities HCC",
+                href: "/skills-bootcamps/hampshire-construction-utilities",
+              },
               { label: "Pathway to Retrofit Excellence", href: "/training/retrofit" },
               {
                 label: "Pathway to Recruitment Leadership",
