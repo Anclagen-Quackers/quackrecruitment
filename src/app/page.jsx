@@ -61,7 +61,7 @@ const Home = () => {
       <main className="flex flex-col">
         <BannerHome
           title={`Quack \nRecruitment & Training`}
-          slogan="Whether your looking to recruit, or train the best talent... we've got you covered!"
+          slogan="Whether you're looking to recruit, or train the best talent... we've got you covered!"
           imgSrc="/images/banners/pexels-sevenstorm-juhaszimrus-443383.jpg"
           imgAlt="Descriptive Image Alt Text"
           links={[
@@ -109,6 +109,33 @@ const Home = () => {
           </FourImageStretch>
         </Section>
         <Section bgColor="bg-zinc-200">
+          <MultiLinkCTASection
+            titleBlack="Looking to build practical skills?"
+            titlePurple="Explore our latest funded Skills Bootcamps."
+            text="Our Skills Bootcamps are designed to help learners build job-ready skills, gain industry insight, and move into real career opportunities."
+            highlights={[
+              "Funded training opportunities",
+              "Face-to-face or live remote delivery",
+              "Career-focused learning with employer progression support",
+            ]}
+            links={[
+              { label: "View All Skills Bootcamps", href: "/skills-bootcamps" },
+              {
+                label: "Construction Utilities HCC",
+                href: "/skills-bootcamps/construction-utilities/hcc",
+              },
+              { label: "Pathway to Retrofit Excellence", href: "/skills-bootcamps/retrofit" },
+              {
+                label: "Pathway to Recruitment Leadership",
+                href: "/skills-bootcamps/recruitment-leadership/symca/",
+              },
+            ]}
+            image="/footer/skillsbootcamp.jpg"
+            alt="Professional training and career development"
+            reverse={true}
+          />
+        </Section>
+        <Section bgColor="bg-zinc-50">
           <CTASection
             titleBlack="Looking for a job?"
             titlePurple="Check out whats on offer."
@@ -119,7 +146,7 @@ const Home = () => {
             alt="Hardhat"
           />
         </Section>
-        <Section bgColor="bg-gray-50">
+        <Section bgColor="bg-zinc-200">
           <FadeInFreeTextSection
             title="Our Comprehensive Recruitment Solutions"
             imageSrc="/images/interview-1.jpg"
@@ -150,7 +177,7 @@ const Home = () => {
             </div>
           </FadeInFreeTextSection>
         </Section>
-        <Section bgColor="bg-zinc-200">
+        <Section bgColor="bg-zinc-50">
           <CTASection
             titleBlack="Searching for the perfect job?"
             titlePurple="Discover roles that resonate with your expertise."
@@ -162,7 +189,7 @@ const Home = () => {
             alt="Tools"
           />
         </Section>
-        <Section bgColor="bg-gray-50">
+        <Section bgColor="bg-zine-200">
           <h2 className="text-3xl text-center mb-10 font-semibold">
             Why Choose Quack Recruitment & Training?
           </h2>
@@ -211,29 +238,8 @@ const Home = () => {
             />
           </CardSection>
         </Section>
-        <Section bgColor="bg-zinc-200">
-          <MultiLinkCTASection
-            titleBlack="Looking to build practical skills?"
-            titlePurple="Explore our latest funded Bootcamps."
-            text="Our Skills Bootcamps are designed to help learners build job-ready skills, gain industry insight, and move into real career opportunities."
-            highlights={[
-              "Funded training opportunities",
-              "Face-to-face or live remote delivery",
-              "Career-focused learning with employer progression support",
-            ]}
-            links={[
-              { label: "Pathway to Retrofit Excellence", href: "/training/retrofit" },
-              {
-                label: "Pathway to Recruitment Leadership",
-                href: "/training/recruitment-leadership/symca/",
-              },
-            ]}
-            image="/footer/skillsbootcamp.jpg"
-            alt="Professional training and career development"
-            reverse={true}
-          />
-        </Section>
-        <Section bgColor="bg-gray-50">
+
+        <Section bgColor="bg-zinc-50">
           <FourImageStretch
             title="Unleash Your Potential with Our Training Programs"
             images={[
@@ -273,7 +279,7 @@ const Home = () => {
               }
             </p>
             <div className="text-center my-10">
-              <PageLink href={"/training"} label={"Learn More"} />
+              <PageLink href={"/skills-bootcamps"} label={"Learn More"} />
             </div>
           </FourImageStretch>
         </Section>

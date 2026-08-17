@@ -37,12 +37,6 @@ export const whyChooseUs = [
     text: "You can rest assured that your in capable hands as we have a team of consultants and support staff to make sure you have a seamless experience from the start. Our job is to make sure you love your job!.",
   },
   {
-    id: 2,
-    title: "24/7 Reliable Availability",
-    icon: { color: "teal-900", name: "verified_user" },
-    text: "We strongly believe that we should offer a service that fits around your needs whether that be as a customer or as a candidate, our customer service representatives are there to answer any of your queries at a time that suits you.",
-  },
-  {
     id: 3,
     title: "Security & Safety",
     icon: { color: "blue-900", name: "lock" },

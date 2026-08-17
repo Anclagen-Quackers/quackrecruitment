@@ -22,13 +22,6 @@ export const metadata = {
   title: "Retrofit Training | Quack Recruitment & Training",
   description:
     "Explore Quack Recruitment & Training retrofit Skills Bootcamps and start your journey into retrofit, insulation, and green construction.",
-  keywords: [
-    "Retrofit training",
-    "Retrofit installer training",
-    "Energy efficiency retrofit course",
-    "Green construction training",
-    "Retrofit careers UK",
-  ],
 };
 
 function RetrofitPage() {
@@ -58,7 +51,7 @@ function RetrofitPage() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-xl lg:mt-10 max-w-xl mx-auto">
+            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-xl lg:mt-10">
               <h3 className="mb-4 text-2xl font-bold">At a glance</h3>
               <ul className="space-y-3">
                 {retrofitHighlights.map((item) => (
@@ -76,7 +69,7 @@ function RetrofitPage() {
                   href="#retrofit-bootcamps"
                   className="rounded-lg bg-quackred-800 px-6 py-3 text-base font-semibold text-white transition hover:bg-quackred-600"
                 >
-                  Explore Bootcamps
+                  Explore Skills Bootcamps
                 </a>
               </div>
             </div>
@@ -138,43 +131,20 @@ function RetrofitPage() {
           <h2 className="mb-10 text-center text-3xl font-semibold lg:text-4xl">
             Why train with Quack?
           </h2>
-          {/* <div className="flex items-start gap-3">
-              <div className="mt-1 flex h-6 w-6 px-2 items-center justify-center rounded-full bg-quackred-100 text-sm font-bold text-quackred-800">
-                ✓
-              </div>
 
-              <div>
-                <h4 className="text-xl font-bold">{item.title}</h4>
-
-                {item.description && (
-                  <p className="mt-2 text-base leading-7 text-gray-900">{item.description}</p>
-                )}
-              </div>
-            </div> */}
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             <div className="rounded-2xl border border-quackred-100 bg-quackred-50 p-6 shadow-xl">
-              <div className="flex items-start gap-3">
-                <div className="mt-1 flex h-6 w-6 px-2 items-center justify-center rounded-full bg-quackred-100 text-sm font-bold text-quackred-800">
-                  ✓
-                </div>
-                <div>
-                  <h3 className="mb-3 text-xl font-bold">Flexible delivery</h3>
-                </div>
-              </div>
+              <h3 className="mb-3 text-xl font-bold">Flexible delivery</h3>
               <p className="text-base leading-7 text-gray-800">
                 Training can be delivered face-to-face or remotely through live tutor-led sessions.
-              </p>
+              </p>{" "}
+              <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-quackred-100 text-quackred-800">
+                ✓
+              </div>
             </div>
 
             <div className="rounded-2xl border border-quackred-100 bg-quackred-50 p-6 shadow-xl">
-              <div className="flex items-start gap-3">
-                <div className="mt-1 flex h-6 w-6 px-2 items-center justify-center rounded-full bg-quackred-100 text-sm font-bold text-quackred-800">
-                  ✓
-                </div>
-                <div>
-                  <h3 className="mb-3 text-xl font-bold">Career-focused support</h3>
-                </div>
-              </div>
+              <h3 className="mb-3 text-xl font-bold">Career-focused support</h3>
               <p className="text-base leading-7 text-gray-800">
                 Learners receive CV support, interview preparation, and guidance on progressing into
                 relevant roles.
@@ -182,28 +152,15 @@ function RetrofitPage() {
             </div>
 
             <div className="rounded-2xl border border-quackred-100 bg-quackred-50 p-6 shadow-xl">
-              <div className="flex items-start gap-3">
-                <div className="mt-1 flex h-6 w-6 px-2 items-center justify-center rounded-full bg-quackred-100 text-sm font-bold text-quackred-800">
-                  ✓
-                </div>
-                <div>
-                  <h3 className="mb-3 text-xl font-bold">Employer engagement</h3>
-                </div>
-              </div>
+              <h3 className="mb-3 text-xl font-bold">Employer engagement</h3>
               <p className="text-base leading-7 text-gray-800">
                 We work with employer partners who support learner progression through insight
                 sessions and recruitment opportunities.
               </p>
             </div>
+
             <div className="rounded-2xl border border-quackred-100 bg-quackred-50 p-6 shadow-xl">
-              <div className="flex items-start gap-3">
-                <div className="mt-1 flex h-6 w-6 px-2 items-center justify-center rounded-full bg-quackred-100 text-sm font-bold text-quackred-800">
-                  ✓
-                </div>
-                <div>
-                  <h3 className="mb-3 text-xl font-bold">Funded training</h3>
-                </div>
-              </div>
+              <h3 className="mb-3 text-xl font-bold">Funded training</h3>
               <p className="text-base leading-7 text-gray-800">
                 Skills Bootcamps are designed to help learners access focused, career-relevant
                 training with clear progression routes.

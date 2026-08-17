@@ -22,11 +22,12 @@ const Footer = () => {
               {[
                 { path: "/", label: "Home" },
                 { path: "/recruitment/listings", label: "Jobs" },
+                { path: "/report-a-safeguarding-concern", label: "Report a Safeguarding Concern" },
                 { path: "/about", label: "About" },
                 { path: "/contact", label: "Contact" },
                 ,
               ].map((route) => (
-                <li key={route.path}>
+                <li key={route.path} className="py-1">
                   <Link
                     prefetch={false}
                     href={`${route.path}`}
@@ -46,7 +47,7 @@ const Footer = () => {
                 { path: "/recruitment/temporary", label: "Temporary Recruitment" },
                 { path: "/recruitment/on-site-managed", label: "On-Site Managed Services" },
               ].map((route) => (
-                <li key={route.path}>
+                <li key={route.path} className="py-1">
                   <Link
                     prefetch={false}
                     href={route.path}
@@ -59,50 +60,36 @@ const Footer = () => {
             </ul>
           </div>
           <div className="px-2">
-            <h3 className="mb-2 text-xl font-bold max-w-fit">Training & Courses</h3>
-            <ul>
-              {[
-                { path: "/training", label: "Training" },
-                { path: "/training/food-and-hygiene", label: "Food & Hygiene" },
-                { path: "/training/sia", label: "Security Industry Authority (SIA)" },
-                {
-                  path: "/training/customer-service-administration",
-                  label: "Admin & Customer Service",
-                },
-                { path: "/training/cscs", label: "Construction Skills (CSCS)" },
-                { path: "/training/fork-lift", label: "Forklift" },
-                { path: "/training/welding", label: "Welding" },
-                { path: "/training/retrofit", label: "Retrofit" },
-              ].map((route) => (
-                <li key={route.path}>
-                  <Link
-                    prefetch={false}
-                    href={`${route.path}`}
-                    className={`${location === route.path ? "underline" : ""} hover:underline hover:text-white text-white text-lg`}
-                  >
-                    {route.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
             <h3 className="mb-2 mt-4 text-xl font-bold max-w-fit">Skills Bootcamps</h3>
             <ul>
               {[
                 {
-                  path: "/training/retrofit/wmca",
+                  path: "/skills-bootcamps",
+                  label: "All Skills Bootcamps",
+                },
+                {
+                  path: "/skills-bootcamps/construction-utilities/hcc",
+                  label: "Construction Utilities HCC",
+                },
+                {
+                  path: "/skills-bootcamps/recruitment-leadership/symca",
+                  label: "Recruitment Leadership SYMCA",
+                },
+                { path: "/skills-bootcamps/retrofit", label: "All Retrofit Skills Bootcamps" },
+                {
+                  path: "/skills-bootcamps/retrofit/wmca",
                   label: "Pathway to Retrofit Excellence (West Midlands Combined Authority)",
                 },
                 {
-                  path: "/training/retrofit/enterprise-cheshire-warrington/",
-                  label: "Pathway to Retrofit Excellence (Enterprise Cheshire & Warrington)",
+                  path: "/skills-bootcamps/retrofit/surrey/",
+                  label: "Pathway to Retrofit Excellence (Surrey County Council)",
                 },
                 {
-                  path: "/training/recruitment-leadership/symca/",
-                  label:
-                    "Pathway to Recruitment Leadership (South Yorkshire Mayoral Combined Authority)",
+                  path: "/skills-bootcamps/retrofit/enterprise-cheshire-warrington/",
+                  label: "Pathway to Retrofit Excellence (Enterprise Cheshire & Warrington)",
                 },
               ].map((route) => (
-                <li key={route.path}>
+                <li key={route.path} className="py-1">
                   <Link
                     prefetch={false}
                     href={`${route.path}`}
@@ -121,8 +108,9 @@ const Footer = () => {
                 { path: "/legal", label: "Legal" },
                 { path: "/legal/privacy-policy", label: "Privacy Policy" },
                 { path: "/legal/policies", label: "All Policies" },
+                { path: "/report-a-safeguarding-concern", label: "Report a Safeguarding Concern" },
               ].map((route) => (
-                <li key={route.path}>
+                <li key={route.path} className="py-1">
                   <Link
                     prefetch={false}
                     href={`${route.path}`}
@@ -147,7 +135,7 @@ const Footer = () => {
                   external: true,
                 },
               ].map((route) => (
-                <li key={route.path}>
+                <li key={route.path} className="py-1">
                   <a
                     target="_blank"
                     href={`${route.path}`}
@@ -164,8 +152,7 @@ const Footer = () => {
             <h3 className="mb-3 text-xl font-bold">Office Hours</h3>
             <p className="my-2">Monday to Friday: 8:00am - 5.30pm</p>
             <p className="my-2">Saturday to Sunday: 9:00am - 3.00pm</p>
-            <p className="my-2">24/7 Availability</p>
-            <h3 className="mb-3 text-xl font-bold">Socials</h3>
+            {/* <h3 className="mb-3 text-xl font-bold">Socials</h3>
             <div className="flex justify-start my-2">
               <a href="#" className=" w-10">
                 <img src="/interface/Facebook_Logo_Primary.png" alt="Facebook" />
@@ -173,8 +160,7 @@ const Footer = () => {
               <a href="#" className="mx-6 w-12">
                 <img src="/interface/LI-In-Bug.png" alt="Linkedin" />
               </a>
-              {/* Add more social icons as needed */}
-            </div>
+            </div> */}
           </div>
         </div>
         {/* Quack group and affiliated */}

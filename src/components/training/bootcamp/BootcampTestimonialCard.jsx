@@ -2,19 +2,16 @@ const BootcampTestimonialCard = ({ testimonial }) => {
   if (!testimonial) return null;
 
   return (
-    <article className="bg-white rounded-xl shadow-lg p-6 lg:p-8 border-t-4 border-quackred-700 hover:-translate-y-1 hover:shadow-md   transition">
-      <h4 className="text-xl font-bold mb-2">
+    <article className="rounded-xl border-t-4 border-quackred-700 bg-white p-6 shadow-lg transition hover:-translate-y-1 hover:shadow-md lg:p-8">
+      <h4 className="mb-2 text-xl font-bold">
         {testimonial.name}
-        {testimonial.role ? ` – ${testimonial.role}` : ""}
+        {testimonial.role ? ` - ${testimonial.role}` : ""}
       </h4>
-      <div className="relative"></div>
 
       <p className="text-lg leading-7 text-gray-900">
-        <span className="text-3xl text-quackred-400 font-bold">“</span>
+        <span className="text-3xl font-bold text-quackred-400">&ldquo;</span>
         {testimonial.quote}
-        <span className="relative">
-          <span className="absolute -top-2 text-3xl text-quackred-400 font-bold">”</span>
-        </span>
+        <span className="text-3xl font-bold text-quackred-400">&rdquo;</span>
       </p>
     </article>
   );

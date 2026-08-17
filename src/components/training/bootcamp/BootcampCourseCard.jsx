@@ -85,7 +85,7 @@ const BootcampCourseCard = ({ course }) => {
             href={course.link}
             className="block w-full rounded-lg bg-quackred-800 px-5 py-3 text-center text-base font-semibold text-white transition hover:bg-quackred-600"
           >
-            View Bootcamp
+            View Skills Bootcamp
           </Link>
         </div>
       </div>

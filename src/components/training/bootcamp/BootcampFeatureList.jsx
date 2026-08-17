@@ -11,7 +11,7 @@ const BootcampFeatureList = ({ items = [], variant = "stack" }) => {
           >
             <div className="flex items-start gap-3">
               <div className="mt-1 flex h-6 w-6 px-2 items-center justify-center rounded-full bg-quackred-100 text-sm font-bold text-quackred-800">
-                ✓
+                &#10003;
               </div>
 
               <div>
