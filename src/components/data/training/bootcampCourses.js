@@ -173,6 +173,7 @@ export const bootcampCourses = {
       // },
       ...sharedPolicies,
     ],
+    handbook: undefined,
     link: "/skills-bootcamps/recruitment-leadership/symca",
   },
   constructionUtilitiesHcc: {
