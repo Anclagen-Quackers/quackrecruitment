@@ -5,12 +5,14 @@ function BootcampPolicies({ items }) {
         <a
           key={policy.link}
           href={policy.link}
-          download
+          target="_blank"
+          rel="noopener noreferrer"
           className="block rounded-lg border border-quackred-100 bg-white p-5 transition hover:border-quackred-300 hover:shadow-md"
         >
           <div className="flex items-start justify-between gap-4">
             <div>
               <h3 className="font-semibold text-gray-900">{policy.name}</h3>
+
               <p className="mt-2 text-sm text-gray-600">{policy.description}</p>
             </div>
 
