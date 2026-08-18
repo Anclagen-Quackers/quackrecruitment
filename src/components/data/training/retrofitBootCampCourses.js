@@ -284,33 +284,40 @@ const retrofitProgramme = {
 
 export const sharedPolicies = [
   {
-    name: "Safeguarding Learner Onboarding",
-    description: "Safeguarding learners at Quack Recruitment & Training",
-    link: "/docs/Quack_safeguarding_learner_onboarding.pdf",
+    name: "Safeguarding, Prevent & Online Safety Policy",
+    description: "Safeguarding, Prevent and online safety information for learners.",
+    link: "/docs/policies/1.1-quack-safeguarding-prevent-online-safety-policy-v5.pdf",
     type: "safety",
   },
   {
-    name: "Prevent Risk Assessment v1.0 2026",
-    description: "Quack Prevent Risk Assessment",
-    link: "/docs/Quack_Prevent_Risk_Assessment_June_2026.pdf",
+    name: "Prevent Radicalisation & Extremism Policy",
+    description:
+      "Information on Quack Recruitment & Training's approach to Prevent, radicalisation and extremism.",
+    link: "/docs/policies/1.3-quack-prevent-radicalisation-extremism-policy-v3.pdf",
     type: "safety",
   },
   {
-    name: "Learner Support Policy v2.0 2026",
-    description: "Safeguarding learners at Quack Recruitment & Training",
-    link: "/docs/Quack_Learner_Support_Policy_June_2026.pdf",
-    type: "safety",
+    name: "Learner Support Policy",
+    description: "Information about the support available to learners throughout their programme.",
+    link: "/docs/policies/2.1-quack-learner-support-policy-v2.pdf",
+    type: "learner",
   },
   {
-    name: "Complaints Policy v2.0 2026",
-    description: "Quack Recruitment and Training Complaints Policy",
-    link: "/docs/Quack_Complaints_Policy_and_Procedure_June_2026.pdf",
-    type: "training",
+    name: "Equality, Diversity & Inclusion Policy",
+    description: "Quack Recruitment & Training's approach to equality, diversity and inclusion.",
+    link: "/docs/policies/2.2-quack-equality-diversity-inclusion-policy-v2.pdf",
+    type: "learner",
   },
   {
-    name: "Health and Safety Policy v3.0 2026",
-    description: "Quack Recruitment and Training Health and Safety Policy",
-    link: "/docs/Quack_Health_and_Safety_Policy_v3_June_2026.pdf",
+    name: "Complaints Policy & Procedure",
+    description: "Information about raising and handling complaints.",
+    link: "/docs/policies/2.7-quack-complaints-policy-procedure-v2.pdf",
+    type: "learner",
+  },
+  {
+    name: "Health & Safety Policy",
+    description: "Quack Recruitment & Training's health and safety policy.",
+    link: "/docs/policies/7.1-quack-health-safety-policy-v3.pdf",
     type: "safety",
   },
 ];
