@@ -253,6 +253,47 @@ const ReportSafeguardingConcern = () => {
                 </div>
               </a>
               <div className="space-y-3">
+                <a
+                  href="/docs/policies/1.1-quack-safeguarding-prevent-online-safety-policy-v5.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between gap-3 rounded-lg border border-quackred-100 bg-gray-50 px-4 py-3 text-base font-semibold text-gray-950 transition hover:border-quackred-300 hover:bg-quackred-50"
+                >
+                  <span>Safeguarding, Prevent & Online Safety Policy</span>
+                  <span className="text-sm text-quackred-800">PDF</span>
+                </a>
+
+                <a
+                  href="/docs/policies/Quack_safeguarding_learner_onboarding.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between gap-3 rounded-lg border border-quackred-100 bg-gray-50 px-4 py-3 text-base font-semibold text-gray-950 transition hover:border-quackred-300 hover:bg-quackred-50"
+                >
+                  <span>Safeguarding Learner Onboarding</span>
+                  <span className="text-sm text-quackred-800">PDF</span>
+                </a>
+
+                <a
+                  href="/docs/policies/Quack_Prevent_Risk_Assessment_June_2026.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between gap-3 rounded-lg border border-quackred-100 bg-gray-50 px-4 py-3 text-base font-semibold text-gray-950 transition hover:border-quackred-300 hover:bg-quackred-50"
+                >
+                  <span>Prevent Risk Assessment</span>
+                  <span className="text-sm text-quackred-800">PDF</span>
+                </a>
+
+                <Link
+                  href="/legal/policies"
+                  className="flex items-center justify-between gap-3 rounded-lg border border-quackred-100 bg-gray-50 px-4 py-3 text-base font-semibold text-gray-950 transition hover:border-quackred-300 hover:bg-quackred-50"
+                >
+                  <span>All Policies</span>
+                  <span className="material-icons text-quackred-800" aria-hidden="true">
+                    arrow_forward
+                  </span>
+                </Link>
+              </div>
+              {/* <div className="space-y-3">
                 {policyLinks.map((link) =>
                   link.href.startsWith("/docs/") ? (
                     <a
@@ -278,7 +319,7 @@ const ReportSafeguardingConcern = () => {
                     </Link>
                   ),
                 )}
-              </div>
+              </div> */}
             </section>
           </aside>
         </div>
