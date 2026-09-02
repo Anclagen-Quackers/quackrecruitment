@@ -35,15 +35,15 @@ const concernTypes = [
 const policyLinks = [
   {
     label: "Safeguarding, Prevent & Online Safety Policy",
-    href: "/docs/Quack_Recruitment_and_Training-Safeguarding_Policy_v.4.pdf",
+    href: "/docs/policies/1.1-quack-safeguarding-prevent-online-safety-policy-v5.pdf",
   },
   {
     label: "Safeguarding Learner Onboarding",
-    href: "/docs/Quack_safeguarding_learner_onboarding.pdf",
+    href: "/docs/policies/Quack_safeguarding_learner_onboarding.pdf",
   },
   {
     label: "Prevent Risk Assessment",
-    href: "/docs/Quack_Prevent_Risk_Assessment_June_2026.pdf",
+    href: "/docs/policies/Quack_Prevent_Risk_Assessment_June_2026.pdf",
   },
   {
     label: "All Policies",
