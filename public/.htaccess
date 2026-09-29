@@ -1,4 +1,14 @@
 RewriteEngine on
+
+# Specific legacy programme redirects first
+RewriteRule ^training/wmca-retrofit/?$ /skills-bootcamps/<current-west-midlands-slug>/ [NC,R=302,L]
+RewriteRule ^training/construction-utilities-hcc/?$ /skills-bootcamps/<current-hampshire-slug>/ [NC,R=302,L]
+
+# Retired sections
+RewriteRule ^training(?:/.*)?$ /skills-bootcamps/ [NC,R=302,L]
+RewriteRule ^multiply(?:/.*)?$ /skills-bootcamps/ [NC,R=302,L]
+
+# Existing frontend fallback
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /index.html?path=$1 [NC,L,QSA]
