@@ -1,12 +1,14 @@
 RewriteEngine on
 
 # Specific legacy programme redirects first
-RewriteRule ^training/wmca-retrofit/?$ /skills-bootcamps/<current-west-midlands-slug>/ [NC,R=302,L]
-RewriteRule ^training/construction-utilities-hcc/?$ /skills-bootcamps/<current-hampshire-slug>/ [NC,R=302,L]
+RewriteRule ^training/wmca-retrofit/?$ /skills-bootcamps/retrofit/wmca/ [NC,R=301,L]
+RewriteRule ^training/retrofit/wmca/?$ /skills-bootcamps/retrofit/wmca/ [NC,R=301,L]
+RewriteRule ^training/retrofit/enterprise-cheshire-warrington/?$ /skills-bootcamps/retrofit/enterprise-cheshire-warrington/ [NC,R=301,L]
+RewriteRule ^training/construction-utilities-hcc/?$ /skills-bootcamps/construction-utilities/hcc/ [NC,R=301,L]
 
 # Retired sections
-RewriteRule ^training(?:/.*)?$ /skills-bootcamps/ [NC,R=302,L]
-RewriteRule ^multiply(?:/.*)?$ /skills-bootcamps/ [NC,R=302,L]
+RewriteRule ^training(?:/.*)?$ /skills-bootcamps/ [NC,R=301,L]
+RewriteRule ^multiply(?:/.*)?$ /skills-bootcamps/ [NC,R=301,L]
 
 # Existing frontend fallback
 RewriteCond %{REQUEST_FILENAME} !-f
