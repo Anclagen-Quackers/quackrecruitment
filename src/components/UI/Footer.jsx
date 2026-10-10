@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-black text-white p-10 mt-auto">
-      <div className="container mx-auto max-w-screen-2xl">
+      <div className="container mx-auto max-w-screen-xl">
         <h3 className="mb-3 text-xl font-bold text-center">Partners & Affiliates</h3>
         <div>
           <LogoGallery />
@@ -163,30 +163,11 @@ const Footer = () => {
             </div> */}
           </div>
         </div>
-        {/* Quack group and affiliated */}
-        <div className="border-t border-quackred-300 pt-6">
-          {/* Copyright */}
-          <div className="flex flex-col lg:flex-row mb-8">
-            <img
-              src="/logos/quack-group-horizonal-full-logo-white.png"
-              alt="Quack Group Full Logo"
-              className="mx-auto my-3 w-full h-full sm:w-80 lg:w-96 mx-auto"
-            />
-            <div className="md:flex flex-row justify-center max-w-screen-lg mx-auto gap-12 mt-5 lg:mt-0">
-              <Link prefetch={false} href="/" className="my-auto flex flex-row">
-                <img src="/logos/temp-logo-rt.png" alt="Logo" className="h-16" />
-                <div className="flex flex-col ml-3 my-auto text-white text-2xl font-medium">
-                  <span>Quack</span>
-                  <span>Recruitment & Training</span>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
         {/* Bottom Section */}
         <div className="border-t border-quackred-300 pt-6">
           {/* Copyright */}
           <div className="text-lg font-semibold text-center">
+            <img src="/logos/temp-logo-rt.png" alt="Logo" className="h-16 mx-auto mb-4" />
             <p>Quack Recruitment & Training Ltd. © 2023</p>
             <p>
               Quack Recruitment & Training, Business & Technology Centre, Bessemer Drive, Stevenage,

@@ -112,7 +112,7 @@ const Nav = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white bg-opacity-80 p-1 z-50 shadow">
-      <div className="max-w-screen-2xl mx-auto flex justify-between items-center">
+      <div className="max-w-screen-xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div>
           <Link prefetch={false} className="flex flex-row" href="/" title="home">
