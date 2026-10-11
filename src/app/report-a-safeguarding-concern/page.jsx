@@ -99,7 +99,7 @@ const ReportSafeguardingConcern = () => {
         <div className="md:grid gap-8 lg:grid-cols-3 lg:items-start">
           <div className="space-y-8 lg:col-span-2">
             <section className="lg:px-10">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-quackred-700">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-quackred-800">
                 Safeguarding concern form
               </p>
               <h2 className="mb-6 text-3xl font-bold text-gray-950 sm:text-4xl">

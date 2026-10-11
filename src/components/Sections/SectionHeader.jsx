@@ -2,7 +2,7 @@ const SectionHeader = ({ title, eyebrow, subtitle, centered = false, className =
   return (
     <div className={`${centered ? "mx-auto text-center" : ""} ${className}`}>
       {eyebrow && (
-        <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-quackred-700">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-quackred-800">
           {eyebrow}
         </p>
       )}

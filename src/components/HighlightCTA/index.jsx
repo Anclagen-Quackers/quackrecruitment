@@ -16,7 +16,7 @@ const HighlightCTA = ({ eyebrow, title, children, href, linkLabel, className = "
     >
       <div className="max-w-4xl">
         {eyebrow && (
-          <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-quackred-700">
+          <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-quackred-800">
             {eyebrow}
           </p>
         )}

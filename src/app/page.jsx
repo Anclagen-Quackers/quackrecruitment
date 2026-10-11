@@ -73,6 +73,25 @@ const programmeRoutes = [
   },
 ];
 
+const recruitmentLinks = [
+  {
+    label: "Job listings",
+    href: "/recruitment/listings",
+  },
+  {
+    label: "Permanent recruitment",
+    href: "/recruitment/permanent",
+  },
+  {
+    label: "Temporary recruitment",
+    href: "/recruitment/temporary",
+  },
+  {
+    label: "On-site managed services",
+    href: "/recruitment/on-site-managed",
+  },
+];
+
 const Home = () => {
   return (
     <>
@@ -134,7 +153,7 @@ const Home = () => {
         <Section bgColor="bg-zinc-50">
           <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.35fr_0.85fr] lg:items-start">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-700">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-800">
                 Our approach
               </p>
 
@@ -168,7 +187,7 @@ const Home = () => {
             </div>
 
             <aside className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm lg:p-8">
-              <h3 className="mb-6 text-2xl font-bold text-quackred-700">Learners receive</h3>
+              <h3 className="mb-6 text-2xl font-bold text-quackred-800">Learners receive</h3>
 
               <ul className="space-y-5">
                 {[
@@ -203,7 +222,7 @@ const Home = () => {
                 ].map((item) => (
                   <li key={item.text} className="flex items-start gap-4">
                     <span
-                      className="material-symbols-outlined shrink-0 text-2xl text-quackred-700"
+                      className="material-symbols-outlined shrink-0 text-2xl text-quackred-800"
                       aria-hidden="true"
                     >
                       {item.icon}
@@ -224,7 +243,7 @@ const Home = () => {
           <div className="mx-auto max-w-6xl">
             <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
-                <p className="mb-2 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-700">
+                <p className="mb-2 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-800">
                   Our programmes
                 </p>
 
@@ -232,20 +251,6 @@ const Home = () => {
                   Build in-demand skills for a sustainable future
                 </h2>
               </div>
-
-              <Link
-                href="/skills-bootcamps"
-                prefetch={false}
-                className="group inline-flex items-center gap-2 font-semibold text-quackred-700"
-              >
-                View all programmes
-                <span
-                  className="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1"
-                  aria-hidden="true"
-                >
-                  arrow_forward
-                </span>
-              </Link>
             </div>
 
             <div className="grid gap-5 md:grid-cols-2">
@@ -258,7 +263,7 @@ const Home = () => {
         <Section bgColor="bg-zinc-50">
           <div className="mx-auto max-w-6xl">
             <div className="mb-10 max-w-3xl">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-700">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-800">
                 Beyond the classroom
               </p>
 
@@ -300,6 +305,83 @@ const Home = () => {
                 arrow
                 variant="outline"
               />
+            </div>
+          </div>
+        </Section>
+        <Section bgColor="bg-zinc-100">
+          <div className="mx-auto max-w-6xl">
+            <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+              <div>
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-800">
+                  Recruitment services
+                </p>
+
+                <h2 className="text-3xl font-bold text-zinc-950 sm:text-4xl">
+                  Recruitment support for employers and jobseekers
+                </h2>
+
+                <div className="mt-5 space-y-4 text-lg leading-8 text-zinc-700">
+                  <p>
+                    Alongside our training provision, Quack Recruitment & Training continues to
+                    support employers with recruitment and workforce needs.
+                  </p>
+
+                  <p>
+                    We provide temporary, permanent and on-site managed recruitment services,
+                    helping employers find suitable people while supporting candidates towards new
+                    opportunities.
+                  </p>
+                </div>
+
+                <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                  <PageLink href="/recruitment" label="Explore Recruitment" arrow />
+
+                  <PageLink
+                    href="/contact/register"
+                    label="Register with us"
+                    arrow
+                    variant="outline"
+                  />
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+                <h3 className="text-xl font-bold text-zinc-950">Recruitment services</h3>
+
+                <ul className="mt-5 space-y-3">
+                  {recruitmentLinks.map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        prefetch={false}
+                        className="
+            group flex items-center justify-between gap-3
+            rounded-lg px-3 py-2
+            text-zinc-700
+            transition
+            hover:bg-zinc-50 hover:text-quackred-800
+            focus-visible:outline-2
+            focus-visible:outline-offset-2
+            focus-visible:outline-quackred-700
+          "
+                      >
+                        <span>{item.label}</span>
+
+                        <span
+                          className="
+              material-symbols-outlined text-xl text-quackred-800
+              transition-transform
+              group-hover:translate-x-1
+            "
+                          aria-hidden="true"
+                        >
+                          arrow_forward
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </Section>

@@ -31,6 +31,7 @@ const Nav = () => {
         { path: "/recruitment/permanent", label: "Permanent Recruitment" },
         { path: "/recruitment/temporary", label: "Temporary Recruitment" },
         { path: "/recruitment/on-site-managed", label: "On Site Managed Services" },
+        { path: "/contact/register", label: "Register" },
       ],
     },
     {
@@ -61,7 +62,6 @@ const Nav = () => {
       ],
     },
     { path: "/report-a-safeguarding-concern", label: "Safeguarding" },
-    { path: "/contact/register", label: "Register" },
     { path: "/contact", label: "Contact" },
     {
       label: "Login",

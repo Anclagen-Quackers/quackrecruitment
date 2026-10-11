@@ -92,7 +92,7 @@ function OutcomeCard({ title, result, icon, highlight = false }) {
       <span
         className={[
           "material-symbols-outlined mb-5 text-4xl",
-          highlight ? "text-quackred-700" : "text-zinc-600",
+          highlight ? "text-quackred-800" : "text-zinc-600",
         ].join(" ")}
         aria-hidden="true"
       >
@@ -106,7 +106,7 @@ function OutcomeCard({ title, result, icon, highlight = false }) {
       <p
         className={[
           "text-xl font-bold leading-tight",
-          highlight ? "text-quackred-700" : "text-zinc-700",
+          highlight ? "text-quackred-800" : "text-zinc-700",
         ].join(" ")}
       >
         {result}
@@ -118,12 +118,12 @@ function OutcomeCard({ title, result, icon, highlight = false }) {
 function QuoteCard({ title, quote }) {
   return (
     <article className="rounded-xl border border-zinc-200 bg-white p-6">
-      <p className="mb-4 text-sm font-semibold uppercase tracking-[0.12em] text-quackred-700">
+      <p className="mb-4 text-sm font-semibold uppercase tracking-[0.12em] text-quackred-800">
         {title}
       </p>
 
       <span
-        className="material-symbols-outlined mb-2 text-4xl text-quackred-700"
+        className="material-symbols-outlined mb-2 text-4xl text-quackred-800"
         aria-hidden="true"
       >
         format_quote
@@ -143,7 +143,7 @@ function ExperienceLink({ title, description, href, icon }) {
       prefetch={false}
       className="group flex h-full items-start gap-4 rounded-xl border border-zinc-200 bg-white p-6 transition hover:border-quackred-300 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-quackred-500 focus:ring-offset-2"
     >
-      <span className="material-symbols-outlined text-3xl text-quackred-700" aria-hidden="true">
+      <span className="material-symbols-outlined text-3xl text-quackred-800" aria-hidden="true">
         {icon}
       </span>
 
@@ -153,7 +153,7 @@ function ExperienceLink({ title, description, href, icon }) {
       </div>
 
       <span
-        className="material-symbols-outlined mt-1 text-quackred-700 transition-transform group-hover:translate-x-1"
+        className="material-symbols-outlined mt-1 text-quackred-800 transition-transform group-hover:translate-x-1"
         aria-hidden="true"
       >
         arrow_forward
@@ -169,7 +169,7 @@ export default function OfstedPage() {
         eyebrow="Our Ofsted inspection"
         title={
           <>
-            Significant Progress <span className="text-quackred-700">in Inclusion</span>
+            Significant Progress <span className="text-quackred-800">in Inclusion</span>
           </>
         }
         description={
@@ -215,7 +215,7 @@ export default function OfstedPage() {
       <Section bgColor="bg-zinc-50">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 max-w-3xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-quackred-700">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-quackred-800">
               Inspection outcomes
             </p>
 
@@ -247,7 +247,7 @@ export default function OfstedPage() {
       <Section bgColor="bg-white">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-quackred-700">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-quackred-800">
               The report
             </p>
 
@@ -265,7 +265,7 @@ export default function OfstedPage() {
       <Section bgColor="bg-zinc-50">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-4xl">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-quackred-700">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-quackred-800">
               Our approach
             </p>
 
@@ -303,7 +303,7 @@ export default function OfstedPage() {
       <Section bgColor="bg-white">
         <div className="mx-auto max-w-6xl">
           <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-6 md:p-8">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-quackred-700">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-quackred-800">
               Next steps
             </p>
 
@@ -334,7 +334,7 @@ export default function OfstedPage() {
       <Section bgColor="bg-zinc-50">
         <div className="mx-auto grid max-w-6xl gap-8 rounded-xl border border-zinc-200 bg-white p-6 md:grid-cols-[1fr_auto] md:p-8">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-quackred-700">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.15em] text-quackred-800">
               Full inspection report
             </p>
 
@@ -348,7 +348,7 @@ export default function OfstedPage() {
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <a
-                href="/documents/ofsted/ofsted-monitoring-report-2026.pdf"
+                href="/documents/ofsted/10468933-Quack recruitment and training- 2905375 Final PDF.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 rounded-lg bg-quackred-800 px-6 py-3 font-semibold text-white transition hover:bg-quackred-600 focus:outline-none focus:ring-2 focus:ring-quackred-500 focus:ring-offset-2"
@@ -363,7 +363,7 @@ export default function OfstedPage() {
                 href="https://reports.ofsted.gov.uk/provider/33/2905375"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-2 rounded-lg border border-quackred-700 bg-white px-6 py-3 font-semibold text-quackred-700 transition hover:bg-quackred-50 focus:outline-none focus:ring-2 focus:ring-quackred-500 focus:ring-offset-2"
+                className="group inline-flex items-center justify-center gap-2 rounded-lg border border-quackred-700 bg-white px-6 py-3 font-semibold text-quackred-800 transition hover:bg-quackred-50 focus:outline-none focus:ring-2 focus:ring-quackred-500 focus:ring-offset-2"
               >
                 View our Ofsted provider page
                 <span className="material-symbols-outlined text-xl" aria-hidden="true">

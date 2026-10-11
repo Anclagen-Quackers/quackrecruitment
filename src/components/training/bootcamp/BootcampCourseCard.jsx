@@ -29,7 +29,7 @@ const BootcampCourseCard = ({ course }) => {
           </div>
         )}
 
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-quackred-700">
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-quackred-800">
           Skills Bootcamp
         </p>
 

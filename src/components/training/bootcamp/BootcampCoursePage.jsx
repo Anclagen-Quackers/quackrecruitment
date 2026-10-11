@@ -58,7 +58,7 @@ const BootcampCoursePage = ({ course, allCourses = [] }) => {
                   href={course.apply.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-semibold text-quackred-700 hover:underline"
+                  className="font-semibold text-quackred-800 hover:underline"
                 >
                   {course.noticeLinkText || "apply now to secure a place"}
                 </a>
@@ -317,7 +317,7 @@ const BootcampCoursePage = ({ course, allCourses = [] }) => {
                       href={item.link}
                       className="group rounded-2xl border border-quackred-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
                     >
-                      <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-quackred-700">
+                      <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-quackred-800">
                         Skills Bootcamp
                       </p>
 
@@ -337,7 +337,7 @@ const BootcampCoursePage = ({ course, allCourses = [] }) => {
                         </p>
                       )}
 
-                      <span className="mt-5 inline-flex text-sm font-semibold text-quackred-700 group-hover:underline">
+                      <span className="mt-5 inline-flex text-sm font-semibold text-quackred-800 group-hover:underline">
                         View Skills Bootcamp
                       </span>
                     </Link>

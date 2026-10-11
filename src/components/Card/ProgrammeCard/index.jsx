@@ -42,7 +42,7 @@ export default function ProgrammeCard({ title, description, href, image, imageAl
 
         <p className="mt-3 text-base leading-7 text-zinc-600">{description}</p>
 
-        <div className="mt-5 inline-flex items-center gap-2 font-semibold text-quackred-700">
+        <div className="mt-5 inline-flex items-center gap-2 font-semibold text-quackred-800">
           Find out more
           <span
             className="

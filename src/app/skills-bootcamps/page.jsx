@@ -57,7 +57,7 @@ function SkillsBootcampsPage() {
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-8 lg:grid-cols-[1.35fr_0.65fr] lg:items-center">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-quackred-700">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-quackred-800">
                 Skills for Life Bootcamps
               </p>
               <h2 className="mb-6 text-3xl font-semibold lg:text-5xl">
