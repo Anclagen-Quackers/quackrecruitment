@@ -1,4 +1,3 @@
-import BannerHalf from "@/components/Banner/BannerHalf";
 import Banner from "@/components/Banner";
 import Image from "next/image";
 import Link from "next/link";
