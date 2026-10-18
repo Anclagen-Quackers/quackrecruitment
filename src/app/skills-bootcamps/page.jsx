@@ -83,7 +83,7 @@ function SkillsBootcampsPage() {
 
             <div className="rounded-xl border border-quackred-100 bg-quackred-50 p-6 shadow-lg">
               <img
-                src="/footer/skills_for_life_multiple_logo.png"
+                src="/footer/skillsbootcamp.jpg"
                 alt="Skills for Life logo"
                 className="mx-auto mb-6 max-h-20 w-auto max-w-full rounded bg-white p-3"
               />
