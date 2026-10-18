@@ -58,7 +58,7 @@ const Banner = ({
         <div className="relative mx-auto flex h-full max-w-screen-2xl items-center px-5 py-10 md:px-12">
           <div className="max-w-2xl">
             {eyebrow && (
-              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-quackred">
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-quackred-800">
                 {eyebrow}
               </p>
             )}

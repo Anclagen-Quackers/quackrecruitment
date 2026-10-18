@@ -18,6 +18,7 @@ const Nav = () => {
       label: "About",
       dropdown: [
         { path: "/about", label: "About Us" },
+        { path: "/ofsted", label: "Ofsted" },
         { path: "/legal", label: "Legal" },
         { path: "/legal/privacy-policy", label: "Privacy Policy" },
         { path: "/legal/policies", label: "All Policies" },
@@ -53,11 +54,11 @@ const Nav = () => {
         },
         {
           path: "/skills-bootcamps/construction-utilities/hcc",
-          label: "Construction Utilities HCC",
+          label: "Construction Utilities (Hampshire)",
         },
         {
           path: "/skills-bootcamps/recruitment-leadership/symca",
-          label: "Recruitment Leadership SYMCA",
+          label: "Recruitment Leadership (South Yorkshire)",
         },
       ],
     },

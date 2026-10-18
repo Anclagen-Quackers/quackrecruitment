@@ -1,12 +1,12 @@
-import BannerHalf from "@/components/Banner/BannerHalf";
-import BootcampOverviewCard from "./BootcampOverviewCard";
+import Banner from "@/components/Banner";
+import Link from "next/link";
+
 import BootcampSection from "./BootcampSection";
 import BootcampBulletList from "./BootcampBulletList";
 import BootcampTestimonials from "./BootcampTestimonials";
 import BootcampFeatureList from "./BootcampFeatureList";
 import BootcampApplyCard from "./BootcampApplyCard";
 import BootcampPolicies from "./BootcampPolicies";
-import Link from "next/link";
 
 const toParagraphs = (content) => {
   if (!content) return [];
@@ -19,13 +19,523 @@ const HandbookButton = ({ handbook, className = "" }) => {
   return (
     <a
       href={handbook.href}
-      download
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex justify-center rounded-lg bg-quackred-800 px-6 py-3 text-base font-semibold text-white transition hover:bg-quackred-600 ${className}`}
+      className={[
+        "inline-flex items-center justify-center rounded-lg",
+        "bg-quackred-800 px-6 py-3",
+        "text-base font-semibold text-white",
+        "transition hover:bg-quackred-600",
+        className,
+      ].join(" ")}
     >
       {handbook.buttonText || "Download Learner Handbook"}
     </a>
+  );
+};
+
+const ProgrammeBranding = ({ course }) => {
+  const defaultLogos = [
+    {
+      src: "/logos/QRT-logo/QRT-black-transparent-centred.png",
+      alt: "Quack Recruitment & Training logo",
+      className: "max-h-16 w-auto",
+    },
+    ...(course.authority?.logo
+      ? [
+          {
+            src: course.authority.logo,
+            alt: course.authority.logoAlt || `${course.authority.name} logo`,
+            className: "max-h-16 w-auto",
+          },
+        ]
+      : []),
+  ];
+
+  const logos = course.brandingLogos?.length > 0 ? course.brandingLogos : defaultLogos;
+
+  if (!logos.length) return null;
+
+  return (
+    <section className="border-b border-zinc-200 bg-white">
+      <div className="mx-auto flex max-w-screen-xl flex-col items-center gap-4 px-5 py-5 md:px-12">
+        <p className="text-center text-sm font-semibold uppercase tracking-[0.14em] text-zinc-500">
+          Delivered in partnership with
+        </p>
+
+        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+          {logos.map((logo, index) => (
+            <img
+              key={`${logo.src}-${index}`}
+              src={logo.src}
+              alt={logo.alt || ""}
+              className={logo.className || "max-h-16 w-auto object-contain"}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ProgrammeAtAGlance = ({ course }) => {
+  const { overview = {}, authority } = course;
+
+  const details = [
+    {
+      label: "Funding partner",
+      value: authority?.name,
+    },
+    {
+      label: "Course",
+      value: overview.course,
+    },
+    {
+      label: "Sector",
+      value: overview.sector,
+    },
+    {
+      label: "Duration",
+      value: overview.duration,
+    },
+    {
+      label: "Guided learning hours",
+      value: overview.guidedLearningHours,
+    },
+    {
+      label: "Schedule",
+      value: overview.schedule,
+    },
+    {
+      label: "Delivery",
+      value: overview.deliveryModes?.length > 0 ? overview.deliveryModes.join(" / ") : null,
+    },
+  ].filter((item) => item.value);
+
+  const overviewText = [
+    overview.duration,
+    overview.guidedLearningHours,
+    overview.schedule,
+    overview.deliveryNote,
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  const additionalStats = (course.programmeStructure || []).filter((item) => {
+    const value = String(item.value || "").toLowerCase();
+
+    return value && !overviewText.includes(value);
+  });
+
+  return (
+    <section className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm sm:p-6">
+      <h2 className="text-2xl font-bold text-zinc-950">At a glance</h2>
+
+      <dl className="mt-5 divide-y divide-zinc-200">
+        {details.map((item) => (
+          <div
+            key={item.label}
+            className="grid gap-1 py-3 sm:grid-cols-[140px_1fr] lg:grid-cols-[125px_1fr]"
+          >
+            <dt className="font-semibold text-zinc-900">{item.label}</dt>
+
+            <dd className="min-w-0 text-zinc-700">{item.value}</dd>
+          </div>
+        ))}
+      </dl>
+
+      {overview.deliveryNote && (
+        <p className="mt-4 text-sm leading-6 text-zinc-600">{overview.deliveryNote}</p>
+      )}
+
+      {additionalStats.length > 0 && (
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+          {additionalStats.map((item, index) => (
+            <div key={`${item.label}-${index}`} className="rounded-xl bg-quackred-50 p-4">
+              <p className="text-xl font-bold text-quackred-800">{item.value}</p>
+
+              <p className="mt-1 text-sm font-semibold text-zinc-800">{item.label}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {course.programmeStructureNote && (
+        <p className="mt-5 text-sm leading-6 text-zinc-600">{course.programmeStructureNote}</p>
+      )}
+    </section>
+  );
+};
+
+const LearnerSupportSection = ({ course }) => {
+  const supportLinks = [
+    {
+      title: "Learner Support, SEND & Inclusion",
+      description:
+        "Find out more about learner support, SEND, reasonable adjustments and the support available throughout your programme.",
+      href: "/learner-support",
+      icon: "diversity_1",
+    },
+    {
+      title: "Accessibility",
+      description:
+        "Find information about accessibility and how to tell us about any adjustments or support you may need.",
+      href: "/accessibility",
+      icon: "accessibility_new",
+    },
+    {
+      title: "Safeguarding",
+      description:
+        "Read our safeguarding information or find out how to report a safeguarding concern.",
+      href: "/report-a-safeguarding-concern",
+      icon: "shield_person",
+    },
+  ];
+
+  return (
+    <BootcampSection title="Learner Support">
+      {course.learnerSupportIntro ? (
+        <p className="mb-5 text-lg leading-8 text-zinc-800">{course.learnerSupportIntro}</p>
+      ) : (
+        <p className="mb-5 text-lg leading-8 text-zinc-800">
+          Support is available throughout the programme and is tailored where appropriate to
+          individual learner needs.
+        </p>
+      )}
+
+      {course.learnerSupport?.length > 0 && (
+        <div className="mb-8">
+          <BootcampBulletList items={course.learnerSupport} />
+        </div>
+      )}
+
+      <div className="grid gap-5 md:grid-cols-3">
+        {supportLinks.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className="
+              group rounded-2xl border border-zinc-200
+              bg-white p-5 shadow-sm transition
+              hover:-translate-y-0.5 hover:shadow-md
+            "
+          >
+            <div className="mb-3 flex items-center gap-3">
+              <span
+                className="material-symbols-outlined shrink-0 text-2xl text-quackred-800"
+                aria-hidden="true"
+              >
+                {item.icon}
+              </span>
+
+              <h3 className="text-lg font-bold text-zinc-950">{item.title}</h3>
+            </div>
+
+            <p className="text-base leading-7 text-zinc-700">{item.description}</p>
+
+            <span className="mt-4 inline-flex items-center gap-1 font-semibold text-quackred-800">
+              Find out more
+              <span
+                className="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1"
+                aria-hidden="true"
+              >
+                arrow_forward
+              </span>
+            </span>
+          </Link>
+        ))}
+      </div>
+    </BootcampSection>
+  );
+};
+
+const CareersProgressionSection = ({ course }) => {
+  const hasRoles = course.careerOpportunities?.length > 0;
+
+  const hasProgression = course.progressionItems?.length > 0;
+
+  const hasJobSupport = course.jobSupport?.length > 0;
+
+  const hasEmployerSection = Boolean(course.employerSection);
+
+  if (!hasRoles && !hasProgression && !hasJobSupport && !hasEmployerSection) {
+    return null;
+  }
+
+  return (
+    <BootcampSection title="Careers and Progression">
+      {course.progressionIntro && (
+        <p className="mb-6 text-lg leading-8 text-zinc-800">{course.progressionIntro}</p>
+      )}
+
+      {(hasRoles || hasProgression) && (
+        <div
+          className={["grid gap-8", hasRoles && hasProgression ? "md:grid-cols-2" : ""].join(" ")}
+        >
+          {hasRoles && (
+            <div>
+              <h3 className="mb-3 text-xl font-bold text-zinc-950">Example roles</h3>
+
+              <BootcampBulletList items={course.careerOpportunities} />
+            </div>
+          )}
+
+          {hasProgression && (
+            <div>
+              <h3 className="mb-3 text-xl font-bold text-zinc-950">
+                Sectors and progression areas
+              </h3>
+
+              <BootcampBulletList items={course.progressionItems} />
+            </div>
+          )}
+        </div>
+      )}
+
+      {course.careerNote && (
+        <p className="mt-6 text-lg leading-8 text-zinc-800">{course.careerNote}</p>
+      )}
+
+      {course.progressionOutro && (
+        <p className="mt-4 text-lg leading-8 text-zinc-800">{course.progressionOutro}</p>
+      )}
+
+      {hasJobSupport && (
+        <div className="mt-10">
+          <h3 className="mb-3 text-2xl font-bold text-zinc-950">
+            Employment and progression support
+          </h3>
+
+          {course.jobSupportIntro && (
+            <p className="mb-6 text-lg leading-8 text-zinc-800">{course.jobSupportIntro}</p>
+          )}
+
+          <BootcampFeatureList items={course.jobSupport} variant="grid" />
+        </div>
+      )}
+
+      {hasEmployerSection && (
+        <div className="mt-10 rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm sm:p-6">
+          <h3 className="text-2xl font-bold text-zinc-950">
+            {course.employerSection.title || "Employer Engagement"}
+          </h3>
+
+          {course.employerSection.description && (
+            <p className="mt-4 text-lg leading-8 text-zinc-800">
+              {course.employerSection.description}
+            </p>
+          )}
+
+          {course.employerSection.details?.length > 0 && (
+            <>
+              <p className="my-4 text-lg leading-8 text-zinc-800">
+                {course.employerSection.detailsIntro ||
+                  "Employers may engage with the programme through:"}
+              </p>
+
+              <BootcampBulletList items={course.employerSection.details} />
+            </>
+          )}
+
+          {course.employerSection.note && (
+            <p className="mt-5 text-lg leading-8 text-zinc-800">{course.employerSection.note}</p>
+          )}
+        </div>
+      )}
+    </BootcampSection>
+  );
+};
+
+const OfstedPanel = () => {
+  return (
+    <div className="my-10 rounded-2xl border border-zinc-200 bg-zinc-100 p-5 shadow-sm sm:p-6">
+      <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+        <div className="max-w-3xl">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-800">
+            Our Ofsted inspection
+          </p>
+
+          <h2 className="text-2xl font-bold text-zinc-950">Significant Progress in Inclusion</h2>
+
+          <p className="mt-3 text-base leading-7 text-zinc-700">
+            Quack Recruitment & Training achieved Significant Progress in Inclusion, the highest
+            possible progress judgement for this theme at a new-provider monitoring inspection.
+          </p>
+
+          <p className="mt-2 text-sm leading-6 text-zinc-600">
+            This is a provider-level inspection outcome and is not a separate grade for this Skills
+            Bootcamp or its funding commissioner.
+          </p>
+        </div>
+
+        <Link
+          href="/ofsted"
+          className="
+            inline-flex shrink-0 items-center justify-center gap-2
+            rounded-lg border-2 border-quackred-800 bg-white
+            px-5 py-3 font-semibold text-quackred-800
+            transition hover:bg-quackred-50
+          "
+        >
+          View our Ofsted results
+          <span className="material-symbols-outlined text-xl" aria-hidden="true">
+            arrow_forward
+          </span>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+const BottomApplySection = ({ course }) => {
+  if (!course.apply?.href) return null;
+
+  const heading =
+    course.finalCta?.heading || course.apply.heading || "Apply for the Skills Bootcamp";
+
+  const text = course.finalCta?.text || course.apply.text;
+
+  const buttonText = course.finalCta?.buttonText || course.apply.buttonText || "Apply Now";
+
+  return (
+    <section className="mt-12 rounded-2xl bg-zinc-950 px-6 py-10 text-center text-white shadow-lg sm:px-8">
+      <h2 className="mx-auto max-w-3xl text-3xl font-bold">{heading}</h2>
+
+      {text && <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-zinc-200">{text}</p>}
+
+      <a
+        href={course.apply.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+          mt-7 inline-flex items-center justify-center
+          rounded-lg bg-white px-6 py-3
+          text-base font-semibold text-zinc-950
+          transition hover:bg-quackred-50
+        "
+      >
+        {buttonText}
+      </a>
+    </section>
+  );
+};
+
+const LearnerInformation = ({ course, policies }) => {
+  if (!course.handbook?.href && policies.length === 0) {
+    return null;
+  }
+
+  return (
+    <BootcampSection title="Learner Information">
+      {course.handbook?.href && (
+        <div className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm sm:p-6">
+          <h3 className="text-2xl font-bold text-zinc-950">
+            {course.handbook.title || "Learner Handbook"}
+          </h3>
+
+          {toParagraphs(course.handbook.description).map((paragraph, index) => (
+            <p key={index} className="mt-4 text-lg leading-8 text-zinc-800">
+              {paragraph}
+            </p>
+          ))}
+
+          <div className="mt-6">
+            <HandbookButton handbook={course.handbook} />
+          </div>
+        </div>
+      )}
+
+      {policies.length > 0 && (
+        <div className={course.handbook?.href ? "mt-8" : ""}>
+          <h3 className="mb-5 text-2xl font-bold text-zinc-950">
+            Policies and learner information
+          </h3>
+
+          <BootcampPolicies items={policies} />
+        </div>
+      )}
+
+      <p className="mt-6 text-base leading-7 text-zinc-600">
+        You can also find further information about{" "}
+        <Link href="/learner-support" className="font-semibold text-quackred-800 hover:underline">
+          learner support
+        </Link>
+        ,{" "}
+        <Link href="/accessibility" className="font-semibold text-quackred-800 hover:underline">
+          accessibility
+        </Link>{" "}
+        and{" "}
+        <Link
+          href="/report-a-safeguarding-concern"
+          className="font-semibold text-quackred-800 hover:underline"
+        >
+          safeguarding
+        </Link>
+        .
+      </p>
+    </BootcampSection>
+  );
+};
+
+const RelatedProgrammes = ({ courses }) => {
+  if (!courses.length) return null;
+
+  return (
+    <section className="mb-10 mt-16 border-t border-zinc-200 pt-12">
+      <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-800">
+        Related provision
+      </p>
+
+      <h2 className="mb-4 text-3xl font-bold text-zinc-950">Explore Other Skills Bootcamps</h2>
+
+      <p className="mb-8 max-w-3xl text-lg leading-8 text-zinc-700">
+        Explore our other employer-led Skills Bootcamp pathways and find the programme that best
+        matches your goals.
+      </p>
+
+      <div className="grid gap-6 md:grid-cols-2">
+        {courses.map((item) => (
+          <Link
+            key={item.slug}
+            href={item.link}
+            className="
+              group rounded-2xl border border-zinc-200
+              bg-white p-6 shadow-sm transition
+              hover:-translate-y-0.5 hover:shadow-md
+            "
+          >
+            <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-quackred-800">
+              Skills Bootcamp
+            </p>
+
+            <h3 className="text-xl font-bold text-zinc-950 group-hover:text-quackred-800">
+              {item.title}
+            </h3>
+
+            {item.authority?.name && (
+              <p className="mt-2 text-sm font-semibold leading-6 text-zinc-600">
+                {item.authority.name}
+              </p>
+            )}
+
+            {item.cardDescription && (
+              <p className="mt-4 text-base leading-7 text-zinc-700">{item.cardDescription}</p>
+            )}
+
+            <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-quackred-800">
+              View Skills Bootcamp
+              <span
+                className="material-symbols-outlined text-xl transition-transform group-hover:translate-x-1"
+                aria-hidden="true"
+              >
+                arrow_forward
+              </span>
+            </span>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 };
 
@@ -33,24 +543,47 @@ const BootcampCoursePage = ({ course, allCourses = [] }) => {
   if (!course) return null;
 
   const otherCourses = allCourses.filter((item) => item.slug !== course.slug);
+
   const cscsProgression = toParagraphs(course.cscsProgression);
 
+  const policies = (course.policies || [])
+    .filter((policy) => policy.link !== course.handbook?.href)
+    .filter(
+      (policy, index, items) => items.findIndex((item) => item.link === policy.link) === index,
+    );
+
   return (
-    <main className="flex flex-col bg-gray-50">
+    <main className="flex flex-col bg-zinc-50">
+      {/* Banner */}
       {course.banner && (
-        <BannerHalf
-          title={course.banner.title}
-          slogan={course.banner.slogan}
+        <Banner
+          eyebrow={course.banner.eyebrow || "Skills Bootcamp"}
+          title={
+            <>
+              {course.banner.title}
+
+              {course.banner.titleAccent && (
+                <>
+                  {" "}
+                  <span className="text-quackred-800">{course.banner.titleAccent}</span>
+                </>
+              )}
+            </>
+          }
+          description={course.banner.description || course.banner.slogan}
           imgSrc={course.banner.imgSrc}
-          imgAlt={course.banner.imgAlt}
-          position={course.banner.position || "center"}
+          imgAlt={course.banner.imgAlt || ""}
+          imagePosition={course.banner.imagePosition || course.banner.position || "right"}
+          size={course.banner.size || "compact"}
         />
       )}
 
+      {/* Cohort / application notice */}
       <div className="border-y border-quackred-200 bg-quackred-50">
-        <div className="mx-auto flex max-w-screen-2xl flex-col gap-4 px-4 py-5 md:flex-row md:items-center md:justify-between lg:px-12">
-          <p className="text-md font-medium text-gray-900">
+        <div className="mx-auto flex max-w-screen-xl flex-col gap-4 px-5 py-5 md:flex-row md:items-center md:justify-between md:px-12">
+          <p className="text-base font-medium text-zinc-900">
             {course.noticeText || "Next cohort starting soon"}
+
             {course.apply?.href && (
               <>
                 {" - "}
@@ -72,284 +605,168 @@ const BootcampCoursePage = ({ course, allCourses = [] }) => {
         </div>
       </div>
 
-      <div className="mx-auto max-w-screen-2xl px-4 lg:py-12">
-        <div className="gap-10 lg:flex">
-          <div className="mx-auto max-w-screen-2xl lg:w-2/3">
-            <section className="mt-10 rounded-xl border border-gray-200 bg-white p-5 shadow-sm lg:mx-10">
-              <div className="flex flex-wrap items-center justify-between gap-6 flex-row">
-                <img
-                  src="/logos/QRT-logo/QRT-black-transparent-centred.png"
-                  alt="Quack Recruitment & Training logo"
-                  className="max-h-20 w-auto mx-auto"
-                />
+      {/* Provider / commissioner branding */}
+      <ProgrammeBranding course={course} />
 
-                {course.authority?.logo && (
-                  <img
-                    src={course.authority.logo}
-                    alt={course.authority.logoAlt}
-                    className="max-h-20 w-auto mx-auto"
-                  />
-                )}
-              </div>
-            </section>
-
-            <BootcampSection
-              title={course.overviewTitle || "Course Overview"}
-              bannerTitle={course.banner?.title}
-            >
-              <div className="space-y-5">
-                {course.hero?.intro?.map((paragraph, index) => (
-                  <p key={index} className="text-lg leading-8 text-gray-900">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-            </BootcampSection>
-
-            {course.overview?.eligibility?.length > 0 && (
-              <BootcampSection title="Who Can Apply">
-                <BootcampBulletList items={course.overview.eligibility} />
-              </BootcampSection>
-            )}
-
-            {course.programmeStructure?.length > 0 && (
-              <BootcampSection title={course.programmeStructureTitle || "Programme Structure"}>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  {course.programmeStructure.map((item, index) => (
-                    <div
-                      key={index}
-                      className="rounded-xl border border-quackred-100 bg-white p-5 shadow-sm"
-                    >
-                      <p className="text-3xl font-bold text-quackred-800">{item.value}</p>
-                      <p className="mt-2 text-base font-semibold leading-6 text-gray-900">
-                        {item.label}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-                {course.programmeStructureNote && (
-                  <p className="mt-5 text-lg leading-8 text-gray-900">
-                    {course.programmeStructureNote}
-                  </p>
-                )}
-              </BootcampSection>
-            )}
-
-            <BootcampSection title={course.learningTitle || "What You Will Learn"}>
-              {course.learningIntro && (
-                <p className="mb-4 text-lg leading-8 text-gray-900">{course.learningIntro}</p>
-              )}
-              {course.learningFeatures?.length > 0 ? (
-                <BootcampFeatureList items={course.learningFeatures} variant="grid" />
-              ) : (
-                <BootcampBulletList items={course.learningPoints} />
-              )}
-              {course.learningOutro && (
-                <p className="mt-4 text-lg leading-8 text-gray-900">{course.learningOutro}</p>
-              )}
-            </BootcampSection>
-
-            {course.qualifications?.length > 0 && (
-              <BootcampSection title="Qualifications Delivered">
-                <BootcampBulletList items={course.qualifications} />
-                {course.qualificationsNote && (
-                  <p className="mt-4 text-lg leading-8 text-gray-900">
-                    {course.qualificationsNote}
-                  </p>
-                )}
-              </BootcampSection>
-            )}
-
-            {course.skillsDeveloped?.length > 0 && (
-              <BootcampSection title={course.skillsTitle || "Skills and Knowledge Developed"}>
-                <BootcampBulletList items={course.skillsDeveloped} />
-              </BootcampSection>
-            )}
-
-            {cscsProgression.length > 0 && (
-              <BootcampSection title="CSCS Labourer Card Progression">
+      <div className="mx-auto w-full max-w-screen-xl px-5 md:px-12">
+        <div className="gap-10 lg:flex lg:items-start">
+          {/* Main content */}
+          <div className="min-w-0 lg:w-2/3">
+            {/* Programme overview */}
+            <BootcampSection title={course.overviewTitle || "Programme Overview"}>
+              {course.hero?.intro?.length > 0 && (
                 <div className="space-y-5">
-                  {cscsProgression.map((paragraph, index) => (
-                    <p key={index} className="text-lg leading-8 text-gray-900">
+                  {course.hero.intro.map((paragraph, index) => (
+                    <p key={index} className="text-lg leading-8 text-zinc-800">
                       {paragraph}
                     </p>
                   ))}
                 </div>
-              </BootcampSection>
-            )}
+              )}
+            </BootcampSection>
 
-            {course.learnerSupport?.length > 0 && (
-              <BootcampSection
-                title={course.learnerSupportTitle || "Safeguarding and Learner Support"}
-              >
-                {course.learnerSupportIntro && (
-                  <p className="mb-4 text-lg leading-8 text-gray-900">
-                    {course.learnerSupportIntro}
-                  </p>
-                )}
-                <BootcampBulletList items={course.learnerSupport} />
-              </BootcampSection>
-            )}
+            {/* Mobile / tablet At a glance */}
+            <div className="mb-10 space-y-6 lg:hidden">
+              <ProgrammeAtAGlance course={course} />
 
-            {course.learnerExpectations?.length > 0 && (
-              <BootcampSection title="Learner Expectations">
-                <BootcampBulletList items={course.learnerExpectations} />
-              </BootcampSection>
-            )}
-
-            {course.careerOpportunities?.length > 0 && (
-              <BootcampSection title={course.careerTitle || "Career Opportunities"}>
-                <BootcampBulletList items={course.careerOpportunities} />
-                {course.careerNote && (
-                  <p className="mt-4 text-lg leading-8 text-gray-900">{course.careerNote}</p>
-                )}
-              </BootcampSection>
-            )}
-
-            <div className="mt-10 lg:hidden">
               <BootcampApplyCard apply={course.apply} />
             </div>
 
+            {/* Why choose */}
+            {course.whyChoose?.length > 0 && (
+              <BootcampSection title="Why Choose This Skills Bootcamp?">
+                <BootcampFeatureList items={course.whyChoose} variant="grid" />
+              </BootcampSection>
+            )}
+
+            {/* What you will learn */}
+            {(course.learningFeatures?.length > 0 ||
+              course.learningPoints?.length > 0 ||
+              course.skillsDeveloped?.length > 0) && (
+              <BootcampSection title={course.learningTitle || "What You Will Learn"}>
+                {course.learningIntro && (
+                  <p className="mb-5 text-lg leading-8 text-zinc-800">{course.learningIntro}</p>
+                )}
+
+                {course.learningFeatures?.length > 0 ? (
+                  <BootcampFeatureList items={course.learningFeatures} variant="grid" />
+                ) : (
+                  course.learningPoints?.length > 0 && (
+                    <BootcampBulletList items={course.learningPoints} />
+                  )
+                )}
+
+                {course.learningOutro && (
+                  <p className="mt-5 text-lg leading-8 text-zinc-800">{course.learningOutro}</p>
+                )}
+
+                {course.skillsDeveloped?.length > 0 && (
+                  <div className="mt-8">
+                    <h3 className="mb-4 text-2xl font-bold text-zinc-950">
+                      {course.skillsTitle || "Skills and Knowledge Developed"}
+                    </h3>
+
+                    <BootcampBulletList items={course.skillsDeveloped} />
+                  </div>
+                )}
+              </BootcampSection>
+            )}
+
+            {/* Qualifications */}
+            {(course.qualifications?.length > 0 || cscsProgression.length > 0) && (
+              <BootcampSection title="Qualifications">
+                {course.qualifications?.length > 0 && (
+                  <>
+                    <h3 className="mb-4 text-xl font-bold text-zinc-950">
+                      Accredited qualifications
+                    </h3>
+
+                    <BootcampBulletList items={course.qualifications} />
+
+                    {course.qualificationsNote && (
+                      <p className="mt-5 text-lg leading-8 text-zinc-800">
+                        {course.qualificationsNote}
+                      </p>
+                    )}
+                  </>
+                )}
+
+                {cscsProgression.length > 0 && (
+                  <div className={course.qualifications?.length > 0 ? "mt-8" : ""}>
+                    <h3 className="mb-4 text-xl font-bold text-zinc-950">
+                      Additional CITB and CSCS progression
+                    </h3>
+
+                    <div className="space-y-4">
+                      {cscsProgression.map((paragraph, index) => (
+                        <p key={index} className="text-lg leading-8 text-zinc-800">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </BootcampSection>
+            )}
+
+            {/* Learner support */}
+            <LearnerSupportSection course={course} />
+
+            {/* Careers and progression */}
+            <CareersProgressionSection course={course} />
+
+            {/* Testimonials */}
             {course.testimonials?.length > 0 && (
               <BootcampSection title={course.testimonialsTitle || "Learner Success Stories"}>
                 <BootcampTestimonials items={course.testimonials} />
               </BootcampSection>
             )}
 
-            {course.jobSupport?.length > 0 && (
-              <BootcampSection title={course.jobSupportTitle || "How We Help You Get a Job"}>
-                {course.jobSupportIntro && (
-                  <p className="mb-6 text-lg leading-8 text-gray-900">{course.jobSupportIntro}</p>
-                )}
-                <BootcampFeatureList items={course.jobSupport} variant="grid" />
-              </BootcampSection>
-            )}
+            {/* Ofsted */}
+            <OfstedPanel />
 
-            {course.employerSection && (
-              <BootcampSection title={course.employerSection.title || "Employer Engagement"}>
-                <p className="text-lg leading-8 text-gray-900">
-                  {course.employerSection.description}
-                </p>
-                {course.employerSection.details?.length > 0 && (
-                  <>
-                    <p className="my-4 text-lg leading-8 text-gray-900">
-                      {course.employerSection.detailsIntro ||
-                        "Employers may engage with the programme through:"}
-                    </p>
-                    <BootcampBulletList items={course.employerSection.details} />
-                  </>
-                )}
-              </BootcampSection>
-            )}
-
-            {course.whyChoose?.length > 0 && (
-              <BootcampSection title="Why Choose Quack Recruitment & Training?">
-                <BootcampFeatureList items={course.whyChoose} variant="grid" />
-              </BootcampSection>
-            )}
-
-            {course.progressionItems?.length > 0 && (
-              <BootcampSection title={course.progressionTitle || "Where Our Learners Now Work"}>
-                {course.progressionIntro && (
-                  <p className="mb-4 text-lg leading-8 text-gray-900">{course.progressionIntro}</p>
-                )}
-                <BootcampBulletList items={course.progressionItems} />
-                {course.progressionOutro && (
-                  <p className="mt-4 text-lg leading-8 text-gray-900">{course.progressionOutro}</p>
-                )}
-              </BootcampSection>
-            )}
-
-            <div className="hidden px-10 lg:block">
-              <BootcampApplyCard apply={course.apply} />
-            </div>
-
-            {course.handbook?.href && (
-              <BootcampSection title={course.handbook.title || "Learner Handbook"}>
-                {toParagraphs(course.handbook.description).map((paragraph, index) => (
-                  <p key={index} className="mb-5 text-lg leading-8 text-gray-900">
-                    {paragraph}
-                  </p>
-                ))}
-                <HandbookButton handbook={course.handbook} />
-              </BootcampSection>
-            )}
-
-            {course.policies?.length > 0 && (
-              <BootcampSection title="Policies & Learner Information">
-                <BootcampPolicies items={course.policies} variant="grid" />
-              </BootcampSection>
-            )}
-
-            {course.finalCta && (
-              <section className="mt-14 rounded-xl bg-gray-900 px-6 py-10 text-center text-white shadow-xl lg:mx-10">
-                <h3 className="mx-auto max-w-3xl text-3xl font-bold">{course.finalCta.heading}</h3>
-                {course.finalCta.text && (
-                  <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-gray-100">
-                    {course.finalCta.text}
-                  </p>
-                )}
-                {course.apply?.href && (
-                  <a
-                    href={course.apply.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-7 inline-flex rounded-lg bg-white px-6 py-3 text-base font-semibold text-gray-900 transition hover:bg-quackred-50"
-                  >
-                    {course.finalCta.buttonText || "Apply Now"}
-                  </a>
-                )}
-              </section>
-            )}
-
-            {otherCourses.length > 0 && (
-              <section className="mt-16 border-t border-quackred-100 pt-12 lg:px-10">
-                <h3 className="mb-4 text-3xl font-bold">Other Skills Bootcamps Available</h3>
-                <p className="mb-8 max-w-3xl text-lg leading-8 text-gray-900">
-                  Explore our other Skills Bootcamp programmes designed to support different career
-                  pathways.
+            {/* Eligibility */}
+            {course.overview?.eligibility?.length > 0 && (
+              <BootcampSection title="Who Can Apply">
+                <p className="mb-5 text-lg leading-8 text-zinc-800">
+                  To be eligible for this Skills Bootcamp, applicants must:
                 </p>
 
-                <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-                  {otherCourses.map((item) => (
-                    <Link
-                      key={item.slug}
-                      href={item.link}
-                      className="group rounded-2xl border border-quackred-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-                    >
-                      <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-quackred-800">
-                        Skills Bootcamp
-                      </p>
+                <BootcampBulletList items={course.overview.eligibility} />
 
-                      <h4 className="text-xl font-bold text-gray-900 group-hover:text-quackred-800">
-                        {item.title}
-                      </h4>
+                {course.eligibilityNote && (
+                  <p className="mt-5 text-lg leading-8 text-zinc-800">{course.eligibilityNote}</p>
+                )}
 
-                      {item.authority?.name && (
-                        <p className="mt-2 text-sm leading-6 text-gray-700">
-                          {item.authority.name}
-                        </p>
-                      )}
+                {course.learnerExpectations?.length > 0 && (
+                  <div className="mt-8 rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm sm:p-6">
+                    <h3 className="mb-4 text-xl font-bold text-zinc-950">
+                      What we expect from learners
+                    </h3>
 
-                      {item.cardDescription && (
-                        <p className="mt-4 text-base leading-7 text-gray-800">
-                          {item.cardDescription}
-                        </p>
-                      )}
-
-                      <span className="mt-5 inline-flex text-sm font-semibold text-quackred-800 group-hover:underline">
-                        View Skills Bootcamp
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-              </section>
+                    <BootcampBulletList items={course.learnerExpectations} />
+                  </div>
+                )}
+              </BootcampSection>
             )}
+
+            {/* Main lower-page CTA */}
+            <BottomApplySection course={course} />
+
+            {/* Handbook and policies */}
+            <LearnerInformation course={course} policies={policies} />
+
+            {/* Related programmes */}
+            <RelatedProgrammes courses={otherCourses} />
           </div>
 
-          <aside className="mt-10 mb-10 space-y-6 lg:w-1/3">
-            <BootcampOverviewCard overview={course.overview} authority={course.authority} />
-            <BootcampApplyCard apply={course.apply} />
+          {/* Desktop sidebar */}
+          <aside className="hidden lg:block lg:w-1/3 lg:self-stretch">
+            <div className="sticky top-24 space-y-6 py-10">
+              <ProgrammeAtAGlance course={course} />
+
+              <BootcampApplyCard apply={course.apply} />
+            </div>
           </aside>
         </div>
       </div>

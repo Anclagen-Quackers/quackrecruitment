@@ -36,12 +36,11 @@ const createRetrofitCourse = ({
     authority,
 
     banner: {
-      imgSrc: "/images/banners/retrofit-banner.jpg",
-      imgAlt: "Colourful houses on a street",
-      position: "center",
+      imgSrc: "/images/banners/green-schemes-banner.jpg",
+      imgAlt: "",
+      imagePosition: "right",
       ...banner,
     },
-
     brandingLogos,
 
     hero: {
@@ -60,6 +59,8 @@ const createRetrofitCourse = ({
       deliveryNote,
       eligibility,
     },
+    eligibilityNote:
+      "Subject to the relevant programme and funding eligibility requirements, Skills Bootcamps may support adults who are unemployed, employed, self-employed, considering a career change or returning to work.",
     programmeStructure: retrofitProgramme.programmeStructure,
     learningTitle: "Programme Content",
     learningIntro: programme.learningIntro,
@@ -328,7 +329,7 @@ export const retrofitWmca = createRetrofitCourse({
   link: "/skills-bootcamps/retrofit/wmca",
 
   authority: {
-    name: "West Midlands Combined Authority (WMCA)",
+    name: "West Midlands Combined Authority",
     shortName: "WMCA",
     strapline: "Delivered in Partnership with the West Midlands Combined Authority",
     logo: "/footer/West_Midlands_Combined_Authority_logo.svg.png",
@@ -336,8 +337,9 @@ export const retrofitWmca = createRetrofitCourse({
   },
 
   banner: {
-    title: "Pathway to Retrofit Excellence (WMCA)",
-    slogan: "Start a career in retrofit and green construction.",
+    title: "Pathway to Retrofit Excellence – West Midlands",
+    description:
+      "A Skills Bootcamp delivered with West Midlands Combined Authority, focused on retrofit, energy efficiency and green construction.",
   },
 
   regionalIntro:
@@ -345,9 +347,8 @@ export const retrofitWmca = createRetrofitCourse({
 
   eligibility: [
     "Aged 19+",
-    "Resident in the relevant Combined Authority area",
+    "Resident in an eligible West Midlands Combined Authority area",
     "Have the right to work in the UK",
-    "Interested in starting or progressing in the sector",
   ],
 
   schedule: "Monday – Friday | 9:00am – 3:30pm",
@@ -410,8 +411,9 @@ export const retrofitEcw = createRetrofitCourse({
   },
 
   banner: {
-    title: "Pathway to Retrofit Excellence (ECW)",
-    slogan: "Start a career in retrofit and green construction.",
+    title: "Pathway to Retrofit Excellence – Cheshire & Warrington",
+    description:
+      "A Skills Bootcamp delivered with Cheshire & Warrington, focused on retrofit, energy efficiency and green construction.",
   },
 
   regionalIntro:
@@ -419,9 +421,8 @@ export const retrofitEcw = createRetrofitCourse({
 
   eligibility: [
     "Aged 19+",
-    "Resident in the relevant Combined Authority area",
+    "Resident in the Enterprise Cheshire & Warrington area",
     "Have the right to work in the UK",
-    "Interested in starting or progressing in the sector",
   ],
 
   schedule: "Monday – Friday | 9:00am – 3:30pm",
@@ -484,8 +485,9 @@ export const retrofitSurrey = createRetrofitCourse({
   },
 
   banner: {
-    title: "Pathway to Retrofit Excellence Surrey County Council",
-    slogan: "Start a career in retrofit and green construction.",
+    title: "Pathway to Retrofit Excellence – Surrey",
+    description:
+      "A Skills Bootcamp delivered with Surrey County Council, focused on retrofit, energy efficiency and green construction.",
   },
 
   brandingLogos: [
@@ -498,12 +500,7 @@ export const retrofitSurrey = createRetrofitCourse({
   regionalIntro:
     "The Pathway to Retrofit Excellence Skills Bootcamp is delivered by Quack Recruitment & Training as part of Skills Bootcamp provision for Surrey.",
 
-  eligibility: [
-    "Aged 19+",
-    "Resident in the relevant Combined Authority area",
-    "Have the right to work in the UK",
-    "Interested in starting or progressing in the sector",
-  ],
+  eligibility: ["Aged 19+", "Resident in Surrey", "Have the right to work in the UK"],
   /*
    * Delivery method/location and timetable still need Surrey-specific
    * confirmation.

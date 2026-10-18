@@ -1,4 +1,5 @@
-import BannerHalf from "@/components/Banner/BannerHalf";
+// import BannerHalf from "@/components/Banner/BannerHalf";
+import Banner from "@/components/Banner";
 import Section from "@/components/Sections/Section";
 import BootcampCourseCard from "@/components/training/bootcamp/BootcampCourseCard";
 import { bootcampCourseList } from "@/components/data/training/bootcampCourses";
@@ -45,12 +46,14 @@ export const metadata = {
 function SkillsBootcampsPage() {
   return (
     <main className="flex flex-col">
-      <BannerHalf
-        title="Skills Bootcamps"
-        slogan="Practical Skills Bootcamp pathways with funded options and clear employment progression."
-        imgSrc="/images/banners/training-banner.jpg"
-        imgAlt="Learners taking part in training"
-        position="center"
+      <Banner
+        eyebrow="Skills Bootcamps"
+        title="Practical training with clear routes into work and progression"
+        description="Explore employer-led Skills Bootcamp pathways designed to build practical skills, support career development and connect learning with real employment opportunities."
+        imgSrc="/images/banners/skills-bootcamps-banner.jpg"
+        imgAlt=""
+        imagePosition="right"
+        size="default"
       />
 
       <Section bgColor="bg-white">

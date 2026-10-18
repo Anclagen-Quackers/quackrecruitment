@@ -185,7 +185,7 @@ export default function OfstedPage() {
         links={[
           {
             label: "Read the final report",
-            path: "/documents/ofsted/ofsted-monitoring-report-2026.pdf",
+            path: "/docs/ofsted/ofsted-monitoring-report-2026.pdf",
           },
         ]}
       />
@@ -348,7 +348,7 @@ export default function OfstedPage() {
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <a
-                href="/documents/ofsted/10468933-Quack recruitment and training- 2905375 Final PDF.pdf"
+                href="/docs/ofsted/ofsted-monitoring-report-2026.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 rounded-lg bg-quackred-800 px-6 py-3 font-semibold text-white transition hover:bg-quackred-600 focus:outline-none focus:ring-2 focus:ring-quackred-500 focus:ring-offset-2"
