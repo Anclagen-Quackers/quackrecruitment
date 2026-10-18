@@ -117,19 +117,14 @@ function OutcomeCard({ title, result, icon, highlight = false }) {
 
 function QuoteCard({ title, quote }) {
   return (
-    <article className="rounded-xl border border-zinc-200 bg-white p-6">
-      <p className="mb-4 text-sm font-semibold uppercase tracking-[0.12em] text-quackred-800">
+    <article className="rounded-xl border border-zinc-200 bg-white p-6 shadow-sm">
+      <p className="mb-5 text-sm font-semibold uppercase tracking-[0.12em] text-quackred-800">
         {title}
       </p>
 
-      <span
-        className="material-symbols-outlined mb-2 text-4xl text-quackred-800"
-        aria-hidden="true"
-      >
-        format_quote
-      </span>
-
-      <blockquote className="text-lg leading-relaxed text-zinc-800">“{quote}”</blockquote>
+      <blockquote className="border-l-4 border-quackred-800 pl-5 text-lg leading-relaxed text-zinc-800">
+        “{quote}”
+      </blockquote>
 
       <p className="mt-5 text-sm text-zinc-500">Ofsted, 2026</p>
     </article>
@@ -186,6 +181,8 @@ export default function OfstedPage() {
           {
             label: "Read the final report",
             path: "/docs/ofsted/ofsted-monitoring-report-2026.pdf",
+            target: "_blank",
+            rel: "noopener noreferrer",
           },
         ]}
       />
