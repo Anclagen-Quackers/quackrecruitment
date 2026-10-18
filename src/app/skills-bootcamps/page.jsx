@@ -18,7 +18,7 @@ const supportItems = [
   },
   {
     title: "For Employers",
-    text: "Connect with learners preparing for entry-level and progression roles across priority sectors.",
+    text: "Recruit trained learners, share vacancies and explore funded Skills Bootcamp training to upskill existing employees and support current and future workforce needs.",
   },
   {
     title: "For Partners",
@@ -75,8 +75,8 @@ function SkillsBootcampsPage() {
 
                 <p className="text-base leading-7 text-gray-800">
                   Skills Bootcamps are government funded for eligible individual learners. Employers
-                  using Skills Bootcamps to upskill existing employees may be required to contribute
-                  towards the cost of training.
+                  using Skills Bootcamps to upskill existing employees will be required to
+                  contribute towards the cost of training under the applicable funding arrangements.
                 </p>
               </div>
             </div>

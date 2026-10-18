@@ -216,6 +216,10 @@ const Home = () => {
                     text: "Employability and interview preparation",
                   },
                   {
+                    icon: "handshake",
+                    text: "An offer of a relevant job interview for eligible unemployed learners who successfully complete the programme",
+                  },
+                  {
                     icon: "groups",
                     text: "Employer engagement and progression support",
                   },
@@ -385,109 +389,6 @@ const Home = () => {
             </div>
           </div>
         </Section>
-        {/* <Section bgColor="bg-zinc-50">
-          <CTASection
-            titleBlack="Looking for a job?"
-            titlePurple="Check out whats on offer."
-            text="At Quack Recruitment & Training, we've curated job listings from across the UK to align with your passions and skills. Dive in and find that perfect role to elevate your career."
-            linkText="Jobs"
-            linkHref="/recruitment/listings"
-            image="/images/hardhat.png"
-            alt="Hardhat"
-          />
-        </Section> */}
-        {/* <Section bgColor="bg-zinc-200">
-          <FadeInFreeTextSection
-            title="Our Comprehensive Recruitment Solutions"
-            imageSrc="/images/interview-1.jpg"
-            imageAlt="Description"
-          >
-            <p className="mt-4 text-lg leading-6">
-              <b>On-Site Managed Services:</b> Benefit from dedicated teams that integrate
-              seamlessly with your HR department, offering scalable and cost-efficient staffing
-              solutions.
-            </p>
-            <p className="mt-4 text-lg leading-6">
-              <b>Temporary Recruitment:</b>
-              {
-                " Got staffing emergencies? Quack's got you. Quick solutions for sudden needs, always the right talent."
-              }
-            </p>
-
-            <p className="mt-4 text-lg leading-6">
-              <b>Permanent Recruitment:</b> Simplify your long-term hires. Whether new roles or
-              replacements, share your needs and let Quack do the rest.
-            </p>
-
-            <p className="mt-8 text-lg leading-6 italic">
-              Discover more about how Quack can empower your hiring process.
-            </p>
-            <div className="text-center my-10">
-              <PageLink href={"/recruitment"} label={"Recruitment"} />
-            </div>
-          </FadeInFreeTextSection>
-        </Section> */}
-        {/* <Section bgColor="bg-zinc-50">
-          <CTASection
-            titleBlack="Searching for the perfect job?"
-            titlePurple="Discover roles that resonate with your expertise."
-            text="Let us guide you towards a career that aligns with your skills and passions."
-            linkText="Register Today"
-            linkHref="/contact/register"
-            image="/images/tools.png"
-            reverse={true}
-            alt="Tools"
-          />
-        </Section> */}
-        {/* <Section bgColor="bg-zine-200">
-          <h2 className="text-3xl text-center mb-10 font-semibold">
-            Why Choose Quack Recruitment & Training?
-          </h2>
-          <CardSection>
-            <CardMinimalIconTop
-              title="Compliant Provider"
-              icon="lock"
-              color={`text-blue-600 text-8xl`}
-              textColor="text-black"
-              text="Licensed by GLAA, we prioritize regulatory adherence in every operation, ensuring ethical recruitment practices."
-            />
-            <CardMinimalIconTop
-              title="Expert Team"
-              icon="school"
-              color={`text-indigo-600 text-8xl`}
-              textColor="text-black"
-              text="Our Senior Consultants aren’t just seasoned—they're specialists in niche fields, bringing top-tier expertise to every hire."
-            />
-            <CardMinimalIconTop
-              title="Quality Guaranteed"
-              icon="award_star"
-              color={`text-yellow-600 text-8xl`}
-              textColor="text-black"
-              text="Dedicated to a seamless experience, our team is always on standby, ensuring support whenever you need."
-            />
-            <CardMinimalIconTop
-              title="Tailored Solutions"
-              icon="cut"
-              color={`text-teal-600 text-8xl`}
-              textColor="text-black"
-              text="Every organization is unique. We offer customized recruitment models, catering to both small businesses and major corporations."
-            />
-            <CardMinimalIconTop
-              title="Diverse Hiring Capabilities"
-              icon="diversity_2"
-              color={`text-green-600 text-8xl`}
-              textColor="text-black"
-              text="From role advertising to sudden staffing shifts or finding the ideal permanent hire, we turn your challenges into opportunities."
-            />
-            <CardMinimalIconTop
-              title="Industry Affiliation"
-              icon="share"
-              color={`text-red-600 text-8xl`}
-              textColor="text-black"
-              text="Registered with leading industry affiliates, our credentials highlight our commitment to recruitment excellence."
-            />
-          </CardSection>
-        </Section> */}
       </main>
     </>
   );
