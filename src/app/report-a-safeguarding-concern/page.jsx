@@ -1,4 +1,5 @@
 import BannerHalf from "@/components/Banner/BannerHalf";
+import Banner from "@/components/Banner";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -60,12 +61,18 @@ export const metadata = {
 const ReportSafeguardingConcern = () => {
   return (
     <main className="flex flex-col bg-gray-50">
-      <BannerHalf
-        title="Report a Safeguarding Concern"
-        slogan="A clear route to report concerns online"
-        imgSrc="/images/banners/training-banner.jpg"
-        imgAlt="Learners in a training environment"
-        position="center"
+      <Banner
+        eyebrow="Safeguarding"
+        title={
+          <>
+            Report a <span className="text-quackred-800">Safeguarding Concern</span>
+          </>
+        }
+        description="A clear and confidential route to raise safeguarding, welfare or wellbeing concerns with our safeguarding team."
+        imgSrc="/images/banners/safeguarding-banner.jpg"
+        imgAlt=""
+        imagePosition="right"
+        size="compact"
       />
 
       <section className="bg-quackred-50 border-y border-quackred-200">
