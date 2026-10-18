@@ -1,12 +1,29 @@
-import BannerHalf from "@/components/Banner/BannerHalf";
+import Banner from "@/components/Banner";
 import Section from "@/components/Sections/Section";
 import BootcampCourseCard from "@/components/training/bootcamp/BootcampCourseCard";
 import { bootcampCourseGroups } from "@/components/data/training/bootcampCourses";
 
 const retrofitHighlights = [
-  "Fully funded Skills Bootcamps",
-  "Face-to-face or live remote delivery",
-  "Employer-led progression support",
+  {
+    icon: "home_repair_service",
+    title: "Practical retrofit training",
+    text: "Build knowledge of retrofit, energy efficiency and sustainable construction.",
+  },
+  {
+    icon: "workspace_premium",
+    title: "Recognised qualifications",
+    text: "Gain relevant qualifications where included within your chosen Skills Bootcamp.",
+  },
+  {
+    icon: "work",
+    title: "Career-focused support",
+    text: "Access employability, interview and progression support throughout your programme.",
+  },
+  {
+    icon: "groups",
+    title: "Employer engagement",
+    text: "Develop an understanding of employer expectations, vacancies and progression routes.",
+  },
 ];
 
 const retrofitOutcomes = [
@@ -14,20 +31,40 @@ const retrofitOutcomes = [
   "Loft Insulation Installer",
   "Cavity Wall Installer",
   "Construction Operative",
-  "Energy efficiency support roles",
-  "Progression into wider green construction pathways",
+  "Energy Efficiency Support Roles",
+  "Wider Green Construction Opportunities",
+];
+
+const whyRetrofit = [
+  {
+    icon: "energy_savings_leaf",
+    title: "Energy efficiency",
+    text: "Retrofit helps improve existing homes and buildings so they use energy more efficiently.",
+  },
+  {
+    icon: "trending_up",
+    title: "Growing skills demand",
+    text: "The transition towards more energy-efficient buildings is creating demand for retrofit and green construction skills.",
+  },
+  {
+    icon: "construction",
+    title: "Practical career routes",
+    text: "Retrofit knowledge can support progression into insulation, construction, installation and related roles.",
+  },
 ];
 
 export const metadata = {
-  title: "Retrofit Training | Quack Recruitment & Training",
+  title: "Retrofit & Green Skills | Quack Recruitment & Training",
   description:
-    "Explore Quack Recruitment & Training retrofit Skills Bootcamps and start your journey into retrofit, insulation, and green construction.",
+    "Explore Quack Recruitment & Training Retrofit Skills Bootcamps, practical training in energy efficiency, retrofit and green construction with clear progression support.",
   keywords: [
+    "Skills Bootcamps",
     "Retrofit training",
     "Retrofit installer training",
-    "Energy efficiency retrofit course",
+    "Energy efficiency training",
     "Green construction training",
     "Retrofit careers UK",
+    "Quack Recruitment and Training",
   ],
 };
 
@@ -36,221 +73,325 @@ function RetrofitPage() {
 
   return (
     <main className="flex flex-col">
-      <BannerHalf
-        title="Retrofit Training"
-        slogan="Build practical skills for a growing green construction sector."
-        imgSrc="/images/banners/retrofit-banner.jpg"
-        imgAlt="Colourful houses on a street"
-        position="center"
+      <Banner
+        eyebrow="Retrofit & Green Skills"
+        title={
+          <>
+            Build practical skills for a{" "}
+            <span className="text-quackred-800">greener built environment</span>
+          </>
+        }
+        description="Explore Skills Bootcamp pathways focused on retrofit, energy efficiency and green construction, with practical training and clear progression support."
+        imgSrc="/images/banners/green-schemes-banner.jpg"
+        imgAlt=""
+        imagePosition="right"
+        size="default"
       />
 
+      {/* Intro */}
       <Section bgColor="bg-white">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-8 lg:grid-cols-[1.4fr_0.7fr] lg:items-center">
+          <div className="grid gap-10 lg:grid-cols-[1.35fr_0.65fr] lg:items-center">
             <div>
-              <h2 className="mb-8 text-3xl font-semibold lg:text-5xl">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-800">
+                Retrofit Skills Bootcamps
+              </p>
+
+              <h2 className="max-w-4xl text-3xl font-bold leading-tight text-zinc-950 sm:text-4xl lg:text-5xl">
                 Start your journey into retrofit and green construction
               </h2>
-              <p className="max-w-4xl text-lg leading-8 text-gray-800">
-                Quack Recruitment & Training offers funded Retrofit Skills Bootcamps designed to
-                help learners build practical knowledge, understand energy efficiency, and progress
-                into real roles within a growing sector.
-              </p>
+
+              <div className="mt-6 max-w-4xl space-y-4 text-lg leading-8 text-zinc-700">
+                <p>
+                  Quack Recruitment & Training delivers Skills Bootcamps designed to help learners
+                  develop practical retrofit knowledge, understand energy efficiency and prepare for
+                  progression within the green construction sector.
+                </p>
+
+                <p>
+                  Programmes are delivered with public funding partners in different areas.
+                  Eligibility, delivery arrangements and available cohorts vary by programme.
+                </p>
+              </div>
+
+              <a
+                href="#retrofit-bootcamps"
+                className="
+                  mt-7 inline-flex items-center gap-2 rounded-lg
+                  bg-quackred-800 px-6 py-3
+                  font-semibold text-white
+                  transition hover:bg-quackred-600
+                "
+              >
+                Explore Retrofit Skills Bootcamps
+                <span className="material-symbols-outlined text-xl" aria-hidden="true">
+                  arrow_downward
+                </span>
+              </a>
             </div>
 
-            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-xl lg:mt-10 max-w-xl mx-auto">
-              <h3 className="mb-4 text-2xl font-bold">At a glance</h3>
-              <ul className="space-y-3">
-                {retrofitHighlights.map((item) => (
+            <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 shadow-sm">
+              <h3 className="text-2xl font-bold text-zinc-950">At a glance</h3>
+
+              <ul className="mt-5 space-y-4">
+                {[
+                  "Funded Skills Bootcamp pathways",
+                  "Practical, career-focused training",
+                  "Retrofit and energy-efficiency knowledge",
+                  "Employer engagement and progression support",
+                  "Learner support throughout the programme",
+                ].map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-3 text-base leading-7 text-gray-800"
+                    className="flex items-start gap-3 text-base leading-7 text-zinc-700"
                   >
-                    <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-quackred-700" />
+                    <span
+                      className="mt-2 h-2 w-2 shrink-0 rounded-full bg-quackred-800"
+                      aria-hidden="true"
+                    />
+
                     <span>{item}</span>
                   </li>
                 ))}
-              </ul>{" "}
-              <div className="mt-6 flex flex-wrap gap-3 justify-center">
-                <a
-                  href="#retrofit-bootcamps"
-                  className="rounded-lg bg-quackred-800 px-6 py-3 text-base font-semibold text-white transition hover:bg-quackred-600"
-                >
-                  Explore Bootcamps
-                </a>
-              </div>
-            </div>
-          </div>{" "}
-        </div>
-      </Section>
+              </ul>
 
-      <Section bgColor="bg-gray-50">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
-            <div>
-              <h2 className="mb-6 text-3xl font-semibold lg:text-4xl">What is Retrofit?</h2>
-              <p className="mb-5 text-lg leading-8 text-gray-800">
-                Retrofit is the process of improving existing homes and buildings so they are more
-                energy efficient, sustainable, and fit for the future.
+              <p className="mt-5 border-t border-zinc-200 pt-5 text-sm leading-6 text-zinc-600">
+                Funding and delivery arrangements depend on the individual programme and relevant
+                funding requirements.
               </p>
-              <p className="mb-5 text-lg leading-8 text-gray-800">
-                As the UK continues working toward Net Zero targets, demand for skilled retrofit
-                workers continues to grow across insulation, installation, compliance, and wider
-                energy-efficiency work.
-              </p>
-              <p className="text-lg leading-8 text-gray-800">
-                Our funded Skills Bootcamps are designed to help learners build industry-relevant
-                knowledge, practical understanding, and clear routes into employment.
-              </p>
-            </div>
-
-            <div className="rounded-2xl bg-white p-6 shadow-xl ring-1 ring-gray-200 ">
-              <h3 className="mb-5 text-2xl font-bold text-quackred-800">Why retrofit now?</h3>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="text-lg font-semibold">Net Zero targets</h4>
-                  <p className="mt-1 text-base leading-7 text-gray-800">
-                    Existing homes and buildings need upgrades to improve energy efficiency and
-                    reduce emissions.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold">Growing demand</h4>
-                  <p className="mt-1 text-base leading-7 text-gray-800">
-                    Retrofit work continues to grow as more housing stock is improved across the UK.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold">Practical opportunities</h4>
-                  <p className="mt-1 text-base leading-7 text-gray-800">
-                    Training can lead into hands-on construction, insulation, and wider
-                    energy-efficiency roles.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </Section>
 
+      {/* What is retrofit */}
+      <Section bgColor="bg-zinc-100">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-800">
+                Understanding retrofit
+              </p>
+
+              <h2 className="text-3xl font-bold text-zinc-950 sm:text-4xl">What is retrofit?</h2>
+
+              <div className="mt-6 space-y-5 text-lg leading-8 text-zinc-700">
+                <p>
+                  Retrofit is the process of improving existing homes and buildings so they are more
+                  energy efficient, sustainable and better prepared for the future.
+                </p>
+
+                <p>
+                  This can include improvements such as insulation, energy efficiency measures and
+                  wider changes that help buildings retain heat, use less energy and reduce
+                  emissions.
+                </p>
+
+                <p>
+                  Skills Bootcamps can help learners develop the technical understanding, workplace
+                  knowledge and employability skills needed to progress within retrofit and related
+                  construction roles.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid gap-4">
+              {whyRetrofit.map((item) => (
+                <article
+                  key={item.title}
+                  className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm"
+                >
+                  <div className="flex items-center gap-3">
+                    <span
+                      className="material-symbols-outlined text-2xl text-quackred-800"
+                      aria-hidden="true"
+                    >
+                      {item.icon}
+                    </span>
+
+                    <h3 className="text-xl font-bold text-zinc-950">{item.title}</h3>
+                  </div>
+
+                  <p className="mt-3 text-base leading-7 text-zinc-700">{item.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Why train with Quack */}
       <Section bgColor="bg-white">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-10 text-center text-3xl font-semibold lg:text-4xl">
-            Why train with Quack?
-          </h2>
-          {/* <div className="flex items-start gap-3">
-              <div className="mt-1 flex h-6 w-6 px-2 items-center justify-center rounded-full bg-quackred-100 text-sm font-bold text-quackred-800">
-                ✓
-              </div>
+          <div className="mx-auto mb-10 max-w-3xl text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-800">
+              Your training
+            </p>
 
-              <div>
-                <h4 className="text-xl font-bold">{item.title}</h4>
+            <h2 className="text-3xl font-bold text-zinc-950 sm:text-4xl">
+              What learners can expect
+            </h2>
 
-                {item.description && (
-                  <p className="mt-2 text-base leading-7 text-gray-900">{item.description}</p>
-                )}
-              </div>
-            </div> */}
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            <div className="rounded-2xl border border-quackred-100 bg-quackred-50 p-6 shadow-xl">
-              <div className="flex items-start gap-3">
-                <div className="mt-1 flex h-6 w-6 px-2 items-center justify-center rounded-full bg-quackred-100 text-sm font-bold text-quackred-800">
-                  ✓
-                </div>
-                <div>
-                  <h3 className="mb-3 text-xl font-bold">Flexible delivery</h3>
-                </div>
-              </div>
-              <p className="text-base leading-7 text-gray-800">
-                Training can be delivered face-to-face or remotely through live tutor-led sessions.
-              </p>
-            </div>
+            <p className="mt-4 text-lg leading-8 text-zinc-700">
+              Our Retrofit Skills Bootcamps combine sector knowledge, learner support and
+              career-focused training to help learners move towards their next step.
+            </p>
+          </div>
 
-            <div className="rounded-2xl border border-quackred-100 bg-quackred-50 p-6 shadow-xl">
-              <div className="flex items-start gap-3">
-                <div className="mt-1 flex h-6 w-6 px-2 items-center justify-center rounded-full bg-quackred-100 text-sm font-bold text-quackred-800">
-                  ✓
-                </div>
-                <div>
-                  <h3 className="mb-3 text-xl font-bold">Career-focused support</h3>
-                </div>
-              </div>
-              <p className="text-base leading-7 text-gray-800">
-                Learners receive CV support, interview preparation, and guidance on progressing into
-                relevant roles.
-              </p>
-            </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {retrofitHighlights.map((item) => (
+              <article
+                key={item.title}
+                className="
+                  rounded-2xl border border-zinc-200
+                  bg-white p-6 shadow-sm
+                  transition hover:-translate-y-0.5 hover:shadow-md
+                "
+              >
+                <div className="flex items-center gap-3">
+                  <span
+                    className="material-symbols-outlined text-2xl text-quackred-800"
+                    aria-hidden="true"
+                  >
+                    {item.icon}
+                  </span>
 
-            <div className="rounded-2xl border border-quackred-100 bg-quackred-50 p-6 shadow-xl">
-              <div className="flex items-start gap-3">
-                <div className="mt-1 flex h-6 w-6 px-2 items-center justify-center rounded-full bg-quackred-100 text-sm font-bold text-quackred-800">
-                  ✓
+                  <h3 className="text-xl font-bold text-zinc-950">{item.title}</h3>
                 </div>
-                <div>
-                  <h3 className="mb-3 text-xl font-bold">Employer engagement</h3>
-                </div>
-              </div>
-              <p className="text-base leading-7 text-gray-800">
-                We work with employer partners who support learner progression through insight
-                sessions and recruitment opportunities.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-quackred-100 bg-quackred-50 p-6 shadow-xl">
-              <div className="flex items-start gap-3">
-                <div className="mt-1 flex h-6 w-6 px-2 items-center justify-center rounded-full bg-quackred-100 text-sm font-bold text-quackred-800">
-                  ✓
-                </div>
-                <div>
-                  <h3 className="mb-3 text-xl font-bold">Funded training</h3>
-                </div>
-              </div>
-              <p className="text-base leading-7 text-gray-800">
-                Skills Bootcamps are designed to help learners access focused, career-relevant
-                training with clear progression routes.
-              </p>
-            </div>
+
+                <p className="mt-3 text-base leading-7 text-zinc-700">{item.text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </Section>
 
-      <Section bgColor="bg-gray-50">
+      {/* Progression */}
+      <Section bgColor="bg-zinc-100">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-4 text-center text-3xl font-semibold lg:text-4xl">
-            Where could this lead?
-          </h2>
-          <p className="mx-auto mb-10 max-w-3xl text-center text-lg leading-8 text-gray-800">
-            Retrofit training can open the door to practical site-based roles and wider
-            opportunities across sustainable construction and energy efficiency work.
-          </p>
+          <div className="mx-auto mb-10 max-w-3xl text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-800">
+              Careers and progression
+            </p>
+
+            <h2 className="text-3xl font-bold text-zinc-950 sm:text-4xl">
+              Where could retrofit training lead?
+            </h2>
+
+            <p className="mt-4 text-lg leading-8 text-zinc-700">
+              Retrofit training can support progression into practical site-based roles and wider
+              opportunities across sustainable construction and energy-efficiency work.
+            </p>
+          </div>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {retrofitOutcomes.map((item) => (
               <div
                 key={item}
-                className="rounded-2xl bg-white p-3 shadow-sm ring-1 ring-gray-200 border-t-4 border-quackred-700 hover:-translate-y-1 hover:shadow-md
-transition"
+                className="
+                  flex items-center gap-3 rounded-2xl
+                  border border-zinc-200 bg-white
+                  p-5 shadow-sm
+                "
               >
-                <p className="text-base font-semibold leading-7 text-gray-900">{item}</p>
+                <span
+                  className="material-symbols-outlined shrink-0 text-2xl text-quackred-800"
+                  aria-hidden="true"
+                >
+                  arrow_forward
+                </span>
+
+                <p className="font-semibold leading-7 text-zinc-900">{item}</p>
               </div>
             ))}
           </div>
         </div>
       </Section>
 
+      {/* Courses */}
       <Section bgColor="bg-white">
-        <div id="retrofit-bootcamps" className="mx-auto max-w-6xl">
-          <h2 className="mb-4 text-center text-3xl font-semibold lg:text-4xl">
-            Available Retrofit Skills Bootcamps
-          </h2>
-          <p className="mx-auto mb-10 max-w-3xl text-center text-lg leading-8 text-gray-800">
-            Explore the current funded retrofit programmes available through our partner
-            authorities.
-          </p>
+        <div id="retrofit-bootcamps" className="mx-auto max-w-6xl scroll-mt-28">
+          <div className="mx-auto mb-10 max-w-3xl text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-800">
+              Current provision
+            </p>
+
+            <h2 className="text-3xl font-bold text-zinc-950 sm:text-4xl">
+              Available Retrofit Skills Bootcamps
+            </h2>
+
+            <p className="mt-4 text-lg leading-8 text-zinc-700">
+              Explore our current Retrofit Skills Bootcamps and select the programme for your area
+              to view eligibility, delivery, qualifications, learner support and application
+              information.
+            </p>
+          </div>
 
           <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
             {retrofitCourses.map((course) => (
               <BootcampCourseCard key={course?.slug} course={course} />
             ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Support */}
+      <Section bgColor="bg-zinc-100">
+        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
+          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+            <div className="flex items-center gap-3">
+              <span
+                className="material-symbols-outlined text-2xl text-quackred-800"
+                aria-hidden="true"
+              >
+                diversity_1
+              </span>
+
+              <h2 className="text-2xl font-bold text-zinc-950">Need support before applying?</h2>
+            </div>
+
+            <p className="mt-4 text-base leading-7 text-zinc-700">
+              Find out about learner support, SEND, reasonable adjustments and the support available
+              throughout your Skills Bootcamp.
+            </p>
+
+            <a
+              href="/learner-support"
+              className="mt-5 inline-flex items-center gap-1 font-semibold text-quackred-800 hover:underline"
+            >
+              Learner Support, SEND & Inclusion
+              <span className="material-symbols-outlined text-xl" aria-hidden="true">
+                arrow_forward
+              </span>
+            </a>
+          </div>
+
+          <div className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+            <div className="flex items-center gap-3">
+              <span
+                className="material-symbols-outlined text-2xl text-quackred-800"
+                aria-hidden="true"
+              >
+                accessibility_new
+              </span>
+
+              <h2 className="text-2xl font-bold text-zinc-950">Accessibility</h2>
+            </div>
+
+            <p className="mt-4 text-base leading-7 text-zinc-700">
+              If you have an accessibility requirement or need adjustments to participate in
+              training, you can find further information about the support available.
+            </p>
+
+            <a
+              href="/accessibility"
+              className="mt-5 inline-flex items-center gap-1 font-semibold text-quackred-800 hover:underline"
+            >
+              View accessibility information
+              <span className="material-symbols-outlined text-xl" aria-hidden="true">
+                arrow_forward
+              </span>
+            </a>
           </div>
         </div>
       </Section>
