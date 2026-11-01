@@ -133,7 +133,7 @@ function SkillsBootcampsPage() {
                 key={item.title}
                 className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm"
               >
-                <h3 className="mb-3 text-2xl font-bold text-gray-900">{item.title}</h3>
+                <h3 className="text-center text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-base leading-7 text-gray-800">{item.text}</p>
               </article>
             ))}

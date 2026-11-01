@@ -371,11 +371,18 @@ export default function OfstedPage() {
           </div>
 
           <div className="flex max-w-[180px] flex-col items-center justify-center">
-            <img
-              src="/images/ofsted/ofsted-page-qr.png"
-              alt="QR code linking to the Quack Recruitment & Training Ofsted page"
-              className="aspect-square w-full"
-            />
+            <a
+              href="https://reports.ofsted.gov.uk/provider/33/2905375"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=""
+            >
+              <img
+                src="/images/ofsted-report-qr.jpg"
+                alt="QR code linking to the Quack Recruitment & Training Ofsted page"
+                className="aspect-square w-full"
+              />
+            </a>
 
             <p className="mt-3 text-center text-sm leading-snug text-zinc-600">
               Scan to visit our Ofsted page and read the report

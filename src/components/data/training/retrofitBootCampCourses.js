@@ -353,7 +353,9 @@ export const retrofitWmca = createRetrofitCourse({
 
   schedule: "Monday – Friday | 9:00am – 3:30pm",
 
-  deliveryModes: ["Face-to-face", "Remotely through live tutor-led sessions"],
+  deliveryModes: ["Face-to-face"],
+  deliveryNote:
+    "Delivery model: face-to-face. Learners attend scheduled classroom-based sessions at the confirmed delivery venue.",
 
   careerOpportunities: [
     "Retrofit Installer",

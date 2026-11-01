@@ -250,6 +250,43 @@ const LearnerSupportSection = ({ course }) => {
   );
 };
 
+const InterviewProgressionSection = ({ course }) => {
+  const progressionSupport = course.progressionSupport;
+
+  if (!progressionSupport?.interview && !progressionSupport?.alternativeRoutes?.length) {
+    return null;
+  }
+
+  return (
+    <div className="mt-10">
+      <div className="flex items-center gap-3">
+        <span className="material-symbols-outlined text-2xl text-quackred-800" aria-hidden="true">
+          work
+        </span>
+
+        <h3 className="text-2xl font-bold text-zinc-950">Interview and progression routes</h3>
+      </div>
+
+      {progressionSupport.interview && (
+        <div className="mt-5 rounded-xl border-l-4 border-quackred-800 bg-quackred-50 px-5 py-4">
+          <p className="text-lg leading-8 text-zinc-800">{progressionSupport.interview}</p>
+        </div>
+      )}
+
+      {progressionSupport.alternativeRoutes?.length > 0 && (
+        <div className="mt-6">
+          <p className="mb-4 text-lg leading-8 text-zinc-800">
+            Employed and self-employed learners may follow alternative progression routes,
+            including:
+          </p>
+
+          <BootcampBulletList items={progressionSupport.alternativeRoutes} />
+        </div>
+      )}
+    </div>
+  );
+};
+
 const CareersProgressionSection = ({ course }) => {
   const hasRoles = course.careerOpportunities?.length > 0;
 
@@ -317,9 +354,18 @@ const CareersProgressionSection = ({ course }) => {
 
       {hasEmployerSection && (
         <div className="mt-10 rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm sm:p-6">
-          <h3 className="text-2xl font-bold text-zinc-950">
-            {course.employerSection.title || "Employer Engagement"}
-          </h3>
+          <div className="flex items-center gap-3">
+            <span
+              className="material-symbols-outlined text-2xl text-quackred-800"
+              aria-hidden="true"
+            >
+              groups
+            </span>
+
+            <h3 className="text-2xl font-bold text-zinc-950">
+              {course.employerSection.title || "Employer Engagement"}
+            </h3>
+          </div>
 
           {course.employerSection.description && (
             <p className="mt-4 text-lg leading-8 text-zinc-800">
@@ -343,6 +389,7 @@ const CareersProgressionSection = ({ course }) => {
           )}
         </div>
       )}
+      <InterviewProgressionSection course={course} />
     </BootcampSection>
   );
 };

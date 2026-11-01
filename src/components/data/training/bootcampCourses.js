@@ -5,6 +5,31 @@ import {
   sharedPolicies,
 } from "./retrofitBootCampCourses";
 
+// sharedBootcampContent.js
+
+export const standardProgressionSupport = {
+  interview:
+    "Eligible unemployed learners who successfully complete the Skills Bootcamp will receive an offer of a relevant job interview. An interview provides an opportunity to be considered by an employer but does not guarantee employment.",
+
+  alternativeRoutes: [
+    "Workplace progression",
+    "Increased responsibilities",
+    "Promotion or a new role",
+    "New contracts or clients",
+    "Developing or expanding self-employed activity",
+  ],
+};
+
+export const existingEmployeeTrainingNote =
+  "Employers can also explore Skills Bootcamp training for existing employees. Where an employer enrols an existing employee, an employer contribution is required under the applicable funding arrangements. Eligibility, programme availability and the required contribution will be confirmed before enrolment.";
+
+retrofitEcw.progressionSupport = standardProgressionSupport;
+retrofitEcw.employerSection.note = existingEmployeeTrainingNote;
+retrofitSurrey.progressionSupport = standardProgressionSupport;
+retrofitSurrey.employerSection.note = existingEmployeeTrainingNote;
+retrofitWmca.progressionSupport = standardProgressionSupport;
+retrofitWmca.employerSection.note = existingEmployeeTrainingNote;
+
 export const bootcampCourses = {
   retrofitEcw,
   retrofitSurrey,
@@ -116,6 +141,7 @@ export const bootcampCourses = {
           "Support continues after training as we assist learners in securing employment opportunities.",
       },
     ],
+    progressionSupport: standardProgressionSupport,
     employerSection: {
       title: "Employer Engagement",
       description:
@@ -125,6 +151,7 @@ export const bootcampCourses = {
         "Discussions about current vacancies and career pathways",
         "Recruitment opportunities for learners completing the programme",
       ],
+      note: existingEmployeeTrainingNote,
     },
     whyChoose: [
       {
@@ -221,9 +248,9 @@ export const bootcampCourses = {
       duration: "15 structured sessions",
       guidedLearningHours: "82 GLH",
       schedule: "97.5 total programme hours",
-      deliveryModes: ["Face-to-face"],
+      deliveryModes: ["Blended"],
       deliveryNote:
-        "The programme includes 82 guided learning hours and 15.5 hours of employability activity.",
+        "Delivery model: blended. The programme includes a combination of scheduled face-to-face and remote tutor-led learning. The specific attendance pattern, venue and online sessions will be confirmed before the learner starts.",
       eligibility: [
         "Aged 19+",
         "Resident in Hampshire",
@@ -374,10 +401,12 @@ export const bootcampCourses = {
       },
     ],
 
+    progressionSupport: standardProgressionSupport,
     employerSection: {
       title: "Employer Engagement and Progression Support",
       description:
         "Employer engagement is built into the programme to help learners understand opportunities within construction, civils and utilities.",
+
       details: [
         "Employer insight sessions",
         "Industry engagement",
@@ -385,6 +414,8 @@ export const bootcampCourses = {
         "Interview support",
         "Progression into employment",
       ],
+
+      note: existingEmployeeTrainingNote,
     },
     brandingLogos: [
       {
