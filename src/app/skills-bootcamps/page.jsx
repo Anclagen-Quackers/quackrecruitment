@@ -1,4 +1,5 @@
-import BannerHalf from "@/components/Banner/BannerHalf";
+// import BannerHalf from "@/components/Banner/BannerHalf";
+import Banner from "@/components/Banner";
 import Section from "@/components/Sections/Section";
 import BootcampCourseCard from "@/components/training/bootcamp/BootcampCourseCard";
 import { bootcampCourseList } from "@/components/data/training/bootcampCourses";
@@ -18,7 +19,7 @@ const supportItems = [
   },
   {
     title: "For Employers",
-    text: "Connect with learners preparing for entry-level and progression roles across priority sectors.",
+    text: "Recruit trained learners, share vacancies and explore funded Skills Bootcamp training to upskill existing employees and support current and future workforce needs.",
   },
   {
     title: "For Partners",
@@ -45,19 +46,21 @@ export const metadata = {
 function SkillsBootcampsPage() {
   return (
     <main className="flex flex-col">
-      <BannerHalf
-        title="Skills Bootcamps"
-        slogan="Practical Skills Bootcamp pathways with funded options and clear employment progression."
-        imgSrc="/images/banners/training-banner.jpg"
-        imgAlt="Learners taking part in training"
-        position="center"
+      <Banner
+        eyebrow="Skills Bootcamps"
+        title="Practical training with clear routes into work and progression"
+        description="Explore employer-led Skills Bootcamp pathways designed to build practical skills, support career development and connect learning with real employment opportunities."
+        imgSrc="/images/banners/skills-bootcamps-banner.jpg"
+        imgAlt=""
+        imagePosition="right"
+        size="default"
       />
 
       <Section bgColor="bg-white">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-8 lg:grid-cols-[1.35fr_0.65fr] lg:items-center">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-quackred-700">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-quackred-800">
                 Skills for Life Bootcamps
               </p>
               <h2 className="mb-6 text-3xl font-semibold lg:text-5xl">
@@ -75,15 +78,15 @@ function SkillsBootcampsPage() {
 
                 <p className="text-base leading-7 text-gray-800">
                   Skills Bootcamps are government funded for eligible individual learners. Employers
-                  using Skills Bootcamps to upskill existing employees may be required to contribute
-                  towards the cost of training.
+                  using Skills Bootcamps to upskill existing employees will be required to
+                  contribute towards the cost of training under the applicable funding arrangements.
                 </p>
               </div>
             </div>
 
             <div className="rounded-xl border border-quackred-100 bg-quackred-50 p-6 shadow-lg">
               <img
-                src="/footer/skills_for_life_multiple_logo.png"
+                src="/footer/skillsbootcamp.jpg"
                 alt="Skills for Life logo"
                 className="mx-auto mb-6 max-h-20 w-auto max-w-full rounded bg-white p-3"
               />
@@ -130,7 +133,7 @@ function SkillsBootcampsPage() {
                 key={item.title}
                 className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm"
               >
-                <h3 className="mb-3 text-2xl font-bold text-gray-900">{item.title}</h3>
+                <h3 className="text-center text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-base leading-7 text-gray-800">{item.text}</p>
               </article>
             ))}

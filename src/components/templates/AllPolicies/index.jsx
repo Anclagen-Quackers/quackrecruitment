@@ -17,7 +17,7 @@ const AllPolicies = () => {
         {policyGroups.map((group) => (
           <section key={group.id} id={group.id}>
             <div className="mb-6 border-l-4 border-quackred-700 pl-4">
-              <p className="mb-1 text-sm font-semibold uppercase tracking-wide text-quackred-700">
+              <p className="mb-1 text-sm font-semibold uppercase tracking-wide text-quackred-800">
                 Policy area
               </p>
 
@@ -44,7 +44,7 @@ const AllPolicies = () => {
 
 export default AllPolicies;
 
-const PolicyItem = ({ policy }) => {
+export const PolicyItem = ({ policy }) => {
   return (
     <a
       href={policy.href}
@@ -78,12 +78,12 @@ const PolicyItem = ({ policy }) => {
         </div>
 
         <div className="flex shrink-0 flex-col items-end gap-2">
-          <span className="rounded-md bg-quackred-100 px-3 py-1 text-sm font-medium text-quackred-700">
+          <span className="rounded-md bg-quackred-100 px-3 py-1 text-sm font-medium text-quackred-900">
             PDF
           </span>
 
           <span
-            className="material-icons text-xl text-gray-400 transition group-hover:text-quackred-700"
+            className="material-icons text-xl text-gray-700 transition group-hover:text-quackred-800"
             aria-hidden="true"
           >
             open_in_new

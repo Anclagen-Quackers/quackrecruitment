@@ -1,4 +1,5 @@
 import BannerHome from "../components/Banner/BannerHome";
+import Banner from "@/components/Banner";
 import Section from "../components/Sections/Section";
 import FadeInFreeTextSection from "@/components/Sections/FadeInFreeFormatSection";
 import { CardMinimalIconTop } from "../components/Card";
@@ -10,6 +11,9 @@ import CTASection from "../components/Sections/CTASection";
 import MultiLinkCTASection from "@/components/Sections/MultiLinkCTASection";
 import Head from "next/head";
 import PageLink from "@/components/PageLink";
+import HighlightCTA from "@/components/HighlightCTA";
+import ProgrammeCard from "@/components/Card/ProgrammeCard";
+import FeatureCard from "@/components/Card/FeatureCard";
 
 export const metadata = {
   title: "Quack Recruitment & Training",
@@ -44,6 +48,50 @@ export const metadata = {
   authors: [{ name: "Alexander Barrett", url: "https://github.com/Anclagen" }],
 };
 
+const programmeRoutes = [
+  {
+    title: "Retrofit & Green Skills",
+    description: "Explore funded retrofit training available across multiple authority areas.",
+    href: "/skills-bootcamps/retrofit",
+    image: "/images/banners/green-schemes-banner.jpg",
+    imageAlt: "",
+  },
+  {
+    title: "Construction & Utilities",
+    description: "A funded Skills Bootcamp for learners in eligible Hampshire areas.",
+    href: "/skills-bootcamps/construction-utilities/hcc",
+    image: "/images/banners/contruction-utilities-banner.jpg",
+    imageAlt: "",
+  },
+  {
+    title: "Recruitment Leadership",
+    description:
+      "A funded Skills Bootcamp for learners in the South Yorkshire Mayoral Combined Authority area.",
+    href: "/skills-bootcamps/recruitment-leadership/symca",
+    image: "/images/banners/leadership-banner.jpg",
+    imageAlt: "",
+  },
+];
+
+const recruitmentLinks = [
+  {
+    label: "Job listings",
+    href: "/recruitment/listings",
+  },
+  {
+    label: "Permanent recruitment",
+    href: "/recruitment/permanent",
+  },
+  {
+    label: "Temporary recruitment",
+    href: "/recruitment/temporary",
+  },
+  {
+    label: "On-site managed services",
+    href: "/recruitment/on-site-managed",
+  },
+];
+
 const Home = () => {
   return (
     <>
@@ -59,229 +107,287 @@ const Home = () => {
         <meta name="keywords" content={keywords} key="keywords" />
       </Head>
       <main className="flex flex-col">
-        <BannerHome
-          title={`Quack \nRecruitment & Training`}
-          slogan="Whether you're looking to recruit, or train the best talent... we've got you covered!"
-          imgSrc="/images/banners/pexels-sevenstorm-juhaszimrus-443383.jpg"
-          imgAlt="Descriptive Image Alt Text"
+        <Banner
+          eyebrow="Adult Skills Bootcamps"
+          title={
+            <>
+              Employer-led Skills Bootcamps that help adults{" "}
+              <span className="text-quackred">achieve, belong and thrive</span>
+            </>
+          }
+          description={
+            <>
+              Practical, employer-led training designed to help adults build the skills, confidence
+              and opportunities needed to progress in work.
+            </>
+          }
+          imgSrc="/images/banners/home-skills-bootcamps-banner.jpg"
+          imgAlt=""
+          imagePosition="right"
+          size="large"
           links={[
-            { label: "Recruitment", path: "/recruitment", color: "quackred" },
-            { label: "Training", path: "/training", color: "quackred" },
+            {
+              label: "Explore Skills Bootcamps",
+              path: "/skills-bootcamps",
+            },
           ]}
         />
-        <Section bgColor="bg-zinc-50">
-          <FourImageStretch
-            title="Who Are We?"
-            images={[
-              {
-                src: "/images/pexels-edmond-dantès-4343030.jpg",
-                alt: "Office workers relaxing in lobby",
-              },
-              {
-                src: "/images/pexels-kampus-production-8171221.jpg",
-                alt: "Office workers in meeting room",
-              },
-              {
-                src: "/images/pexels-yan-krukau-8867482.jpg",
-                alt: "Call center workers posing for photo",
-              },
-              {
-                src: "/images/pexels-mart-production-7709219.jpg",
-                alt: "Office with works at desks.",
-              },
-            ]}
+        <Section bgColor="bg-zinc-200">
+          <HighlightCTA
+            eyebrow="Our Ofsted results"
+            title="Significant Progress in Inclusion"
+            href="/ofsted"
+            linkLabel="Read our Ofsted report"
           >
-            <p className="mt-4 text-lg leading-6">
-              {
-                "Quack Recruitment & Training: A force in the recruitment landscape. We've soared, partnering with both household giants and cherished local businesses. In our recent highlight, we managed over 400 temps for one major client, showcasing our range and capability. Whether you're a small business with 5 staff or a large-scale operation needing 400+ temps, we tailor to your needs. Our affiliations span top industry bodies, from warehouse & logistics to food and production. Our promise? Delivering with integrity, every step of the way."
-              }
+            <p>
+              The highest possible progress judgement for this theme at a new-provider monitoring
+              inspection.
             </p>
-            <p className="mt-4 text-lg leading-6 italic">Discover the Quack difference.</p>
-            <div className="text-center my-10">
-              <Link
-                prefetch={false}
-                className="py-4 px-6  bg-quackred-900 hover:bg-quackred-600 focus:ring-quackred-500 focus:ring-offset-quackred-200 text-white w-full transition ease-in duration-200  text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
-                href="/about"
-              >
-                Learn More
-              </Link>
+
+            <p>
+              Reasonable Progress in leadership and governance, curriculum, teaching and training,
+              and safeguarding arrangements.
+            </p>
+          </HighlightCTA>
+        </Section>
+        <Section bgColor="bg-zinc-50">
+          <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.35fr_0.85fr] lg:items-start">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-800">
+                Our approach
+              </p>
+
+              <h2 className="mb-6 text-3xl font-bold text-gray-950 sm:text-4xl">
+                Training with a clear purpose
+              </h2>
+
+              <div className="space-y-5 text-lg leading-8 text-gray-700">
+                <p>
+                  Our programmes are designed to help learners move from their individual starting
+                  point towards a realistic employment or career goal.
+                </p>
+
+                <p>
+                  Quack Recruitment & Training is an independent adult skills provider delivering
+                  employer-led Skills Bootcamps designed around real labour-market demand.
+                </p>
+
+                <p>
+                  We work with public-sector commissioners, employers and awarding organisations to
+                  help adults develop new knowledge, skills and confidence and progress towards
+                  sustainable employment or career advancement.
+                </p>
+
+                <p>
+                  Our current provision includes construction, utilities, retrofit and green-skills
+                  programmes, combining recognised qualifications, practical learning, employability
+                  support and continued progression activity.
+                </p>
+              </div>
             </div>
-          </FourImageStretch>
+
+            <aside className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm lg:p-8">
+              <h3 className="mb-6 text-2xl font-bold text-quackred-800">Learners receive</h3>
+
+              <ul className="space-y-5">
+                {[
+                  {
+                    icon: "school",
+                    text: "Structured vocational learning",
+                  },
+                  {
+                    icon: "workspace_premium",
+                    text: "Recognised qualifications where included within the programme",
+                  },
+                  {
+                    icon: "support_agent",
+                    text: "Careers information, advice and guidance",
+                  },
+                  {
+                    icon: "calculate",
+                    text: "English and maths support where required",
+                  },
+                  {
+                    icon: "accessibility_new",
+                    text: "SEND and reasonable-adjustment support",
+                  },
+                  {
+                    icon: "work",
+                    text: "Employability and interview preparation",
+                  },
+                  {
+                    icon: "handshake",
+                    text: "An offer of a relevant job interview for eligible unemployed learners who successfully complete the programme",
+                  },
+                  {
+                    icon: "groups",
+                    text: "Employer engagement and progression support",
+                  },
+                ].map((item) => (
+                  <li key={item.text} className="flex items-start gap-4">
+                    <span
+                      className="material-symbols-outlined shrink-0 text-2xl text-quackred-800"
+                      aria-hidden="true"
+                    >
+                      {item.icon}
+                    </span>
+
+                    <p className="text-base leading-7 text-gray-800 mt-1">{item.text}</p>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          </div>
+
+          <div className="mx-auto mt-10 flex max-w-6xl justify-start">
+            <PageLink href="/skills-bootcamps" label="Explore Current Skills Bootcamps" arrow />
+          </div>
         </Section>
         <Section bgColor="bg-zinc-200">
-          <MultiLinkCTASection
-            titleBlack="Looking to build practical skills?"
-            titlePurple="Explore our latest funded Skills Bootcamps."
-            text="Our Skills Bootcamps are designed to help learners build job-ready skills, gain industry insight, and move into real career opportunities."
-            highlights={[
-              "Funded training opportunities",
-              "Face-to-face or live remote delivery",
-              "Career-focused learning with employer progression support",
-            ]}
-            links={[
-              { label: "View All Skills Bootcamps", href: "/skills-bootcamps" },
-              {
-                label: "Construction Utilities HCC",
-                href: "/skills-bootcamps/construction-utilities/hcc",
-              },
-              { label: "Pathway to Retrofit Excellence", href: "/skills-bootcamps/retrofit" },
-              {
-                label: "Pathway to Recruitment Leadership",
-                href: "/skills-bootcamps/recruitment-leadership/symca/",
-              },
-            ]}
-            image="/footer/skillsbootcamp.jpg"
-            alt="Professional training and career development"
-            reverse={true}
-          />
-        </Section>
-        <Section bgColor="bg-zinc-50">
-          <CTASection
-            titleBlack="Looking for a job?"
-            titlePurple="Check out whats on offer."
-            text="At Quack Recruitment & Training, we've curated job listings from across the UK to align with your passions and skills. Dive in and find that perfect role to elevate your career."
-            linkText="Jobs"
-            linkHref="/recruitment/listings"
-            image="/images/hardhat.png"
-            alt="Hardhat"
-          />
-        </Section>
-        <Section bgColor="bg-zinc-200">
-          <FadeInFreeTextSection
-            title="Our Comprehensive Recruitment Solutions"
-            imageSrc="/images/interview-1.jpg"
-            imageAlt="Description"
-          >
-            <p className="mt-4 text-lg leading-6">
-              <b>On-Site Managed Services:</b> Benefit from dedicated teams that integrate
-              seamlessly with your HR department, offering scalable and cost-efficient staffing
-              solutions.
-            </p>
-            <p className="mt-4 text-lg leading-6">
-              <b>Temporary Recruitment:</b>
-              {
-                " Got staffing emergencies? Quack's got you. Quick solutions for sudden needs, always the right talent."
-              }
-            </p>
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="mb-2 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-800">
+                  Our programmes
+                </p>
 
-            <p className="mt-4 text-lg leading-6">
-              <b>Permanent Recruitment:</b> Simplify your long-term hires. Whether new roles or
-              replacements, share your needs and let Quack do the rest.
-            </p>
-
-            <p className="mt-8 text-lg leading-6 italic">
-              Discover more about how Quack can empower your hiring process.
-            </p>
-            <div className="text-center my-10">
-              <PageLink href={"/recruitment"} label={"Recruitment"} />
+                <h2 className="text-3xl font-bold text-zinc-950 sm:text-4xl">
+                  Build in-demand skills for a sustainable future
+                </h2>
+              </div>
             </div>
-          </FadeInFreeTextSection>
-        </Section>
-        <Section bgColor="bg-zinc-50">
-          <CTASection
-            titleBlack="Searching for the perfect job?"
-            titlePurple="Discover roles that resonate with your expertise."
-            text="Let us guide you towards a career that aligns with your skills and passions."
-            linkText="Register Today"
-            linkHref="/contact/register"
-            image="/images/tools.png"
-            reverse={true}
-            alt="Tools"
-          />
-        </Section>
-        <Section bgColor="bg-zine-200">
-          <h2 className="text-3xl text-center mb-10 font-semibold">
-            Why Choose Quack Recruitment & Training?
-          </h2>
-          <CardSection>
-            <CardMinimalIconTop
-              title="Compliant Provider"
-              icon="lock"
-              color={`text-blue-600 text-8xl`}
-              textColor="text-black"
-              text="Licensed by GLAA, we prioritize regulatory adherence in every operation, ensuring ethical recruitment practices."
-            />
-            <CardMinimalIconTop
-              title="Expert Team"
-              icon="school"
-              color={`text-indigo-600 text-8xl`}
-              textColor="text-black"
-              text="Our Senior Consultants aren’t just seasoned—they're specialists in niche fields, bringing top-tier expertise to every hire."
-            />
-            <CardMinimalIconTop
-              title="Quality Guaranteed"
-              icon="award_star"
-              color={`text-yellow-600 text-8xl`}
-              textColor="text-black"
-              text="Dedicated to a seamless experience, our team is always on standby, ensuring support whenever you need."
-            />
-            <CardMinimalIconTop
-              title="Tailored Solutions"
-              icon="cut"
-              color={`text-teal-600 text-8xl`}
-              textColor="text-black"
-              text="Every organization is unique. We offer customized recruitment models, catering to both small businesses and major corporations."
-            />
-            <CardMinimalIconTop
-              title="Diverse Hiring Capabilities"
-              icon="diversity_2"
-              color={`text-green-600 text-8xl`}
-              textColor="text-black"
-              text="From role advertising to sudden staffing shifts or finding the ideal permanent hire, we turn your challenges into opportunities."
-            />
-            <CardMinimalIconTop
-              title="Industry Affiliation"
-              icon="share"
-              color={`text-red-600 text-8xl`}
-              textColor="text-black"
-              text="Registered with leading industry affiliates, our credentials highlight our commitment to recruitment excellence."
-            />
-          </CardSection>
-        </Section>
 
-        <Section bgColor="bg-zinc-50">
-          <FourImageStretch
-            title="Unleash Your Potential with Our Training Programs"
-            images={[
-              { src: "/images/pexels-christina-morillo-1181524.jpg", alt: "Woman sitting at desk" },
-              { src: "/images/pexels-movidagrafica-barcelona-1474993.jpg", alt: "Welder at work" },
-              {
-                src: "/images/pexels-cottonbro-studio-3205737.jpg",
-                alt: "Security camera on wall",
-              },
-              {
-                src: "/images/pexels-elevate-1267338.jpg",
-                alt: "Forklift moving pallet in warehouse",
-              },
-            ]}
-          >
-            <p className="mt-4 text-lg leading-6">
-              {
-                "Embarking on a new career journey or looking to advance in your current role? Dive deep into our specialized training courses tailored for real-world challenges. From the dynamic environment of warehouse & logistics, the intricate tasks in admin & customer service, to the rigorous demands of CSCS and SIA security courses, we've got you covered."
-              }
-            </p>
-            <p className="mt-4 text-lg leading-6">
-              <b>Multiple Training Locations:</b>{" "}
-              {
-                "Our training centers are strategically located to cater to a diverse group of trainees. Whether you're from Walsall, Northampton, or Stevenage, there's a venue near you."
-              }
-            </p>
-            <p className="mt-4 text-lg leading-6">
-              <b>Certifications & Accreditations:</b>
-              {
-                " Our courses aren't just about learning; they're about achieving recognized certifications that boost your employability. Stay tuned for detailed insights on our accreditations!"
-              }
-            </p>
-            <p className="mt-4 text-lg leading-6">
-              <b>More Details Coming Soon:</b>
-              {
-                " We're in the process of fine-tuning our offerings. Check back soon for comprehensive course details, schedules, and more."
-              }
-            </p>
-            <div className="text-center my-10">
-              <PageLink href={"/skills-bootcamps"} label={"Learn More"} />
+            <div className="grid gap-5 md:grid-cols-2">
+              {programmeRoutes.map((programme) => (
+                <ProgrammeCard key={programme.title} {...programme} />
+              ))}
             </div>
-          </FourImageStretch>
+          </div>
+        </Section>
+        <Section bgColor="bg-zinc-50">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-10 max-w-3xl">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-800">
+                Beyond the classroom
+              </p>
+
+              <h2 className="text-3xl font-bold text-zinc-950 sm:text-4xl">
+                Training designed around employment and progression
+              </h2>
+
+              <p className="mt-5 text-lg leading-8 text-zinc-700">
+                Employer engagement is central to our Skills Bootcamp model. We work with employers
+                to understand recruitment needs, job roles and the knowledge and behaviours learners
+                need to succeed in work.
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-3">
+              <FeatureCard
+                title="Shaped by employers"
+                icon="groups"
+                description="Employer feedback and labour-market demand help us keep training relevant to real roles and sector expectations."
+              />
+
+              <FeatureCard
+                title="Preparing for work"
+                icon="work"
+                description="Learners can receive careers guidance, CV support, interview preparation and help understanding employer expectations."
+              />
+
+              <FeatureCard
+                title="Continued progression"
+                icon="trending_up"
+                description="Where applicable, our team continues progression activity after programme completion to support learners towards employment or career progression."
+              />
+            </div>
+
+            <div className="mt-8">
+              <PageLink
+                href="/skills-bootcamps"
+                label="Explore Skills Bootcamps"
+                arrow
+                variant="outline"
+              />
+            </div>
+          </div>
+        </Section>
+        <Section bgColor="bg-zinc-100">
+          <div className="mx-auto max-w-6xl">
+            <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+              <div>
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-quackred-800">
+                  Recruitment services
+                </p>
+
+                <h2 className="text-3xl font-bold text-zinc-950 sm:text-4xl">
+                  Recruitment support for employers and jobseekers
+                </h2>
+
+                <div className="mt-5 space-y-4 text-lg leading-8 text-zinc-700">
+                  <p>
+                    Alongside our training provision, Quack Recruitment & Training continues to
+                    support employers with recruitment and workforce needs.
+                  </p>
+
+                  <p>
+                    We provide temporary, permanent and on-site managed recruitment services,
+                    helping employers find suitable people while supporting candidates towards new
+                    opportunities.
+                  </p>
+                </div>
+
+                <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                  <PageLink href="/recruitment" label="Explore Recruitment" arrow />
+
+                  <PageLink
+                    href="/contact/register"
+                    label="Register with us"
+                    arrow
+                    variant="outline"
+                  />
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-zinc-200 bg-white p-6">
+                <h3 className="text-xl font-bold text-zinc-950">Recruitment services</h3>
+
+                <ul className="mt-5 space-y-3">
+                  {recruitmentLinks.map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        prefetch={false}
+                        className="
+            group flex items-center justify-between gap-3
+            rounded-lg px-3 py-2
+            text-zinc-700
+            transition
+            hover:bg-zinc-50 hover:text-quackred-800
+            focus-visible:outline-2
+            focus-visible:outline-offset-2
+            focus-visible:outline-quackred-700
+          "
+                      >
+                        <span>{item.label}</span>
+
+                        <span
+                          className="
+              material-symbols-outlined text-xl text-quackred-800
+              transition-transform
+              group-hover:translate-x-1
+            "
+                          aria-hidden="true"
+                        >
+                          arrow_forward
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
         </Section>
       </main>
     </>

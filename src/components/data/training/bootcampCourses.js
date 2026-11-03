@@ -5,6 +5,31 @@ import {
   sharedPolicies,
 } from "./retrofitBootCampCourses";
 
+// sharedBootcampContent.js
+
+export const standardProgressionSupport = {
+  interview:
+    "Eligible unemployed learners who successfully complete the Skills Bootcamp will receive an offer of a relevant job interview. An interview provides an opportunity to be considered by an employer but does not guarantee employment.",
+
+  alternativeRoutes: [
+    "Workplace progression",
+    "Increased responsibilities",
+    "Promotion or a new role",
+    "New contracts or clients",
+    "Developing or expanding self-employed activity",
+  ],
+};
+
+export const existingEmployeeTrainingNote =
+  "Employers can also explore Skills Bootcamp training for existing employees. Where an employer enrols an existing employee, an employer contribution is required under the applicable funding arrangements. Eligibility, programme availability and the required contribution will be confirmed before enrolment.";
+
+retrofitEcw.progressionSupport = standardProgressionSupport;
+retrofitEcw.employerSection.note = existingEmployeeTrainingNote;
+retrofitSurrey.progressionSupport = standardProgressionSupport;
+retrofitSurrey.employerSection.note = existingEmployeeTrainingNote;
+retrofitWmca.progressionSupport = standardProgressionSupport;
+retrofitWmca.employerSection.note = existingEmployeeTrainingNote;
+
 export const bootcampCourses = {
   retrofitEcw,
   retrofitSurrey,
@@ -14,16 +39,15 @@ export const bootcampCourses = {
     category: "recruitment",
     title: "Pathway to Recruitment Leadership",
     banner: {
-      title: "Pathway to Recruitment Leadership (SYMCA)",
-      slogan: "Build practical recruitment and office skills with career-focused support.",
-      imgSrc: "/images/interview-1.jpg",
-      imgAlt: "Professional office environment",
-      position: "top",
+      title: "Pathway to Recruitment Leadership – South Yorkshire",
+      description:
+        "A Skills Bootcamp delivered with South Yorkshire Mayoral Combined Authority, combining practical recruitment training with employer-focused progression support.",
+      imgSrc: "/images/banners/leadership-banner.jpg",
+      imgAlt: "",
+      imagePosition: "right",
     },
     authority: {
-      name: "South Yorkshire Mayoral Combined Authority (SYMCA)",
-      shortName: "SYMCA",
-      strapline: "Skills Bootcamp",
+      name: "South Yorkshire Mayoral Combined Authority",
       logo: "/footer/SYMCA.jpg",
       logoAlt: "South Yorkshire Mayoral Combined Authority logo",
     },
@@ -38,7 +62,7 @@ export const bootcampCourses = {
       eyebrow: "Skills Bootcamp",
       heading: "Start a Career in Recruitment",
       intro: [
-        "Quack Recruitment & Training delivers the Pathway to Recruitment Leadership Skills Bootcamp in partnership with the South Yorkshire Mayoral Combined Authority (SYMCA).",
+        "Quack Recruitment & Training delivers the Pathway to Recruitment Leadership Skills Bootcamp in partnership with the South Yorkshire Mayoral Combined Authority.",
         "This programme prepares learners for careers in recruitment, sales and professional office roles.",
       ],
     },
@@ -55,6 +79,8 @@ export const bootcampCourses = {
         "Interested in starting or progressing in the sector",
       ],
     },
+    eligibilityNote:
+      "Subject to the relevant programme and funding requirements, the Skills Bootcamp may support people who are unemployed, employed, self-employed, considering a career change or returning to work. Eligibility will be checked before a funded place is confirmed.",
     learningIntro: "The Skills Bootcamp covers the full recruitment process including:",
     learningPoints: [
       "the recruitment lifecycle",
@@ -115,6 +141,7 @@ export const bootcampCourses = {
           "Support continues after training as we assist learners in securing employment opportunities.",
       },
     ],
+    progressionSupport: standardProgressionSupport,
     employerSection: {
       title: "Employer Engagement",
       description:
@@ -124,6 +151,7 @@ export const bootcampCourses = {
         "Discussions about current vacancies and career pathways",
         "Recruitment opportunities for learners completing the programme",
       ],
+      note: existingEmployeeTrainingNote,
     },
     whyChoose: [
       {
@@ -183,18 +211,18 @@ export const bootcampCourses = {
     title: "Pathway to Construction Utilities",
 
     banner: {
-      title: "Pathway to Construction Utilities (HCC)",
-      slogan:
-        "Gain practical construction, civils and utilities skills with industry-recognised qualifications and employer-focused support.",
-      imgSrc: "/images/banners/construction-banner.jpg",
-      imgAlt: "Construction worker wearing PPE on a building site",
-      position: "top",
+      eyebrow: "Skills Bootcamp",
+      title: "Pathway to Construction Utilities",
+      titleAccent: "– Hampshire",
+      description:
+        "A Hampshire County Council-funded Skills Bootcamp providing practical construction, civils and utilities training with employer-focused progression support.",
+      imgSrc: "/images/banners/contruction-utilities-banner.jpg",
+      imgAlt: "",
+      imagePosition: "right",
     },
 
     authority: {
       name: "Hampshire County Council",
-      shortName: "HCC",
-      strapline: "Hampshire County Council Skills Bootcamp",
       logo: "/images/hcc-logo-colour.gif",
       logoAlt: "Hampshire County Council logo",
     },
@@ -220,9 +248,9 @@ export const bootcampCourses = {
       duration: "15 structured sessions",
       guidedLearningHours: "82 GLH",
       schedule: "97.5 total programme hours",
-      deliveryModes: ["Face-to-face"],
+      deliveryModes: ["Blended"],
       deliveryNote:
-        "The programme includes 82 guided learning hours and 15.5 hours of employability activity.",
+        "Delivery model: blended. The programme includes a combination of scheduled face-to-face and remote tutor-led learning. The specific attendance pattern, venue and online sessions will be confirmed before the learner starts.",
       eligibility: [
         "Aged 19+",
         "Resident in Hampshire",
@@ -230,7 +258,8 @@ export const bootcampCourses = {
         "Interested in starting or progressing in construction, civils or utilities",
       ],
     },
-
+    eligibilityNote:
+      "Subject to the relevant programme and funding requirements, the Skills Bootcamp may support people who are unemployed, employed, self-employed, considering a career change or returning to work. Eligibility will be checked before a funded place is confirmed.",
     programmeStructure: [
       {
         label: "Structured Sessions",
@@ -372,10 +401,12 @@ export const bootcampCourses = {
       },
     ],
 
+    progressionSupport: standardProgressionSupport,
     employerSection: {
       title: "Employer Engagement and Progression Support",
       description:
         "Employer engagement is built into the programme to help learners understand opportunities within construction, civils and utilities.",
+
       details: [
         "Employer insight sessions",
         "Industry engagement",
@@ -383,6 +414,8 @@ export const bootcampCourses = {
         "Interview support",
         "Progression into employment",
       ],
+
+      note: existingEmployeeTrainingNote,
     },
     brandingLogos: [
       {

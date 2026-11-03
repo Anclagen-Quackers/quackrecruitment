@@ -41,9 +41,19 @@ const Recruitment = () => {
     <>
       <div className="hidden bg-teal-900 bg-gray-900 bg-sky-900 bg-indigo-900 bg-red-900 bg-blue-900 bg-green-900 bg-sky-400 text-teal-900 text-gray-900 text-sky-900 text-indigo-900 text-red-900 text-blue-900 text-green-900 text-sky-400"></div>
       <main className="flex flex-col">
-        <BannerHalf title="Recruitment" slogan="Turn Passion into Profession." imgSrc="/images/banners/pexels-pixabay-162553.jpg" imgAlt="Descriptive Image Alt Text" links={[]} />
+        <BannerHalf
+          title="Recruitment"
+          slogan="Turn Passion into Profession."
+          imgSrc="/images/banners/pexels-pixabay-162553.jpg"
+          imgAlt="Descriptive Image Alt Text"
+          links={[]}
+        />
         <Section bgColor="bg-zinc-200">
-          <FadeInFreeTextSection title="Our Comprehensive Recruitment Solutions" imageSrc="/images/interview-1.jpg" imageAlt="Description">
+          <FadeInFreeTextSection
+            title="Our Comprehensive Recruitment Solutions"
+            imageSrc="/images/interview-1.jpg"
+            imageAlt="Description"
+          >
             <p className="mt-4 text-lg leading-6 max-w-screen-sm mx-auto">
               {`Welcome to Quack Recruitment & Training, your partner in redefining recruitment solutions for the modern business landscape. Whether you're seeking flexibility through our tailor-made
               Temporary Recruitment Services, strategic talent acquisition with our Permanent Recruitment offerings, or comprehensive workforce management via our On-Site Managed Services, we are
@@ -53,11 +63,15 @@ const Recruitment = () => {
           </FadeInFreeTextSection>
           <div className="flex flex-wrap">
             <div className="md:w-1/2 xl:w-1/3 p-6  flex flex-col">
-              <h3 className="mt-4 text-xl font-semibold leading-6">On-Site Managed Services Recruitment</h3>
+              <h3 className="mt-4 text-xl font-semibold leading-6">
+                On-Site Managed Services Recruitment
+              </h3>
               <p className="mt-4 text-lg leading-6 flex-grow">
-                Transform your recruitment process with our On-Site Managed Services. Benefit from dedicated teams that integrate seamlessly with your HR department, offering scalable and
-                cost-efficient staffing solutions. We specialize in tailoring recruitment strategies for continuous improvement and operational effectiveness, ensuring your workforce needs are met
-                with precision and agility.
+                Transform your recruitment process with our On-Site Managed Services. Benefit from
+                dedicated teams that integrate seamlessly with your HR department, offering scalable
+                and cost-efficient staffing solutions. We specialize in tailoring recruitment
+                strategies for continuous improvement and operational effectiveness, ensuring your
+                workforce needs are met with precision and agility.
               </p>
               <Link
                 prefetch={false}
@@ -68,7 +82,9 @@ const Recruitment = () => {
               </Link>
             </div>
             <div className="md:w-1/2 xl:w-1/3 p-6  flex flex-col">
-              <h3 className="mt-4 text-xl font-semibold leading-6">Temporary Recruitment Services</h3>
+              <h3 className="mt-4 text-xl font-semibold leading-6">
+                Temporary Recruitment Services
+              </h3>
               <p className="mt-4 text-lg leading-6 flex-grow">
                 {`Elevate your workforce with Quack Recruitment & Training's Temporary Recruitment Services. Experience unparalleled flexibility with our customized staffing solutions, tailored to meet project demands and adapt to workload fluctuations. Benefit from swift placements, industry-specific expertise, and cost-effective workforce management, ensuring efficiency and quality in every hire.`}
               </p>
@@ -100,13 +116,55 @@ const Recruitment = () => {
         <Section bgColor="bg-gray-50">
           <h2 className="text-4xl text-center mb-8">Our Sectors</h2>
           <div className="flex flex-wrap justify-center">
-            <Flipper text="Administration" bgColor={"quackred"} textColor="white" imageSRC="/images/pexels-christina-morillo-1181524.jpg" imageAlt="Woman working at desk" />
-            <Flipper text={"Customer Services"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-yan-krukau-8867482.jpg"} imageAlt="Customer Service Rep Smiling" />
-            <Flipper text={"Engineering"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-pixabay-159358.jpg"} imageAlt="Construction site with workers in safety gear" />
-            <Flipper text={"Food Processing & Packaging"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-mark-stebnicki-7163991.jpg"} imageAlt="Meat in a food processing plant" />
-            <Flipper text={"IT"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-andrea-piacquadio-840996.jpg"} imageAlt="Man working at a computer" />
-            <Flipper text={"Logistics"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-tiger-lily-4487365.jpg"} imageAlt="Men in a warehouse" />
-            <Flipper text={"Sales"} textColor={"white"} bgColor={"quackred"} imageSRC={"/images/pexels-edmond-dantès-4343030.jpg"} imageAlt="People in a meeting" />
+            <Flipper
+              text="Administration"
+              bgColor={"quackred"}
+              textColor="white"
+              imageSRC="/images/pexels-christina-morillo-1181524.jpg"
+              imageAlt="Woman working at desk"
+            />
+            <Flipper
+              text={"Customer Services"}
+              textColor={"white"}
+              bgColor={"quackred"}
+              imageSRC={"/images/pexels-yan-krukau-8867482.jpg"}
+              imageAlt="Customer Service Rep Smiling"
+            />
+            <Flipper
+              text={"Engineering"}
+              textColor={"white"}
+              bgColor={"quackred"}
+              imageSRC={"/images/pexels-pixabay-159358.jpg"}
+              imageAlt="Construction site with workers in safety gear"
+            />
+            <Flipper
+              text={"Food Processing & Packaging"}
+              textColor={"white"}
+              bgColor={"quackred"}
+              imageSRC={"/images/pexels-mark-stebnicki-7163991.jpg"}
+              imageAlt="Meat in a food processing plant"
+            />
+            <Flipper
+              text={"IT"}
+              textColor={"white"}
+              bgColor={"quackred"}
+              imageSRC={"/images/pexels-andrea-piacquadio-840996.jpg"}
+              imageAlt="Man working at a computer"
+            />
+            <Flipper
+              text={"Logistics"}
+              textColor={"white"}
+              bgColor={"quackred"}
+              imageSRC={"/images/pexels-tiger-lily-4487365.jpg"}
+              imageAlt="Men in a warehouse"
+            />
+            <Flipper
+              text={"Sales"}
+              textColor={"white"}
+              bgColor={"quackred"}
+              imageSRC={"/images/pexels-edmond-dantès-4343030.jpg"}
+              imageAlt="People in a meeting"
+            />
           </div>
         </Section>
         <Section bgColor="bg-zinc-200">
@@ -132,7 +190,8 @@ const faqData = [
   },
   {
     question: "Can you handle recruitment for specialized roles?",
-    answer: "Absolutely. Our team has expertise in sourcing candidates for a wide range of specialized roles across various industries, ensuring we can meet your specific requirements.",
+    answer:
+      "Absolutely. Our team has expertise in sourcing candidates for a wide range of specialized roles across various industries, ensuring we can meet your specific requirements.",
   },
   {
     question: "What is your approach to diversity and inclusion in recruitment?",

@@ -16,7 +16,7 @@ function BootcampPolicies({ items }) {
               <p className="mt-2 text-sm text-gray-600">{policy.description}</p>
             </div>
 
-            <span className="shrink-0 rounded-md bg-quackred-100 px-3 py-1 text-sm font-medium text-quackred-700">
+            <span className="shrink-0 rounded-md bg-quackred-100 px-3 py-1 text-sm font-medium text-quackred-800">
               PDF
             </span>
           </div>

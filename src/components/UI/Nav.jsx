@@ -18,6 +18,7 @@ const Nav = () => {
       label: "About",
       dropdown: [
         { path: "/about", label: "About Us" },
+        { path: "/ofsted", label: "Ofsted" },
         { path: "/legal", label: "Legal" },
         { path: "/legal/privacy-policy", label: "Privacy Policy" },
         { path: "/legal/policies", label: "All Policies" },
@@ -31,6 +32,7 @@ const Nav = () => {
         { path: "/recruitment/permanent", label: "Permanent Recruitment" },
         { path: "/recruitment/temporary", label: "Temporary Recruitment" },
         { path: "/recruitment/on-site-managed", label: "On Site Managed Services" },
+        { path: "/contact/register", label: "Register" },
       ],
     },
     {
@@ -52,16 +54,15 @@ const Nav = () => {
         },
         {
           path: "/skills-bootcamps/construction-utilities/hcc",
-          label: "Construction Utilities HCC",
+          label: "Construction Utilities (Hampshire)",
         },
         {
           path: "/skills-bootcamps/recruitment-leadership/symca",
-          label: "Recruitment Leadership SYMCA",
+          label: "Recruitment Leadership (South Yorkshire)",
         },
       ],
     },
     { path: "/report-a-safeguarding-concern", label: "Safeguarding" },
-    { path: "/contact/register", label: "Register" },
     { path: "/contact", label: "Contact" },
     {
       label: "Login",
@@ -112,7 +113,7 @@ const Nav = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white bg-opacity-80 p-1 z-50 shadow">
-      <div className="max-w-screen-2xl mx-auto flex justify-between items-center">
+      <div className="max-w-screen-xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div>
           <Link prefetch={false} className="flex flex-row" href="/" title="home">

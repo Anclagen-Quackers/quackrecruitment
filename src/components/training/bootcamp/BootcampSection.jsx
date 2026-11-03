@@ -6,7 +6,7 @@ const BootcampSection = ({ title, bannerTitle, children }) => {
   return (
     <section className="mb-6 mt-10 lg:px-10">
       {bannerTitle && (
-        <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-quackred-700">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-quackred-800">
           {bannerTitle}
         </p>
       )}

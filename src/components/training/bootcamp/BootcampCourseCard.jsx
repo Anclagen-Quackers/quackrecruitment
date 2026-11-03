@@ -29,7 +29,7 @@ const BootcampCourseCard = ({ course }) => {
           </div>
         )}
 
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-quackred-700">
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-quackred-800">
           Skills Bootcamp
         </p>
 
@@ -70,15 +70,6 @@ const BootcampCourseCard = ({ course }) => {
             </p>
           )}
         </div>
-
-        {course.cardHighlights?.length > 0 && (
-          <ul className="mt-5 ms-5 list-disc space-y-2 text-base text-gray-800">
-            {course.cardHighlights.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        )}
-
         <div className="mt-6">
           <Link
             prefetch={false}
